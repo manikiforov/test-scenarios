@@ -1,3 +1,5 @@
+require: all.sc
+    module = common
 
 theme: /
 
