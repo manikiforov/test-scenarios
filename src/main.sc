@@ -1,5 +1,3 @@
-require: all.sc
-    module = common
 
 theme: /
 
@@ -28,7 +26,8 @@ theme: /
           "varName" : "number",
           "minValue" : -500,
           "maxValue" : 55,
-          "failureMessage" : [ "Введите число от 1 до 5", "Где твои мозги?!", "Не хотите в Болливуд?!" ]
+          "failureMessage" : [ "Введите число от 1 до 5", "Где твои мозги?!", "Не хотите в Болливуд?!" ],
+          "then" : "/newNode_3"
         }
     state: newNode_2
         a: Введите число, о Величаший!
@@ -53,10 +52,13 @@ theme: /
                     $temp.number_ok = true;
                 }
             if: $temp.number_ok
-                go!:
+                go!: /newNode_3
             else:
                 go: CatchNumber
 
         state: CatchAll
             q: *
             go!: ..
+
+    state: newNode_3
+        a: пыщ!
