@@ -8,11 +8,11 @@ theme: /
         go!: /newNode_1
     @InputText
         {
-          "prompt" : "Введите текст",
+          "prompt" : "Введите текст или отправитесь играть в покер со Смертью!",
           "varName" : "text"
         }
     state: newNode_1
-        a: Введите текст
+        a: Введите текст или отправитесь играть в покер со Смертью!
 
         state: CatchText
             q: *
