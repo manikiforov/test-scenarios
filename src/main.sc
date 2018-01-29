@@ -1,5 +1,5 @@
 require: patterns.sc
-         module = common
+    module = common
 
 theme: /
 
