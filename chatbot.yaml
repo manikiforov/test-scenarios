@@ -1,0 +1,8 @@
+name: echo
+
+entryPoint:
+  - main.sc
+
+tests:
+  include:
+    - test.xml
