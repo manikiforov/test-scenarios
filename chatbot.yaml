@@ -3,6 +3,9 @@ name: echo
 entryPoint:
   - main.sc
 
+tests:
+  exclude:
+    - test.xml
     
 dependencies:
   - name: common
