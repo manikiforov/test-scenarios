@@ -1,4 +1,4 @@
-name: echo1
+name: echo
 
 entryPoint:
   - main.sc
