@@ -1,4 +1,5 @@
 require: all.sc
+require: patterns.sc
     module = common
 
 theme: /
