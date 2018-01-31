@@ -1,7 +1,3 @@
-require: all.sc
-    module = common
-require: patterns.sc
-    module = common
 
 theme: /
 
@@ -12,12 +8,12 @@ theme: /
         go!: /newNode_1
     @InputText
         {
-          "prompt" : "Введите текст или отправитесь играть в покер со Смертью1!",
+          "prompt" : "Введите текст или отправитесь играть в покер со Смертью1!1",
           "varName" : "text",
           "then" : "/newNode_2"
         }
     state: newNode_1
-        a: Введите текст или отправитесь играть в покер со Смертью1!
+        a: Введите текст или отправитесь играть в покер со Смертью1!1
 
         state: CatchText
             q: *
@@ -70,7 +66,7 @@ theme: /
         {
           "prompt" : "Вы согласны перейти в плоский мир?",
           "agreeState" : "/newNode_3",
-          "disagreeState" : "/1",
+          "disagreeState" : "/newNode_5",
           "useButtons" : true,
           "agreeButton" : "Дя",
           "disagreeButton" : "Нэт"
@@ -85,4 +81,41 @@ theme: /
             go!: /newNode_3
         state: Disagree
             q: $disagree
-            go!: /1
+            go!: /newNode_5
+    @Switch
+        {
+          "prompt" : "Вам ответит первый освободившийся оператор",
+          "ignoreOffline" : false,
+          "firstMessage" : "Пыщ пыщ вам сообщение",
+          "closeChatPhrases" : [ "пока", "хватит плз" ],
+          "destination" : "",
+          "attributes" : { },
+          "onClose" : "",
+          "chatClosedMessage" : "Оператор завершил диалог",
+          "noOperatorsOnlineState" : ""
+        }
+    state: newNode_5
+        if: false || hasOperatorsOnline()
+            script:
+                var switchReply = {type:"switch"};
+                switchReply.ignoreOffline = false;
+                switchReply.closeChatPhrases = [
+                     "пока",
+                     "хватит плз"
+                ];
+                switchReply.destination = "";
+                switchReply.attributes = {
+                };
+                switchReply.firstMessage = "Пыщ пыщ вам сообщение";
+                $response.replies = $response.replies || [];
+                $response.replies.push(switchReply);
+            a: Вам ответит первый освободившийся оператор
+        else:
+            go!:
+        state: NoOperatorsOnline
+            event: noLivechatOperatorsOnline
+            go!:
+        state: LivechatReset
+            event: livechatFinished
+            a: Оператор завершил диалог
+            go!:
