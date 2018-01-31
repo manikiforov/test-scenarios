@@ -1,7 +1,3 @@
-require: all.sc
-    module = common
-require: patterns.sc
-    module = common
 
 theme: /
 
@@ -94,9 +90,9 @@ theme: /
           "closeChatPhrases" : [ "пока", "хватит плз" ],
           "destination" : "",
           "attributes" : { },
-          "onClose" : "",
+          "onClose" : "/newNode_3",
           "chatClosedMessage" : "Оператор завершил диалог",
-          "noOperatorsOnlineState" : ""
+          "noOperatorsOnlineState" : "/newNode_3"
         }
     state: newNode_5
         if: false || hasOperatorsOnline()
@@ -115,11 +111,11 @@ theme: /
                 $response.replies.push(switchReply);
             a: Вам ответит первый освободившийся оператор
         else:
-            go!:
+            go!: /newNode_3
         state: NoOperatorsOnline
             event: noLivechatOperatorsOnline
-            go!:
+            go!: /newNode_3
         state: LivechatReset
             event: livechatFinished
             a: Оператор завершил диалог
-            go!:
+            go!: /newNode_3
