@@ -1,7 +1,3 @@
-require: all.sc
-    module = common
-require: patterns.sc
-    module = common
 
 theme: /
 
@@ -96,7 +92,7 @@ theme: /
           "attributes" : {
             "мемасики" : "112312312"
           },
-          "onClose" : "",
+          "onClose" : "/newNode_7",
           "chatClosedMessage" : "Оператор завершил диалог",
           "noOperatorsOnlineState" : "/newNode_6"
         }
@@ -125,7 +121,10 @@ theme: /
         state: LivechatReset
             event: livechatFinished
             a: Оператор завершил диалог
-            go!:
+            go!: /newNode_7
 
     state: newNode_6
-        a: Нет операторов!
+        image: https://248305.selcdn.ru/public_test/sadmin/0puvH1GRFIfBJsov.png
+
+    state: newNode_7
+        image: https://248305.selcdn.ru/public_test/sadmin/d57NsHbMCQqYAv4b.jpg
