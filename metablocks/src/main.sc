@@ -1,7 +1,3 @@
-require: all.sc
-    module = common
-require: patterns.sc
-    module = common
 
 theme: /
 
@@ -93,7 +89,9 @@ theme: /
           "firstMessage" : "Пыщ пыщ вам сообщение",
           "closeChatPhrases" : [ "пока", "хватит плз" ],
           "destination" : "",
-          "attributes" : { },
+          "attributes" : {
+            "мемасики" : "112312312"
+          },
           "onClose" : "",
           "chatClosedMessage" : "Оператор завершил диалог",
           "noOperatorsOnlineState" : "/newNode_6"
@@ -109,6 +107,7 @@ theme: /
                 ];
                 switchReply.destination = "";
                 switchReply.attributes = {
+                         "мемасики": "112312312"
                 };
                 switchReply.firstMessage = "Пыщ пыщ вам сообщение";
                 $response.replies = $response.replies || [];
