@@ -1,7 +1,3 @@
-require: all.sc
-    module = common
-require: patterns.sc
-    module = common
 
 theme: /
 
@@ -94,7 +90,7 @@ theme: /
           "closeChatPhrases" : [ "пока", "хватит плз" ],
           "destination" : "",
           "attributes" : { },
-          "onClose" : "/newNode_3",
+          "onClose" : "",
           "chatClosedMessage" : "Оператор завершил диалог",
           "noOperatorsOnlineState" : "/newNode_3"
         }
@@ -122,4 +118,4 @@ theme: /
         state: LivechatReset
             event: livechatFinished
             a: Оператор завершил диалог
-            go!: /newNode_3
+            go!:
