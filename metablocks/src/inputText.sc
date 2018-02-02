@@ -3,8 +3,8 @@ theme: /
     @InputText
         {
           "prompt" : "Введите текст",
-          "varName" : "text",
-          "then" : ""
+          "varName" : "tex",
+          "then" : "/newNode_1"
         }
     state: newNode_0
         a: Введите текст
@@ -12,5 +12,8 @@ theme: /
         state: CatchText
             q: *
             script:
-                $session.text = $parseTree.text;
-            go!:
+                $session.tex = $parseTree.text;
+            go!: /newNode_1
+
+    state: newNode_1
+        a: Вы сказали {{$parseTree.tex}}
