@@ -17,3 +17,7 @@ theme: /
 
     state: newNode_1
         a: Вы сказали {{$parseTree.tex}}
+
+    state: newNode_2
+        q!: inputText
+        go!: /newNode_0
