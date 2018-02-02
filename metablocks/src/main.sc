@@ -1,3 +1,4 @@
+require inputText.sc
 
 theme: /
 
