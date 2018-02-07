@@ -8,9 +8,9 @@ theme: /
           "closeChatPhrases" : [ "пока пока " ],
           "destination" : "",
           "attributes" : { },
-          "onClose" : "",
+          "onClose" : "/newNode_3",
           "chatClosedMessage" : "Оператор завершил диалог",
-          "noOperatorsOnlineState" : ""
+          "noOperatorsOnlineState" : "/newNode_2"
         }
     state: newNode_0
         if: false || hasOperatorsOnline()
@@ -28,11 +28,21 @@ theme: /
                 $response.replies.push(switchReply);
             a: Вам ответит первый освободившийся оператор
         else:
-            go!:
+            go!: /newNode_2
         state: NoOperatorsOnline
             event: noLivechatOperatorsOnline
-            go!:
+            go!: /newNode_2
         state: LivechatReset
             event: livechatFinished
             a: Оператор завершил диалог
-            go!:
+            go!: /newNode_3
+
+    state: newNode_1
+        q!: switch
+        go!: /newNode_0
+
+    state: newNode_2
+        a: 123
+
+    state: newNode_3
+        a: 456
