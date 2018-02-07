@@ -1,4 +1,14 @@
-name: zbwbot
+name: echo
 
 entryPoint:
   - main.sc
+
+tests:
+  exclude:
+    - test.xml
+    
+dependencies:
+  - name: common
+    type: git
+    url: https://bitbucket.org/just-ai/zb-common
+    version: heads/master
