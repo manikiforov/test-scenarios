@@ -46,7 +46,3 @@ theme: /
 
     state: newNode_3
         a: 456
-
-    state: newNode_4
-        q!: *
-        a: xtnj 
