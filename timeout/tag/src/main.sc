@@ -1,18 +1,28 @@
 theme: /
-    state: Start
+    state:
         q: *
-        a: Подождите немного
-        #Аналогичная функция так же должна быть достпна в JS API
-        timeout: /timedout || interval = 10s
-
-    state: 
-        q!: *
-        a: Не пишите ничего, пожалуйста.
-        go!: /Start
+        a: Набери timeout чтобы начать
+    
+    state: Start
+        q!: timeout
+        a: Таймер начался когда вы сказали: {{$parseTree.text}}
+        a: Напишите что нибудь и таймер перезапустится
+        script: $reactions.timeout({interval: '0 min 15 seconds', targetState: '/timedout'});
+        
+        state:
+            q: *
+            a: Перезапускаю таймер
+            go!: /Start
 
     state: timedout
-        a: Этот ответ должен быть выведен в случае, если клиент молчит
-
-        state: 
+        a: Первый таймер закончился, второй начался. Напиши что нибудь и снова начнется первый
+        timeout: /end || interval = "10 sec"
+        
+        state:
             q: *
-            a: Тест окончен.
+            a: Перезапускаю таймер
+            go!: /timedout
+
+    state: end
+        a: Тест окончен
+        go: /
