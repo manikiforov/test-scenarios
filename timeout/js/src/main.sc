@@ -11,7 +11,7 @@ theme: /
         
         state:
             q: *
-            a: Не пиши ничего
+            a: Перезапускаю таймер
             go!: /Start
 
         state: timedout
