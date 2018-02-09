@@ -7,7 +7,7 @@ theme: /
         q!: time
         a: Вы сказали: {{$parseTree.text}}
         a: параметры запроса: {{JSON.stringify($request.data)}}
-        script: $reactions.timeout({interval: '5 seconds', targetState: './timedout'});
+        script: $reactions.timeout({interval: '5 seconds', targetState: '/Start/timedout'});
         
         state:
             q: *
