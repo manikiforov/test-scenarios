@@ -7,7 +7,7 @@ theme: /
         q!: timeout
         a: Таймер начался когда вы сказали: {{$parseTree.text}}
         a: Напишите что нибудь и таймер перезапустится
-        script: $reactions.timeout({interval: '30 seconds', targetState: './timedout'});
+        script: $reactions.timeout({interval: '30 seconds', targetState: '/timedout'});
         
         state:
             q: *
