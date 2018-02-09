@@ -1,6 +1,6 @@
 theme: /
     state: Start
-        q: * *start
+        q: *
         a: Подождите немного
         #Аналогичная функция так же должна быть достпна в JS API
         timeout: /timedout || interval = 10s
