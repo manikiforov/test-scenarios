@@ -5,8 +5,8 @@ theme: /
     
     state: Start
         q!: time
-        a: Вы сказали: {{$parseTree.text}}
-        a: параметры запроса: {{JSON.stringify($request.data)}}
+        a: Таймер начался когда вы сказали: {{$parseTree.text}}
+        a: Напишите что нибудь и таймер перезапустится
         script: $reactions.timeout({interval: '30 seconds', targetState: './timedout'});
         
         state:
@@ -15,7 +15,7 @@ theme: /
             go!: /Start
 
         state: timedout
-            a: Этот ответ должен быть выведен в случае, если клиент молчит
+            a: Первый таймер закончился, второй начался. Напиши что нибудь и снова начнется первый
             timeout: /end || interval = "10 sec"
 
     state: end
