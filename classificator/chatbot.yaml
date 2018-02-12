@@ -4,7 +4,7 @@ entryPoint:
   - main.sc
 
 tests:
-  include:
+  exclude:
     - test.xml
 
 # Подключаем справочники классификатора
