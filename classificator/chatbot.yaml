@@ -9,7 +9,7 @@ tests:
 
 # Подключаем справочники классификатора
 exampleGroups:
- - src/classifier.yaml
+  - src/examples.json
  
 # Конфигурируем алгоритм классификатора
 aligner:
