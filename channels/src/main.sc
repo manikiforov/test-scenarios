@@ -1,5 +1,5 @@
 theme: /
 
-state: 1
+    state: Start
         q!: start
         a: Вы сказали: {{$parseTree.text}}
