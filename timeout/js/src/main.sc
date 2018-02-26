@@ -1,7 +1,7 @@
 theme: /
     state:
         q: *
-        a: Набери timeout чтобы начать
+        a: Набери timeout или loop чтобы начать
     
     state: Start
         q!: timeout
@@ -26,3 +26,8 @@ theme: /
     state: end
         a: Тест окончен
         go: /
+        
+    state: loop
+        q!: loop
+        a: Цикл бам бам
+        timeout: /loop || interval = 2s
