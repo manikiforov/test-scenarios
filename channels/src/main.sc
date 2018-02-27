@@ -10,24 +10,15 @@ theme: /
         
     state: Operator
         q!: operator
-        script:
-            $session.nonsenseQuery = $parseTree._Root
-            dontPushState();
         if: !hasOperatorsOnline()
             go!: Switch/NoOperatorsOnline
         else:
-            a: {{ yamlAnswer(main.CatchAll) }}
-            if: ($session.lastState && $session.lastState != "/CatchAll")
-                buttons:
-                    "{{ yamlButton(main.CatchAll, 'Yes') }}" -> Switch
-                    "{{ yamlButton(main.CatchAll, 'No') }}" -> {{ $session.lastState }}
-            else:
-                buttons:
+            buttons:
                     "{{ yamlButton(main.CatchAll, 'Yes') }}" -> Switch
                     "{{ yamlButton(main.CatchAll, 'No') }}" -> /Menu
-        
+                
         state: Switch
-            a: {{ yamlAnswer(main.Switch) }}
+            a: Переводим на оператора, кстати Марксу уже больше 200лет!
             buttons:
                 { text: "{{ yamlButton(main.Switch, 'Go2Menu') }}", storeForViberLivechat: true }
             script:
