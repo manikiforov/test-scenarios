@@ -27,9 +27,9 @@ theme: /
                 $response.replies
                  .push({
                     type:"switch",
-                    closeChatPhrases: ["/closeLiveChat", yamlButton(main.Switch, 'Go2Menu')],
+                    closeChatPhrases: ["/closeLiveChat"],
                     firstMessage: $client.history,
-                    lastMessage: yamlScript(main.Switch, 'ClientClosedChat'),
+                    lastMessage: "alert"
                 });
 
             state: NoOperatorsOnline
