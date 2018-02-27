@@ -48,5 +48,5 @@ theme: /
                             ignoreOffline: true,
                             oneTimeMessage: true
                          });
-                    go!: /Start
+                    go!: /CatchAll
         
