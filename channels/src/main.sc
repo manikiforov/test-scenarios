@@ -27,9 +27,9 @@ theme: /
                 $response.replies
                  .push({
                     type:"switch",
-                    closeChatPhrases: ["/closeLiveChat"],
+                    closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
                     firstMessage: $client.history,
-                    lastMessage: "alert"
+                    lastMessage: "Клиент закрыл чат, паршивец эдакий"
                 });
 
             state: NoOperatorsOnline
