@@ -33,8 +33,7 @@ theme: /
                 });
 
             state: NoOperatorsOnline
-                event: noLivechatOperatorsOnline
-                a: Операторов нет, а ты есть.
+                a: Операторов нет, а ты есть. Но ты напиши им, порадуй зарождающуюся шизу.
                 buttons:
                     "Вернись в лоно земли обетованной" -> /Start
                 state: GetUserInfo
