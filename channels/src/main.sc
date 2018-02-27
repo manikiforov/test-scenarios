@@ -21,15 +21,15 @@ theme: /
         state: Switch
             a: Переводим на оператора, кстати Марксу уже больше 200лет!
             buttons:
-                { text: "Закрыть диалог", storeForViberLivechat: true } -> /Start
+                { text: "Закрыть диалог", storeForViberLivechat: true } -> /CatchAll
             script:
                 $response.replies = $response.replies || [];
                 $response.replies
                  .push({
                     type:"switch",
-                    closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
+                    closeChatPhrases: ["/closeLiveChat"],
                     firstMessage: $client.history,
-                    lastMessage: "Клиент закрыл чат, паршивец эдакий"
+                    lastMessage: "alert"
                 });
 
             state: NoOperatorsOnline
