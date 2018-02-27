@@ -21,7 +21,7 @@ theme: /
         state: Switch
             a: Переводим на оператора, кстати Марксу уже больше 200лет!
             buttons:
-                { text: "Закрыть диалог", storeForViberLivechat: true }
+                { text: "Закрыть диалог", storeForViberLivechat: true } -> /Start
             script:
                 $response.replies = $response.replies || [];
                 $response.replies
