@@ -13,6 +13,7 @@ theme: /
         if: !hasOperatorsOnline()
             go!: Switch/NoOperatorsOnline
         else:
+            a: Переходим?
             buttons:
                     "Да" -> Switch
                     "Нет" -> /Start
