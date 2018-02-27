@@ -43,7 +43,7 @@ theme: /
                         $response.replies
                          .push({
                             type:"switch",
-                            firstMessage: '{{$parseTree.text}} \nДанное сообщение было отправлено в нерабочее время.',
+                            firstMessage: $parseTree.text + '\nДанное сообщение было отправлено в нерабочее время.',
                             ignoreOffline: true,
                             oneTimeMessage: true
                          });
