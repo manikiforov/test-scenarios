@@ -14,22 +14,15 @@ theme: /
             go!: Switch/NoOperatorsOnline
         else:
             buttons:
-                    "{{ yamlButton(main.CatchAll, 'Yes') }}" -> Switch
-                    "{{ yamlButton(main.CatchAll, 'No') }}" -> /Menu
+                    "Да" -> Switch
+                    "Нет" -> /Start
                 
         state: Switch
             a: Переводим на оператора, кстати Марксу уже больше 200лет!
             buttons:
-                { text: "{{ yamlButton(main.Switch, 'Go2Menu') }}", storeForViberLivechat: true }
+                { text: "Закрыть диалог", storeForViberLivechat: true }
             script:
-                noBackButton();
-                dontPushState();
                 $response.replies = $response.replies || [];
-                if ($temp.switchFirstMessage) {
-                    $client.history = $temp.switchFirstMessage;
-                } else {
-                    $client.history = services.createFirstMessage();
-                }
                 $response.replies
                  .push({
                     type:"switch",
@@ -40,42 +33,19 @@ theme: /
 
             state: NoOperatorsOnline
                 event: noLivechatOperatorsOnline
-                script:
-                    if ($temp.switchFirstMessage) {
-                        $client.history = $temp.switchFirstMessage;
-                    } else {
-                        $client.history = services.createFirstMessage();
-                    }
-                    noBackButton();
-                    dontPushState();
-                a: {{ yamlAnswer(main.NoOperatorsOnline) }}
+                a: Операторов нет, а ты есть.
                 buttons:
-                    "{{ lang(main.MenuButton) }}"
-
+                    "Вернись в лоно земли обетованной" -> /Start
                 state: GetUserInfo
-                    q: * ($phoneNumber|$email) *
+                    q: *
                     script:
-                        noBackButton();
-                        dontPushState();
-                        var info = $request.query;
-                        log($request.query);
                         $response.replies = $response.replies || [];
                         $response.replies
                          .push({
                             type:"switch",
-                            firstMessage: 'Данное сообщение было отправлено в нерабочее время.\n' + $client.history + '\n' + info,
+                            firstMessage: 'Данное сообщение было отправлено в нерабочее время.',
                             ignoreOffline: true,
                             oneTimeMessage: true
                          });
-                    a: {{ yamlAnswer(main.GetUserInfo) }}
-                    go!: /Menu
-
-                state: NoInfo
-                    q: *
-                    script:
-                        noBackButton();
-                        dontPushState();
-                    a: {{ yamlAnswer(main.NoInfo) }}
-                    buttons:
-                        "{{ lang(main.MenuButton) }}"
+                    go!: /Start
         
