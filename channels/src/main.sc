@@ -8,6 +8,32 @@ theme: /
         q!: *
         a: Скажите боту чтото осмысленное.
         
+    state: Destination
+        q!: destination
+        if: !hasOperatorsOnline()
+            go!: NoOperatorsOnline
+        else:
+            a: Переходим?
+            buttons:
+                    "Да" -> Switch
+                    "Нет" -> /CatchAll
+                    
+        state: NoOperatorsOnline
+            a: Операторов сейчас нет, они отравились сушами в стриптиз баре.
+        
+        state: Groups
+            a: Перевожу на оператора. Не ходите с ним в стриптиз бар!
+            script:
+                $client.history = createFirstMessage();
+                $response.replies = $response.replies || [];
+                $response.replies
+                 .push({
+                    type:"switch",
+                    closeChatPhrases: catchAll.closeChatPhrases || ["/close"],
+                    firstMessage: $client.history,
+                    destination: "support",
+                });
+        
     state: LivechatReset
         event: livechatFinished
         go!: /CatchAll
