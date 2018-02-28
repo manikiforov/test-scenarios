@@ -8,6 +8,10 @@ theme: /
         q!: *
         a: Скажите боту чтото осмысленное.
         
+    state: LivechatReset
+        event: livechatFinished
+        go!: /CatchAll
+        
     state: Operator
         q!: operator
         if: !hasOperatorsOnline()
@@ -16,7 +20,7 @@ theme: /
             a: Переходим?
             buttons:
                     "Да" -> Switch
-                    "Нет" -> /Start
+                    "Нет" -> /CatchAll
                 
         state: Switch
             a: Переводим на оператора, кстати Марксу уже больше 200лет!
@@ -29,7 +33,7 @@ theme: /
                     type:"switch",
                     closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
                     firstMessage: $client.history,
-                    lastMessage: "alert"
+                    lastMessage: "Этот паршивец закрыл диалог, запомни это."
                 });
 
             state: NoOperatorsOnline
