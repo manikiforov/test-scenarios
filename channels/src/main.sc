@@ -8,6 +8,36 @@ theme: /
         q!: *
         a: Скажите боту чтото осмысленное.
         
+    state: Prechat
+        q!: prechat
+        if: !hasOperatorsOnline()
+            go!: NoOperatorsOnline
+        else:
+            a: Переходим?
+            buttons:
+                    "Да" -> PrechatO
+                    "Нет" -> /CatchAll
+                    
+        state: NoOperatorsOnline
+            a: Операторов сейчас нет, они отравились сушами в стриптиз баре.
+        
+        state: PrechatO
+            a: Перевожу на оператора. Не ходите с ним в стриптиз бар!
+            script:
+                $response.replies = $response.replies || [];
+                $response.replies
+                 .push({
+                    type:"switch",
+                    closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
+                    firstMessage: $client.history,
+                    destination: "group1",
+                    lastMessage: "Этот паршивец закрыл диалог, запомни это.",
+                    atributes: {
+                        "Имя": "Доминик",
+                        "Фамилия": "Флэндри"
+                    }
+                });
+        
     state: Destination
         q!: destination
         if: !hasOperatorsOnline("group1")
