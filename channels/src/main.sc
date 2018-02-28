@@ -15,7 +15,7 @@ theme: /
         else:
             a: Переходим?
             buttons:
-                    "Да" -> Switch
+                    "Да" -> Groups
                     "Нет" -> /CatchAll
                     
         state: NoOperatorsOnline
@@ -24,14 +24,13 @@ theme: /
         state: Groups
             a: Перевожу на оператора. Не ходите с ним в стриптиз бар!
             script:
-                $client.history = createFirstMessage();
                 $response.replies = $response.replies || [];
                 $response.replies
                  .push({
                     type:"switch",
-                    closeChatPhrases: catchAll.closeChatPhrases || ["/close"],
+                    closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
                     firstMessage: $client.history,
-                    destination: "support",
+                    destination: "group1",
                 });
         
     state: LivechatReset
