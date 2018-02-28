@@ -31,6 +31,7 @@ theme: /
                     closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
                     firstMessage: $client.history,
                     destination: "group1",
+                    lastMessage: "Этот паршивец закрыл диалог, запомни это."
                 });
         
     state: LivechatReset
