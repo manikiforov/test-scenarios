@@ -10,7 +10,7 @@ theme: /
         
     state: Destination
         q!: destination
-        if: !hasOperatorsOnline()
+        if: !hasOperatorsOnline("group1")
             go!: NoOperatorsOnline
         else:
             a: Переходим?
