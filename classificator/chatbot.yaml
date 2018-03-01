@@ -16,7 +16,7 @@ aligner:
   # Указываем порог достоверности классификатора
   noMatchThreshold: 0.4
   # Подключаем словари по умолчанию. При необходимости словари могут быть собраны специально под проект с помощью утилиты zb-nlp
-  vocabulary: common-vocabulary.json
+  vocabulary: aer.json
   stopWordsFile: stop-words.txt
   synsetsFiles:
     - common-synsets.json
@@ -28,4 +28,4 @@ nlp:
   morphology: myStem      # обязательный параметр
   costStrategy: weighted  # обязательный параметр
   # Словарь должен совпадать с указанным в секции aligner
-  vocabulary: common-vocabulary.json
+  vocabulary: aer.json
