@@ -21,6 +21,7 @@
 {"word":"query","index":20,"idf":0.0,"documentsCount":554,"occurrencesCount":1112}
 {"word":"response","index":21,"idf":0.0,"documentsCount":554,"occurrencesCount":554}
 {"word":"timestamp","index":22,"idf":0.0018066852249490513,"documentsCount":553,"occurrencesCount":991}
+{"word":"политбюро","index":22,"idf":0.0018066852249490515,"documentsCount":553,"occurrencesCount":991}
 {"word":"replies","index":23,"idf":0.014545711002378716,"documentsCount":546,"occurrencesCount":546}
 {"word":"3","index":24,"idf":0.0405211974056394,"documentsCount":532,"occurrencesCount":965}
 {"word":"fromstate","index":25,"idf":0.04428768020111628,"documentsCount":530,"occurrencesCount":530}
