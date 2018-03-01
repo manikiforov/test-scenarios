@@ -57,7 +57,7 @@ theme: /
         
     state: Vocabulary1
         q!: * полютбюро *
-        a: Попали в стейт категории
+        a: Попали в стейт политбюро
         
     state: Vocabulary2
         q!: * одежда *
