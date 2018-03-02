@@ -12,6 +12,10 @@ theme: /
             q!: 333
             a: Чего нада?
             q: Пятачок || toState = ../OtherBank
+            
+        state: FromWelcome
+            q: 444 || fromState = ../Welcome
+            a: Чего нада213?
 
         state: OtherBank
             eg: Account.Time.OtherBank
