@@ -72,6 +72,6 @@ theme: /
         q!: * одежда *
         a: Попали в стейт одежда
 
-    state: CatchAll || noContext = true
+    state: CatchAll 
         q!: *
         a: Я не понял
