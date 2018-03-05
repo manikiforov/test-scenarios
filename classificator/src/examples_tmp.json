@@ -1,7 +1,7 @@
 {
   "classes" : [
     {
-      "path" : "/Deposit/InterestPayout",
+      "path" : "/Temporary/InterestPayout",
       "phrases" : [
         "Добрый день. Скажите, % от вклада какого числа будет начислен?",
         "Мне не пришли проценты по вкладу за декабрь. Почему？",
