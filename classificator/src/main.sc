@@ -4,6 +4,10 @@ theme: /
     state: OutOfScope
         eg!: Account.OutOfScope
         go!: /Switch
+        
+    state: Temp
+        eg!: Temporary.InterestPayout
+        a: Второй справочник работает
 
     state: Time
         eg!: Account.Time
