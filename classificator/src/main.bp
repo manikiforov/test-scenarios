@@ -1,0 +1,71 @@
+{
+  "positions" : [ {
+    "id" : "/OutOfScope",
+    "x" : 200,
+    "y" : 2565
+  }, {
+    "id" : "/Time",
+    "x" : 200,
+    "y" : 2355
+  }, {
+    "id" : "/Time/Welcome",
+    "x" : 200,
+    "y" : 2126
+  }, {
+    "id" : "/Time/FromWelcome",
+    "x" : 736,
+    "y" : 2095
+  }, {
+    "id" : "/Time/OtherBank",
+    "x" : 736,
+    "y" : 2293
+  }, {
+    "id" : "/Time/Internal",
+    "x" : 200,
+    "y" : 1978
+  }, {
+    "id" : "/Commission",
+    "x" : 200,
+    "y" : 1830
+  }, {
+    "id" : "/Commission/OtherBank",
+    "x" : 200,
+    "y" : 1682
+  }, {
+    "id" : "/Commission/Internal",
+    "x" : 200,
+    "y" : 1534
+  }, {
+    "id" : "/GiveMoneyBack",
+    "x" : 200,
+    "y" : 1386
+  }, {
+    "id" : "/CantDoTransfer",
+    "x" : 200,
+    "y" : 1238
+  }, {
+    "id" : "/FailTransfer",
+    "x" : 200,
+    "y" : 1090
+  }, {
+    "id" : "/TransferRefusal",
+    "x" : 200,
+    "y" : 942
+  }, {
+    "id" : "/Limit",
+    "x" : 200,
+    "y" : 794
+  }, {
+    "id" : "/Vocabulary1",
+    "x" : 200,
+    "y" : 596
+  }, {
+    "id" : "/Vocabulary2",
+    "x" : 200,
+    "y" : 398
+  }, {
+    "id" : "/CatchAll",
+    "x" : 200,
+    "y" : 200
+  } ]
+}
