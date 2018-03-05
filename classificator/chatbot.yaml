@@ -10,7 +10,7 @@ tests:
 # Подключаем справочники классификатора
 exampleGroups:
   - src/examples.json
-  - src/examples.json
+  - src/examples_tmp.json
  
 # Конфигурируем алгоритм классификатора
 aligner:
