@@ -44,3 +44,16 @@ theme: /
 
             $session.lastActiveTime = currentDate();
         });
+        
+    state: CatchAll
+        q!: *
+        script: pageName("Что то непонятно");
+        a: Что то не понятное
+        
+    state: Первый стейт
+        q!: 1
+        scrpit: pageName("Первый стейт");
+        a: Пойдем по первой
+        
+        state: Первый контекстный
+        
