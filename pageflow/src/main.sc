@@ -7,7 +7,6 @@ theme: /
     init:
         bind("preProcess", function($context) {
             var $session = $context.session, $temp = $context.temp, $request = $context.request, $parseTree = $context.parseTree;
-            checkButtonTransition();
             $session.noBackButton = false;
             $session.dontPushState = false;
 
