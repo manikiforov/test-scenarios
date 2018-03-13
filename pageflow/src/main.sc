@@ -1,5 +1,4 @@
 require: integration.js
-    module = functions
 
 theme: /
 
