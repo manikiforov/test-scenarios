@@ -12,3 +12,7 @@ function rememberLastState() {
 function currentState() {
   return $jsapi.context().currentState;
 }
+
+function testMode() {
+    return !!$jsapi.context().testContext;
+}
