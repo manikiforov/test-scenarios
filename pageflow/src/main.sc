@@ -31,15 +31,6 @@ theme: /
             if (!testMode() && !$temp.specialState) {
                 services.updatePageInfo();
             }
-            setMarkupMode("markdown");
-            setFacebookMenuTitle();
-
-            if (!$session.dontPushState) {
-                pushBackState();
-            }
-            if (!$session.noBackButton) {
-                pushBackButton();
-            }
 
             $response.orgData = { 'firm': $client.FirmArr, 'number': $client.numberArr };
 
