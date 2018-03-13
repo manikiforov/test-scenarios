@@ -1,3 +1,5 @@
+require: common.js
+    module = common
 require: integration.js
 
 theme: /
