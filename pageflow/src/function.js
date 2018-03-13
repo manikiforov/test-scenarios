@@ -8,3 +8,7 @@ function rememberLastState() {
     $session.lastState = currentState();
     log("REMEMBER LAST STATE: " + $session.lastState)
 }
+
+function currentState() {
+  return $jsapi.context().currentState;
+}
