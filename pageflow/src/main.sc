@@ -14,7 +14,7 @@ theme: /
             var $session = $context.session;
             var $temp = $context.temp;
             var $response = $context.response;
-            var $client = $context.client;
+            var $client = $context.client;3
             rememberLastState();
             if (!testMode() && !$temp.specialState) {
                 services.updatePageInfo();
