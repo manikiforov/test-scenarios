@@ -1,3 +1,5 @@
+require: patterns/patterns.sc
+
 theme: /
 
     state: CatchAll
