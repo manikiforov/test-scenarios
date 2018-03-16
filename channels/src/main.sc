@@ -31,7 +31,7 @@ theme: /
                     closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
                     firstMessage: $client.history,
                     lastMessage: "Этот паршивец закрыл диалог, запомни это.",
-                    atributes: {
+                    attributes: {
                         "Имя": "Доминик",
                         "Фамилия": "Флэндри"
                     }
