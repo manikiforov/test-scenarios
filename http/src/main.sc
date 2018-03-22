@@ -7,4 +7,4 @@ theme: /
     state: First
         q!: Пыщ
         script:
-            $reactions.answer($http.query('http://localhost:9001/method1').data.text);
+            $reactions.answer($http.query('http://echo.jsontest.com/key/value/one/two').one);
