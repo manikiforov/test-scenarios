@@ -2,7 +2,7 @@ theme: /
 
     state: Start
         q!: start
-        a: Вы сказали и бот ответил КОПИЯ: {{$parseTree.text}}
+        a: Вы сказали и бот ответил КОПИЯ123: {{$parseTree.text}}
         
     state: CatchAll
         q!: *
