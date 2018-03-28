@@ -10,6 +10,11 @@ tests:
 # Подключаем справочники классификатора
 exampleGroups:
   - src/examples.json
+  
+classifier:
+  engine: sts
+  parameters:
+    algorithm: aligner2
  
 # Конфигурируем алгоритм классификатора
 aligner:
