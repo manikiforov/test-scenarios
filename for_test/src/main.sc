@@ -1,7 +1,3 @@
-require: all.sc
-    module = common
-require: patterns.sc
-    module = common
 
 theme: /
     @InputText
@@ -133,3 +129,8 @@ theme: /
 
     state: newNode_6
         image: https://248305.selcdn.ru/public_test/39/80/ZpZAMAdFZtpCEAjO.png
+
+    state: newNode_7
+        q!: *
+        a: Окей, начнем!
+        go!: /step1
