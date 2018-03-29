@@ -1,12 +1,8 @@
-require: all.sc
-    module = common
-require: patterns.sc
-    module = common
 
 theme: /
 
     state: 1
-        q!: start
+        q!: /start
         a: Вы сказали: {{$parseTree.text}}
         a: параметры запроса: {{JSON.stringify($request.data)}}
         go!: /newNode_1
@@ -30,7 +26,11 @@ theme: /
           "varName" : "number",
           "minValue" : -500,
           "maxValue" : 55,
-          "failureMessage" : [ "Введите число от 1 до 5", "Где твои мозги?!", "Не хотите в Болливуд?!" ],
+          "failureMessage" : [
+            "Введите число от 1 до 5",
+            "Где твои мозги?!",
+            "Не хотите в Болливуд?!"
+          ],
           "then" : "/newNode_4"
         }
     state: newNode_2
@@ -91,7 +91,10 @@ theme: /
           "prompt" : "Вам ответит первый освободившийся оператор",
           "ignoreOffline" : false,
           "firstMessage" : "Пыщ пыщ вам сообщение",
-          "closeChatPhrases" : [ "пока", "хватит плз" ],
+          "closeChatPhrases" : [
+            "пока",
+            "хватит плз"
+          ],
           "destination" : "",
           "attributes" : {
             "мемасики" : "112312312"
