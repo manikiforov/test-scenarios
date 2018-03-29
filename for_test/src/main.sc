@@ -11,5 +11,5 @@ theme: /
         a: Скажите боту чтото осмысленное.
 
     state: newNode_2
-        e!: kek
+        event!: kek
         a: ты сказал kek???
