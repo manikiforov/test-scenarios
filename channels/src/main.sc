@@ -1,13 +1,14 @@
+
 theme: /
 
     state: Start
         q!: start
         a: Вы сказали и бот ответил: {{$parseTree.text}}
-        
+
     state: CatchAll
         q!: *
         a: Скажите боту чтото осмысленное.
-        
+
     state: Prechat
         q!: prechat
         if: !hasOperatorsOnline()
@@ -15,12 +16,12 @@ theme: /
         else:
             a: Переходим?
             buttons:
-                    "Да" -> PrechatO
-                    "Нет" -> /CatchAll
-                    
+                "Да" -> /Prechat/Prechat$IF-1$ELSE/PrechatO
+                "Нет" -> /CatchAll
+
         state: NoOperatorsOnline
             a: Операторов сейчас нет, они отравились сушами в стриптиз баре.
-        
+
         state: PrechatO
             a: Перевожу на оператора. Не ходите с ним в стриптиз бар!
             script:
@@ -36,7 +37,7 @@ theme: /
                         "Фамилия": "Флэндри"
                     }
                 });
-        
+
     state: Destination
         q!: destination
         if: !hasOperatorsOnline("group1")
@@ -44,12 +45,12 @@ theme: /
         else:
             a: Переходим?
             buttons:
-                    "Да" -> Groups
-                    "Нет" -> /CatchAll
-                    
+                "Да" -> /Destination/Destination$IF-1$ELSE/Groups
+                "Нет" -> /CatchAll
+
         state: NoOperatorsOnline
             a: Операторов сейчас нет, они отравились сушами в стриптиз баре.
-        
+
         state: Groups
             a: Перевожу на оператора. Не ходите с ним в стриптиз бар!
             script:
@@ -62,11 +63,11 @@ theme: /
                     destination: "group1",
                     lastMessage: "Этот паршивец закрыл диалог, запомни это."
                 });
-        
+
     state: LivechatReset
-        event: livechatFinished
+        event!: livechatFinished
         go!: /CatchAll
-        
+
     state: Operator
         q!: operator
         if: !hasOperatorsOnline()
@@ -74,13 +75,13 @@ theme: /
         else:
             a: Переходим?
             buttons:
-                    "Да" -> Switch
-                    "Нет" -> /CatchAll
-                
+                "Да" -> /Operator/Operator$IF-1$ELSE/Switch
+                "Нет" -> /CatchAll
+
         state: Switch
             a: Переводим на оператора, кстати Марксу уже больше 200лет!
             buttons:
-                { text: "Закрыть диалог", storeForViberLivechat: true } -> /CatchAll
+                {"text":"Закрыть диалог","storeForViberLivechat":true}
             script:
                 $response.replies = $response.replies || [];
                 $response.replies
@@ -95,6 +96,7 @@ theme: /
                 a: Операторов нет, а ты есть. Но ты напиши им, порадуй зарождающуюся шизу.
                 buttons:
                     "Вернись в лоно земли обетованной" -> /Start
+
                 state: GetUserInfo
                     q: *
                     script:
@@ -107,4 +109,3 @@ theme: /
                             oneTimeMessage: true
                          });
                     go!: /CatchAll
-        

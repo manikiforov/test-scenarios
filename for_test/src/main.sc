@@ -17,3 +17,6 @@ theme: /
 
     state: newNode_1
         a: Hello
+
+    state: start
+        go!: /newNode_0
