@@ -39,6 +39,14 @@
       ]
     },
     {
+      "id" : "null_copy",
+      "path" : "/Cards/InterestPayout_copy",
+      "description" : "",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
       "id" : "",
       "path" : "/Other/SMSInformation/DoNotGetSMS",
       "description" : "",
