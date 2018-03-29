@@ -1,6 +1,14 @@
 {
   "classes" : [
     {
+      "id" : "",
+      "path" : "/123",
+      "description" : "",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
       "id" : "1",
       "path" : "/First12345671",
       "description" : "1241241414",
