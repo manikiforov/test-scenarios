@@ -82,5 +82,5 @@ theme: /
         a: Я не понял
 
     state: newNode_18
-        eg!: /Account/FailTransfer
-        a: JKKKJK
+        eg!: /Cards/ActivateCard
+        a: Попали в Cards.ActivateCard
