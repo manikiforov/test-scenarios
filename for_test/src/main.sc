@@ -4,7 +4,7 @@ theme: /
         {
           "prompt" : "Загадай число",
           "varName" : "number",
-          "then" : ""
+          "then" : "/newNode_1"
         }
     state: newNode_0
         a: Загадай число
@@ -13,4 +13,7 @@ theme: /
             q: *
             script:
                 $session.number = $parseTree.text;
-            go!:
+            go!: /newNode_1
+
+    state: newNode_1
+        a: Hello
