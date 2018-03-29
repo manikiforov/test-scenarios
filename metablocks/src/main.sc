@@ -42,7 +42,7 @@ theme: /
         a: Введите число, о Величаший!
 
         state: CatchNumber
-            q: $number
+            q: $Number
             script:
                 var failureMessages = [
                     "Введите число от 1 до 5",
@@ -86,10 +86,10 @@ theme: /
             "Дя" -> Agree
             "Нэт" -> Disagree
         state: Agree
-            q: $Agree
+            q: $agree
             go!: /newNode_3
         state: Disagree
-            q: $Disagree
+            q: $disagree
             go!: /newNode_5
     @Switch
         {
