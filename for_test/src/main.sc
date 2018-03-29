@@ -58,7 +58,7 @@ theme: /
     @Confirmation
         {
           "prompt" : "Вы согласны перейти в плоский мир?",
-          "agreeState" : "",
+          "agreeState" : "/newNode_4",
           "disagreeState" : "/step4",
           "useButtons" : true,
           "agreeButton" : "Ну давай",
@@ -71,7 +71,7 @@ theme: /
             "Нет, не буду" -> Disagree
         state: Agree
             q: $agree
-            go!:
+            go!: /newNode_4
         state: Disagree
             q: $disagree
             go!: /step4
@@ -120,3 +120,12 @@ theme: /
             event: livechatFinished
             a: Оператор завершил диалог
             go!:
+
+    state: newNode_4
+        a: Такой кекас!
+
+    state: newNode_5
+        image:
+
+    state: newNode_6
+        image:
