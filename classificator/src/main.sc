@@ -80,3 +80,7 @@ theme: /
     state: CatchAll
         q!: *
         a: Я не понял
+
+    state: newNode_18
+        eg!: /Account/FailTransfer
+        a: JKKKJK
