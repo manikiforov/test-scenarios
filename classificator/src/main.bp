@@ -5,24 +5,24 @@
     "y" : 2565
   }, {
     "id" : "/Time",
-    "x" : 200,
-    "y" : 2355
+    "x" : 615,
+    "y" : 1730
   }, {
     "id" : "/Time/Welcome",
-    "x" : 200,
-    "y" : 2126
+    "x" : 1222,
+    "y" : 1782
   }, {
     "id" : "/Time/FromWelcome",
-    "x" : 736,
-    "y" : 2095
+    "x" : 1447,
+    "y" : 1989
   }, {
     "id" : "/Time/OtherBank",
-    "x" : 736,
-    "y" : 2293
+    "x" : 1213,
+    "y" : 2178
   }, {
     "id" : "/Time/Internal",
-    "x" : 200,
-    "y" : 1978
+    "x" : 797,
+    "y" : 2069
   }, {
     "id" : "/Commission",
     "x" : 200,
@@ -47,6 +47,10 @@
     "id" : "/FailTransfer",
     "x" : 200,
     "y" : 1090
+  }, {
+    "id" : "/ClassFailTransfer",
+    "x" : 0,
+    "y" : 0
   }, {
     "id" : "/TransferRefusal",
     "x" : 200,
