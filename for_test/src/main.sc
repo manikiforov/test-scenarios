@@ -1,8 +1,8 @@
 require: all.sc
-   module = common
+    module = common
 require: patterns.sc
-   module = common
-
+    module = common
+    
 theme: /
     @InputText
         {
@@ -38,7 +38,7 @@ theme: /
             script:
                 var failureMessages = [
                     "Введите число от 0 до 10",
-                    "Ты не понял? От 0 до 10!!"
+                    "Ты не понял? От 0 до 10!!!"
                 ];
                 var failureRandom = failureMessages[$reactions.random(failureMessages.length)];
                 if ($parseTree._Number < 0) {
