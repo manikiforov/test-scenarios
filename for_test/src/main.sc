@@ -1,9 +1,10 @@
 
 theme: /
 
-    state: start
+    state: Start
         q!: start
-        go!: /newNode_1
-
-    state: newNode_1
-        a: Kek
+        a: Вы сказали и бот ответил: {{$parseTree.text}}
+        
+    state: CatchAll
+        q!: *
+        a: Скажите боту чтото осмысленное.
