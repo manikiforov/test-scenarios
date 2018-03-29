@@ -20,4 +20,4 @@ theme: /
 
     state: start
         q!: inputText
-        go!: /newNode_0
+        go: /newNode_0
