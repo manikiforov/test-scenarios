@@ -1,7 +1,7 @@
 require: all.sc
-    module = common
+  module = common
 require: patterns.sc
-    module = common
+  module = common
     
 theme: /
     @InputText
