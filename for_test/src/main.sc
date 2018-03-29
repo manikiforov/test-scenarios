@@ -89,9 +89,9 @@ theme: /
           "attributes" : {
             "1" : "кек"
           },
-          "onClose" : "",
+          "onClose" : "/newNode_6",
           "chatClosedMessage" : "Оператор завершил диалог",
-          "noOperatorsOnlineState" : ""
+          "noOperatorsOnlineState" : "/newNode_5"
         }
     state: step4
         if: false || hasOperatorsOnline()
@@ -112,20 +112,20 @@ theme: /
                 $response.replies.push(switchReply);
             a: оператор курит! Жди
         else:
-            go!:
+            go!: /newNode_5
         state: NoOperatorsOnline
             event: noLivechatOperatorsOnline
-            go!:
+            go!: /newNode_5
         state: LivechatReset
             event: livechatFinished
             a: Оператор завершил диалог
-            go!:
+            go!: /newNode_6
 
     state: newNode_4
         a: Такой кекас!
 
     state: newNode_5
-        image:
+        image: https://248305.selcdn.ru/public_test/39/80/IhNuQHjuw0ER1KHx.jpg
 
     state: newNode_6
-        image:
+        image: https://248305.selcdn.ru/public_test/39/80/ZpZAMAdFZtpCEAjO.png
