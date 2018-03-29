@@ -2,30 +2,6 @@
   "classes" : [
     {
       "id" : "",
-      "path" : "/123",
-      "description" : "",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "1",
-      "path" : "/First12345671",
-      "description" : "1241241414",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "1 ",
-      "path" : "/Second1234",
-      "description" : "",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "",
       "path" : "/121",
       "description" : "",
       "phrases" : [
@@ -49,6 +25,14 @@
       ]
     },
     {
+      "id" : "1",
+      "path" : "/First1234567",
+      "description" : "1241241414ads",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
       "id" : "",
       "path" : "/Third",
       "description" : "",
@@ -59,6 +43,14 @@
     {
       "id" : "",
       "path" : "/fourq1",
+      "description" : "",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "1 ",
+      "path" : "/Second12",
       "description" : "",
       "phrases" : [
         ""
