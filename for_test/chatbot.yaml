@@ -6,3 +6,5 @@ entryPoint:
 tests:
   exclude:
     - test.xml
+    
+    
