@@ -59,7 +59,7 @@ theme: /
         {
           "prompt" : "Вы согласны перейти в плоский мир?",
           "agreeState" : "",
-          "disagreeState" : "",
+          "disagreeState" : "/step4",
           "useButtons" : true,
           "agreeButton" : "Ну давай",
           "disagreeButton" : "Нет, не буду"
@@ -74,4 +74,49 @@ theme: /
             go!:
         state: Disagree
             q: $disagree
+            go!: /step4
+    @Switch
+        {
+          "prompt" : "оператор курит! Жди",
+          "ignoreOffline" : false,
+          "firstMessage" : "Покурил? Обслужи!",
+          "closeChatPhrases" : [
+            "бб",
+            "пока",
+            "я пошел"
+          ],
+          "destination" : "",
+          "attributes" : {
+            "1" : "кек"
+          },
+          "onClose" : "",
+          "chatClosedMessage" : "Оператор завершил диалог",
+          "noOperatorsOnlineState" : ""
+        }
+    state: step4
+        if: false || hasOperatorsOnline()
+            script:
+                var switchReply = {type:"switch"};
+                switchReply.ignoreOffline = false;
+                switchReply.closeChatPhrases = [
+                     "бб",
+                     "пока",
+                     "я пошел"
+                ];
+                switchReply.destination = "";
+                switchReply.attributes = {
+                         "1": "кек"
+                };
+                switchReply.firstMessage = "Покурил? Обслужи!";
+                $response.replies = $response.replies || [];
+                $response.replies.push(switchReply);
+            a: оператор курит! Жди
+        else:
+            go!:
+        state: NoOperatorsOnline
+            event: noLivechatOperatorsOnline
+            go!:
+        state: LivechatReset
+            event: livechatFinished
+            a: Оператор завершил диалог
             go!:
