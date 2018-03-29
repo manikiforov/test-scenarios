@@ -1,12 +1,3 @@
 {
-  "classes" : [
-    {
-      "id" : "test5",
-      "path" : "/test4",
-      "description" : "",
-      "phrases" : [
-        ""
-      ]
-    }
-  ]
+  "classes" : [ ]
 }
