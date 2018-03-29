@@ -1,3 +1,12 @@
 {
-  "classes" : [ ]
+  "classes" : [
+    {
+      "id" : "",
+      "path" : "/First1",
+      "description" : "",
+      "phrases" : [
+        ""
+      ]
+    }
+  ]
 }
