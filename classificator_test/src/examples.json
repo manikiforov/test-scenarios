@@ -1,14 +1,6 @@
 {
   "classes" : [
     {
-      "id" : "test2",
-      "path" : "/test2",
-      "description" : "",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
       "id" : "test1",
       "path" : "/test1",
       "description" : "",
