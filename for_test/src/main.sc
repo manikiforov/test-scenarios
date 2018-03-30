@@ -137,12 +137,9 @@ theme: /
 
     state: newNode_8
         buttons:
-            "111" -> /newNode_9
+            "111"
             "222" -> /newNode_10
             "333" -> /newNode_11
-
-    state: newNode_9
-        a: ты нажал кнопку 1
 
     state: newNode_10
         a: ты нажал кнопку 2
