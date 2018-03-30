@@ -133,16 +133,4 @@ theme: /
     state: newNode_7
         q!: *
         a: Окей, начнем!
-        go!: /newNode_8
-
-    state: newNode_8
-        buttons:
-            "111"
-            "222" -> /newNode_10
-            "333" -> /newNode_11
-
-    state: newNode_10
-        a: ты нажал кнопку 2
-
-    state: newNode_11
-        a: ты нажал на кнопку 3
+        go!: /step1
