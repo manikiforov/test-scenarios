@@ -139,6 +139,6 @@ theme: /
         a: Окей, начнем!
         go!: /step1
 
-    state: newNode_8
-        q!: piture
-        image: https://248305.selcdn.ru/public_test/39/80/JSfS7x25hVLYVfUP.png
+    state: newNode_9
+        q!: kek
+        a: kek?
