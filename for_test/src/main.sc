@@ -2,7 +2,6 @@ require: all.sc
     module = common
 require: patterns.sc
     module = common
-    
 theme: /
     @InputText
         {
@@ -137,7 +136,7 @@ theme: /
     state: newNode_7
         q!: *
         a: Окей, начнем!
-        go!:
+        go!: /newNode_8
 
     state: newNode_8
         q!: кек
