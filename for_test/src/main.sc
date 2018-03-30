@@ -1,7 +1,4 @@
-require: all.sc
-    module = common
-require: patterns.sc
-    module = common
+
 theme: /
     @InputText
         {
@@ -140,9 +137,9 @@ theme: /
 
     state: newNode_8
         buttons:
-            "1" -> /newNode_9
-            "2" -> /newNode_10
-            "3" -> /newNode_11
+            "111" -> /newNode_9
+            "222" -> /newNode_10
+            "333" -> /newNode_11
 
     state: newNode_9
         a: ты нажал кнопку 1
