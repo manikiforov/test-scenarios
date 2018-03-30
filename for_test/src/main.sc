@@ -1,7 +1,3 @@
-require: all.sc
-    module = common
-require: patterns.sc
-    module = common
 
 theme: /
     @InputText
@@ -141,4 +137,4 @@ theme: /
 
     state: newNode_8
         q!: piture
-        image: https://248305.selcdn.ru/public_test/39/80/2TbTHdm3onHeedY6.jpg
+        image: https://248305.selcdn.ru/public_test/39/80/JSfS7x25hVLYVfUP.png
