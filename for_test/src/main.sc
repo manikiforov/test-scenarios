@@ -140,9 +140,9 @@ theme: /
 
     state: newNode_8
         buttons:
-            "Переход" -> /newNode_9
-            "Новая кнопка 1" -> /newNode_10
-            "Новая кнопка 2" -> /newNode_11
+            "1" -> /newNode_9
+            "2" -> /newNode_10
+            "3" -> /newNode_11
 
     state: newNode_9
         a: ты нажал кнопку 1
