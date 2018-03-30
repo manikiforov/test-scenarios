@@ -133,4 +133,19 @@ theme: /
     state: newNode_7
         q!: *
         a: Окей, начнем!
-        go!: /step1
+        go!: /newNode_8
+
+    state: newNode_8
+        random:
+            go!: /newNode_9
+            go!: /newNode_10
+            go!: /newNode_11
+
+    state: newNode_9
+        a: 1
+
+    state: newNode_10
+        a: 2
+
+    state: newNode_11
+        a: 3
