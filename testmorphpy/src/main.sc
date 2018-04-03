@@ -35,8 +35,8 @@ theme: /
         a: {{toPrettyString($parseTree.AnyWord)}}
         
     state: TestTokenize
-        q!: *tokenize*
+        q!: tokenize
         script:
-            $temp.m = $nlp.tokenize($parseTree.text);
+            $temp.m = $nlp.tokenize("Прошу активировать старую карту. У нее сегодня еще действует срок. Я в поездке и не имею возможности tokenize получить пока новую. Спасибо. С наступающим.");
         a: morph: {{JSON.stringify($temp.m)}}
         a: {{toPrettyString($parseTree.AnyWord)}}
