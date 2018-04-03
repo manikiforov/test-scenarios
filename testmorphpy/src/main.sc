@@ -33,3 +33,10 @@ theme: /
             $temp.m = $nlp.conform($parseTree.AnyWord[0].words, 5);
         a: morph: {{JSON.stringify($temp.m)}}
         a: {{toPrettyString($parseTree.AnyWord)}}
+        
+    state: TestTokenize
+        q!: *tokenize*
+        script:
+            $temp.m = $nlp.tokenize($parseTree.text);
+        a: morph: {{JSON.stringify($temp.m)}}
+        a: {{toPrettyString($parseTree.AnyWord)}}
