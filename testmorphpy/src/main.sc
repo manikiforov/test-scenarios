@@ -38,5 +38,5 @@ theme: /
         q!: tokenize
         script:
             $temp.m = $nlp.tokenize("Прошу активировать старую карту. У нее сегодня еще действует срок. Я в поездке и не имею возможности tokenize получить пока новую. Спасибо. С наступающим.");
-        a: morph: {{$temp.m}}
+        a: morph: {{$temp.m[0]}}
         a: {{toPrettyString($parseTree.AnyWord)}}
