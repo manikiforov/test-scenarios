@@ -3,7 +3,7 @@ theme: /
 
     state: OutOfScope
         eg!: Account.OutOfScope
-        go!: /Switch
+        go!: /Vocabulary2
 
     state: Time
         eg!: Account.Time
