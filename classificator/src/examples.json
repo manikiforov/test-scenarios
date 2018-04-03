@@ -1037,7 +1037,7 @@
       ]
     },
     {
-      "id" : "1",
+      "id" : "",
       "path" : "/Credit/PaymentFromAccount",
       "description" : "",
       "phrases" : [
@@ -1284,7 +1284,7 @@
       ]
     },
     {
-      "id" : "1",
+      "id" : "",
       "path" : "/Credit/EarlyRepaymentSum",
       "description" : "",
       "phrases" : [
