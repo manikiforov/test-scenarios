@@ -1,5 +1,18 @@
+require: all.sc
+  module = common
+require: patterns.sc
+  module = common
+
 
 theme: /
+
+    state: Number
+        q!: $Number
+        a: Вы отправили чилсо и оно попало в паттерн
+    
+    state: DateTime
+        q!: $DateTime
+        a: Вы отправили дату и она попала в паттерн даты
 
     state: OutOfScope
         eg!: Account.OutOfScope
