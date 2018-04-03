@@ -40,3 +40,11 @@ theme: /
             $temp.m = $nlp.tokenize("Прошу активировать старую карту. У нее сегодня еще действует срок. Я в поездке и не имею возможности tokenize получить пока новую. Спасибо. С наступающим.");
         a: morph: {{$temp.m[0]}}
         a: {{toPrettyString($parseTree.AnyWord)}}
+        
+    state: TestMatch
+        q!: match $AnyWord
+        script:
+            $temp.m = $nlp.match($parseTree.AnyWord[0].words, "/");
+        a: morph: {{JSON.stringify($temp.m)}}
+        a: {{toPrettyString($parseTree.AnyWord)}}
+        
