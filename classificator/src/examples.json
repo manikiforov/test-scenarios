@@ -1,7 +1,7 @@
 {
   "classes" : [
     {
-      "id" : "1",
+      "id" : "",
       "path" : "/Cards/ActivateCard",
       "description" : "",
       "phrases" : [
@@ -74,7 +74,7 @@
       ]
     },
     {
-      "id" : "1",
+      "id" : "",
       "path" : "/Other/MobilePay/Apple",
       "description" : "",
       "phrases" : [
