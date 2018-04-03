@@ -23,7 +23,7 @@ theme: /
     state: TestInflect
         q!: inflect $AnyWord
         script:
-            $temp.m = $nlp.inflect($parseTree.AnyWord[0].words);
+            $temp.m = $nlp.inflect($parseTree.AnyWord[0].words, "accs");
         a: morph: {{JSON.stringify($temp.m)}}
         a: {{toPrettyString($parseTree.AnyWord)}}
         
