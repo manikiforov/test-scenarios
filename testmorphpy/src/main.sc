@@ -14,7 +14,7 @@ theme: /
         a: Скажите боту чтото осмысленное.
         
     state: Testmorphpy
-        q!: testmorphpy $AnyWord
+        q!: test $AnyWord
         script:
             $temp.m = $nlp.parseMorph($parseTree.AnyWord[0].words);
         a: morph: {{JSON.stringify($temp.m)}}
