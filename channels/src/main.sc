@@ -16,7 +16,7 @@ theme: /
         else:
             a: Переходим?
             buttons:
-                "Да" -> /Prechat/Prechat$IF-1$ELSE/PrechatO
+                "Да" -> PrechatO
                 "Нет" -> /CatchAll
 
         state: NoOperatorsOnline
@@ -45,7 +45,7 @@ theme: /
         else:
             a: Переходим?
             buttons:
-                "Да" -> /Destination/Destination$IF-1$ELSE/Groups
+                "Да" -> Groups
                 "Нет" -> /CatchAll
 
         state: NoOperatorsOnline
@@ -75,7 +75,7 @@ theme: /
         else:
             a: Переходим?
             buttons:
-                "Да" -> /Operator/Operator$IF-1$ELSE/Switch
+                "Да" -> Switch
                 "Нет" -> /CatchAll
 
         state: Switch
