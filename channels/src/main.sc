@@ -3,7 +3,7 @@ theme: /
 
     state: Start
         q!: start
-        a: Вы сказали и бот ответил kek: {{$parseTree.text}}
+        a: Вы сказали и бот ответил: {{$parseTree.text}}
 
     state: CatchAll
         q!: *
