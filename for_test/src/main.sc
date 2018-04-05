@@ -20,5 +20,9 @@ theme: /
     state: newNode_3
         a: kek?
 
+    state: reqursivePatterns
+        q!: $activateService
+        a: Рекурсия
+        
     state: newNode_4
         a: not kek?
