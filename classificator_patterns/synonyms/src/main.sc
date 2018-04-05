@@ -2,7 +2,7 @@ require: patterns.sc
 
 theme: /
 
-    state:
+    state: Patterns
         eg!: Patterns.Syn
         a: Вчера произошел захват
         
