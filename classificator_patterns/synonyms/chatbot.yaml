@@ -3,17 +3,17 @@ name: synonymsWithoutPatterns
 entryPoint:
   - main.sc
 
-# exampleGroups:
-# - src/examples.json
+exampleGroups:
+- src/examples.json
 
 tests:
   exclude:
     - test.xml
 
-# ner:
-#  allowedPatterns:
-#   - $terrorist
-#   - $captive
+ner:
+ allowedPatterns:
+  - $terrorist
+  - $captive
 
 aligner:
   noMatchThreshold: 0.4
