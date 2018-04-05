@@ -1,0 +1,16 @@
+name: synonymsWithoutPatterns
+
+entryPoint:
+  - main.sc
+
+exampleGroups:
+- src/examples.json
+
+ner:
+ allowedPatterns:
+  - $terrorist
+  - $captive
+
+aligner:
+  noMatchThreshold: 0.4
+  vocabulary: common-vocabulary.json
