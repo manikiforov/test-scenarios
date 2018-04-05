@@ -1,3 +1,4 @@
+require: patterns.sc
 
 theme: /
 
