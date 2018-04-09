@@ -1,15 +1,12 @@
 theme: /
-
-    state: nBestMode
-        q!: nbest
     
-        state:
-            q: * || fromState = /nBestMode
-            script:
-                var res = $nlp.matchNBest($parseTree.text, "/", 10)
-                res.forEach(function(r) {
-                    $reactions.answer(JSON.stringify(r));
-                })
+    state:
+        q: *
+        script:
+            var res = $nlp.matchNBest($parseTree.text, "/", 10)
+            res.forEach(function(r) {
+                $reactions.answer(JSON.stringify(r));
+            })
                 
     state: 
         q!: привет*
@@ -18,7 +15,3 @@ theme: /
     state:
         q!: пока*
         a: Спасибо за прощание
-        
-    state: CatchAll
-        q!: *
-        a: Не понимаю
