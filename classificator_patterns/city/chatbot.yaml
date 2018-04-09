@@ -6,6 +6,10 @@ entryPoint:
 exampleGroups:
 - src/examples.json
 
+tests:
+  exclude:
+    - test.xml
+
 ner:
  allowedPatterns:
   - $City
