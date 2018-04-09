@@ -42,8 +42,8 @@ theme: /
     state: matchExamples
         q!: matchE
         script:
-            var res = $nlp.matchExamples("раз раз", ["раз", "два", "три"]);
-            $reactions.answer(res);
+            $temp.m = $nlp.matchExamples("раз раз", ["раз", "два", "три"]);
+        a:{{JSON.stringify($temp.m)}}
 
 
 #тестировать будем на фразах:
