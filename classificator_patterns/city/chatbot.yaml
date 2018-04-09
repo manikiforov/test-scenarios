@@ -1,0 +1,27 @@
+name: synonymsWithoutPatterns
+
+entryPoint:
+  - entryPoint.sc
+
+exampleGroups:
+- src/dictionaries/examples.json
+
+ner:
+ allowedPatterns:
+  - $City
+
+aligner:
+  noMatchThreshold: 0.4
+  vocabulary: common-vocabulary.json
+
+nlp:
+  tokenizer: myStem       # обязательный параметр
+  morphology: myStem      # обязательный параметр
+  costStrategy: weighted  # обязательный параметр
+  # Словарь должен совпадать с указанным в секции aligner
+  vocabulary: common-vocabulary.json
+
+classifier:
+ engine: sts
+ parameters:
+   algorithm: aligner2
