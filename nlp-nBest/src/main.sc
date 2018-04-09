@@ -37,7 +37,7 @@ theme: /
         q!: matchP
         script:
             var res = $nlp.matchPatterns("test 1", ["test 1", "test 2"]);
-            $reactions.answer(res);
+            log(res)
             
     state: matchExamples
         q!: matchE
