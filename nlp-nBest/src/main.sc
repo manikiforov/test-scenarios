@@ -2,6 +2,7 @@ theme: /
 
     state: nBestMode
         q!: nbest
+        a: Вы попали в nBest!
     
         state:
             q: *
