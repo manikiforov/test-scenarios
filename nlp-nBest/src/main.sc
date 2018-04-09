@@ -1,17 +1,80 @@
+patterns:
+    $Text = $nonEmptyGarbage || converter = function ($pt) { return $pt.text; }
+
+init:
+    // короткий псевдоним для функции вывода ответа
+    $global.a = function (t) {
+    $reactions.answer(JSON.stringify(t));
+    };
+
 theme: /
-    
+
     state:
-        q: *
+        q!: patterns $Text
         script:
-            var res = $nlp.matchNBest($parseTree.text, "/", 10)
+            var res = $nlp.matchNBest($parseTree._Text, "/Patterns", 10)
             res.forEach(function(r) {
-                $reactions.answer(JSON.stringify(r));
+                $reactions.answer(r.clazz + " - " + r.score.toFixed(2));
             })
-                
-    state: 
-        q!: привет*
-        a: Спасибо за приветствие
-        
+
     state:
-        q!: пока*
-        a: Спасибо за прощание
+        q!: examples $Text
+        script:
+            var res = $nlp.matchNBest($parseTree._Text, "/Examples", 10)
+            res.forEach(function(r) {
+                $reactions.answer(r.clazz + " - " + r.score.toFixed(2));
+            })
+
+    state:
+        q!: mixed $Text
+        script:
+            var res = $nlp.matchNBest($parseTree._Text, "/Mixed", 10)
+            res.forEach(function(r) {
+                $reactions.answer(r.clazz + " - " + r.score.toFixed(2));
+            })
+
+
+#тестировать будем на фразах:
+#раз два
+#раз два три
+theme: /Patterns
+
+    state: 1
+        q: * раз *
+
+    state: 2
+        q: * [раз] два *
+
+    state: 3
+        q: * [раз] [два] три *
+
+theme: /Examples
+
+    state: 1
+        e: раз
+
+    state: 2
+        e: раз два
+
+    state: 3
+        e: раз два три
+
+theme: /Mixed
+
+    state: e1
+        e: раз
+
+    state: e2
+        e: раз два
+
+    state: e3
+        e: раз два три
+
+    state: q1
+        q: * раз *
+
+    state: q2
+        q: * [раз] два *
+
+    state: q3
+        q: * [раз] [два] три *
