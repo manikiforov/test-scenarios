@@ -36,8 +36,8 @@ theme: /
     state: matchPatterns
         q!: matchP
         script:
-            var res = $nlp.matchPatterns("test 1", ["test 1", "test 2"]);
-            log(res)
+            $temp.m = $nlp.matchPatterns("test 1", ["test 1", "test 2"]);
+        a:{{JSON.stringify($temp.m)}}
             
     state: matchExamples
         q!: matchE
