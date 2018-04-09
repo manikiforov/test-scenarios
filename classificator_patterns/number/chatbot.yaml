@@ -6,6 +6,10 @@ entryPoint:
 #exampleGroups:
 #- src/dictionaries/examples.json
 
+tests:
+  exclude:
+    - test.xml
+
 ner:
  allowedPatterns:
   - $Number
