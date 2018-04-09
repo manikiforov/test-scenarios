@@ -32,6 +32,18 @@ theme: /
             res.forEach(function(r) {
                 $reactions.answer(r.clazz + " - " + r.score.toFixed(2));
             })
+            
+    state: matchPatterns
+        q!: matchP
+        script:
+            var res = $nlp.matchPatterns("test 1", ["test 1", "test 2"]);
+            $reactions.answer(res);
+            
+    state: matchExamples
+        q!: matchE
+        script:
+            var res = $nlp.matchExamples("раз раз", ["раз", "два", "три"]);
+            $reactions.answer(res);
 
 
 #тестировать будем на фразах:
