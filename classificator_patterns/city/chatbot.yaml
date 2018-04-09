@@ -1,10 +1,10 @@
 name: synonymsWithoutPatterns
 
 entryPoint:
-  - entryPoint.sc
+  - main.sc
 
 exampleGroups:
-- src/dictionaries/examples.json
+- src/examples.json
 
 ner:
  allowedPatterns:
