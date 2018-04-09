@@ -4,7 +4,7 @@ theme: /
         q!: nbest
     
         state:
-            q: *
+            q: * || fromState = /nBestMode
             script:
                 var res = $nlp.matchNBest($parseTree.text, "/", 10)
                 res.forEach(function(r) {
