@@ -10,10 +10,10 @@ tests:
   exclude:
     - test.xml
 
-ner:
- allowedPatterns:
-  - $terrorist
-  - $captive
+# ner:
+#  allowedPatterns:
+#   - $terrorist
+#   - $captive
 
 aligner:
   noMatchThreshold: 0.4
