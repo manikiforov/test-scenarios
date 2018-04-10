@@ -9,14 +9,20 @@ theme: /
         q!: testCache
         script:
             $temp.m = $http.get('https://www.random.org/strings/?num=3&len=10&digits=on&unique=on&format=plain&rnd=new', {
-                cachingRequired: false
+                cachingRequired: true
             });
             log($temp.m)
 
             $temp.g = $http.get('https://www.random.org/strings/?num=3&len=10&digits=on&unique=on&format=plain&rnd=new', {
-                cachingRequired: true
+                cachingRequired: false
             });
             log($temp.g)
             
+            $temp.y = $http.get('https://www.random.org/strings/?num=3&len=10&digits=on&unique=on&format=plain&rnd=new', {
+                cachingRequired: true
+            });
+            log($temp.y)
+            
         a: {{JSON.stringify($temp.m.data)}}
         a: {{JSON.stringify($temp.g.data)}}
+        a: {{JSON.stringify($temp.y.data)}}
