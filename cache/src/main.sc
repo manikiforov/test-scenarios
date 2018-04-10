@@ -14,7 +14,7 @@ theme: /
             log($temp.m)
 
             $temp.g = $http.get('https://www.random.org/strings/?num=3&len=10&digits=on&unique=on&format=plain&rnd=new', {
-                cachingRequired: true
+                cachingRequired: false
             });
             log($temp.g)
             
