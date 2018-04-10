@@ -8,7 +8,6 @@ theme: /
     state:
         q!: testCache
         script:
-
             $temp.m = $http.get('https://www.random.org/strings/?num=3&len=10&digits=on&unique=on&format=plain&rnd=new', {
                 cachingRequired: true
             });
