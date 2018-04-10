@@ -16,5 +16,5 @@ theme: /
                 cachingRequired: true
             });
             
-        a: {{$temp.m}}
-        a: {{$temp.g}}
+        a: {{JSON.stringify($temp.m)}}
+        a: {{JSON.stringify($temp.m)}}
