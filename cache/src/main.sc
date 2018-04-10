@@ -18,5 +18,5 @@ theme: /
             });
             log($temp.g)
             
-        a: {{JSON.stringify($temp.m)}}
-        a: {{JSON.stringify($temp.m)}}
+        a: {{JSON.stringify($temp.m.data)}}
+        a: {{JSON.stringify($temp.m.data)}}
