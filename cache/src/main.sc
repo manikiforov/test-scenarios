@@ -11,10 +11,12 @@ theme: /
             $temp.m = $http.get('https://www.random.org/strings/?num=3&len=10&digits=on&unique=on&format=plain&rnd=new', {
                 cachingRequired: true
             });
+            log($temp.m)
 
             $temp.g = $http.get('https://www.random.org/strings/?num=3&len=10&digits=on&unique=on&format=plain&rnd=new', {
                 cachingRequired: true
             });
+            log($temp.g)
             
         a: {{JSON.stringify($temp.m)}}
         a: {{JSON.stringify($temp.m)}}
