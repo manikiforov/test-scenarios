@@ -44,7 +44,12 @@ theme: /
         script:
             $temp.m = $nlp.matchExamples("раз раз", ["раз", "два", "три"]);
         a:{{JSON.stringify($temp.m)}}
-
+        
+    state: xmlParser
+        q!: parseX
+        script:
+            $temp.m = $jsapi.parseXml("<test><a>1</a><a>2</a></test>");
+        a:{{JSON.stringify($temp.m)}}
 
 #тестировать будем на фразах:
 #раз два
