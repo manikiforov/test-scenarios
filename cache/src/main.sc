@@ -29,3 +29,28 @@ theme: /
         a: {{JSON.stringify($temp.m.data)}}
         a: {{JSON.stringify($temp.g.data)}}
         a: {{JSON.stringify($temp.y.data)}}
+        
+    state:
+        q!: testCacheMax
+        script:
+            $temp.x = $http.get('https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D1%8C%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%80%D0%BE%D0%BA', {
+                cachingRequired: true
+            });
+            log($temp.x)
+
+            $temp.r = $http.get('https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D1%8C%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%80%D0%BE%D0%BA', {
+                cachingRequired: false
+            });
+            log($temp.r)
+            
+            var startTime = $jsapi.currentTime()
+            while ($jsapi.currentTime() - startTime < 2000) {};
+            
+            $temp.d = $http.get('https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D1%8C%D1%82%D0%B5%D1%80%D0%BD%D0%B0%D1%82%D0%B8%D0%B2%D0%BD%D1%8B%D0%B9_%D1%80%D0%BE%D0%BA', {
+                cachingRequired: true
+            });
+            log($temp.d)
+            
+        a: {{JSON.stringify($temp.x)}}
+        a: {{JSON.stringify($temp.r)}}
+        a: {{JSON.stringify($temp.d)}}
