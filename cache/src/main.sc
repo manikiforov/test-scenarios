@@ -2,7 +2,7 @@ theme: /
 
     init:
         $http.config({
-            cacheTimeToLiveInSeconds: 2000
+            cacheTimeToLiveInSeconds: 2
         });
 
     state:
