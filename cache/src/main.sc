@@ -26,9 +26,9 @@ theme: /
             });
             log($temp.y)
             
-        a: {{$temp.m.data}}
-        a: {{$temp.g.data}}
-        a: {{$temp.y.data}}
+        a: cache {{$temp.m.data}}
+        a: no cache {{$temp.g.data}}
+        a: cache {{$temp.y.data}}
         
     state:
         q!: testCacheMax
