@@ -1,4 +1,3 @@
-require: patterns.sc
 
 theme: /
 
@@ -16,6 +15,6 @@ theme: /
     state: reqursivePatterns
         q!: $activateService
         a: Рекурсия
-        
+
     state: newNode_4
         a: not kek?
