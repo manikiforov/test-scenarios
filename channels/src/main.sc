@@ -8,7 +8,7 @@ theme: /
         event: rawRequestEvent
         a: Такой кек!
         script:
-            log($request);
+            log($request + 99999999999999999999999999999999999);
             
     state: CatchAll
         q!: *
