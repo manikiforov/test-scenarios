@@ -6,7 +6,7 @@ theme: /
         
     state: raw
         event: rawRequestEvent
-        a: Такой кек!
+        a: ПОЛУЧИЛ POST ЗАПРОС!!!
         script:
             log($request);
         
