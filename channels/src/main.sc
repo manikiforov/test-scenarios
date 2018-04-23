@@ -4,6 +4,10 @@ theme: /
         q!: start
         a: Вы сказали и бот ответил: {{$parseTree.text}}
         
+    state: raw
+        event: rawRequestEvent
+        script:
+            log($request);
     state: CatchAll
         q!: *
         a: Скажите боту чтото осмысленное.
