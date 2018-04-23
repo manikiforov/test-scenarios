@@ -6,8 +6,10 @@ theme: /
         
     state: raw
         event: rawRequestEvent
+        a: Такой кек!
         script:
             log($request);
+            
     state: CatchAll
         q!: *
         a: Скажите боту чтото осмысленное.
