@@ -18,3 +18,9 @@ theme: /
 
     state: newNode_4
         a: not kek?
+
+    state: newNode_5
+        if: Новое условие
+            go!: /newNode_3
+        else:
+            go!: /newNode_4
