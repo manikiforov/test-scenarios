@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 name: echo
 
 entryPoint:
@@ -12,3 +13,13 @@ dependencies:
     type: git
     url: https://bitbucket.org/just-ai/zb-common
     version: heads/master
+=======
+name: echo
+
+entryPoint:
+  - main.sc
+
+tests:
+  exclude:
+    - test.xml
+>>>>>>> branch 'nikitin' of https://bitbucket.org/just-ai/test_scenarios.git

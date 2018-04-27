@@ -10,6 +10,11 @@ tests:
 # Подключаем справочники классификатора
 exampleGroups:
   - src/examples.json
+  
+classifier:
+  engine: sts
+  parameters:
+    algorithm: aligner2
  
 # Конфигурируем алгоритм классификатора
 aligner:
@@ -29,3 +34,9 @@ nlp:
   costStrategy: weighted  # обязательный параметр
   # Словарь должен совпадать с указанным в секции aligner
   vocabulary: src/aer.json
+  
+dependencies:
+  - name: common
+    type: git
+    url: https://bitbucket.org/just-ai/zb-common
+    version: heads/master

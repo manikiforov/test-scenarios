@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <test>
 
 <test-case>
@@ -6,3 +7,5 @@
     <a>параметры запроса: {}</a>
 </test-case> 
 </test>
+=======
+>>>>>>> branch 'nikitin' of https://bitbucket.org/just-ai/test_scenarios.git

@@ -1,13 +1,22 @@
+require: all.sc
+  module = common
+require: patterns.sc
+  module = common
+
 
 theme: /
 
+    state: Number
+        q!: $Number
+        a: Вы отправили чилсо и оно попало в паттерн
+    
+    state: DateTime
+        q!: $DateTime
+        a: Вы отправили дату и она попала в паттерн даты
+
     state: OutOfScope
         eg!: Account.OutOfScope
-        go!: /Switch
-        
-   # state: Temp
-    #    eg!: Temporary.InterestPayout
-     #   a: Второй справочник работает
+        go!: /Vocabulary2
 
     state: Time
         eg!: Account.Time
@@ -60,7 +69,7 @@ theme: /
             Переводы в сторонние Банки осуществляются только в рабочие дни, срок исполнения стандартный, составляет от 1 до 3 рабочих дней.
             При переводе со счёта другого банка срок осуществления перевода необходимо уточнить в Банке, через который был совершён перевод.
             Если прошло больше времени, то для выяснения причин необходима голосовая идентификация. Обратитесь, пожалуйста, по телефону горячей линии 8-800-700-10-20. Провести идентификацию в чате невозможно.
-            
+
     state: ClassFailTransfer
         q!: перевод денежных средств
         a: Сработал именно класс
@@ -84,3 +93,7 @@ theme: /
     state: CatchAll
         q!: *
         a: Я не понял
+
+    state: newNode_18
+        eg!: Cards.ActivateCard
+        a: Попали в Cards.ActivateCard

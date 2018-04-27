@@ -1,5 +1,6 @@
 {
   "positions" : [ {
+<<<<<<< HEAD
     "id" : "/step1",
     "x" : 490,
     "y" : 73
@@ -47,5 +48,32 @@
     "id" : "/newNode_11",
     "x" : 451,
     "y" : 753
+=======
+    "id" : "/Start",
+    "x" : 51,
+    "y" : 85
+  }, {
+    "id" : "/CatchAll",
+    "x" : 561,
+    "y" : 140
+  }, {
+    "id" : "/newNode_3",
+    "x" : 748,
+    "y" : 380
+  }, {
+    "id" : "/reqursivePatterns",
+    "name" : "reqursivePatterns",
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_4",
+    "x" : 771,
+    "y" : 625
+  }, {
+    "id" : "/newNode_5",
+    "name" : "Экран 5",
+    "x" : 190,
+    "y" : 433
+>>>>>>> branch 'nikitin' of https://bitbucket.org/just-ai/test_scenarios.git
   } ]
 }
