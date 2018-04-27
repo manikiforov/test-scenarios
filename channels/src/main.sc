@@ -10,6 +10,10 @@ theme: /
         script:
             log($request);
         
+    state:
+        event: lengthLimit
+        a: Текст слишком длинный
+
     state: CatchAll
         q!: *
         a: Скажите боту чтото осмысленное.
