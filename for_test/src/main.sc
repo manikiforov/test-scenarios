@@ -18,11 +18,3 @@ theme: /
 
     state: newNode_4
         a: not kek?
-
-    state: newNode_5
-        if: Новое условие
-            go!: /newNode_3
-        elseif: Новое условие
-            go!: /CatchAll
-        else:
-            go!: /newNode_4
