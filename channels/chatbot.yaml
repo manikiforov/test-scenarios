@@ -5,7 +5,7 @@ entryPoint:
 
 lp:
     lengthLimit:
-        symbols: 405
+        symbols: 1000
 tests:
   exclude:
     - test.xml
