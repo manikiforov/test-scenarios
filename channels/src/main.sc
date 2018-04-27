@@ -8,6 +8,16 @@ theme: /
         q!: *
         a: Скажите боту чтото осмысленное.
 
+    state: Prechat123
+        q!: prechat123
+        if: !hasOperatorsOnline()
+            go!: NoOperatorsOnline
+        else:
+            a: Переходим?
+            buttons:
+                "Да" -> PrechatO
+                "Нет" -> /CatchAll
+                
     state: Prechat
         q!: prechat
         if: !hasOperatorsOnline()
