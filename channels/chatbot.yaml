@@ -2,9 +2,7 @@ name: echo
 
 entryPoint:
   - main.sc
-lp:
-    lengthLimit:
-        symbols: 10
+
 
 tests:
   exclude:
