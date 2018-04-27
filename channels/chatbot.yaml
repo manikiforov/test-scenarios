@@ -3,9 +3,9 @@ name: echo
 entryPoint:
   - main.sc
 
-lp:
+nlp:
     lengthLimit:
-        symbols: 1000
+        symbols: 10
 tests:
   exclude:
     - test.xml
