@@ -4,7 +4,7 @@ entryPoint:
   - main.sc
 lp:
     lengthLimit:
-        symbols: 10
+        symbols: 100000000
 
 tests:
   exclude:
