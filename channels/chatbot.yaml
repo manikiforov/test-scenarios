@@ -3,8 +3,8 @@ name: echo
 entryPoint:
   - main.sc
 lp:
-lengthLimit:
-symbols: 10
+    lengthLimit:
+    symbols: 10
 
 tests:
   exclude:
