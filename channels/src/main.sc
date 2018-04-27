@@ -39,7 +39,7 @@ theme: /
 
     state: Destination
         q!: destination
-        if: !hasOperatorsOnline("group1")
+        if: !hasOperatorsOnline("group123")
             go!: NoOperatorsOnline
         else:
             a: Переходим?
@@ -59,7 +59,7 @@ theme: /
                     type:"switch",
                     closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
                     firstMessage: $client.history,
-                    destination: "group1",
+                    destination: "group123",
                     lastMessage: "Этот паршивец закрыл диалог, запомни это."
                 });
 
