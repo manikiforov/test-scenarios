@@ -30,4 +30,4 @@ theme: /
     state: loop
         q!: loop
         a: Цикл бам бам
-        timeout: /loop || interval = 0.5s
+        timeout: /loop || interval = 0,5s
