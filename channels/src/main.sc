@@ -6,6 +6,7 @@ theme: /
         
     state: raw
         event: rawRequestEvent
+        a: LOL
         script:
             log($request);
             
