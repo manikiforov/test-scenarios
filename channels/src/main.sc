@@ -2,7 +2,7 @@ theme: /
 
     state: Start
         q!: start
-        a: Вы сказали и бот ответил11: {{$parseTree.text}}
+        a: Вы сказали и бот ответил: {{$parseTree.text}}
         
     state: raw
         event: rawRequestEvent
