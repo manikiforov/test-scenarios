@@ -4,10 +4,6 @@ theme: /
         q!: start
         a: Вы сказали и бот ответил: {{$parseTree.text}}
     
-    state: hello2
-        eg!: hello.hello2
-        a: Привет!
-       
     state:
         event: lengthLimit
         a: Текст слишком длинный
