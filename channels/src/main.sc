@@ -4,8 +4,8 @@ theme: /
         q!: start
         a: Вы сказали и бот ответил: {{$parseTree.text}}
     
-    state: hello
-        eg!: /hello
+    state: hello2
+        eg!: hello.hello2
         a: Привет!
        
     state:
