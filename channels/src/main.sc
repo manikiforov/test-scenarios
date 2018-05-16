@@ -1,8 +1,8 @@
 theme: /
 
-state: hello
-    q!: Hello
-    a: Привет!
+   state: hello
+       q!: Hello
+       a: Привет!
     
     state: Start
         q!: start
