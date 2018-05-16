@@ -9,6 +9,14 @@
         "Привет!",
         "hello"
       ]
+    },
+    {
+      "id" : "",
+      "path" : "/hello/hello2",
+      "description" : "",
+      "phrases" : [
+        "еще раз привет"
+      ]
     }
   ]
 }
