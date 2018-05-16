@@ -5,8 +5,8 @@ theme: /
         a: Вы сказали и бот ответил: {{$parseTree.text}}
     
      state: 1
-            eg!: Hello
-            a: Привет!
+        eg!: Hello
+        a: Привет!
             
     state:
         event: lengthLimit
