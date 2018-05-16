@@ -1,11 +1,14 @@
 {
   "classes" : [
     {
-      "id" : "",
+      "id" : "1",
       "path" : "/start",
       "description" : "",
       "phrases" : [
-        ""
+        "2",
+        "3",
+        "4",
+        "5"
       ]
     }
   ]
