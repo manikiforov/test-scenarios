@@ -3,9 +3,21 @@ name: echo
 entryPoint:
   - main.sc
 
-nlp:
-    lengthLimit:
-        symbols: 10
+
 tests:
   exclude:
     - test.xml
+    
+classifier:
+  engine: sts
+  parameters:
+    algorithm: aligner2
+    
+nlp:
+  tokenizer: myStem       # обязательный параметр
+  morphology: myStem      # обязательный параметр
+  costStrategy: weighted  # обязательный параметр
+  # Словарь должен совпадать с указанным в секции aligner
+  vocabulary: common-vocabulary.json
+  lengthLimit:
+     symbols: 10
