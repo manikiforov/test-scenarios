@@ -1,15 +1,13 @@
 theme: /
-
-   state: hello
-       q!: Hello
-       a: Привет!
     
     state: Start
         q!: start
         a: Вы сказали и бот ответил: {{$parseTree.text}}
     
-
-        
+    state: hello
+        q!: Hello
+        a: Привет!
+       
     state:
         event: lengthLimit
         a: Текст слишком длинный
