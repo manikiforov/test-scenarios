@@ -19,10 +19,7 @@ theme: /
         if: !hasOperatorsOnline()
             go!: NoOperatorsOnline
         else:
-            a: Переходим?
-            buttons:
-                "Да" -> PrechatO
-                "Нет" -> /CatchAll
+            go!: ./PrechatO
 
         state: NoOperatorsOnline
             a: Операторов сейчас нет, они отравились сушами в стриптиз баре.
@@ -48,10 +45,7 @@ theme: /
         if: !hasOperatorsOnline("group1")
             go!: NoOperatorsOnline
         else:
-            a: Переходим?
-            buttons:
-                "Да" -> Groups
-                "Нет" -> /CatchAll
+            go!: ./Groups
 
         state: NoOperatorsOnline
             a: Операторов сейчас нет, они отравились сушами в стриптиз баре.
@@ -78,10 +72,7 @@ theme: /
         if: !hasOperatorsOnline()
             go!: Switch/NoOperatorsOnline
         else:
-            a: Переходим?
-            buttons:
-                "Да" -> Switch
-                "Нет" -> /CatchAll
+            go!: ./Switch
 
         state: Switch
             a: Переводим на оператора, кстати Марксу уже больше 200лет!
@@ -99,8 +90,6 @@ theme: /
 
             state: NoOperatorsOnline
                 a: Операторов нет, а ты есть. Но ты напиши им, порадуй зарождающуюся шизу.
-                buttons:
-                    "Вернись в лоно земли обетованной" -> /Start
 
                 state: GetUserInfo
                     q: *
