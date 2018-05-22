@@ -18,7 +18,7 @@ theme: /
         q: test
         script:
             $reactions.buttons([{button:{text:"test url", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
-            $reactions.buttons([{button:{text:"test hide", hide:true}}]);
+            //$reactions.buttons([{button:{text:"test hide", hide:true}}]);
 
     state: Prechat
         q!: prechat
