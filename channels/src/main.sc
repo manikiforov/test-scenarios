@@ -23,7 +23,7 @@ theme: /
     state: Test image
         q: test image
         script:
-            $jsapi.context().response.imageUrl = "https://docs.i-free.com/s/ru_RU-1988229788/4733/f235dd088df5682b0560ab6fc66ed22c9124c0be.3/_/images/logo/confluence-logo.png";
+            $jsapi.context().response.replies.imageUrl = "https://docs.i-free.com/s/ru_RU-1988229788/4733/f235dd088df5682b0560ab6fc66ed22c9124c0be.3/_/images/logo/confluence-logo.png";
 
     state: Prechat
         q!: prechat
