@@ -20,6 +20,10 @@ theme: /
             $reactions.buttons([{button:{text:"test url", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
             //$reactions.buttons([{button:{text:"test hide", hide:true}}]);
 
+        state: Test url
+            q: test url
+            a: Работает!
+
     state: Test image
         event: imageEvent
         a: Я не умею обрабатывать изображения, извините.
