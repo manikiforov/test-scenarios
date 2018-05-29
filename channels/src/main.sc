@@ -2,13 +2,6 @@
 
 theme: /
 
-    init:
-        bind("onException", function($context) {
-                $reactions.answer("onException");
-                $reactions.answer($context.exception.name);
-                $reactions.answer($context.exception.message);
-            });
-
     state: Start
         q!: start
         a: Вы сказали и бот ответил: {{$parseTree.text}}
