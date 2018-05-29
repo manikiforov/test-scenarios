@@ -36,6 +36,8 @@ theme: /
         script:
             $reactions.buttons([{button:{text:"test url", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
             $reactions.buttons([{button:{text:"test url 2", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
+            $reactions.buttons([{button:{text:"test url 3", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
+            $reactions.buttons([{button:{text:"test url 4", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
             //$reactions.buttons([{button:{text:"test hide", hide:true}}]);
 
         state: Test url
