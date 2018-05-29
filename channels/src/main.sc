@@ -1,4 +1,13 @@
+require: main.js
+
 theme: /
+
+    init:
+        bind("onException", function($context) {
+                $reactions.answer("onException");
+                $reactions.answer($context.exception.name);
+                $reactions.answer($context.exception.message);
+            });
 
     state: Start
         q!: start
@@ -14,10 +23,26 @@ theme: /
         q!: *
         a: Скажите боту чтото осмысленное.
 
+    state: JS code from file test
+        q!: test from file
+        script:
+            Test.testErrorThrowing();
+
+    state: ECTest
+        q!: ectest
+        script:
+            throw new TypeError('type error');
+
+    state: BSTest
+        q!: bstest
+        script:
+            throw new Error('test error from test_scenarios');
+
     state: Test
         q: test
         script:
             $reactions.buttons([{button:{text:"test url", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
+            $reactions.buttons([{button:{text:"test url 2", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
             //$reactions.buttons([{button:{text:"test hide", hide:true}}]);
 
         state: Test url
