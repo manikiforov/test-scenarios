@@ -1,56 +1,46 @@
-
-
 theme: /
 
     state: Start
         q!: start
         a: Вы сказали и бот ответил: {{$parseTree.text}}
-        
-    state: raw
-        event: rawRequestEvent
-        a: LOL
-        script:
-            log($request);
             
     state: CatchAll
         q!: *
-        a: Скажите боту чтото осмысленное.
+        a: Скажите боту что-то осмысленное.
 
-    state: JS code from file test
-        q!: test from file
+    state: Test buttons
+        q!: test buttons
         script:
-            Test.testErrorThrowing();
+            $reactions.buttons([{button:{text:"test button 1", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
+            $reactions.buttons([{button:{text:"test button 2", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
+            $reactions.buttons([{button:{text:"test button 3", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
 
-    state: ECTest
-        q!: ectest
-        script:
-            throw new TypeError('type error');
+        state: Test url 1
+            q: test button 1
+            a: Вы нажали 1!
 
-    state: BSTest
-        q!: bstest
-        script:
-            throw new Error('test error from test_scenarios');
+        state: Test url 2
+            q: test button 2
+            a: Вы нажали 2!
 
-    state: Test
-        q: test
-        script:
-            $reactions.buttons([{button:{text:"test url 1", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
-            $reactions.buttons([{button:{text:"test url 2", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
-            $reactions.buttons([{button:{text:"test url 3", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
-            $reactions.buttons([{button:{text:"test url 4", url:"https://store.playstation.com/ru-ru/product/EP9000-CUSA08308_00-DTRTEPRPREORDPSN"}}]);
-            //$reactions.buttons([{button:{text:"test hide", hide:true}}]);
+        state: Test url 3
+            q: test button 3
+            a: Вы нажали 3!
 
-        state: Test url
-            q: test url (1|2|3|4)
-            a: Работает!
 
     state: Test image
         event: imageEvent
-        a: Я не умею обрабатывать изображения, извините.
+        a: Отличная картинка!
 
     state: Test file
         event: fileEvent
         a: Я не умею обрабатывать файлы, извините.
+
+    state: Send me an image
+        q!: отправь мне картинку
+        script:
+            $response.replies = $response.replies || [];
+            $response.replies.push({type: "image", imageUrl: "http://images.indianexpress.com/2016/12/wechat-759.jpg"});
 
     state: Prechat
         q!: prechat
@@ -60,10 +50,10 @@ theme: /
             go!: ./PrechatO
 
         state: NoOperatorsOnline
-            a: Операторов сейчас нет, они отравились сушами в стриптиз баре.
+            a: Операторов сейчас нет.
 
         state: PrechatO
-            a: Перевожу на оператора. Не ходите с ним в стриптиз бар!
+            a: Перевожу на оператора.
             script:
                 $response.replies = $response.replies || [];
                 $response.replies
@@ -77,6 +67,11 @@ theme: /
                         "Фамилия": "Флэндри"
                     }
                 });
+
+
+
+
+
 
     state: Destination
         q!: destination
