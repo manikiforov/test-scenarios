@@ -65,6 +65,9 @@ theme: /
 
 
 
+    state: Any message
+        event: weChatAnyMessage
+        a: А вот работать с этим я ещё не умею.
 
 
     state: Destination
