@@ -36,12 +36,6 @@ theme: /
         event: fileEvent
         a: Я не умею обрабатывать файлы, извините.
 
-    state: Send me an image
-        q!: отправь мне картинку
-        script:
-            $response.replies = $response.replies || [];
-            $response.replies.push({type: "image", imageUrl: "http://images.indianexpress.com/2016/12/wechat-759.jpg"});
-
     state: Prechat
         q!: prechat
         if: !hasOperatorsOnline()
