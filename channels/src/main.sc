@@ -4,6 +4,14 @@ theme: /
         q!: start
         a: Вы сказали и бот ответил: {{$parseTree.text}}
         
+    state: phone
+        q!: задарма
+        a: Длинный ответ. Длинный ответ. Длинный ответ. Длинный ответ.
+        
+    state: stop
+        q!: stop
+        a: Вы прервали меня
+        
     state: raw
         event: rawRequestEvent
         a: LOL
