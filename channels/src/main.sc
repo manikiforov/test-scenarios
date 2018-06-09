@@ -8,6 +8,9 @@ theme: /
         event: lengthLimit
         a: Текст слишком длинный
 
+    state: 
+        event: telegramApiRequestFailed
+        a: Файл слишком большой (>20Мб)
     state: CatchAll
         q!: *
         a: Скажите боту чтото осмысленное.
