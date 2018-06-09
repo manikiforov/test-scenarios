@@ -1,0 +1,10 @@
+ <test>
+     <test-case id="test 1">
+        <q>21</q>
+        <a>catchAll</a>
+
+        <state>Start</state>
+        <q>start</q>
+        <a>Вы сказали и бот ответил: start</a>
+     </test-case>
+ </test>
