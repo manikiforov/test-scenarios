@@ -4,7 +4,7 @@
         <a>Скажите боту чтото осмысленное.</a>
 
         <state>Start</state>
-        <q>start1</q>
+        <q>start</q>
         <a>Вы сказали и бот ответил: start</a>
      </test-case>
  </test>
