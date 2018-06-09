@@ -17,7 +17,7 @@ theme: /
                 
     state: Prechat
         q!: prechat
-        if:        ю                
+        if: !hasOperatorsOnline()  
             go!: NoOperatorsOnline
         else:
             a: Переходим?
