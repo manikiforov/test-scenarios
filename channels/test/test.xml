@@ -3,8 +3,7 @@
         <q>21</q>
         <a>Скажите боту чтото осмысленное.</a>
 
-        <state>Start</state>
-        <q>start</q>
-        <a>Вы сказали и бот ответил: start</a>
+        <state>NoOperatorsOnline</state>
+        <a>Операторов сейчас нет, они отравились сушами в стриптиз баре.</a>
      </test-case>
  </test>
