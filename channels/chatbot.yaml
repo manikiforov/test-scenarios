@@ -5,8 +5,8 @@ entryPoint:
 
 
 tests:
-  exclude:
-    - test.xml
+ include:
+ - test.xml
     
 nlp:
   lengthLimit:
