@@ -14,6 +14,11 @@ theme: /
         script:
             log($request);
             
+    state: file and image
+        event: imageEvent
+        event: fileEvent
+        a: файл или изображение дошло
+            
     state: CatchAll
         q!: *
         a: Скажите боту чтото осмысленное.
