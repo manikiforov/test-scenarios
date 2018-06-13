@@ -21,6 +21,10 @@ theme: /
     state: file
         event: fileEvent
         a: файл дошел
+        
+    state: telegramError
+        event: telegramApiRequestFailed
+        script: $request.data.eventData.errorMessage
 
     state: CatchAll
         q!: *
