@@ -12,7 +12,7 @@ theme: /
                 closeTicket: false,
                 htmlBody: false,
                 needResponse: true,
-                assigneeEmail: '',
+                assigneeEmail: 'b.shabalin@just-ai.com',
                 assigneeGroupName: 'Поддержка',
                 addTags: [],
                 removeTags: []
