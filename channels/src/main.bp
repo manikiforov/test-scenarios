@@ -6,13 +6,57 @@
     "y" : 0
   }, {
     "id" : "/newNode_1",
-    "name" : "col#1",
-    "boundsTo" : "",
+    "name" : "col#0",
+    "boundsTo" : "/newNode_0",
     "x" : 0,
     "y" : 0
   }, {
     "id" : "/newNode_2",
+    "name" : "col#1",
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_3",
+    "name" : "col#1",
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_4",
+    "name" : "col#1",
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_5",
     "name" : "col#2",
+    "boundsTo" : "",
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_6",
+    "name" : "col#2",
+    "boundsTo" : "",
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_7",
+    "name" : "col#3",
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_10",
+    "name" : "col#3",
+    "boundsTo" : "/newNode_7",
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_8",
+    "name" : "col#3",
+    "x" : 0,
+    "y" : 0
+  }, {
+    "id" : "/newNode_9",
+    "name" : "col#3",
+    "boundsTo" : "/newNode_8",
     "x" : 0,
     "y" : 0
   } ]
