@@ -35,6 +35,14 @@ nlp:
   # Словарь должен совпадать с указанным в секции aligner
   vocabulary: src/aer.json
   
+nlp:
+  morphology: pyMorphy
+
+
+nlp:
+  spellcheck:
+    enabled: true
+  
 dependencies:
   - name: common
     type: git
