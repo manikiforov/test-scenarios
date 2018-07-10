@@ -20,7 +20,7 @@ theme: /
         
     state: file
         event: fileEvent
-        a: файл дошел
+        a: файл дошел!
         
     state: telegramError
         event: telegramApiRequestFailed
