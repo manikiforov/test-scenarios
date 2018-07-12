@@ -4,7 +4,7 @@ theme: /
         {
           "prompt" : "Введите текст",
           "varName" : "text",
-          "then" : ""
+          "then" : "/newNode_1"
         }
     state: newNode_0
         a: Введите текст
@@ -13,4 +13,12 @@ theme: /
             q: *
             script:
                 $session.text = $parseTree.text;
-            go!: /
+            go!: /newNode_1
+
+    state: newNode_1 || modal = true, noContext = true
+        a: Вы сказали {{$parseTree.tex}}
+
+    state: newNode_2
+        script:
+            INPUTTEXT
+        go!: /newNode_0
