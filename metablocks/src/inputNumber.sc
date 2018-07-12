@@ -10,7 +10,9 @@ theme: /
           "varName" : "numb",
           "minValue" : 1,
           "maxValue" : 5,
-          "failureMessage" : [ "Введите число от 1 до 5" ],
+          "failureMessage" : [
+            "Введите число от 1 до 5"
+          ],
           "then" : "/newNode_2"
         }
     state: newNode_1
