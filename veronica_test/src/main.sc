@@ -34,7 +34,8 @@ theme: /
           "minValue" : 1,
           "maxValue" : 5,
           "failureMessage" : [
-            "Введите число от 1 до 5"
+            "Введите число от 1 до 5",
+            "Где твои мозги?!"
           ],
           "then" : "/newNode_2"
         }
@@ -45,7 +46,8 @@ theme: /
             q: $Number
             script:
                 var failureMessages = [
-                    "Введите число от 1 до 5"
+                    "Введите число от 1 до 5",
+                    "Где твои мозги?!"
                 ];
                 var failureRandom = failureMessages[$reactions.random(failureMessages.length)];
                 if ($parseTree._Number < 1) {
