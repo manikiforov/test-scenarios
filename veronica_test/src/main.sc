@@ -6,7 +6,7 @@ require: patterns.sc
 theme: /
 
     state: newNode_0
-        q!: /start
+        q!: start
         a: Мы стартанули!
         go!: /newNode_1
     @InputText
