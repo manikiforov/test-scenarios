@@ -9,7 +9,7 @@ theme: /
     state: newNode_0
         a: Введите текст
 
-        state: CatchText
+        state: CatchText || modal = true
             q: *
             script:
                 $session.tex = $parseTree.text;

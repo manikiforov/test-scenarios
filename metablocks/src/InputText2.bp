@@ -1,0 +1,18 @@
+{
+  "positions" : [ {
+    "id" : "/newNode_0",
+    "name" : "Экран 0",
+    "x" : 442,
+    "y" : 352
+  }, {
+    "id" : "/newNode_1",
+    "name" : "newNode_1",
+    "x" : 820,
+    "y" : 490
+  }, {
+    "id" : "/start",
+    "name" : "newNode_2",
+    "x" : 42,
+    "y" : 244
+  } ]
+}
