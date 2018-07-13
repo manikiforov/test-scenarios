@@ -8,7 +8,6 @@ theme: /
     state: newNode_0
         q!: start
         a: Мы стартанули!
-        a: параметры запроса: {{JSON.stringify($request.data)}}
         go!: /newNode_1
     @InputText
         {
