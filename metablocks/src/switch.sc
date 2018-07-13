@@ -9,7 +9,9 @@ theme: /
           "prompt" : "Вам ответит первый освободившийся оператор",
           "ignoreOffline" : false,
           "firstMessage" : "",
-          "closeChatPhrases" : [ "хватит" ],
+          "closeChatPhrases" : [
+            "хватит"
+          ],
           "destination" : "",
           "attributes" : {
             "фыв" : "фыв"
