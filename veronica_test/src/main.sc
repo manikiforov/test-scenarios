@@ -26,3 +26,4 @@ theme: /
 
     state: newNode_2
         image: https://248305.selcdn.ru/public_test/sadmin/qapoW67Hq0FczFGi.jpg
+        a: Вы сказали {{$parseTree.tex}}
