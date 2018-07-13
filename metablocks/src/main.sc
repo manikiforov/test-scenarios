@@ -1,7 +1,7 @@
 require: all.sc
-  module = common
+    module = common
 require: patterns.sc
-  module = common
+    module = common
 
 theme: /
 
@@ -19,7 +19,7 @@ theme: /
     state: newNode_1
         a: Введите текст или отправитесь играть в покер со Смертью1!1
 
-        state: CatchText
+        state: CatchText || modal = true
             q: *
             script:
                 $session.text = $parseTree.text;
