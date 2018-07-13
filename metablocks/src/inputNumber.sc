@@ -1,13 +1,9 @@
 
 theme: /
-
-    state: newNode_0
-        q!: inputNumber
-        go!: /newNode_1
     @InputNumber
         {
           "prompt" : "Ввод числа",
-          "varName" : "numb",
+          "varName" : "number",
           "minValue" : 1,
           "maxValue" : 5,
           "failureMessage" : [
@@ -15,7 +11,7 @@ theme: /
           ],
           "then" : "/newNode_2"
         }
-    state: newNode_1
+    state: newNode_0
         a: Ввод числа
 
         state: CatchNumber
@@ -32,10 +28,10 @@ theme: /
                     $reactions.answer(failureRandom);
                 } else
                 {
-                    $session.numb = $parseTree._Number;
-                    $temp.numb_ok = true;
+                    $session.number = $parseTree._Number;
+                    $temp.number_ok = true;
                 }
-            if: $temp.numb_ok
+            if: $temp.number_ok
                 go!: /newNode_2
             else:
                 go: CatchNumber
@@ -43,6 +39,10 @@ theme: /
         state: CatchAll
             q: *
             go!: ..
+
+    state: newNode_1
+        q!: InputNumber
+        go!: /newNode_0
 
     state: newNode_2
         a: Ваше число - {{$parseTree.numb}}
