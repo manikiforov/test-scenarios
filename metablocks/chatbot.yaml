@@ -1,7 +1,7 @@
 name: echo
 
 entryPoint:
-  - main.sc
+  - confirmation.sc
 
 tests:
   exclude:
