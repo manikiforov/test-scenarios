@@ -15,10 +15,10 @@ theme: /
             "Да" -> Agree
             "Нет" -> Disagree
         state: Agree
-            q: $agree
+            q: agree
             go!: /newNode_3
         state: Disagree
-            q: $disagree
+            q: disagree
             go!: /newNode_2
 
     state: newNode_1
