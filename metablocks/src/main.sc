@@ -135,7 +135,7 @@ theme: /
             go!: /newNode_7
 
     state: newNode_6
-        image: https://248305.selcdn.ru/public_test/sadmin/0puvH1GRFIfBJsov.png
+        image: https://248305.selcdn.ru/public_test/sadmin/O3O9argQgcvlEwRe.jpg
 
     state: newNode_7
-        image: https://248305.selcdn.ru/public_test/sadmin/d57NsHbMCQqYAv4b.jpg
+        image: https://248305.selcdn.ru/public_test/sadmin/NXxJAPvXHWr0pqld.jpg
