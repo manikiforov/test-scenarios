@@ -1,9 +1,7 @@
 require: all.sc
-  module = common
-
+    module = common
 require: patterns.sc
-
-  module = common
+    module = common
 
 theme: /
 
@@ -87,10 +85,10 @@ theme: /
             "Да" -> Agree
             "Нет" -> Disagree
         state: Agree
-            q: agree
+            q: $agree
             go!: /newNode_3
         state: Disagree
-            q: disagree
+            q: $disagree
             go!: /newNode_8
     @Switch
         {
@@ -126,3 +124,8 @@ theme: /
             event: livechatFinished
             a: Оператор завершил диалог
             go!: /newNode_7
+
+    state: newNode_0
+        q!: *
+        a: Вы сказали {{$parseTree.tex}}
+        go!: /newNode_1
