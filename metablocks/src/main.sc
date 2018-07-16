@@ -1,7 +1,9 @@
 require: all.sc
-module = common
+  module = common
+
 require: patterns.sc
-module = common
+
+  module = common
 
 theme: /
 
@@ -85,10 +87,10 @@ theme: /
             "Да" -> Agree
             "Нет" -> Disagree
         state: Agree
-            q: $agree
+            q: agree
             go!: /newNode_3
         state: Disagree
-            q: $disagree
+            q: disagree
             go!: /newNode_8
     @Switch
         {
