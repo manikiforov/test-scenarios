@@ -5,25 +5,22 @@ theme: /
           "prompt" : "Вы согласны?",
           "agreeState" : "/newNode_3",
           "disagreeState" : "/newNode_2",
-          "useButtons" : true,
+          "useButtons" : false,
           "agreeButton" : "Да",
           "disagreeButton" : "Нет"
         }
-    state: newNode_0
+    state: newNode_4
         a: Вы согласны?
-        buttons:
-            "Да" -> Agree
-            "Нет" -> Disagree
         state: Agree
-            q: agree
+            q: $agree
             go!: /newNode_3
         state: Disagree
-            q: disagree
+            q: $disagree
             go!: /newNode_2
 
     state: newNode_1
         q!: confirmation
-        go!: /newNode_0
+        go!: /newNode_4
 
     state: newNode_2
         a: Отказ!
