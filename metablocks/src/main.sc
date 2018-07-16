@@ -5,19 +5,22 @@ require: patterns.sc
 
 theme: /
 
-    state: 1
-        q!: start
-        a: Вы сказали: {{$parseTree.text}}
-        a: параметры запроса: {{JSON.stringify($request.data)}}
-        go!: /newNode_1
+    state: newNode_3
+        a: пыщ!
+
+    state: newNode_6
+        image: https://248305.selcdn.ru/public_test/sadmin/O3O9argQgcvlEwRe.jpg
+
+    state: newNode_7
+        image: https://248305.selcdn.ru/public_test/sadmin/NXxJAPvXHWr0pqld.jpg
     @InputText
         {
-          "prompt" : "Введите текст или отправитесь играть в покер со Смертью1!1",
+          "prompt" : "\"Введите текст или отправитесь играть в покер со Смертью1!\"",
           "varName" : "text",
           "then" : "/newNode_2"
         }
     state: newNode_1
-        a: Введите текст или отправитесь играть в покер со Смертью1!1
+        a: "Введите текст или отправитесь играть в покер со Смертью1!"
 
         state: CatchText || modal = true
             q: *
@@ -26,33 +29,33 @@ theme: /
             go!: /newNode_2
     @InputNumber
         {
-          "prompt" : "Введите число, о Величаший!",
+          "prompt" : "\"Введите число, о Величаший!\"",
           "varName" : "number",
-          "minValue" : -500,
-          "maxValue" : 55,
+          "minValue" : 0,
+          "maxValue" : 10,
           "failureMessage" : [
-            "Введите число от 1 до 5",
-            "Где твои мозги?!",
-            "Не хотите в Болливуд?!"
+            "Введите число от 0 до 10",
+            "о онет",
+            "не очень супер"
           ],
-          "then" : "/newNode_4"
+          "then" : "/newNode_5"
         }
     state: newNode_2
-        a: Введите число, о Величаший!
+        a: "Введите число, о Величаший!"
 
         state: CatchNumber
             q: $Number
             script:
                 var failureMessages = [
-                    "Введите число от 1 до 5",
-                    "Где твои мозги?!",
-                    "Не хотите в Болливуд?!"
+                    "Введите число от 0 до 10",
+                    "о онет",
+                    "не очень супер"
                 ];
                 var failureRandom = failureMessages[$reactions.random(failureMessages.length)];
-                if ($parseTree._Number < -500) {
+                if ($parseTree._Number < 0) {
                     $reactions.answer(failureRandom);
                 } else
-                if ($parseTree._Number > 55) {
+                if ($parseTree._Number > 10) {
                     $reactions.answer(failureRandom);
                 } else
                 {
@@ -60,67 +63,55 @@ theme: /
                     $temp.number_ok = true;
                 }
             if: $temp.number_ok
-                go!: /newNode_4
+                go!: /newNode_5
             else:
                 go: CatchNumber
 
         state: CatchAll
             q: *
             go!: ..
-
-    state: newNode_3
-        a: пыщ!
     @Confirmation
         {
-          "prompt" : "Вы согласны перейти в плоский мир?",
+          "prompt" : " \"Вы согласны перейти в плоский мир?\"",
           "agreeState" : "/newNode_3",
-          "disagreeState" : "/newNode_5",
+          "disagreeState" : "/newNode_8",
           "useButtons" : true,
-          "agreeButton" : "Дя",
-          "disagreeButton" : "Нэт"
+          "agreeButton" : "Да",
+          "disagreeButton" : "Нет"
         }
-    state: newNode_4
-        a: Вы согласны перейти в плоский мир?
+    state: newNode_5
+        a:  "Вы согласны перейти в плоский мир?"
         buttons:
-            "Дя" -> Agree
-            "Нэт" -> Disagree
+            "Да" -> Agree
+            "Нет" -> Disagree
         state: Agree
             q: $agree
             go!: /newNode_3
         state: Disagree
             q: $disagree
-            go!: /newNode_5
+            go!: /newNode_8
     @Switch
         {
           "prompt" : "Вам ответит первый освободившийся оператор",
           "ignoreOffline" : false,
-          "firstMessage" : "Пыщ пыщ вам сообщение",
-          "closeChatPhrases" : [
-            "пока",
-            "хватит плз"
-          ],
+          "oneTimeMessage" : false,
+          "firstMessage" : "",
+          "closeChatPhrases" : [ ],
           "destination" : "",
-          "attributes" : {
-            "мемасики" : "112312312"
-          },
           "onClose" : "/newNode_7",
           "chatClosedMessage" : "Оператор завершил диалог",
           "noOperatorsOnlineState" : "/newNode_6"
         }
-    state: newNode_5
+    state: newNode_8
         if: false || hasOperatorsOnline()
             script:
                 var switchReply = {type:"switch"};
                 switchReply.ignoreOffline = false;
+                switchReply.oneTimeMessage = false;
                 switchReply.closeChatPhrases = [
-                     "пока",
-                     "хватит плз"
                 ];
                 switchReply.destination = "";
-                switchReply.attributes = {
-                         "мемасики": "112312312"
-                };
-                switchReply.firstMessage = "Пыщ пыщ вам сообщение";
+                switchReply.firstMessage = "";
                 $response.replies = $response.replies || [];
                 $response.replies.push(switchReply);
             a: Вам ответит первый освободившийся оператор
@@ -133,9 +124,3 @@ theme: /
             event: livechatFinished
             a: Оператор завершил диалог
             go!: /newNode_7
-
-    state: newNode_6
-        image: https://248305.selcdn.ru/public_test/sadmin/O3O9argQgcvlEwRe.jpg
-
-    state: newNode_7
-        image: https://248305.selcdn.ru/public_test/sadmin/NXxJAPvXHWr0pqld.jpg
