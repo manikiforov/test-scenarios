@@ -43,3 +43,7 @@ theme: /
     state: all
         q!: all 
         a: Вот все что есть на сегодня: {{$client.data['today']}}\nВот все что есть на завтра: {{$client.data['tomorrow']}}
+        
+    state: empty
+        q!: empty
+        script: $client.data = {};
