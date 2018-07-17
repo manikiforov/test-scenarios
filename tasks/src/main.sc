@@ -13,7 +13,7 @@ theme: /
         
     state: Task_today
         a: Введи задачу
-        script: $client.data.append = $parseTree.text
+        script: $client.data["today"] = $parseTree.text
         
     state: Task_tomorrow
         a: Введи задачу
