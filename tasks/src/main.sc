@@ -24,4 +24,4 @@ theme: /
         
     state: all
         q!: all 
-        a: Вот все что есть: {{$client.data.today}}
+        a: Вот все что есть: {{$client.data['today']}}
