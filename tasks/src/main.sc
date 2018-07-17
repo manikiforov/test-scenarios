@@ -15,7 +15,7 @@ theme: /
         a: Введи задачу
         script:
             $client.data = {};
-            $client.data["today"] = $parseTree.text;
+            $client.data.today = $parseTree.text;
             
         
     state: Task_tomorrow
