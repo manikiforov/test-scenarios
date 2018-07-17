@@ -13,9 +13,12 @@ theme: /
         
     state: Task_today
         a: Введи задачу
+        
+        state: Task_today2
+        q: *
         script:
             $client.data = {};
-            $client.data.today = "dfsdfsdf";
+            $client.data.today = $parseTree.text;
             
         
     state: Task_tomorrow
