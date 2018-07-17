@@ -15,10 +15,10 @@ theme: /
         a: Введи задачу
         
         state: Task_today2
-        q: *
-        script:
-            $client.data = {};
-            $client.data.today = $parseTree.text;
+            q: *
+            script:
+                $client.data = {};
+                $client.data.today = $parseTree.text;
             
         
     state: Task_tomorrow
