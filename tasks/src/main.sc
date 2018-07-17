@@ -12,10 +12,10 @@ theme: /
             "Tomorrow" -> /Task_tomorrow
         
     state: Task_today
-        script: $client.data = $parseTree.text
+        script: $client.data.append($parseTree.text)
         
     state: Task_tomorrow
-        script: $client.data = $parseTree.text
+        script: $client.data.append($parseTree.text)
         
     state: all
         q!: all 
