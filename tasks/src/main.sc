@@ -28,8 +28,18 @@ theme: /
                 
     state: Task_tomorrow
         a: Введи задачу
-        script: $client.data = $parseTree.text
+        
+        state: Task_today2
+            q: *
+            script:
+                if ($client.data) {
+                    $client.data.tomorrow = $client.data.tomorrow + '\n' + $parseTree.text;
+                }            
+                else {
+                    $client.data = {};
+                    $client.data.tomorrow = $parseTree.text
+                }
         
     state: all
         q!: all 
-        a: Вот все что есть: {{$client.data['today']}}
+        a: Вот все что есть на сегодня: {{$client.data['today']}}\nВот все что есть на завтра: {{$client.data['tomorrow']}}
