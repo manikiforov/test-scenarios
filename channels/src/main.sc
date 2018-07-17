@@ -14,6 +14,10 @@ theme: /
         script:
             log($request);
             
+    state: vk
+        q: test-vk
+        a:
+            
     state: image
         event: imageEvent
         a: изображение дошло
