@@ -18,7 +18,8 @@ theme: /
             q: *
             script:
                 $client.data = {};
-                $client.data.today = $parseTree.text;
+                $client.data.today = $client.data.today || "";
+                $client.data.today = $client.data.today + '\n' + $parseTree.text;
             
         
     state: Task_tomorrow
