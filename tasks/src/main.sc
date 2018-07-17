@@ -7,6 +7,9 @@ theme: /
     state: start
         q!: start
         a: Привет. Это тестовый бот с таск-трекером внутри. Пока могу не очень много,  только добавить таску на сегодня или на завтра:( Но я быстро учусь.
+        script:
+            $client.data = {};
+            $client.data.today = "";
         buttons:
             "Today" -> /Task_today
             "Tomorrow" -> /Task_tomorrow
@@ -17,8 +20,6 @@ theme: /
         state: Task_today2
             q: *
             script:
-                $client.data = {};
-                $client.data.today = $client.data.today || "";
                 $client.data.today = $client.data.today + '\n' + $parseTree.text;
             
         
