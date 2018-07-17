@@ -15,7 +15,7 @@ theme: /
             log($request);
             
     state: vk
-        q: test-vk
+        q: контакт
         a:
             
     state: image
