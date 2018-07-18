@@ -2,23 +2,37 @@
   "classes" : [
     {
       "id" : "",
-      "path" : "/343434",
+      "path" : "/1/help2/home3",
       "description" : "",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "",
+      "path" : "/1/help2/home3/mood4",
+      "description" : "",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "11.22.33.34",
+      "path" : "/kykyky/papapapa/33/34",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "11.22.12",
+      "path" : "/kykyky/papapapa/12",
       "phrases" : [
         ""
       ]
     },
     {
       "id" : "1",
-      "path" : "/First1234",
-      "description" : "1241241414adssadasdasdasd",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "",
-      "path" : "/fourq1",
+      "path" : "/1",
       "description" : "",
       "phrases" : [
         ""
@@ -26,23 +40,7 @@
     },
     {
       "id" : "",
-      "path" : "/qweqweqweqwe",
-      "description" : "",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "1 ",
-      "path" : "/Second12",
-      "description" : "",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "Second12.gertyur",
-      "path" : "/Second12/mood",
+      "path" : "/1/help2",
       "description" : "",
       "phrases" : [
         ""
@@ -50,7 +48,7 @@
     },
     {
       "id" : "",
-      "path" : "/Third",
+      "path" : "/kykyky",
       "description" : "",
       "phrases" : [
         ""
@@ -58,23 +56,22 @@
     },
     {
       "id" : "",
-      "path" : "/veronika",
+      "path" : "/1/help2/number5",
       "description" : "",
       "phrases" : [
         ""
       ]
     },
     {
-      "id" : "",
-      "path" : "/veronika/testik",
-      "description" : "",
+      "id" : "11.22.33",
+      "path" : "/kykyky/papapapa/33",
       "phrases" : [
         ""
       ]
     },
     {
       "id" : "",
-      "path" : "/veronika/testik/testik2",
+      "path" : "/kykyky/papapapa",
       "description" : "",
       "phrases" : [
         ""
