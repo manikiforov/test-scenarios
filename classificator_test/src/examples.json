@@ -2,30 +2,6 @@
   "classes" : [
     {
       "id" : "",
-      "path" : "/121",
-      "description" : "",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "",
-      "path" : "/121/testik",
-      "description" : "",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "",
-      "path" : "/121/testik/testik2",
-      "description" : "",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "",
       "path" : "/343434",
       "description" : "",
       "phrases" : [
@@ -66,7 +42,8 @@
     },
     {
       "id" : "Second12.gertyur",
-      "path" : "/Second12/gertyur",
+      "path" : "/Second12/mood",
+      "description" : "",
       "phrases" : [
         ""
       ]
@@ -74,6 +51,30 @@
     {
       "id" : "",
       "path" : "/Third",
+      "description" : "",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "",
+      "path" : "/veronika",
+      "description" : "",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "",
+      "path" : "/veronika/testik",
+      "description" : "",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "",
+      "path" : "/veronika/testik/testik2",
       "description" : "",
       "phrases" : [
         ""
