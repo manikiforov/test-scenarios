@@ -31,14 +31,6 @@
       ]
     },
     {
-      "id" : "1",
-      "path" : "/1",
-      "description" : "",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
       "id" : "",
       "path" : "/1/help2",
       "description" : "",
@@ -72,6 +64,14 @@
     {
       "id" : "",
       "path" : "/kykyky/papapapa",
+      "description" : "",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "2",
+      "path" : "/1",
       "description" : "",
       "phrases" : [
         ""
