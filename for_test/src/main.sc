@@ -3,12 +3,6 @@ theme: /
 
     state: Start
         q!: start
-        a: Вы сказали и бот ответил: {{$parseTree.text}}
-        go!: /CatchAll
-
-    state: CatchAll
-        q!: *
-        a: Скажите боту чтото осмысленное.
         go!: /newNode_5
 
     state: newNode_5
