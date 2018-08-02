@@ -9,14 +9,6 @@ theme: /
     state: CatchAll
         q!: *
         a: Скажите боту чтото осмысленное.
-        go!: /newNode_3
-
-    state: newNode_3
-        a: kek?
-        go!: /newNode_4
-
-    state: newNode_4
-        a: not kek?
         go!: /newNode_5
 
     state: newNode_5
