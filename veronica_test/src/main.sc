@@ -2,7 +2,7 @@
 theme: /
 
     state: newNode_2
-        e!: start
+        q!: *
         go!: /newNode_3
 
     state: newNode_3
