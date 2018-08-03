@@ -1,3 +1,10 @@
+init:
+    bind("onAnyError", function($context) {
+            if ($context.exception.message) {
+                $reactions.answer($context.exception.message);
+            }
+        });
+
 
 theme: /
 
