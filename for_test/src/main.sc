@@ -9,10 +9,14 @@ init:
 theme: /
 
     state:
-        q: * start
+        q!: * start
         script:
             while (true);
         go!: /test
 
     state: test
         a:  Start processing! {{ $client.test }}
+        
+    state: pov
+        q!: test
+        a: бум
