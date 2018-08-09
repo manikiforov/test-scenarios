@@ -1,7 +1,9 @@
 theme: /
 
     state: answer
-        q!: 
+        q!: answer
+        a: Я вам ответил
+    
     state: 
         q!: *
         a: Вы сказали: {{$parseTree.text}}
