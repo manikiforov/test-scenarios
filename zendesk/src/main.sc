@@ -4,8 +4,8 @@ theme: /
         q!: answer
         a: Я вам ответил
     
-    state: 
-        q!: *
+    state: nonanswer
+        q!: nonanswer
         a: Вы сказали: {{$parseTree.text}}
         script: $response.zendesk = {
                 status: 'NEW',
