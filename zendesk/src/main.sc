@@ -3,6 +3,15 @@ theme: /
     state: answer
         q!: answer
         a: Я вам ответил
+        script: $response.zendesk = {
+                status: 'OPEN',
+                htmlBody: false,
+                needResponse: false,
+                assigneeEmail: '',
+                assigneeGroupName: '',
+                addTags: [],
+                removeTags: []
+            }
     
     state: nonanswer
         q!: nonanswer
