@@ -6,3 +6,8 @@ entryPoint:
 tests:
   exclude:
     - test.xml
+
+nlp:
+  rankByContext:
+    p1: 0
+    p2: 0
