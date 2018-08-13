@@ -9,5 +9,3 @@ state: /3
     state: /2
         q: тест
         a: response 2
-
-    
