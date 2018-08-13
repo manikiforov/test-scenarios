@@ -1,11 +1,11 @@
 theme: /
 
     state: /3
-        q: тест
+        q: * привет *
         a: response 3
 
     state: /1
-        q: тест
+        q: привет
         a: response 1
 
     state: /2
