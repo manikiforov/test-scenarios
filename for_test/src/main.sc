@@ -1,4 +1,6 @@
-state: /3
+theme: /
+
+    state: /3
         q: тест
         a: response 3
 
