@@ -19,3 +19,6 @@ theme: /
 
     state:
         q!: test5 $weight<-0.2>
+        
+    state:
+        q!: test6 $weight<1.1-0.2+0.3>
