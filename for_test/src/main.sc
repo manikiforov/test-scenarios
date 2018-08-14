@@ -9,7 +9,7 @@ theme: /
     state:
         q: * start
         script:
-            while(true) {
+            do {
                 var i = 1;
-            }
+            } while(true)
         a:  Start processing!
