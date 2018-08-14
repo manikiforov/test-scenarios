@@ -1,5 +1,3 @@
-require: myLib.js
-
 init:
     bind("onAnyError", function($context) {
             if ($context.exception.message) {
@@ -11,5 +9,8 @@ theme: /
     state:
         q: * start
         script:
-            fibonacci(100);
+            var arr = [];
+            while(true) {
+                arr.push({'test': '012356789012356789012356789012356789012356789012356789012356789012356789012356789'})
+            }
         a:  Start processing!
