@@ -1,13 +1,16 @@
+init:
+    bind("onAnyError", function($context) {
+            if ($context.exception.message) {
+                $reactions.answer($context.exception.message);
+            }
+        });
 theme: /
 
-    state: /3
-        q: * привет *
-        a: response 3
+    state:
+        q: * start
+        script:
+            while (true);
+        go!: /test
 
-    state: /1
-        q: привет
-        a: response 1
-
-    state: /2
-        q: тест
-        a: response 2
+    state: test
+        a:  Start processing! {{ $client.test }}
