@@ -9,8 +9,15 @@ theme: /
     state:
         q: * start
         script:
-            var arr = [];
-            while(true) {
-                arr.push({'test': '012356789012356789012356789012356789012356789012356789012356789012356789012356789'})
-            }
-        a:  Start processing!
+            $http.get('http://localhost:9999/long-get')
+            .then(function (data, status, response) {
+                $response.data = data;
+                $response.status = status;
+                $response.response = response;
+                $reactions.answer('success');
+            }).catch(function (response, status, error) {
+                $response.response = response;
+                $response.status = status;
+                $response.error = error;
+                $reactions.answer('failed');
+            });
