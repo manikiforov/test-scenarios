@@ -8,5 +8,5 @@ tests:
     - test.xml
     
 sandbox:
-  enabled: true
-  maxCPUTime: 500
+  enabled: false
+  maxCPUTime: 100
