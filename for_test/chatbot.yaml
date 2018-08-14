@@ -9,4 +9,4 @@ tests:
     
 sandbox:
   enabled: true
-  maxCPUTime: 100
+  maxCPUTime: 500
