@@ -1,3 +1,5 @@
+require: myLib.js
+
 init:
     bind("onAnyError", function($context) {
             if ($context.exception.message) {
@@ -9,7 +11,5 @@ theme: /
     state:
         q: * start
         script:
-            do {
-                var i = 1;
-            } while(true)
+            fibonacci(100);
         a:  Start processing!
