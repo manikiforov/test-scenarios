@@ -1,5 +1,3 @@
-require: myLib.js
-
 init:
     bind("onAnyError", function($context) {
             if ($context.exception.message) {
@@ -11,5 +9,7 @@ theme: /
     state:
         q: * start
         script:
-            myFunction();
+            while(true) {
+                var i = 1;
+            }
         a:  Start processing!
