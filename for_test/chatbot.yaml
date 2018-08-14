@@ -9,4 +9,4 @@ tests:
     
 sandbox:
   enabled: true
-  maxMemory: 1048576
+  maxCPUTime: 500
