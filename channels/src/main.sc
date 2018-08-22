@@ -32,7 +32,7 @@ theme: /
 
     state: CatchAll
         q!: *
-        a: Скажите боту чтото осмысленное.
+        a: Скажите боту чтото осмысленное start2.
                 
     state: Prechat
         q!: prechat
