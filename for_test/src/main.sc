@@ -1,15 +1,17 @@
-init:
-    bind("onAnyError", function($context) {
-            if ($context.exception.message) {
-                $reactions.answer($context.exception.message);
-            }
-        });
 theme: /
 
     state:
-        q: * start
-        script:
-            while(true) {
-                var i = 1;
-            }
-        a:  Start processing!
+        q!: солнце
+        a: солнце
+
+    state:
+        q!: сало
+        a: сало
+
+    state:
+        q!: соло
+        a: соло
+
+    state:
+        q!: *
+        a: не попали
