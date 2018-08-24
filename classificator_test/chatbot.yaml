@@ -33,4 +33,4 @@ nlp:
   morphology: myStem      # обязательный параметр
   costStrategy: weighted  # обязательный параметр
   # Словарь должен совпадать с указанным в секции aligner
-  vocabulary: src/aer.json
+  #vocabulary: src/aer.json
