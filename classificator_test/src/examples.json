@@ -2,15 +2,7 @@
   "classes" : [
     {
       "id" : "",
-      "path" : "/1/help2/home3",
-      "description" : "",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "",
-      "path" : "/1/help2/home3/mood4",
+      "path" : "/1/home3",
       "description" : "",
       "phrases" : [
         ""
@@ -40,23 +32,7 @@
     },
     {
       "id" : "",
-      "path" : "/1/help2",
-      "description" : "",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "",
       "path" : "/kykyky",
-      "description" : "",
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "",
-      "path" : "/1/help2/number5",
       "description" : "",
       "phrases" : [
         ""
@@ -80,6 +56,30 @@
     {
       "id" : "2",
       "path" : "/1",
+      "description" : "",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "",
+      "path" : "/1/home3/mood",
+      "description" : "",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "",
+      "path" : "/1/home3/mood/help2",
+      "description" : "",
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "",
+      "path" : "/1/home3/mood/help2/number5",
       "description" : "",
       "phrases" : [
         ""
