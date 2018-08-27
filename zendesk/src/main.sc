@@ -5,6 +5,7 @@ theme: /
         a: Я вам ответил
         script: $response.zendesk = {
                 status: 'OPEN',
+                type: 'QUESTION',
                 htmlBody: false,
                 needResponse: false,
                 assigneeEmail: '',
