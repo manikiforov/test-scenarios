@@ -17,8 +17,8 @@ theme: /
         q!: nonanswer
         a: Вы сказали: {{$parseTree.text}}
         script: $response.zendesk = {
-                status: '123',
-                type: 'TASK',
+                status: 'NEW',
+                type: '123',
                 htmlBody: false,
                 needResponse: false,
                 assigneeEmail: '',
