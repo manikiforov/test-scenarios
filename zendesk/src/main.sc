@@ -18,7 +18,7 @@ theme: /
         a: Вы сказали: {{$parseTree.text}}
         script: $response.zendesk = {
                 status: 'NEW',
-                type: 'PROBLEM',
+                type: 'INCIDENT',
                 htmlBody: false,
                 needResponse: false,
                 assigneeEmail: '',
