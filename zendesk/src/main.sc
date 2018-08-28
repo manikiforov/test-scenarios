@@ -5,6 +5,7 @@ theme: /
         a: Я вам ответил
         script: $response.zendesk = {
                 status: 'OPEN',
+                type: 'QUESTION',
                 htmlBody: false,
                 needResponse: false,
                 assigneeEmail: '',
@@ -18,7 +19,7 @@ theme: /
         a: Вы сказали: {{$parseTree.text}}
         script: $response.zendesk = {
                 status: 'NEW',
-                type: 'INCIDENT',
+                type: 'TASK',
                 htmlBody: false,
                 needResponse: false,
                 assigneeEmail: '',
