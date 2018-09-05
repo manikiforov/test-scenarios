@@ -1,7 +1,7 @@
 theme: /
 
     state: Start
-        q!: /start
+        q!: * (*start|*reset)
         a: Привет я тестовый бот тестер люблю тестить
 
     state: stop
