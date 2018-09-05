@@ -1,8 +1,8 @@
 theme: /
 
     state: Start
-        q!: start
-        a: Вы сказали и бот ответил: {{$parseTree.text}}
+        q!: /start
+        a: Привет я тестовый бот тестер люблю тестить
 
     state: stop
         q!: stop
