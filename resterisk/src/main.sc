@@ -32,7 +32,7 @@ theme: /
 
     state: CatchAll
         q!: *
-        a: Скажите боту чтото осмысленное .
+        a: Вы сказали : {{$parseTree.text}}
                 
     state: Prechat
         q!: prechat
