@@ -1,4 +1,4 @@
-require: numbers.js
+require: numbersStr.js
 
 theme: /
 
