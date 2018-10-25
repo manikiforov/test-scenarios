@@ -9,17 +9,7 @@ theme: /
 
 
         bind("postProcess", function($context) {
-            log('postProcess!');
-            var $context = $jsapi.context();
-            if ($context.temp.count == 5) {
-                return;
-            }
-            if ($context.temp.count > 2) {
-                $reactions.transition("/postprocess2");
-            } else {
-                $reactions.transition("/postprocess");
-            }
-            $context.temp.count = $context.temp.count + 1
+            $reactions.transition("/postprocess");
         });
 
     state: start
@@ -30,6 +20,3 @@ theme: /
 
         state: postprocessEnd
             a: state from postprocess transition
-
-    state: postprocess2
-        a: postprocess2
