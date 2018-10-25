@@ -3,12 +3,6 @@ name: echo
 entryPoint:
   - main.sc
 
-nlp:
-  timeLimit:
-    enabled: false
-  speller:
-    dictionary: speller.dict
-
 tests:
   exclude:
     - test.xml
