@@ -1,7 +1,5 @@
 theme: /
     init:
-
-
         bind("preProcess", function($context) {
             log('preProcess!');
             $context.temp.count = 1;
