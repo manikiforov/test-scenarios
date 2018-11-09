@@ -2,7 +2,5 @@ name: timeouts
 
 entryPoint:
   - main.sc
-
-tests:
-  exclude:
+  include:
     - test.xml
