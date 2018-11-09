@@ -2,7 +2,7 @@
 
     <test-case>
         <q>11</q>
-        <a>Вы сказали: 11</a>
+        <a>Набери timeout чтобы начать</a>
         <a>параметры запроса: {}</a>
         <timeoutReply targetState="/timedout"/>
         <timeout/>
