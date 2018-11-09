@@ -3,7 +3,6 @@
     <test-case>
         <q>11</q>
         <a>Набери timeout чтобы начать</a>
-        <a>параметры запроса: {}</a>
         <timeoutReply targetState="/timedout"/>
         <timeout/>
         <a>Этот ответ должен быть выведен в случае, если клиент молчит</a>
