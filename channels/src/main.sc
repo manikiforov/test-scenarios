@@ -8,6 +8,14 @@ theme: /
         q!: stop
         a: Вы прервали меня!!!
         
+    state: buttons
+        q!: buttons
+        a: кнопки
+        buttons:
+            "Первая" -> /Start
+            "Вторая" -> /Stop
+            "Третья" -> /CatchAll
+        
     state: raw
         event: rawRequestEvent
         a: LOL
