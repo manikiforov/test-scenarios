@@ -142,3 +142,13 @@ theme: /
                             oneTimeMessage: true
                          });
                     go!: /CatchAll
+        
+        state: OperatorZopim
+            q: *zopim*
+            a: Перевожу на оператора
+            script:
+                $response.zopim = {
+                    needResponse: true,
+                    departmentName: 'Dep 1'
+                };
+        
