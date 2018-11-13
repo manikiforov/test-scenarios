@@ -1,12 +1,15 @@
 {
   "classes" : [
     {
-      "id" : "testclassifier",
-      "path" : "/testclassifier",
-      "description" : "asdasd",
+      "id" : "apple",
+      "path" : "/Apple",
+      "description" : "",
       "disabled" : false,
       "phrases" : [
-        ""
+        "Где можно оформить карту?",
+        "Хочу вашу халву!",
+        "У друга есть ваша халва, я тоже ее хочу",
+        "доставка"
       ]
     }
   ]
