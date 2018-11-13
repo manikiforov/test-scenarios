@@ -1,9 +1,9 @@
 {
   "classes" : [
     {
-      "id" : "hey",
-      "path" : "/sometestclass",
-      "description" : "",
+      "id" : "classifiertest",
+      "path" : "/classifiertest",
+      "description" : "test description",
       "disabled" : false,
       "phrases" : [
         ""
