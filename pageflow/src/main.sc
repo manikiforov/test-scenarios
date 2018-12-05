@@ -26,7 +26,7 @@ theme: /
         
     state: CatchAll
         q!: *
-        script: pageName("Что то непонятно");
+        script: pageName("Что то непонятно123");
         a: Что то не понятное
         
     state: Первый стейт
