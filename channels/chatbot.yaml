@@ -1,36 +1,8 @@
-name: empty
+name: echo
 
 entryPoint:
-  - entryPoint.sc
+  - main.sc
 
-nlp:
-  tokenizer: myStem
-  morphology: pyMorphy
-  costStrategy: weighted
-  contextHistoryDepth: 1
-  nbest: 1
-  vocabulary: sys/zb-dictionaries/opencorpora/opcorpora-vocab.json
-  synonyms: sys/zb-dictionaries/opencorpora/weighted-synonyms-pmiIdf.json
-
-classifier:
-  engine: sts
-  noMatchThreshold: 0.2
-  parameters:
-    algorithm: match-aligner
-
-ner:
-  allowedPatterns:
-
-tests: 
-    exclude:
-        - '*.xml'
-
-scriptsPreLoad:
-  global:
-   - /jslib/moment.min.js
-   - /jslib/underscore.js
-   - /jsapi/common.js
-   - /jsapi/http.js
-  local:
-   - /jsapi/mail.js
-   - /jsapi/reactions.js
+tests:
+  exclude:
+    - test.xml
