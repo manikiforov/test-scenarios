@@ -2,12 +2,12 @@ init:
 	bind("postProcess", function($context) {
 		if ($client && $client.post){
 		    log('Условие в ПОСТпроцессе -----> ' + $client.post);
-		    $reactions.transition('/fray_test/postProcess'); 
+		    $reactions.transition('/postProcess'); 
 		    return false;
 		}
 	});
 
-theme: /fray_test
+theme: /
 
     state:
         q!: testpostprocess
