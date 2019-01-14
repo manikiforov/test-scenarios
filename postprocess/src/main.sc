@@ -11,7 +11,7 @@ theme: /fray_test
 
 
     state:
-        q!: testpostprocess
+        q!: *
         script:
             $client.post = 'true';
             log('Был в state 1 -----> ' + ($client.wasInPost ? 'да' : 'нет'));
@@ -19,9 +19,9 @@ theme: /fray_test
             log('ПОСТ -----> ' + $client.post);
 
     state:
-        q!: testpostprocessClean
+        q!: clean
         script:
-            $client.post = undefined;
+            $client = {};
             log('NO ПОСТ -----> ' + $client.post);
 
     state: postProcess
