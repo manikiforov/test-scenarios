@@ -14,6 +14,8 @@ theme: /fray_test
         q!: testpostprocess
         script:
             $client.post = 'true';
+            log('Был в state 1 -----> ' + ($temp.wasHere ? 'да' : 'нет'));
+            $temp.wasHere = true;
             log('ПОСТ -----> ' + $client.post);
 
     state:
