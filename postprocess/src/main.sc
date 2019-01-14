@@ -2,24 +2,22 @@ init:
     bind("postProcess", function($context) {
         if ($context.client && $context.client.post) {
             log('Условие в ПОСТпроцессе -----> ' + $context.client.post);
-            $reactions.transition('/postProcess'); 
+            $reactions.transition('/fray_test/postProcess'); 
             return false;
         }
     });
 
-theme: /
-
-
+theme: /fray_test
     state:
-        q!: *
+        q!: testpostprocess
         script:
             $client.post = 'true';
             log('ПОСТ -----> ' + $client.post);
 
     state:
-        q!: clean
+        q!: testpostprocessClean
         script:
-            $client = {};
+            $client.post = undefined;
             log('NO ПОСТ -----> ' + $client.post);
 
     state: postProcess
