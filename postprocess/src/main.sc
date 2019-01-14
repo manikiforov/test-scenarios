@@ -7,6 +7,7 @@ init:
 		}
 	});
 
+
 theme: /
 
     state:
@@ -20,7 +21,6 @@ theme: /
         script:
             $client.post = undefined;
             log('NO ПОСТ -----> ' + $client.post);
-
 
     state: postProcess
         script:
