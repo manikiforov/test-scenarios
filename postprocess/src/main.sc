@@ -1,7 +1,7 @@
 init:
 	bind("postProcess", function($context) {
-		if ($client && $client.post) {
-		    log('Условие в ПОСТпроцессе -----> ' + $client.post);
+		if ($context.client && $context.client.post) {
+		    log('Условие в ПОСТпроцессе -----> ' + $context.client.post);
 		    $reactions.transition('/postProcess'); 
 		    return false;
 		}
