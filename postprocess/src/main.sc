@@ -1,14 +1,12 @@
-init:
-	bind("postProcess", function($context) {
-		if ($context.client && $context.client.post) {
-		    log('Условие в ПОСТпроцессе -----> ' + $context.client.post);
-		    $reactions.transition('/postProcess'); 
-		    return false;
-		}
-	});
-
-
 theme: /
+    init:
+    	bind("postProcess", function($context) {
+    		if ($context.client && $context.client.post) {
+    		    log('Условие в ПОСТпроцессе -----> ' + $context.client.post);
+    		    $reactions.transition('/postProcess'); 
+    		    return false;
+    		}
+    	});
 
     state:
         q!: testpostprocess
