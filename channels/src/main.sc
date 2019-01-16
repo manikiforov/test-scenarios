@@ -1,75 +1,154 @@
-
 theme: /
-    @HttpRequest
-        {
-          "boundsTo" : "",
-          "actions" : [
-            {
-              "type" : "buttons",
-              "buttons" : [ ]
-            }
-          ],
-          "url" : "http://tools.aimylogic.com/api/rss2json?url=https://yandex.ru/blog/company/rss",
-          "method" : "GET",
-          "dataType" : "json",
-          "body" : "",
-          "okState" : "/newNode_1",
-          "errorState" : "",
-          "timeout" : 0,
-          "headers" : [ ],
-          "vars" : [
-            {
-              "name" : "items",
-              "value" : "$httpResponse"
-            }
-          ]
-        }
-    state: newNode_0
-        script:
-            var headers = {
-            };
-            var result = $http.query("http://tools.aimylogic.com/api/rss2json?url=https://yandex.ru/blog/company/rss", {
-                method: "GET",
-                headers: headers,
-                query: $session,
-                dataType: "json",
-                timeout: 0 || 10000
-            });
-            var $httpResponse = result.data;
-            $session.httpStatus = result.status;
-            $session.httpResponse = $httpResponse;
-            if (result.isOk && result.status >= 200 && result.status < 300) {
-                $session["items"] = $httpResponse;
-                $reactions.transition("/newNode_1");
-            }
-        init:
-            $jsapi.bind({
-                type: "postProcess",
-                path: "/newNode_0",
-                name: "newNode_0 buttons",
-                handler: function($context) {
-                }
-            });
 
-    state: newNode_1
-        if: $session.items.next()
-            go!: /newNode_2
-        else:
-            go!: /newNode_3
+    state: Start
+        q!: start
+        a: Вы сказали и бот ответил: {{$parseTree.text}}
 
-    state: newNode_2
-        random:
-            a: {{$session.items.current().title}}
+    state: stop
+        q!: stop
+        a: Вы прервали меня!!!
+        
+    state: buttons
+        q!: buttons
+        a: кнопки
         buttons:
-            "Дальше" -> /newNode_1
-            {text: "еще1", url: "https://yandex.ru"}
-            "123" -> /newNode_3
-            {text: "123 3", url: "http://yandex.ru"}
-            {text: "qweqweqweqweqwewqeeeeeeeeeeeee", url: "ya.ru"}
-            "1" -> /newNode_3
-            "1241" -> /newNode_3
-            {text: "124141414", url: "mail.ru"}
+            "Первая" -> /Start
+            "Вторая" -> /Stop
+            "Третья" -> /CatchAll
+        
+    state: raw
+        event: rawRequestEvent
+        a: LOL
+        script:
+            log($request);
+            
+    state: vk
+        q: контакт
+        a:
+            
+    state: image
+        event: imageEvent
+        a: изображение дошло
+        
+    state: file
+        event: fileEvent
+        a: файл дошел!
+        
+    state: telegramError
+        event: telegramApiRequestFailed
+        script: $request.data.eventData.errorMessage
 
-    state: newNode_3
-        random:
-            a: Больше нет новостей
+    state: CatchAll
+        q!: *
+        a: Скажите боту чтото осмысленное .
+                
+    state: Prechat
+        q!: prechat
+        if: !hasOperatorsOnline()
+            go!: NoOperatorsOnline
+        else:
+            a: Переходим?
+            buttons:
+                "Да" -> PrechatO
+                "Нет" -> /CatchAll
+
+        state: NoOperatorsOnline
+            a: Операторов сейчас нет, они отравились сушами в стриптиз баре.
+
+        state: PrechatO
+            a: Перевожу на оператора. Не ходите с ним в стриптиз бар!
+            script:
+                $response.replies = $response.replies || [];
+                $response.replies
+                 .push({
+                    type:"switch",
+                    closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
+                    firstMessage: $client.history,
+                    lastMessage: "Этот паршивец закрыл диалог, запомни это.",
+                    attributes: {
+                        "Имя": "Доминик",
+                        "Фамилия": "Флэндри"
+                    }
+                });
+
+    state: Destination
+        q!: destination
+        if: !hasOperatorsOnline("group1")
+            go!: NoOperatorsOnline
+        else:
+            a: Переходим?
+            buttons:
+                "Да" -> Groups
+                "Нет" -> /CatchAll
+
+        state: NoOperatorsOnline
+            a: Операторов сейчас нет, они отравились сушами в стриптиз баре.
+
+        state: Groups
+            a: Перевожу на оператора. Не ходите с ним в стриптиз бар!
+            script:
+                $response.replies = $response.replies || [];
+                $response.replies
+                 .push({
+                    type:"switch",
+                    closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
+                    firstMessage: $client.history,
+                    destination: "group1",
+                    lastMessage: "Этот паршивец закрыл диалог, запомни это."
+                });
+
+    state: LivechatReset
+        event!: livechatFinished
+        go!: /CatchAll
+
+    state: Operator
+        q!: operator
+        if: !hasOperatorsOnline()
+            go!: Switch/NoOperatorsOnline
+        else:
+            a: Переходим?
+            buttons:
+                "Да" -> Switch
+                "Нет" -> /CatchAll
+
+        state: Switch
+            a: Переводим на оператора, кстати Марксу уже больше 200лет!
+            buttons:
+                {"text":"Закрыть диалог","storeForViberLivechat":true}
+            script:
+                $response.replies = $response.replies || [];
+                $response.replies
+                 .push({
+                    type:"switch",
+                    closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
+                    firstMessage: $client.history,
+                    lastMessage: "Этот паршивец закрыл диалог, запомни это."
+                });
+
+            state: NoOperatorsOnline
+                a: Операторов нет, а ты есть. Но ты напиши им, порадуй зарождающуюся шизу.
+                buttons:
+                    "Вернись в лоно земли обетованной" -> /Start
+
+                state: GetUserInfo
+                    q: *
+                    script:
+                        $response.replies = $response.replies || [];
+                        $response.replies
+                         .push({
+                            type:"switch",
+                            firstMessage: $parseTree.text + '\nДанное сообщение было отправлено в нерабочее время.',
+                            ignoreOffline: true,
+                            oneTimeMessage: true
+                         });
+                    go!: /CatchAll
+        
+    state: OperatorZopim
+        q: *zopim*
+        a: Перевожу на оператора
+        script:
+            $response.zopim = {
+                needResponse: true,
+                departmentName: 'Dep 1'
+            };
+        
