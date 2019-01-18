@@ -1,3 +1,19 @@
+init:
+
+    bind("postProcess", function($context) {
+        var $response = $context.response, $temp = $context.temp, $session = $context.session, $request = $context.request;
+
+        $session.lastAnswer = $response.answer
+        $session.lastState = $context.currentState;
+
+        $response.bargeIn = true;
+
+        // чтобы на просьбу повторить, бот повторял не эти фразы, а те, что были перед ними
+        if (!$session.lastAnswer.startsWith("Вас не слышно.") && !$session.lastAnswer.startsWith("Я Вас слушаю")) {
+            //lastAnswerSpecial вводится, чтобы проигнорировать последний ответ про "Вас не слышно" или "Я Вас слушаю"
+            $session.lastAnswerSpecial = $session.lastAnswer
+            }
+    })
 theme: /
 
     state: Start
