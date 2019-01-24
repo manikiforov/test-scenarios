@@ -151,4 +151,8 @@ theme: /
                 needResponse: true,
                 departmentName: 'Dep 1'
             };
-        
+            
+    state: reset
+        q!: reset
+        script:
+            $reactions.newSession({message: "/start", data: $request.data});    
