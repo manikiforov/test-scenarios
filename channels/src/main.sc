@@ -6,7 +6,7 @@ theme: /
 
     state: stop
         q!: stop
-        a: Вы прервали меня!!!
+        a: Вы прервали меня!!!1
         
     state: buttons
         q!: buttons
