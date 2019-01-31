@@ -1,8 +1,9 @@
-name: echo
+name: echo-template
 
 entryPoint:
   - main.sc
 
 tests:
-  exclude:
+  include:
     - test.xml
+
