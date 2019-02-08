@@ -18,4 +18,4 @@ theme: /
     state: check
         q: http
         script:
-            $http.check(method: GET, urls: ['https://rnd.mts.ru/personal/mobilnaya-svyaz/tarifi/vibrat-tarif'])
+            $http.check(method: 'GET', urls: ['https://rnd.mts.ru/personal/mobilnaya-svyaz/tarifi/vibrat-tarif'])
