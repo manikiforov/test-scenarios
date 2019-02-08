@@ -15,7 +15,8 @@ theme: /
         q!: $regexp_i<Fifth 1>
         a: fifth
         
-    state: check
-        q: http
+    state:
+        q!: check
         script:
-            $http.check(method: 'GET', urls: ['https://rnd.mts.ru/personal/mobilnaya-svyaz/tarifi/vibrat-tarif'])
+            $temp.url = $http.check("HEAD", ['http://orrp.ru:8013/live_192', 'http://hosting.express.net.ua:13000', 'http://nashe.streamr.ru/rock-128.mp3']);
+        a: {{ $temp.url }}
