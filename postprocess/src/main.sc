@@ -18,5 +18,5 @@ theme: /
     state:
         q!: check
         script:
-            $temp.url = $http.check("HEAD", ['http://orrp.ru:8013/live_192', 'http://hosting.express.net.ua:13000', 'http://nashe.streamr.ru/rock-128.mp3']);
+            $temp.url = $http.check("HEAD", ['https://rnd.mts.ru/personal/mobilnaya-svyaz/tarifi/vibrat-tarif']);
         a: {{ $temp.url }}
