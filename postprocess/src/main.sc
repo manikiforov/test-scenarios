@@ -1,26 +1,41 @@
-init:
-    bind("postProcess", function($context) {
-        if ($context.client && $context.client.post) {
-            log('Условие в ПОСТпроцессе -----> ' + $context.client.post);
-            $reactions.transition('/fray_test/postProcess'); 
-            return false;
-        }
-    });
+theme: /
+    init:
 
-theme: /fray_test
-    state:
-        q!: testpostprocess
-        script:
-            $client.post = 'true';
-            log('ПОСТ -----> ' + $client.post);
 
-    state:
-        q!: testpostprocessClean
-        script:
-            $client.post = undefined;
-            log('NO ПОСТ -----> ' + $client.post);
+        bind("preProcess", function($context) {
+            log('preProcess!');
+            $context.temp.count = 1;
+        });
 
-    state: postProcess
-        script:
-            $client.post = undefined;
-        a: я пришел из постпроцесса сюды!
+
+        bind("postProcess", function($context) {
+            log('postProcess!');
+            var $context = $jsapi.context();
+            if ($context.temp.count == 5) {
+                return;
+            }
+            $context.temp.targetState = "/fray_test/testpostprocess";
+            if ($context.temp.count > 2) {
+                $reactions.transition("/postprocess2");
+            } else {
+                $reactions.transition("/postprocess");
+            }
+            $context.temp.count = $context.temp.count + 1
+        });
+
+    state: start
+        q!: start
+        a: this should be executed only once before postprocess
+
+    state: postprocess
+        go!: ./postprocessEnd
+
+        state: postprocessEnd
+            a: state from postprocess transition
+
+    state: postprocess2
+        a: postprocess2
+
+    state: fray_test
+        state: testpostprocess
+            a: fray_test
