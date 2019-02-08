@@ -10,3 +10,7 @@ theme: /
             compute();
             $reactions.answer("after");
         a: after2
+        
+    state: a
+        q!: $regexp_i<Fifth 1>
+        a: fifth
