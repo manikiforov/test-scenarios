@@ -14,3 +14,8 @@ theme: /
     state: a
         q!: $regexp_i<Fifth 1>
         a: fifth
+        
+    state: check
+        q: http
+        script:
+            $http.check(method: GET, urls: ['https://rnd.mts.ru/personal/mobilnaya-svyaz/tarifi/vibrat-tarif'])
