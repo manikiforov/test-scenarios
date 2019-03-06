@@ -1513,6 +1513,18 @@
     },
     {
       "id" : "",
+      "path" : "/newcheck/onezone",
+      "description" : "",
+      "disabled" : false,
+      "phrases" : [
+        "Первый раз в первый класс",
+        "А в первый пойдем",
+        "А нам в первый",
+        "пики"
+      ]
+    },
+    {
+      "id" : "",
       "path" : "/testM",
       "description" : "",
       "disabled" : false,
@@ -1523,20 +1535,6 @@
         "пять",
         "шест",
         "семь"
-      ]
-    },
-    {
-      "id" : "",
-      "path" : "/newcheck/onezone",
-      "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        "Первый раз в первый класс",
-        "А в первый пойдем",
-        "А нам в первый",
-        "пыщь пыщь",
-        "/start",
-        "пики точенные"
       ]
     },
     {
