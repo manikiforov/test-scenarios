@@ -1513,17 +1513,6 @@
     },
     {
       "id" : "",
-      "path" : "/newcheck/twozone",
-      "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        "Во сторой класс ором поем",
-        "Второй огонь",
-        "Второй класс огонь"
-      ]
-    },
-    {
-      "id" : "",
       "path" : "/testM",
       "description" : "",
       "disabled" : false,
@@ -1554,6 +1543,17 @@
       "disabled" : false,
       "phrases" : [
         "Тестовая зона"
+      ]
+    },
+    {
+      "id" : "",
+      "path" : "/newcheck/twozone",
+      "description" : "",
+      "disabled" : false,
+      "phrases" : [
+        "Во сторой класс ором поем",
+        "Второй огонь",
+        "Второй класс огонь"
       ]
     }
   ]
