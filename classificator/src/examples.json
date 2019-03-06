@@ -1504,27 +1504,6 @@
     },
     {
       "id" : "",
-      "path" : "/3/2/22",
-      "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "",
-      "path" : "/newcheck/onezone",
-      "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        "Первый раз в первый класс",
-        "А в первый пойдем",
-        "А нам в первый",
-        "пики"
-      ]
-    },
-    {
-      "id" : "",
       "path" : "/testM",
       "description" : "",
       "disabled" : false,
@@ -1544,6 +1523,27 @@
       "disabled" : false,
       "phrases" : [
         "Тестовая зона"
+      ]
+    },
+    {
+      "id" : "",
+      "path" : "/3/2/22",
+      "description" : "",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "123",
+      "path" : "/newcheck/onezone",
+      "description" : "",
+      "disabled" : false,
+      "phrases" : [
+        "Первый раз в первый класс",
+        "А в первый пойдем",
+        "А нам в первый",
+        "пики"
       ]
     }
   ]
