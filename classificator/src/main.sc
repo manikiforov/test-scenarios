@@ -6,6 +6,10 @@ require: patterns.sc
 
 theme: /
     
+    state: new
+        eg!: newcheck
+        a: Киви будут рады
+        
     state: newcheck
         eg!: newcheck.onezone
         a: Ты в первой зоне амеба
