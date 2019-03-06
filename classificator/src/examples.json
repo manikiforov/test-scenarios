@@ -1530,15 +1530,6 @@
       ]
     },
     {
-      "id" : "",
-      "path" : "/new/1/2-2",
-      "description" : "123",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    },
-    {
       "id" : "new.1",
       "path" : "/new/1",
       "description" : "new1",
