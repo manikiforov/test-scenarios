@@ -1529,14 +1529,6 @@
       ]
     },
     {
-      "id" : "new.1.1-2",
-      "path" : "/new/1/1-2",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    },
-    {
       "id" : "",
       "path" : "/new/2",
       "description" : "",
@@ -1549,6 +1541,15 @@
       "id" : "",
       "path" : "/new/2/2-2",
       "description" : "",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "new.1.1-2",
+      "path" : "/new/1/1-2",
+      "description" : "213123213123",
       "disabled" : false,
       "phrases" : [
         ""
