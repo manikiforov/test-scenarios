@@ -1553,22 +1553,8 @@
       "description" : "123",
       "disabled" : false,
       "phrases" : [
-        "ОЛОЛОЛОЛпыщьпыщь"
-      ]
-    },
-    {
-      "id" : "",
-      "path" : "/testM",
-      "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        "один",
-        "два ",
-        "три",
-        "четыре",
-        "пять",
-        "шест",
-        "семь"
+        "ОЛОЛОЛОЛпыщьпыщь",
+        "Опачки чапачки"
       ]
     },
     {
@@ -1578,6 +1564,20 @@
       "disabled" : false,
       "phrases" : [
         ""
+      ]
+    },
+    {
+      "id" : "",
+      "path" : "/testM",
+      "description" : "",
+      "disabled" : false,
+      "phrases" : [
+        "один",
+        "три",
+        "четыре",
+        "пять",
+        "шест",
+        "семь"
       ]
     }
   ]
