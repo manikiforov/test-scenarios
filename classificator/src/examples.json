@@ -1512,44 +1512,29 @@
       ]
     },
     {
-      "id" : "",
-      "path" : "/new",
-      "description" : "",
+      "id" : "newcheck",
+      "path" : "/newcheck",
       "disabled" : false,
       "phrases" : [
         ""
       ]
     },
     {
-      "id" : "new.1.1-2",
-      "path" : "/new/1/one",
-      "description" : "123",
+      "id" : "newcheck.twozone",
+      "path" : "/newcheck/twozone",
       "disabled" : false,
       "phrases" : [
-        "11",
-        "12",
-        "13",
-        "14",
-        "15",
-        "16",
-        "17",
-        "18"
+        ""
       ]
     },
     {
       "id" : "",
-      "path" : "/new/2/two",
-      "description" : "",
+      "path" : "/newcheck/onezone",
+      "description" : "Первый раз в первый класс",
       "disabled" : false,
       "phrases" : [
-        "22",
-        "23",
-        "24",
-        "25",
-        "26",
-        "27",
-        "28",
-        "29"
+        "А в первый пойдем",
+        "А нам в первый"
       ]
     },
     {
@@ -1564,24 +1549,6 @@
         "пять",
         "шест",
         "семь"
-      ]
-    },
-    {
-      "id" : "",
-      "path" : "/new/2",
-      "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        "два"
-      ]
-    },
-    {
-      "id" : "new.1",
-      "path" : "/new/1",
-      "description" : "new1",
-      "disabled" : false,
-      "phrases" : [
-        "один"
       ]
     }
   ]
