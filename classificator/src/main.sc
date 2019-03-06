@@ -5,6 +5,14 @@ require: patterns.sc
 
 
 theme: /
+    
+    state: newcheck
+        eg!: newcheck.onezone
+        a: Ты в первой зоне амеба
+    
+    state: newcheck2
+       eg!: newcheck.twozone
+       a: Второй стул всеже
 
     state: Number
         q!: $Number
