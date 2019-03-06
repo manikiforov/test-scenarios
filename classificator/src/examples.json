@@ -1512,14 +1512,6 @@
       ]
     },
     {
-      "id" : "newcheck",
-      "path" : "/newcheck",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    },
-    {
       "id" : "",
       "path" : "/newcheck/twozone",
       "description" : "",
@@ -1553,6 +1545,15 @@
         "Первый раз в первый класс",
         "А в первый пойдем",
         "А нам в первый"
+      ]
+    },
+    {
+      "id" : "",
+      "path" : "/newcheck",
+      "description" : "",
+      "disabled" : false,
+      "phrases" : [
+        "Тестовая зона"
       ]
     }
   ]
