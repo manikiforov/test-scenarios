@@ -1503,18 +1503,6 @@
       ]
     },
     {
-      "id" : "123",
-      "path" : "/newcheck/onezone",
-      "description" : "qwe",
-      "disabled" : false,
-      "phrases" : [
-        "Первый раз в первый класс",
-        "А в первый пойдем",
-        "А нам в первый",
-        "пики"
-      ]
-    },
-    {
       "id" : "",
       "path" : "/testM",
       "description" : "",
@@ -1526,15 +1514,6 @@
         "пять",
         "шест",
         "семь"
-      ]
-    },
-    {
-      "id" : "",
-      "path" : "/newcheck",
-      "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        "Тестовая зона"
       ]
     },
     {
