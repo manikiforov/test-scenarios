@@ -12,7 +12,7 @@ theme: /
     
     state: newcheck2
        eg!: newcheck.twozone
-       a: Второй стул всеже
+       a: Второй стул все же
 
     state: Number
         q!: $Number
