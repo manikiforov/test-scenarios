@@ -19,7 +19,7 @@ classifier:
 # Конфигурируем алгоритм классификатора
 aligner:
   # Указываем порог достоверности классификатора
-  noMatchThreshold: 0.4
+  noMatchThreshold: 0.8
   # Подключаем словари по умолчанию. При необходимости словари могут быть собраны специально под проект с помощью утилиты zb-nlp
   vocabulary: src/aer.json
   stopWordsFile: stop-words.txt
