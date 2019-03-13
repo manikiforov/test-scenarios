@@ -100,7 +100,20 @@ theme: /
     state: LivechatReset
         event!: livechatFinished
         go!: /CatchAll
-
+        
+    state: Justswitch
+        q!: justswitch
+        a: Перевожу на оператора
+        script:
+            $response.replies = $response.replies || [];
+            $response.replies
+             .push({
+                type:"switch",
+                closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
+                firstMessage: $client.history,
+                lastMessage: "Этот паршивец закрыл диалог, запомни это."
+            });
+        
     state: Operator
         q!: operator
         if: !hasOperatorsOnline()
