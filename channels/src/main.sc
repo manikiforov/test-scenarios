@@ -25,6 +25,18 @@ theme: /
     state: vk
         q: контакт
         a:
+        
+    state: webim_actions
+        q!: webimAct
+        script:
+            $response.actions = [{
+               type:"close_chat",
+               operatorId:"123"
+            },
+            {
+               type:"redirect_to_department",
+               departmentKey:"123"
+            }];
             
     state: image
         event: imageEvent
