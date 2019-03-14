@@ -28,6 +28,7 @@ theme: /
         
     state: webim_actions
         q!: webimAct
+        a: actions
         script:
             $response.actions = [{
                type:"close_chat",
