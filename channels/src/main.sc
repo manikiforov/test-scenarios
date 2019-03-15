@@ -28,11 +28,18 @@ theme: /
         
     state: webim_actions
         q!: webimAct
-        a: actions
         script:
             $response.actions = [{
                type:"close_chat",
                operatorId:"123"
+            },
+            {
+               type:"redirect_to_department",
+               departmentKey:"123"
+            },
+            {
+               type:"redirect_to_operator",
+               departmentKey:"123"
             },
             {
                type:"redirect_to_department",
