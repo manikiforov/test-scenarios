@@ -26,6 +26,10 @@ theme: /
         q: контакт
         a:
         
+    state: kind
+        event: fghf
+        a: kind!
+        
     state: webim_actions
         q!: webimAct
         a: actions!
