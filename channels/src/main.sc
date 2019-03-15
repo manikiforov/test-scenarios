@@ -29,6 +29,8 @@ theme: /
     state: kind
         event: fghf
         a: kind!
+        script:
+            log($request);
         
     state: webim_actions
         q!: webimAct
