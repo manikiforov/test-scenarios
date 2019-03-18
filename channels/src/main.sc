@@ -185,7 +185,7 @@ theme: /
         
     state: OperatorZopim
         q: *zopim*
-        a: Перевожу на оператора
+        a: Перевожу на оператор
         script:
             $response.zopim = {
                 needResponse: true,
