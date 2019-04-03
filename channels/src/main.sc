@@ -2,7 +2,7 @@ theme: /
 
     state: Start
         q!: start
-        a: Вы сказали и бот ответил1: {{$parseTree.text}}
+        a: Вы сказали и бот ответил11: {{$parseTree.text}}
 
     state: stop
         q!: stop
