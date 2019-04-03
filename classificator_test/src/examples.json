@@ -103,6 +103,15 @@
       "phrases" : [
         ""
       ]
+    },
+    {
+      "id" : "",
+      "path" : "/класс/Класс2",
+      "description" : "",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
     }
   ]
 }
