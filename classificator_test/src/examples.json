@@ -104,44 +104,9 @@
       ]
     },
     {
-      "id" : "класс12_copy",
-      "path" : "/kykyky/papapapa/33/Класс2_copy",
-      "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    },
-    {
       "id" : "_copy",
       "path" : "/kykyky/papapapa/home3_copy",
       "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "класс12",
-      "path" : "/kykyky/papapapa/home3_copy/Класс2",
-      "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "класс12_copy_copy",
-      "path" : "/kykyky/papapapa/home3_copy/Класс2/Класс2_copy_copy",
-      "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "класс",
-      "path" : "/kykyky/papapapa/класс",
       "disabled" : false,
       "phrases" : [
         ""
