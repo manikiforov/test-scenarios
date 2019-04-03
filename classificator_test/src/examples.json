@@ -46,6 +46,22 @@
       ]
     },
     {
+      "id" : "йцу.фыв",
+      "path" : "/1/home3/mood/help2/фыв",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "undefined_copy",
+      "path" : "/1/home3/mood/help2/фыв/йцу_copy",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
       "id" : "",
       "path" : "/kykyky",
       "description" : "",
@@ -88,6 +104,15 @@
       ]
     },
     {
+      "id" : "класс12_copy",
+      "path" : "/kykyky/papapapa/33/Класс2_copy",
+      "description" : "",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
       "id" : "_copy",
       "path" : "/kykyky/papapapa/home3_copy",
       "description" : "",
@@ -97,17 +122,26 @@
       ]
     },
     {
-      "id" : "класс",
-      "path" : "/класс",
+      "id" : "класс12",
+      "path" : "/kykyky/papapapa/home3_copy/Класс2",
+      "description" : "",
       "disabled" : false,
       "phrases" : [
         ""
       ]
     },
     {
-      "id" : "класс12",
-      "path" : "/класс/Класс2",
+      "id" : "класс12_copy_copy",
+      "path" : "/kykyky/papapapa/home3_copy/Класс2/Класс2_copy_copy",
       "description" : "",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "класс",
+      "path" : "/kykyky/papapapa/класс",
       "disabled" : false,
       "phrases" : [
         ""
