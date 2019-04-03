@@ -111,6 +111,23 @@
       "phrases" : [
         ""
       ]
+    },
+    {
+      "id" : "Класс",
+      "path" : "/Класс",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "",
+      "path" : "/Класс/Класс2",
+      "description" : "",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
     }
   ]
 }
