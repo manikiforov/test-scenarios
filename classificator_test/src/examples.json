@@ -114,7 +114,8 @@
     },
     {
       "id" : "Класс",
-      "path" : "/Класс",
+      "path" : "/Класс1",
+      "description" : "123",
       "disabled" : false,
       "phrases" : [
         ""
@@ -122,7 +123,7 @@
     },
     {
       "id" : "",
-      "path" : "/Класс/Класс2",
+      "path" : "/Класс1/Класс2",
       "description" : "",
       "disabled" : false,
       "phrases" : [
