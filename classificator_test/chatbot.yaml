@@ -14,23 +14,23 @@ messages:
             ru: Ой, кажется, что-то пошло не так.
 
 nlp:                                    // параметры для nlp-функци платформы
-  morphology: myStem                    // библиотека для морфологического анализа слов
-  tokenizer: myStem                     // токенизатор, задает правила для разбиения текста на слова
-  vocabulary: common-vocabulary.json    // словарь весов слов для ранжирования паттернов
+  morphology: myStem                    
+  tokenizer: myStem                     
+  vocabulary: common-vocabulary.json    
   lengthLimit:
     enabled: true
-    symbols: 400                        // лимит на количество символов во входящем сообщении
-    words: 100000                       // лимит на количество слов во входящем сообщении
+    symbols: 400                        
+    words: 100000                       
   timeLimit:
     enabled: true
-    timeout: 10000                      // максимальное время обработки запроса в nlp-модуле в миллисекундах
+    timeout: 10000                      
 
-classifier:                             // параметры для классификатора
+classifier:                             
   enable: true
-  engine: sts                           // тип классификатора
+  engine: sts                           
   noMatchThreshold: 0.2
   parameters:
-    algorithm: aligner2                 // алгоритм классификации
+    algorithm: aligner2                 
 
 aligner:
   vocabulary: common-vocabulary.json
