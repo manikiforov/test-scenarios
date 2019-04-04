@@ -8,13 +8,13 @@ tests:
     - test.xml
 
 messages:
-    onError: 
-        defaultMessage: Ой, кажется, что-то пошло не так. 
-        locales: 
-            ru: Ой, кажется, что-то пошло не так.
+  onError: 
+    defaultMessage: Ой, кажется, что-то пошло не так. 
+    locales: 
+      ru: Ой, кажется, что-то пошло не так.
 
 nlp:                                    // параметры для nlp-функци платформы
-  morphology: myStem                    
+  morphology: myStem
   tokenizer: myStem                     
   vocabulary: common-vocabulary.json    
   lengthLimit:
