@@ -7,30 +7,34 @@ tests:
   exclude:
     - test.xml
 
+messages:
+    onError: 
+        defaultMessage: Ой, кажется, что-то пошло не так. 
+        locales: 
+            ru: Ой, кажется, что-то пошло не так.
+
+nlp:                                    // параметры для nlp-функци платформы
+  morphology: myStem                    // библиотека для морфологического анализа слов
+  tokenizer: myStem                     // токенизатор, задает правила для разбиения текста на слова
+  vocabulary: common-vocabulary.json    // словарь весов слов для ранжирования паттернов
+  lengthLimit:
+    enabled: true
+    symbols: 400                        // лимит на количество символов во входящем сообщении
+    words: 100000                       // лимит на количество слов во входящем сообщении
+  timeLimit:
+    enabled: true
+    timeout: 10000                      // максимальное время обработки запроса в nlp-модуле в миллисекундах
+
+classifier:                             // параметры для классификатора
+  enable: true
+  engine: sts                           // тип классификатора
+  noMatchThreshold: 0.2
+  parameters:
+    algorithm: aligner2                 // алгоритм классификации
+
+aligner:
+  vocabulary: common-vocabulary.json
+  
 # Подключаем справочники классификатора
 exampleGroups:
   - src/examples.json
-  
-classifier:
-  engine: sts
-  parameters:
-    algorithm: aligner2
- 
-# Конфигурируем алгоритм классификатора
-aligner:
-  # Указываем порог достоверности классификатора
-  noMatchThreshold: 0.4
-  # Подключаем словари по умолчанию. При необходимости словари могут быть собраны специально под проект с помощью утилиты zb-nlp
-  #vocabulary: src/aer.json
-  stopWordsFile: stop-words.txt
-#   synsetsFiles:
-#     - common-synsets.json
- 
- 
-# Настраиваем матчер для вычисления весов, аналогичных весам, выдаваемым классификатором
-nlp:
-  tokenizer: myStem       # обязательный параметр
-  morphology: myStem      # обязательный параметр
-  costStrategy: weighted  # обязательный параметр
-  # Словарь должен совпадать с указанным в секции aligner
-  #vocabulary: src/aer.json
