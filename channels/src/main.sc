@@ -1,3 +1,5 @@
+require: function.js
+
 theme: /
 
     state: Start
