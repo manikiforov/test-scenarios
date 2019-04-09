@@ -16,12 +16,6 @@ theme: /
             script: pageName("Первый подстейт");
             a: Записали
             
-            state: exit
-            q: buttons
-            a: жми на exit
-            buttons:
-                "exit" -> /Start
-            
         state: второй простой подстейт
             q: Второй
             a: Напиши выход
@@ -29,8 +23,6 @@ theme: /
             state: exit
             q: buttons
             a: жми на exit
-            buttons:
-                "exit" -> /Start
             
     state: stop
         q!: stop
