@@ -24,7 +24,7 @@ theme: /
                 q: buttons
                 a: жми на exit
                 buttons:
-                    "exit" -> /Start
+                    "exit" -> Start
             
     state: stop
         q!: stop
