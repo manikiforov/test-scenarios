@@ -21,10 +21,10 @@ theme: /
             a: Напиши выход
             
             state: exit
-            q: buttons
-            a: жми на exit
-            buttons:
-                "exit" -> /Start
+                q: buttons
+                a: жми на exit
+                buttons:
+                    "exit" -> /Start
             
     state: stop
         q!: stop
