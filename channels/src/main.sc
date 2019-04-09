@@ -21,7 +21,7 @@ theme: /
             a: Напиши выход
             
             state: exit
-                q: buttons
+                q: выход
                 a: жми на exit
                 buttons:
                     "exit" -> /Start
