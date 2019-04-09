@@ -4,6 +4,26 @@ theme: /
         q!: start
         a: Вы сказали и бот ответил: {{$parseTree.text}}
 
+    state: statemaster
+        q!: state
+        script: pageName("State main");
+        a: В главном стейте
+        
+        state: Первый подстейт
+            q: Первый
+            script: pageName("Первый подстейт");
+            a: Записали
+            
+        state: второй простой подстейт
+            q: Второй
+            a: Напиши выход
+            
+            state: exit
+            q: buttons
+            a: жми на exit
+            buttons:
+                "exit" -> /Start
+            
     state: stop
         q!: stop
         a: Вы прервали меня!!!
