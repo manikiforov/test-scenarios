@@ -26,10 +26,6 @@ theme: /
             buttons:
                 "exit" -> /Start
             
-            state: noexit
-            q: в тупике
-            a: ой ой
-            
     state: stop
         q!: stop
         a: Вы прервали меня!!!
