@@ -23,6 +23,12 @@ theme: /
             state: exit
             q: buttons
             a: жми на exit
+            buttons:
+                "exit" -> /Start
+            
+            state: noexit
+            q: в тупике
+            a: ой ой
             
     state: stop
         q!: stop
