@@ -8,7 +8,7 @@ theme: /
     
     state: new
         eg!: newcheck
-        a: Киви будут рады
+        a: Киви будут рады1
         
     state: newcheck
         eg!: newcheck.onezone
