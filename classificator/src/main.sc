@@ -104,7 +104,7 @@ theme: /
 
     state: CatchAll
         q!: *
-        a: Я не понял1
+        a: Я не понял123йцу
 
     state: newNode_18
         eg!: Cards.ActivateCard
