@@ -111,6 +111,7 @@ theme: /
                 $response.replies
                  .push({
                     type:"switch",
+                    appendCloseChatButton: true,
                     closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
                     firstMessage: $client.history,
                     lastMessage: "Этот паршивец закрыл диалог, запомни это.",
