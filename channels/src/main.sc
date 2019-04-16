@@ -183,7 +183,7 @@ theme: /
                  .push({
                     type:"switch",
                     appendCloseChatButton: true,
-                    closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
+                    closeChatPhrases: ["Закрыть диалог", "/closeLiveChat"],
                     firstMessage: $client.history,
                     lastMessage: "Этот паршивец закрыл диалог, запомни это."
                 });
