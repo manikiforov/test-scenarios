@@ -1,4 +1,4 @@
-function pageName(name) {
+function pageName(name) {1
     var $session = $jsapi.context().session;
     $session.pageName = name;
 }
