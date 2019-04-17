@@ -4,7 +4,7 @@ theme: /
 
     state: Start 
         q!: start
-        a: Вы сказали и бот ответил123123: {{$parseTree.text}}
+        a: Вы сказали и бот ответил: {{$parseTree.text}}
 
     state: statemaster
         q!: state
