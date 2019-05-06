@@ -88,7 +88,7 @@ theme: /
         a: Глаз да глаз за оператором
     
     state: deletemessage
-        event: ONIMBOTMESSAGEUPDATE
+        event: ONIMBOTMESSAGEDELETE
         a: Вжух и карандаш испарился
       
     state: file
