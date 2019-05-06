@@ -78,7 +78,19 @@ theme: /
     state: image
         event: imageEvent
         a: изображение дошло
-        
+    
+    state: bitrixbot
+        event: ONIMBOTJOINCHAT
+        a: Бот вернулся, во славу битрикса
+    
+    state: updatemessage
+        event: ONIMBOTMESSAGEUPDATE
+        a: Глаз да глаз за оператором
+    
+    state: deletemessage
+        event: ONIMBOTMESSAGEUPDATE
+        a: Вжух и карандаш испарился
+      
     state: file
         event: fileEvent
         a: файл дошел!
