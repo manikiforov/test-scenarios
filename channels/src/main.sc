@@ -5,6 +5,11 @@ theme: /
     state: Start 
         q!: start
         a: Вы сказали и бот ответил: {{$parseTree.text}}
+        
+    state: Internal http
+        q!: http internal
+        script: 
+            var result = $http.get("http://localhost:9030/restapi/public/mts-distribution");
 
     state: statemaster
         q!: state
