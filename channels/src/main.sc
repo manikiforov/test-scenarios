@@ -263,8 +263,8 @@ theme: /
     
     state: Getevent
         event: telegramCallbackQuery
-            script:
-                $session.name = parseChar($request.query);
+        script:
+            $session.name = parseChar($request.query);
         go!: /takevariable
     
     state: takevariable
