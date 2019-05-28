@@ -260,7 +260,7 @@ theme: /
         inlineButtons:
             { text: "{{ 'текст из справочника' }}", callback_data: "cb-55" }
             { text: "{{ 'текст из справочника' }}", url: "{{ 'https://just-ai.com/' }}" }
-        go!: Getevent    
+            go!: Getevent    
     
         state: Getevent
             event: telegramCallbackQuery
