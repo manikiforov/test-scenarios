@@ -259,7 +259,6 @@ theme: /
         a: Для Телеграма
         inlineButtons:
             { text: "{{ 'текст из справочника' }}", callback_data: "cb-55" }
-            go!: /Getevent
             { text: "{{ 'текст из справочника' }}", url: "{{ 'https://just-ai.com/' }}" }
            
     
