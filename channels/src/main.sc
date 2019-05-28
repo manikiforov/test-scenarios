@@ -255,6 +255,7 @@ theme: /
             $reactions.newSession({message: "/start", data: $request.data});
             
     state: InlineButtons
+        q!: Кнопки телеграма
         a: Для Телеграма
         inlineButtons:
             { text: "{{ 'текст из справочника' }}", callback_data: "cb-55" }
