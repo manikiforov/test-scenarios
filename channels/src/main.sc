@@ -252,4 +252,10 @@ theme: /
     state: reset
         q!: reset
         script:
-            $reactions.newSession({message: "/start", data: $request.data});    
+            $reactions.newSession({message: "/start", data: $request.data});
+            
+    state: InlineButtons
+        a: Для Телеграма поддерживаются inline-кнопки
+        inlineButtons:
+            { text: "{{ 'текст из справочника' }}", callback_data: "cb-55" }
+            { text: "{{ 'текст из справочника' }}", url: "{{ 'https://just-ai.com/' }}" }
