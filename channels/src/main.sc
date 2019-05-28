@@ -261,11 +261,11 @@ theme: /
             { text: "{{ 'текст из справочника' }}", callback_data: "cb-55" }
             { text: "{{ 'текст из справочника' }}", url: "{{ 'https://just-ai.com/' }}" }
     
-    state: Getevent
-        event: telegramCallbackQuery
-        script:
-            $session.name = parseChar($request.query);
-        go!: /takevariable
+        state: Getevent
+            event: telegramCallbackQuery
+            script:
+                $session.name = parseChar($request.query);
+            go!: /takevariable
     
     state: takevariable
         a: {{ $session.name }}
