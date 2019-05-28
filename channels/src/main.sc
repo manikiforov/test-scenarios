@@ -255,7 +255,7 @@ theme: /
             $reactions.newSession({message: "/start", data: $request.data});
             
     state: InlineButtons
-        a: Для Телеграма поддерживаются inline-кнопки
+        a: Для Телеграма
         inlineButtons:
             { text: "{{ 'текст из справочника' }}", callback_data: "cb-55" }
             { text: "{{ 'текст из справочника' }}", url: "{{ 'https://just-ai.com/' }}" }
