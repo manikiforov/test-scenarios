@@ -5,5 +5,5 @@ entryPoint:
 
 tests:
   include:
-    - test/test.xml
+    - test.xml
 

