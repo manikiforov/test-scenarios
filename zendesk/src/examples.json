@@ -1,13 +1,3 @@
 {
-  "classes" : [
-    {
-      "id" : "",
-      "path" : "/test1",
-      "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    }
-  ]
+  "classes" : [ ]
 }
