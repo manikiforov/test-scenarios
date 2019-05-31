@@ -71,6 +71,22 @@
       ]
     },
     {
+      "id" : "11.22.33",
+      "path" : "/kykyky/33",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "11.22.33.34",
+      "path" : "/kykyky/33/34",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
       "id" : "",
       "path" : "/kykyky/papapapa",
       "description" : "",
@@ -88,22 +104,6 @@
       ]
     },
     {
-      "id" : "11.22.33",
-      "path" : "/kykyky/papapapa/33",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "11.22.33.34",
-      "path" : "/kykyky/papapapa/33/34",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    },
-    {
       "id" : "_copy",
       "path" : "/kykyky/papapapa/home3_copy",
       "description" : "",
@@ -113,18 +113,18 @@
       ]
     },
     {
-      "id" : "Класс",
-      "path" : "/Класс1",
-      "description" : "123",
+      "id" : "",
+      "path" : "/kykyky/КлассСаб",
+      "description" : "",
       "disabled" : false,
       "phrases" : [
         ""
       ]
     },
     {
-      "id" : "",
-      "path" : "/Класс1/КлассСаб",
-      "description" : "",
+      "id" : "Класс",
+      "path" : "/Класс123",
+      "description" : "123",
       "disabled" : false,
       "phrases" : [
         ""
