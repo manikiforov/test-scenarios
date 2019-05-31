@@ -16,7 +16,7 @@ theme: /
 
     state: timedout
         a: Первый таймер закончился, второй начался. Напиши что нибудь и второй таймер перезапустится
-        timeout: /end || interval =  "0h 0minutes 5seconds"
+        timeout: /end || interval =  "0 hour 0min 5secs"
         
         state:
             q: *
