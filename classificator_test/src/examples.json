@@ -11,7 +11,7 @@
     },
     {
       "id" : "",
-      "path" : "/1/home3",
+      "path" : "/1/1",
       "description" : "",
       "disabled" : false,
       "phrases" : [
@@ -20,7 +20,7 @@
     },
     {
       "id" : "",
-      "path" : "/1/home3/mood",
+      "path" : "/1/1/mood",
       "description" : "",
       "disabled" : false,
       "phrases" : [
@@ -29,7 +29,7 @@
     },
     {
       "id" : "",
-      "path" : "/1/home3/mood/help2",
+      "path" : "/1/1/mood/help2",
       "description" : "",
       "disabled" : false,
       "phrases" : [
@@ -38,7 +38,7 @@
     },
     {
       "id" : "",
-      "path" : "/1/home3/mood/help2/number5",
+      "path" : "/1/1/mood/help2/number5",
       "description" : "",
       "disabled" : false,
       "phrases" : [
@@ -47,7 +47,7 @@
     },
     {
       "id" : "йцу.фыв",
-      "path" : "/1/home3/mood/help2/фыв",
+      "path" : "/1/1/mood/help2/фыв",
       "disabled" : false,
       "phrases" : [
         ""
@@ -55,7 +55,7 @@
     },
     {
       "id" : "undefined_copy",
-      "path" : "/1/home3/mood/help2/фыв/йцу_copy",
+      "path" : "/1/1/mood/help2/фыв/йцу_copy",
       "disabled" : false,
       "phrases" : [
         ""
