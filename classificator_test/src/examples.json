@@ -88,7 +88,7 @@
     },
     {
       "id" : "",
-      "path" : "/kykyky/papapapa",
+      "path" : "/kykyky/papapapaui",
       "description" : "",
       "disabled" : false,
       "phrases" : [
@@ -97,7 +97,7 @@
     },
     {
       "id" : "11.22.12",
-      "path" : "/kykyky/papapapa/12",
+      "path" : "/kykyky/papapapaui/12",
       "disabled" : false,
       "phrases" : [
         ""
@@ -105,7 +105,7 @@
     },
     {
       "id" : "_copy",
-      "path" : "/kykyky/papapapa/home3_copy",
+      "path" : "/kykyky/papapapaui/home3_copy",
       "description" : "",
       "disabled" : false,
       "phrases" : [
