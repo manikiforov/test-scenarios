@@ -13,9 +13,9 @@ messages:
     locales: 
       ru: Ой, кажется, что-то пошло не так.
 
-nlp:                                    // параметры для nlp-функци платформы
+nlp:
   morphology: myStem
-  tokenizer: myStem                     
+  tokenizer: myStem                    
   vocabulary: common-vocabulary.json    
   lengthLimit:
     enabled: true
