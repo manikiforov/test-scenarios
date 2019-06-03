@@ -27,6 +27,12 @@ theme: /
         q!: http internal
         script: 
             var result = $http.get("http://localhost:9030/restapi/public/mts-distribution");
+    
+    state:
+        q!: сайт
+        script:
+            $temp.url = $http.checkUrls("HEAD", ['https://yandex.ru/','https://yandex.ru/','https://yandex.ru/'], false);
+        a: {{ $temp.url }}
 
     state: statemaster
         q!: state
