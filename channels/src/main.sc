@@ -31,7 +31,7 @@ theme: /
     state:
         q!: сайт
         script:
-            $temp.url = $http.checkUrls("HEAD", ['https://www.webhook.site/dfb789c5-8c30-49e9-bc6f-987a8269aeeb','https://www.webhook.site/dfb789c5-8c30-49e9-bc6f-987a8269aeeb','https://www.webhook.site/dfb789c5-8c30-49e9-bc6f-987a8269aeeb'] false);
+            $temp.url = $http.checkUrls("HEAD", ['https://www.webhook.site/dfb789c5-8c30-49e9-bc6f-987a8269aeeb','https://www.webhook.site/dfb789c5-8c30-49e9-bc6f-987a8269aeeb','https://www.webhook.site/dfb789c5-8c30-49e9-bc6f-987a8269aeeb'], false);
         a: {{ $temp.url }}
 
     state: statemaster
