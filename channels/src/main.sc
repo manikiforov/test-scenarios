@@ -31,7 +31,7 @@ theme: /
     state:
         q!: сайт
         script:
-            $temp.url = $http.check("GET", ['https://www.webhook.site/dfb789c5-8c30-49e9-bc6f-987a8269aeeb'], true);
+            $temp.url = $http.check("POST", ['https://www.webhook.site/dfb789c5-8c30-49e9-bc6f-987a8269aeeb'], true);
         a: {{ $temp.url }}
 
     state: statemaster
