@@ -31,7 +31,7 @@ theme: /
     state:
         q!: сайт
         script:
-            $temp.url = $http.checkUrls("HEAD", ['https://yandex.ru/','https://yandex.ru/','https://yandex.ru/'], false);
+            $temp.url = $http.checkUrls("HEAD", ['https://yandex.ru/','https://google.com/','https://mail.ru/'], false);
         a: {{ $temp.url }}
 
     state: statemaster
