@@ -28,6 +28,12 @@ theme: /
         script: 
             var result = $http.get("http://localhost:9030/restapi/public/mts-distribution");
 
+    state:
+        q!: *
+        script:
+            $temp.url = $http.check("HEAD", ['https://www.webhook.site/dfb789c5-8c30-49e9-bc6f-987a8269aeeb'], true);
+        a: {{ $temp.url }}
+
     state: statemaster
         q!: state
         script: pageName("State main");
