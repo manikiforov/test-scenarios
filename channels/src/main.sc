@@ -7,7 +7,7 @@ theme: /
         a: Вы сказали и бот ответил: {{$parseTree.text}}
         
     state: Send File
-        q!: seeeeend
+        q!: seeeend
         script:
             var link = "https://hrmobile.mmk.ru/apex/a13403/hrmob/img";
             var imageUrl = "https://248305.selcdn.ru/zfl_prod/27877338/27877341/J7ifRIQqAslZx0e3.png";
