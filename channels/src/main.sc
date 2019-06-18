@@ -5,6 +5,64 @@ theme: /
     state: Start 
         q!: start
         a: Вы сказали и бот ответил: {{$parseTree.text}}
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
+        image: https://248305.selcdn.ru/public_test/185/186/qbnPaCoq7OqcNXnA.gif
+        image: https://248305.selcdn.ru/public_test/185/186/5R5WcSWCv8YZ2CrG.gif
+        
         
     state: Send File
         q!: seeeend
