@@ -5,7 +5,7 @@ theme: /
     state: Start 
         q!: start
         a:  Вы сказали и бот ответил: {{$parseTree.text}}
-       main.sc 
+        
     state: Send File
         q!: seeeeend
         script:
