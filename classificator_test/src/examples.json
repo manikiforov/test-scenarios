@@ -46,16 +46,16 @@
       ]
     },
     {
-      "id" : "йцу.фыв",
-      "path" : "/1/1/mood/help2/фыв",
+      "id" : "undefined_copy",
+      "path" : "/1/1/mood/help2/йцу_copy",
       "disabled" : false,
       "phrases" : [
         ""
       ]
     },
     {
-      "id" : "undefined_copy",
-      "path" : "/1/1/mood/help2/фыв/йцу_copy",
+      "id" : "йцу.фыв",
+      "path" : "/1/1/mood/help2/фыв",
       "disabled" : false,
       "phrases" : [
         ""
@@ -73,6 +73,7 @@
     {
       "id" : "11.22.33",
       "path" : "/kykyky/33",
+      "description" : "",
       "disabled" : false,
       "phrases" : [
         ""
@@ -81,6 +82,22 @@
     {
       "id" : "11.22.33.34",
       "path" : "/kykyky/33/34",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "Класс123.class_1",
+      "path" : "/kykyky/33/class_1",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "Класс123.class_1.class_1_1",
+      "path" : "/kykyky/33/class_1/class_1_1",
       "disabled" : false,
       "phrases" : [
         ""
@@ -99,22 +116,6 @@
       "id" : "Класс",
       "path" : "/Класс123",
       "description" : "2706_1234567890",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "Класс123.class_1",
-      "path" : "/Класс123/class_1",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "Класс123.class_1.class_1_1",
-      "path" : "/Класс123/class_1/class_1_1",
       "disabled" : false,
       "phrases" : [
         ""
