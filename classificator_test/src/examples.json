@@ -122,18 +122,18 @@
       ]
     },
     {
-      "id" : "",
-      "path" : "/класс1",
-      "description" : "",
+      "id" : "Класс",
+      "path" : "/Класс123",
+      "description" : "123",
       "disabled" : false,
       "phrases" : [
         ""
       ]
     },
     {
-      "id" : "Класс",
-      "path" : "/Класс123",
-      "description" : "123",
+      "id" : "",
+      "path" : "/класс_борщ",
+      "description" : "",
       "disabled" : false,
       "phrases" : [
         ""
