@@ -122,6 +122,15 @@
       ]
     },
     {
+      "id" : "",
+      "path" : "/класс1",
+      "description" : "",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
       "id" : "Класс",
       "path" : "/Класс123",
       "description" : "123",
