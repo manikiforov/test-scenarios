@@ -1,273 +1,822 @@
-require: /dictionaries/customerOrientationQuestions.csv
-  name = customerOrientation
-  var = $customerOrientation
 
-require: /dictionaries/teamQuestions.csv
-  name = teamQuestions
-  var = $teamQuestions
-  
-require: /dictionaries/communication.csv
-  name = communicationQuestions
-  var = $communicationQuestions
+theme: /
 
-require: /dictionaries/focus.csv
-  name = focusQuestions
-  var = $focusQuestions
-
-require: /scripts/question.js
-
-require: /scripts/zenflow.js
-
-
-
-init:
-    Zenflow.init(); //сделать параметры со своего сайта доступными в виджете в объекте start
-    
-    if (!$global.$converters) {
-        $global.$converters = {};
-    }
-
-    $global.$converters
-        .customerOrientationConverter = function(parseTree) {
-            var id = parseTree.customerOrientation[0].value;
-            return $customerOrientation[id].value;
-        };
-
-    $global.$converters
-        .teamConverter = function(parseTree) {
-            var id = parseTree.teamQuestions[0].value;
-            return $teamQuestions[id].value;
-        };
-
-    $global.$converters
-        .communicationConverter = function(parseTree) {
-            var id = parseTree.communicationQuestions[0].value;
-            return $communicationQuestions[id].value;
-        };
-
-    $global.$converters
-        .focusConverter = function(parseTree) {
-            var id = parseTree.focusQuestions[0].value;
-            return $focusQuestions[id].value;
-        };
-        
-    bind("preProcess", function($context) {
-        var $session = $jsapi.context().session;
-        //Нужен для CatchAll
-        $session.lastState =  $context.contextPath;
-    });
-patterns:
-    $customerOrientation = $entity<customerOrientation> || converter = $converters.customerOrientationConverter
-    $teamQuestions = $entity<teamQuestions> || converter = $converters.teamConverter
-    $communicationQuestions = $entity<communicationQuestions> || converter = $converters.communicationConverter
-    $focusQuestions = $entity<focusQuestions> || converter = $converters.focusConverter
-    $Text = *
-    
-    
-    
-theme: /CV
-
-    state: Enter
-        q!: (тест/*start)
-        a: Здравствуйте! 👋
-        a: Представлюсь: я директор ресторана Макдоналдс 👱
-        a: Прежде чем пригласить Вас на собеседование, я бы хотел узнать Вас получше.
-        a: Я задам несколько вопросов, а Вам нужно просто выбрать наиболее близкий Вам вариант ответа, кликнув по нему.👍
-        script:
-            QuestionService.init();
-            $session.curAnswers = [];  //создать такое поле в questionService
-        go!:../Customer orientation questionarie
-
-    state: Customer orientation questionarie        
-        script:
-            $session.i = $session.i || 0;
-        if: $session.i < 4
-            script:
-                $session.themeQuestionarie = "Customer orientation";
-                QuestionService.generateQuestions($session.themeQuestionarie);
-                $session.i++;
-        elseif: $session.i == 4
-            if: QuestionService.partWasRotated("Customer orientation")
-                script:
-                    QuestionService.generateQuestions($session.themeQuestionarie);
-            else:
-                script:
-                    QuestionService.generateRotataionQuestion($customerOrientation);
-            script:
-                $session.i++;
-        else:
-            a: Интересно 🤔\nВозможно, в некоторых ситуациях я поступил бы так же… 
-            a: Вы отлично справляетесь, давайте продолжим!
-            script:
-                $session.i = 0;
-            go!: ../Team questionarie
-
-    state: Team questionarie
-        script:
-            $session.i = $session.i || 0;
-        if: $session.i < 4
-            script:
-                $session.themeQuestionarie = "Team";
-                QuestionService.generateQuestions($session.themeQuestionarie);
-                $session.i++;
-        elseif: $session.i == 4
-            if: QuestionService.partWasRotated("Team")
-                script:
-                    QuestionService.generateQuestions($session.themeQuestionarie);
-            else:
-                script:
-                    QuestionService.generateRotataionQuestion($teamQuestions);
-            script:
-                $session.i++;
-        else:
-            a: За разговорами время летит незаметно, правда?⏰
-            a: Мы в Макдоналдс ценим открытое общение. И мне нравится с Вами беседовать!🙂
-            a: 🙌Продолжаем!
-            script:
-                $session.i = 0;
-            go!: ../Communication questionarie
-
-
-
-    state: Communication questionarie 
-        script:
-            $session.i = $session.i || 0;
-        if: $session.i < 4
-            script:
-                $session.themeQuestionarie = "Communication";
-                QuestionService.generateQuestions($session.themeQuestionarie);
-                $session.i++;
-        elseif: $session.i == 4
-            if: QuestionService.partWasRotated("Communication")
-                script:
-                    QuestionService.generateQuestions($session.themeQuestionarie);
-            else:
-                script:
-                    QuestionService.generateRotataionQuestion($communicationQuestions);
-            script:
-                $session.i++;
-        else:
-            a: Спасибо Вам за откровенность!🙏
-            a: У меня осталось совсем немного вопросов… Я задам их, и Вы сможете вернуться к своим делам.👌 
-            script:
-                $session.i = 0;
-            go!: ../Focus questionarie
-    
-    
-    state: Focus questionarie
-        script:
-            $session.i = $session.i || 0;
-        if: $session.i < 4
-            script:
-                $session.themeQuestionarie = "Focus";
-                QuestionService.generateQuestions($session.themeQuestionarie);
-                $session.i++;
-        elseif: $session.i == 4
-            if: QuestionService.partWasRotated("Focus")
-                script:
-                    QuestionService.generateQuestions($session.themeQuestionarie);
-            else:
-                script:
-                    QuestionService.generateRotataionQuestion($focusQuestions);
-            script:
-                $session.i++;
-        else:
-            script:
-                $session.i = 0;
-            go!: ../Check results
-
-
-    state: Check results
-        if: QuestionService.finalScoreBigEnough()
-            if: $session.testResults.customerOrientationScore <= 6
-                script:
-                    $session.testResults.finalScore -= 15;
-                go!: ../Tell results
-            elseif: $session.testResults.customerOrientationScore >= 14
-                script:
-                    $session.i = 0;
-                go!:../Ask other customer orientation questions
-        else:
-            go!: ../Tell results
-
-                
-    state: Ask other customer orientation questions
-        script:
-            $session.i = $session.i || 0;
-        if: $session.i < 5
-            script:
-                $session.themeQuestionarie = "Customer orientation last";
-                QuestionService.generateQuestions($session.themeQuestionarie);
-                $session.i++;
-        else:
-            go!: ../Tell results
-            
-    state: Tell results
-        a: Итоговый результат:\n балл за клиентоориентированность: {{$session.testResults.customerOrientationScore}} \nбалл за умение работать в команде: {{$session.testResults.teamScore}} \nбалл за навыки коммуникации: {{$session.testResults.communicationScore}} \nбалл за умение держать фокус: {{$session.testResults.focusScore}} \nобщий балл: {{$session.testResults.finalScore}}.
-        a: Кажется, теперь я узнал Вас отлично!😊
-        a: Было очень приятно пообщаться, спасибо!
-        a: Надеюсь, мои вопросы напомнили Вам о знакомых ситуациях или просто развлекли.✌🏻✨🎉
-        a: При наличии в ресторане свободных вакансий, подходящих под Ваши временные возможности, мы с коллегами свяжемся с Вами в ближайшее время и расскажем о дальнейших шагах.
-        a: А пока Вы можете почитать о графике📋, рабочей униформе👕, корпоративной культуре 🎈и деталях работы.
-
-    
-    state: Get answer
-        q: $Text || fromState = "/CV/Customer orientation questionarie"
-        q: $Text || fromState = "/CV/Team questionarie"
-        q: $Text || fromState = "/CV/Communication questionarie"
-        q: $Text || fromState = "/CV/Focus questionarie"
-        q: $Text || fromState = "/CV/Ask other customer orientation questions"
-        script:
-            $session.curAnswers = [];
-            for (var i = 0; i < $session.currentQuestion.answers.length; i++){
-                var bb = $session.currentQuestion.answers[i].text.replace(/[.,\/#%!\^\*;:{}=\_`~()]/g,"").toLowerCase().split(" ");
-                var answerPattern = "* " + (bb[bb.length-3] + " " + bb[bb.length-2] + " " + bb[bb.length-1]).replace(/[.,\/#%!\^\*;:{}=\_`~()]/g,"").toLowerCase();
-                $session.curAnswers.push(answerPattern);
-            }
-            var match = $nlp.matchPatterns($parseTree._Text.replace(/[.,\/#%!\^\*;:{}=\_`~()]/g,"").toLowerCase(), $session.curAnswers);
-            if(match){
-                var transformMatch = match.effectivePattern.toLowerCase();
-                var index = $session.curAnswers.indexOf(transformMatch);
-                
-                $session.testResults.finalScore = $session.testResults.finalScore + parseInt($session.currentQuestion.answers[index].score);
-
-                switch($session.themeQuestionarie){
-                    case "Customer orientation":
-                        $session.testResults.customerOrientationScore = $session.testResults.customerOrientationScore + parseInt($session.currentQuestion.answers[index].score);
-                        $reactions.transition("/CV/Customer orientation questionarie");
-                        break;
-
-                    case "Team":
-                        $session.testResults.teamScore = $session.testResults.teamScore + parseInt($session.currentQuestion.answers[index].score);
-                        $reactions.transition("/CV/Team questionarie");
-                        break;
-                        
-                    case "Communication":
-                        $session.testResults.communicationScore = $session.testResults.communicationScore + parseInt($session.currentQuestion.answers[index].score);
-                        $reactions.transition("/CV/Communication questionarie");
-                        break;
-
-                    case "Focus":
-                        $session.testResults.focusScore = $session.testResults.focusScore + parseInt($session.currentQuestion.answers[index].score);
-                        $reactions.transition("/CV/Focus questionarie");
-                        break;
-
-                    case "Customer orientation last":
-                        $session.testResults.customerOrientationScore = $session.testResults.customerOrientationScore + parseInt($session.currentQuestion.answers[index].score);
-                        $reactions.transition("/CV/Ask other customer orientation questions");
-                        break;
-                }       
-            } else {
-                $reactions.transition("/CV/CatchAll");
-            }
-
-
-
-    state: CatchAll
-        q!: *
+    state: newNode_0
         random:
-            a: Пожалуйста, выберите один из предложенных вариантов ответа.
-            a: Вам нужно выбрать один из перечисленных вариантов ответа.
-            a: Необходимо выбрать один из предложенных вариантов.
-        a: {{$session.curQuestionAnswer}}
-        go!: {{$session.lastState}}
+            a: Тестер введи Имя и дату || tts = "Раз раз раз это войс тест", ttsEnabled = true
+        image: https://248305.selcdn.ru/zfl_prod/302602/302605/vYO8SYdYYk96Z41A.jpg
+        go!: /newNode_1
+    @Transition
+        {
+          "boundsTo" : "/newNode_0",
+          "then" : "/newNode_49"
+        }
+    state: newNode_1
+        go!: /newNode_49
+    @InputText
+        {
+          "boundsTo" : "",
+          "actions" : [ ],
+          "prompt" : "Имя",
+          "varName" : "name",
+          "then" : "/newNode_48"
+        }
+    state: newNode_49
+        a: Имя
+
+        state: CatchText || modal = true
+            q: *
+            script:
+                $session.name = $parseTree.text;
+            go!: /newNode_48
+
+    state: newNode_48
+        random:
+            a: Цифра текст || tts = "", ttsEnabled = false
+        go!: /newNode_50
+    @InputNumber
+        {
+          "boundsTo" : "/newNode_48",
+          "actions" : [
+            {
+              "type" : "buttons",
+              "buttons" : [ ]
+            }
+          ],
+          "prompt" : "Введите число",
+          "varName" : "day",
+          "failureMessage" : [
+            "Введите число от 1 до 31",
+            "число от 1 до 31",
+            "в месяце 31 день"
+          ],
+          "then" : "/newNode_4",
+          "minValue" : 1,
+          "maxValue" : 31
+        }
+    state: newNode_50
+        a: Введите число
+
+        state: CatchNumber
+            q: $Number
+            script:
+                var failureMessages = [
+                    "Введите число от 1 до 31",
+                    "число от 1 до 31",
+                    "в месяце 31 день"
+                ];
+                var failureRandom = failureMessages[$reactions.random(failureMessages.length)];
+                if ($parseTree._Number < 1) {
+                    $reactions.answer(failureRandom);
+                } else
+                if ($parseTree._Number > 31) {
+                    $reactions.answer(failureRandom);
+                } else
+                {
+                    $session.day = $parseTree._Number;
+                    $temp.day_ok = true;
+                }
+            if: $temp.day_ok
+                go!: /newNode_4
+            else:
+                go: CatchNumber
+
+        state: CatchAll
+            q: *
+            go!: ..
+        init:
+            $jsapi.bind({
+                type: "postProcess",
+                path: "/newNode_50",
+                name: "newNode_50 buttons",
+                handler: function($context) {
+                }
+            });
+
+    state: newNode_4
+        random:
+            a: ну что поехали {{$session.name}} , сегодняшний день ({{$session.day}}) только начался || tts = "<speak> ты {{$session.name}} , сегодня {{$session.day}} , попробуем выжить</speak>", ttsEnabled = true
+        go!: /newNode_5
+    @Transition
+        {
+          "boundsTo" : "/newNode_4",
+          "then" : "/newNode_6"
+        }
+    state: newNode_5
+        go!: /newNode_6
+
+    state: newNode_6
+        random:
+            a: Скажи или напиши, что хочешь || tts = "", ttsEnabled = false
+        go!: /newNode_7
+    @IntentGroup
+        {
+          "boundsTo" : "/newNode_6",
+          "actions" : [
+            {
+              "type" : "buttons",
+              "buttons" : [
+                {
+                  "name" : "Http",
+                  "transition" : ""
+                },
+                {
+                  "name" : "Обработка массивов",
+                  "transition" : ""
+                },
+                {
+                  "name" : "Завершим диалог",
+                  "transition" : ""
+                },
+                {
+                  "name" : "C чистого листа",
+                  "transition" : ""
+                },
+                {
+                  "name" : "Фразы",
+                  "transition" : ""
+                },
+                {
+                  "name" : "Вебхук",
+                  "transition" : ""
+                }
+              ]
+            }
+          ],
+          "global" : true,
+          "fallback" : "/newNode_6",
+          "intents" : [
+            {
+              "phrases" : [
+                {
+                  "type" : "example",
+                  "value" : "Http"
+                }
+              ],
+              "then" : "/newNode_8"
+            },
+            {
+              "phrases" : [
+                {
+                  "type" : "example",
+                  "value" : "Обработка массивов"
+                }
+              ],
+              "then" : "/newNode_23"
+            },
+            {
+              "phrases" : [
+                {
+                  "type" : "example",
+                  "value" : "завершим диалог и очистим себя"
+                }
+              ],
+              "then" : "/newNode_30"
+            },
+            {
+              "phrases" : [
+                {
+                  "type" : "example",
+                  "value" : "С чистого листа"
+                }
+              ],
+              "then" : "/newNode_31"
+            },
+            {
+              "phrases" : [
+                {
+                  "type" : "example",
+                  "value" : "Фразы с паттерами"
+                }
+              ],
+              "then" : "/newNode_32"
+            },
+            {
+              "phrases" : [
+                {
+                  "type" : "example",
+                  "value" : "Вебхук"
+                }
+              ],
+              "then" : "/newNode_44"
+            }
+          ]
+        }
+    state: newNode_7
+        state: 1
+            e!: Http
+
+            go!: /newNode_8
+
+        state: 2
+            e!: Обработка массивов
+
+            go!: /newNode_23
+
+        state: 3
+            e!: завершим диалог и очистим себя
+
+            go!: /newNode_30
+
+        state: 4
+            e!: С чистого листа
+
+            go!: /newNode_31
+
+        state: 5
+            e!: Фразы с паттерами
+
+            go!: /newNode_32
+
+        state: 6
+            e!: Вебхук
+
+            go!: /newNode_44
+
+        state: Fallback
+            q: *
+            go!: /newNode_6
+        init:
+            $jsapi.bind({
+                type: "postProcess",
+                path: "/newNode_7",
+                name: "newNode_7 buttons",
+                handler: function($context) {
+                  $reactions.buttons([
+                    {text: "Http"
+                    },
+                    {text: "Обработка массивов"
+                    },
+                    {text: "Завершим диалог"
+                    },
+                    {text: "C чистого листа"
+                    },
+                    {text: "Фразы"
+                    },
+                    {text: "Вебхук"
+                    },
+                  ]);
+                }
+            });
+    @HttpRequest
+        {
+          "boundsTo" : "",
+          "actions" : [
+            {
+              "type" : "buttons",
+              "buttons" : [ ]
+            }
+          ],
+          "url" : "https://webhook.site/2ac28c57-4e39-4c73-abec-b14132e4a7a3",
+          "method" : "GET",
+          "dataType" : "json",
+          "body" : "",
+          "okState" : "/newNode_14",
+          "errorState" : "/newNode_22",
+          "timeout" : 0,
+          "headers" : [ ],
+          "vars" : [
+            {
+              "name" : "answerget",
+              "value" : "$httpResponse"
+            }
+          ]
+        }
+    state: newNode_8
+        script:
+            var headers = {
+            };
+            var result = $http.query("https://webhook.site/2ac28c57-4e39-4c73-abec-b14132e4a7a3", {
+                method: "GET",
+                headers: headers,
+                query: $session,
+                dataType: "json",
+                timeout: 0 || 10000
+            });
+            var $httpResponse = result.data;
+            $session.httpStatus = result.status;
+            $session.httpResponse = $httpResponse;
+            if (result.isOk && result.status >= 200 && result.status < 300) {
+                $session["answerget"] = $httpResponse;
+                $reactions.transition("/newNode_14");
+            } else {
+                $reactions.transition("/newNode_22");
+            }
+        init:
+            $jsapi.bind({
+                type: "postProcess",
+                path: "/newNode_8",
+                name: "newNode_8 buttons",
+                handler: function($context) {
+                }
+            });
+
+    state: newNode_14
+        random:
+            a: Вернуло в get {{$session.answerget}} || tts = "", ttsEnabled = false
+        go!: /newNode_15
+    @Transition
+        {
+          "boundsTo" : "/newNode_14",
+          "then" : "/newNode_9"
+        }
+    state: newNode_15
+        go!: /newNode_9
+    @HttpRequest
+        {
+          "boundsTo" : "",
+          "actions" : [
+            {
+              "type" : "buttons",
+              "buttons" : [ ]
+            }
+          ],
+          "url" : "https://webhook.site/2ac28c57-4e39-4c73-abec-b14132e4a7a3",
+          "method" : "POST",
+          "dataType" : "json",
+          "body" : "{\n    \"clientId\": \"test\",\n    \"questionId\": \"2897f5c0-06bb-4c58-bd01-9886e58b794a\",\n    \"data\": {\n        \"answer\": \"Здравствуйте! Я знаю про количество проживающих в любом городе мира. Просто назовите город!\",\n        \"replies\": [\n            {\n                \"type\": \"text\",\n                \"text\": \"Здравствуйте! Я знаю про количество проживающих в любом городе мира. Просто назовите город!\",\n                \"state\": \"/newNode_0\"\n            }\n        ]\n    },\n    \"timestamp\": \"2018-09-28T13:59:25.008\"\n}",
+          "okState" : "/newNode_16",
+          "errorState" : "/newNode_22",
+          "timeout" : 0,
+          "headers" : [
+            {
+              "name" : "Content-Type",
+              "value" : "text/xml"
+            }
+          ],
+          "vars" : [
+            {
+              "name" : "answerpost",
+              "value" : "$httpResponse"
+            }
+          ]
+        }
+    state: newNode_9
+        script:
+            var headers = {
+                "Content-Type": _.template("text/xml", {variable: '$session'})($session)
+            };
+            var result = $http.query("https://webhook.site/2ac28c57-4e39-4c73-abec-b14132e4a7a3", {
+                method: "POST",
+                headers: headers,
+                query: $session,
+                body: _.template("{    \"clientId\": \"test\",    \"questionId\": \"2897f5c0-06bb-4c58-bd01-9886e58b794a\",    \"data\": {        \"answer\": \"Здравствуйте! Я знаю про количество проживающих в любом городе мира. Просто назовите город!\",        \"replies\": [            {                \"type\": \"text\",                \"text\": \"Здравствуйте! Я знаю про количество проживающих в любом городе мира. Просто назовите город!\",                \"state\": \"/newNode_0\"            }        ]    },    \"timestamp\": \"2018-09-28T13:59:25.008\"}", {variable: '$session'})($session),
+                dataType: "json",
+                timeout: 0 || 10000
+            });
+            var $httpResponse = result.data;
+            $session.httpStatus = result.status;
+            $session.httpResponse = $httpResponse;
+            if (result.isOk && result.status >= 200 && result.status < 300) {
+                $session["answerpost"] = $httpResponse;
+                $reactions.transition("/newNode_16");
+            } else {
+                $reactions.transition("/newNode_22");
+            }
+        init:
+            $jsapi.bind({
+                type: "postProcess",
+                path: "/newNode_9",
+                name: "newNode_9 buttons",
+                handler: function($context) {
+                }
+            });
+
+    state: newNode_16
+        random:
+            a: вернуло в post {{$session.answerpost}} || tts = "", ttsEnabled = false
+        go!: /newNode_18
+    @Transition
+        {
+          "boundsTo" : "/newNode_16",
+          "then" : "/newNode_10"
+        }
+    state: newNode_18
+        go!: /newNode_10
+    @HttpRequest
+        {
+          "boundsTo" : "",
+          "actions" : [
+            {
+              "type" : "buttons",
+              "buttons" : [ ]
+            }
+          ],
+          "url" : "https://webhook.site/2ac28c57-4e39-4c73-abec-b14132e4a7a3",
+          "method" : "PUT",
+          "dataType" : "json",
+          "body" : "{Put}",
+          "okState" : "/newNode_17",
+          "errorState" : "/newNode_22",
+          "timeout" : 0,
+          "headers" : [
+            {
+              "name" : "",
+              "value" : ""
+            }
+          ],
+          "vars" : [
+            {
+              "name" : "answerput",
+              "value" : "$httpResponse"
+            }
+          ]
+        }
+    state: newNode_10
+        script:
+            var headers = {
+                "": _.template("", {variable: '$session'})($session)
+            };
+            var result = $http.query("https://webhook.site/2ac28c57-4e39-4c73-abec-b14132e4a7a3", {
+                method: "PUT",
+                headers: headers,
+                query: $session,
+                body: _.template("{Put}", {variable: '$session'})($session),
+                dataType: "json",
+                timeout: 0 || 10000
+            });
+            var $httpResponse = result.data;
+            $session.httpStatus = result.status;
+            $session.httpResponse = $httpResponse;
+            if (result.isOk && result.status >= 200 && result.status < 300) {
+                $session["answerput"] = $httpResponse;
+                $reactions.transition("/newNode_17");
+            } else {
+                $reactions.transition("/newNode_22");
+            }
+        init:
+            $jsapi.bind({
+                type: "postProcess",
+                path: "/newNode_10",
+                name: "newNode_10 buttons",
+                handler: function($context) {
+                }
+            });
+
+    state: newNode_17
+        random:
+            a: вернуло в put {{$session.answerput}} || tts = "", ttsEnabled = false
+        go!: /newNode_19
+    @Transition
+        {
+          "boundsTo" : "/newNode_17",
+          "then" : "/newNode_11"
+        }
+    state: newNode_19
+        go!: /newNode_11
+    @HttpRequest
+        {
+          "boundsTo" : "",
+          "actions" : [
+            {
+              "type" : "buttons",
+              "buttons" : [ ]
+            }
+          ],
+          "url" : "https://webhook.site/2ac28c57-4e39-4c73-abec-b14132e4a7a3",
+          "method" : "DELETE",
+          "dataType" : "json",
+          "body" : "{delete}",
+          "okState" : "/newNode_20",
+          "errorState" : "/newNode_22",
+          "timeout" : 0,
+          "headers" : [ ],
+          "vars" : [
+            {
+              "name" : "answerdelete",
+              "value" : "$httpResponse"
+            }
+          ]
+        }
+    state: newNode_11
+        script:
+            var headers = {
+            };
+            var result = $http.query("https://webhook.site/2ac28c57-4e39-4c73-abec-b14132e4a7a3", {
+                method: "DELETE",
+                headers: headers,
+                query: $session,
+                body: _.template("{delete}", {variable: '$session'})($session),
+                dataType: "json",
+                timeout: 0 || 10000
+            });
+            var $httpResponse = result.data;
+            $session.httpStatus = result.status;
+            $session.httpResponse = $httpResponse;
+            if (result.isOk && result.status >= 200 && result.status < 300) {
+                $session["answerdelete"] = $httpResponse;
+                $reactions.transition("/newNode_20");
+            } else {
+                $reactions.transition("/newNode_22");
+            }
+        init:
+            $jsapi.bind({
+                type: "postProcess",
+                path: "/newNode_11",
+                name: "newNode_11 buttons",
+                handler: function($context) {
+                }
+            });
+
+    state: newNode_20
+        random:
+            a: вернуло в delete {{$session.answerdelete}} || tts = "", ttsEnabled = false
+        go!: /newNode_21
+    @Transition
+        {
+          "boundsTo" : "/newNode_20",
+          "then" : "/newNode_12"
+        }
+    state: newNode_21
+        go!: /newNode_12
+
+    state: newNode_12
+        random:
+            a: Проверка показала что запросы работает || tts = "", ttsEnabled = false
+        go!: /newNode_13
+    @Transition
+        {
+          "boundsTo" : "/newNode_12",
+          "then" : "/newNode_6"
+        }
+    state: newNode_13
+        go!: /newNode_6
+
+    state: newNode_22
+        random:
+            a: ой йой ошибка в http блоке || tts = "", ttsEnabled = false
+    @HttpRequest
+        {
+          "boundsTo" : "",
+          "actions" : [
+            {
+              "type" : "buttons",
+              "buttons" : [ ]
+            }
+          ],
+          "url" : "http://tools.aimylogic.com/api/rss2json?url=https://yandex.ru/blog/company/rss",
+          "method" : "GET",
+          "dataType" : "json",
+          "body" : "",
+          "okState" : "/newNode_24",
+          "errorState" : "/newNode_22",
+          "timeout" : 0,
+          "headers" : [ ],
+          "vars" : [
+            {
+              "name" : "items",
+              "value" : "$httpResponse"
+            }
+          ]
+        }
+    state: newNode_23
+        script:
+            var headers = {
+            };
+            var result = $http.query("http://tools.aimylogic.com/api/rss2json?url=https://yandex.ru/blog/company/rss", {
+                method: "GET",
+                headers: headers,
+                query: $session,
+                dataType: "json",
+                timeout: 0 || 10000
+            });
+            var $httpResponse = result.data;
+            $session.httpStatus = result.status;
+            $session.httpResponse = $httpResponse;
+            if (result.isOk && result.status >= 200 && result.status < 300) {
+                $session["items"] = $httpResponse;
+                $reactions.transition("/newNode_24");
+            } else {
+                $reactions.transition("/newNode_22");
+            }
+        init:
+            $jsapi.bind({
+                type: "postProcess",
+                path: "/newNode_23",
+                name: "newNode_23 buttons",
+                handler: function($context) {
+                }
+            });
+
+    state: newNode_24
+        if: $session.items.next()
+            go!: /newNode_27
+        else:
+            go!: /newNode_28
+
+    state: newNode_25
+        if: $session.items.prev()
+            go!: /newNode_27
+        else:
+            go!: /newNode_28
+
+    state: newNode_26
+        if: $session.items.random()
+            go!: /newNode_27
+        else:
+            go!: /newNode_28
+
+    state: newNode_27
+        random:
+            a: {{$session.items.current().title}} || tts = "", ttsEnabled = false
+        buttons:
+            "дальше" -> /newNode_24
+            "назад" -> /newNode_25
+            "рандом" -> /newNode_26
+            {text: "Подробнее", url: "{{$session.items.current().link}}"}
+            {text: "2 кнопка подробнее", url: "{{$session.items.current().link}}"}
+
+    state: newNode_28
+        random:
+            a: Кончились новости || tts = "", ttsEnabled = false
+        go!: /newNode_29
+    @Transition
+        {
+          "boundsTo" : "/newNode_28",
+          "then" : "/newNode_23"
+        }
+    state: newNode_29
+        go!: /newNode_23
+    @EndSession
+        {
+          "boundsTo" : ""
+        }
+    state: newNode_30
+        script:
+            $session = new Object();
+            $response.endSession = true;
+
+    state: newNode_31
+        random:
+            a: Больше нет имени {{$session.name}} || tts = "", ttsEnabled = false
+
+    state: newNode_32
+        random:
+            a: введите паттерн по смыслу || tts = "", ttsEnabled = false
+        go!: /newNode_33
+    @IntentGroup
+        {
+          "boundsTo" : "/newNode_32",
+          "actions" : [
+            {
+              "type" : "buttons",
+              "buttons" : [ ]
+            }
+          ],
+          "global" : false,
+          "fallback" : "/newNode_6",
+          "intents" : [
+            {
+              "phrases" : [
+                {
+                  "type" : "pattern",
+                  "value" : "Скидку хочу на $TEXT"
+                }
+              ],
+              "then" : "/newNode_37"
+            },
+            {
+              "phrases" : [
+                {
+                  "type" : "example",
+                  "value" : "Я в городе $CITY"
+                },
+                {
+                  "type" : "example",
+                  "value" : "Мой город $CITY"
+                }
+              ],
+              "then" : "/newNode_41"
+            },
+            {
+              "phrases" : [
+                {
+                  "type" : "example",
+                  "value" : "Давление у меня $NUMBER::SYS на $NUMBER::DIA"
+                }
+              ],
+              "then" : "/newNode_34"
+            }
+          ]
+        }
+    state: newNode_33
+        state: 1
+            q: Скидку хочу на $TEXT
+
+            go!: /newNode_37
+
+        state: 2
+            e: Я в городе $CITY
+            e: Мой город $CITY
+
+            go!: /newNode_41
+
+        state: 3
+            e: Давление у меня $NUMBER::SYS на $NUMBER::DIA
+
+            go!: /newNode_34
+
+        state: Fallback
+            q: *
+            go!: /newNode_6
+        init:
+            $jsapi.bind({
+                type: "postProcess",
+                path: "/newNode_33",
+                name: "newNode_33 buttons",
+                handler: function($context) {
+                }
+            });
+
+    state: newNode_34
+        if: (30 < $session.DIA) & ($session.DIA<$session.SYS) & ($session.SYS < 300)
+            go!: /newNode_36
+        else:
+            go!: /newNode_35
+
+    state: newNode_35
+        random:
+            a: ты труп [{{$session.SYS}} на {{$session.DIA}}] {{$session.name}} || tts = "", ttsEnabled = false
+        go!: /newNode_39
+    @Transition
+        {
+          "boundsTo" : "/newNode_35",
+          "then" : "/newNode_32"
+        }
+    state: newNode_39
+        go!: /newNode_32
+
+    state: newNode_36
+        random:
+            a: Везет тебе ({{$session.SYS}} на {{$session.DIA}}) {{$session.name}} || tts = "", ttsEnabled = false
+        go!: /newNode_40
+    @Transition
+        {
+          "boundsTo" : "/newNode_36",
+          "then" : "/newNode_32"
+        }
+    state: newNode_40
+        go!: /newNode_32
+
+    state: newNode_37
+        random:
+            a: Много хочешь {{$session.name}} на {{$session.TEXT}} возьми кредит || tts = "", ttsEnabled = false
+        go!: /newNode_38
+    @Transition
+        {
+          "boundsTo" : "/newNode_37",
+          "then" : "/newNode_32"
+        }
+    state: newNode_38
+        go!: /newNode_32
+
+    state: newNode_41
+        random:
+            a: Ты гражданин {{$session.name}} с города {{$session.CITY}} || tts = "", ttsEnabled = false
+        go!: /newNode_42
+    @Transition
+        {
+          "boundsTo" : "/newNode_41",
+          "then" : "/newNode_6"
+        }
+    state: newNode_42
+        go!: /newNode_6
+    @InputText
+        {
+          "boundsTo" : "",
+          "actions" : [
+            {
+              "type" : "buttons",
+              "buttons" : [ ]
+            }
+          ],
+          "prompt" : "Переменная",
+          "varName" : "webhook",
+          "then" : "/newNode_45"
+        }
+    state: newNode_44
+        a: Переменная
+
+        state: CatchText || modal = true
+            q: *
+            script:
+                $session.webhook = $parseTree.text;
+            go!: /newNode_45
+        init:
+            $jsapi.bind({
+                type: "postProcess",
+                path: "/newNode_44",
+                name: "newNode_44 buttons",
+                handler: function($context) {
+                }
+            });
+
+    state: newNode_45
+        random:
+            a: {{$session.webhook}} вот || tts = "", ttsEnabled = false
+        buttons:
+            "получить хуки" -> /newNode_46
+
+    state: newNode_46
+        random:
+            a: Ты есть {{$session.name}} || tts = "", ttsEnabled = false
