@@ -103,6 +103,22 @@
       "phrases" : [
         ""
       ]
+    },
+    {
+      "id" : "Класс123.class_1",
+      "path" : "/Класс123/class_1",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
+      "id" : "Класс123.class_1.class_1_1",
+      "path" : "/Класс123/class_1/class_1_1",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
     }
   ]
 }
