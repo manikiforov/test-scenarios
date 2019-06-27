@@ -62,6 +62,15 @@
       ]
     },
     {
+      "id" : "Класс",
+      "path" : "/class_01",
+      "description" : "2706_1234567890",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
+    },
+    {
       "id" : "1234567890",
       "path" : "/kykyky",
       "description" : "",
@@ -107,15 +116,6 @@
       "id" : "",
       "path" : "/kykyky/КлассСаб_33",
       "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        ""
-      ]
-    },
-    {
-      "id" : "Класс",
-      "path" : "/Класс123",
-      "description" : "2706_1234567890",
       "disabled" : false,
       "phrases" : [
         ""
