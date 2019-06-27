@@ -1,8 +1,31 @@
-name: echo
+name: mcdonalds-hh-test
 
-entryPoint:
-  - main.sc
+entryPoint: main.sc
+
+nlp:
+ spellcheck:
+  enabled: true
+ vocabulary: common-vocabulary.json
 
 tests:
-  exclude:
+  include:
     - test.xml
+
+classifier:
+ engine: sts
+ noMatchThreshold: 0.4
+ parameters:
+  algorithm: aligner2
+
+matcherSettings:
+  contextHistoryDepth: 2 # количество фраз, за которые бот будет помнить "историю" диалога
+
+messages:
+  onError:
+    defaultMessage: Упс! В моей программе встретилась какая-то ошибка.
+
+dependencies:
+  - name: zb_common
+    type: git
+    url: https://bitbucket.org/just-ai/zb-common
+    version: heads/master
