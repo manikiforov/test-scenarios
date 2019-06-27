@@ -129,6 +129,15 @@
       "phrases" : [
         ""
       ]
+    },
+    {
+      "id" : "Класс_copy",
+      "path" : "/kykyky/class_01_copy",
+      "description" : "2706_1234567890",
+      "disabled" : false,
+      "phrases" : [
+        ""
+      ]
     }
   ]
 }
