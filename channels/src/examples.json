@@ -2,13 +2,11 @@
   "classes" : [
     {
       "id" : "",
-      "path" : "/testClass",
+      "path" : "/1",
       "description" : "",
       "disabled" : false,
       "phrases" : [
-        "Привет",
-        "Пока",
-        "ваыпва"
+        ""
       ]
     }
   ]
