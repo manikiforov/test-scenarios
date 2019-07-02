@@ -19,5 +19,23 @@
     "name" : "Перевод на оператора 34",
     "x" : 473,
     "y" : 583
+  }, {
+    "id" : "/newNode_4",
+    "name" : "Экран 4",
+    "actionTitles" : [ null ],
+    "x" : 1145,
+    "y" : 748
+  }, {
+    "id" : "/newNode_5",
+    "name" : "Экран 5",
+    "actionTitles" : [ null ],
+    "x" : 41,
+    "y" : 487
+  }, {
+    "id" : "/newNode_6",
+    "name" : "Экран 6",
+    "actionTitles" : [ null ],
+    "x" : 47,
+    "y" : 613
   } ]
 }

@@ -60,8 +60,8 @@ theme: /
     @Confirmation
         {
           "prompt" : "Вы согласны перейти в плоский мир?",
-          "agreeState" : "",
-          "disagreeState" : "",
+          "agreeState" : "/newNode_4",
+          "disagreeState" : "/newNode_04",
           "useButtons" : true,
           "agreeButton" : "лололололол",
           "disagreeButton" : "найн"
@@ -73,21 +73,27 @@ theme: /
             "найн" -> Disagree
         state: Agree
             q: $agree
-            go!:
+            go!: /newNode_4
         state: Disagree
             q: $disagree
-            go!:
+            go!: /newNode_04
     @Switch
         {
-          "prompt" : "Вам ответит первый освободившийся оператор",
+          "prompt" : "Вам ответит апапапапап",
           "ignoreOffline" : false,
-          "firstMessage" : "",
-          "closeChatPhrases" : [ ],
+          "firstMessage" : "ухты емае",
+          "closeChatPhrases" : [
+            "пока",
+            "ой пока",
+            "заеб"
+          ],
           "destination" : "",
-          "attributes" : { },
-          "onClose" : "",
-          "chatClosedMessage" : "Оператор завершил диалог",
-          "noOperatorsOnlineState" : ""
+          "attributes" : {
+            "name" : "id12345"
+          },
+          "onClose" : "/newNode_6",
+          "chatClosedMessage" : "Оператор послал вас",
+          "noOperatorsOnlineState" : "/newNode_5"
         }
     state: newNode_04
         if: false || hasOperatorsOnline()
@@ -95,20 +101,33 @@ theme: /
                 var switchReply = {type:"switch"};
                 switchReply.ignoreOffline = false;
                 switchReply.closeChatPhrases = [
+                     "пока",
+                     "ой пока",
+                     "заеб"
                 ];
                 switchReply.destination = "";
                 switchReply.attributes = {
+                         "name": "id12345"
                 };
-                switchReply.firstMessage = "";
+                switchReply.firstMessage = "ухты емае";
                 $response.replies = $response.replies || [];
                 $response.replies.push(switchReply);
-            a: Вам ответит первый освободившийся оператор
+            a: Вам ответит апапапапап
         else:
-            go!:
+            go!: /newNode_5
         state: NoOperatorsOnline
             event: noLivechatOperatorsOnline
-            go!:
+            go!: /newNode_5
         state: LivechatReset
             event: livechatFinished
-            a: Оператор завершил диалог
-            go!:
+            a: Оператор послал вас
+            go!: /newNode_6
+
+    state: newNode_4 || modal = true
+        a: Пиу
+
+    state: newNode_5
+        image: https://248305.selcdn.ru/public_test/262/267/rGUxh3sAVYOdhedc.png
+
+    state: newNode_6
+        image: https://248305.selcdn.ru/public_test/262/267/u7RjQJV7nK7lOl26.jpg
