@@ -23,8 +23,8 @@ theme: /
     state: CatchAll
         q!: *
         script:
-            pageName("Что то 4");
-        a: Что то не понятное1
+            pageName("Что то ");
+        a: Что то не понятное5
 
     state: Первый стейт
         q!: 1
