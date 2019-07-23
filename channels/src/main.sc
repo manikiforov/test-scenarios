@@ -2,4 +2,4 @@ theme: /
 
     state: 
         q!: *
-        a: Вы сказали и бот повторил: {{$parseTree.text}}
+        a: Вы сказали и бот ответил КОПИЯ: {{$parseTree.text}}
