@@ -1,6 +1,5 @@
 theme: /
     state:
-        q: *
         a: Набери timeout чтобы начать
     
     state: Start
