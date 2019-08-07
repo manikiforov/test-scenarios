@@ -3,12 +3,14 @@ var QuestionService = (function () {
     function init() {
         var $session = $jsapi.context().session;
         $session.i = 0;
+        $session.secretToken = "iIvqtaKVle8fjkMTC3otC4kL2nN7IyBN";
         $session.testResults = {
             customerOrientationScore: 0,
             teamScore: 0,
             communicationScore: 0,
             focusScore: 0,
-            finalScore: 0
+            finalScore: 0,
+            questionAnswerList: []
         };
 
         $session.serviceInfo = {
@@ -109,7 +111,7 @@ var QuestionService = (function () {
         $session.curQuestionAnswer = $session.currentQuestion.question + "\n\n";
 
         for (var i = 0; i < $session.currentQuestion.answers.length; i++){
-            $session.curQuestionAnswer = $session.curQuestionAnswer + "[" + $session.currentQuestion.answers[i].text + "]\n\n";
+            $session.curQuestionAnswer = $session.curQuestionAnswer + " * [" + $session.currentQuestion.answers[i].text + "]\n\n";
         }
 
         $reactions.answer($session.curQuestionAnswer);
@@ -122,13 +124,56 @@ var QuestionService = (function () {
         }
         return false;
     }
+    
+    function requestError(response, status) {
+        var $temp = $jsapi.context().temp;
+        log("ERROR: Failed to query API body: " + toPrettyString($temp.body) + ", status: " + status + ", data: " + toPrettyString(response));
+        $reactions.transition("/CV/Error");
+    }
+    
+    function sendTheResult(userID, secretToken, results){
+        var $session = $jsapi.context().session;
+        var $temp =  $jsapi.context().temp;
+        var login = "root";
+        var password = "test";
+        var tokenmd5 = md5(userID + secretToken);
+        //log("прям из этого-самого: id: " + userID + "; secretToken: " + secretToken + "; forHash: " + userID + secretToken + "; hash: " + tokenmd5);
+        $temp.body = {
+            id: userID,
+            token: tokenmd5,
+            customerfocus_score: results.customerOrientationScore,
+            team_score: results.teamScore,
+            communication_score: results.communicationScore,
+            focus_score: results.focusScore,
+            total_score: results.finalScore,
+            debug: 1,
+            questions: results.questionAnswerList
+            
+        };
+
+        log("прям из этого-самого:" + toPrettyString($temp.body));
+        return $http.post(sendResultAPI, {
+            dataType: "json",
+            method: "POST",
+            body: $temp.body,
+            headers: {
+                "Content-Type": "application/json",
+                "Authorization": "Basic " + base64.encode(login + ":" + password)
+            },
+        }).then(function (data) {
+            log(data);
+            return data.success;
+        }).catch(requestError);
+    }
+
     return {
         init:init,
         generateQuestions:generateQuestions,
         getQuestion:getQuestion,
         partWasRotated:partWasRotated,
         generateRotataionQuestion:generateRotataionQuestion,
-        finalScoreBigEnough:finalScoreBigEnough
+        finalScoreBigEnough:finalScoreBigEnough,
+        sendTheResult:sendTheResult
     };
 
 })();

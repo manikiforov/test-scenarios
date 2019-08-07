@@ -1,262 +1,364 @@
-require: function.js
+require: /dictionaries/customerOrientationQuestions.csv
+  name = customerOrientation
+  var = $customerOrientation
 
-theme: /
+require: /dictionaries/teamQuestions.csv
+  name = teamQuestions
+  var = $teamQuestions
+  
+require: /dictionaries/communication.csv
+  name = communicationQuestions
+  var = $communicationQuestions
 
-    state: Start 
-        q!: start
-        a: Вы сказали и бот ответил: {{$parseTree.text}}
-        image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
-        
-    state: Send File
-        q!: seeeend
-        script:
-            var link = "https://hrmobile.mmk.ru/apex/a13403/hrmob/img";
-            var imageUrl = "https://248305.selcdn.ru/zfl_prod/27877338/27877341/J7ifRIQqAslZx0e3.png";
-    
-            log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LINK: ' + link);
-            var response = $http.post(link, {
-                timeout: 10000,
-                fileUrl: imageUrl,
-                headers: {
-                    //"idGroup": groupID
-                    "idGroup": "123456789"
-                }
-            });
+require: /dictionaries/focus.csv
+  name = focusQuestions
+  var = $focusQuestions
 
-        
-    state: Internal http
-        q!: http internal
-        script: 
-            var result = $http.get("http://localhost:9030/restapi/public/mts-distribution");
-    
-    state:
-        q!: сайт
-        script:
-            $temp.url = $http.checkUrls("HEAD", ['https://yandex.ru/','https://google.com/','https://mail.ru/'], false);
-        a: {{ $temp.url }}
+require: /scripts/question.js
 
-    state: statemaster
-        q!: state
-        script: pageName("State main");
-        a: В главном стейте
-        
-        state: Первый подстейт
-            q: Первый
-            script: pageName("Первый подстейт");
-            a: Записали, а теперь пиши второй
-            
-        state: второй простой подстейт
-            q!: Второй
-            a: Напиши выход
-            
-            state: exit
-                q: выход
-                a: жми на exit
-                buttons:
-                    "exit" -> /Start
-            
-    state: stop
-        q!: stop
-        a: Вы прервали меня!!
-        
-    state: buttons
-        q!: buttons
-        a: кнопки
-        buttons:
-            "Первая" -> /Start
-            "Вторая" -> /Stop
-            "Третья" -> /CatchAll
-        
-    state: raw
-        event: rawRequestEvent
-        a: LOL
-        script:
-            log($request);
-            
-    state: vk
-        q: контакт
-        a:
-        
-    state: kind
-        event: fghf
-        a: kind!
-        script:
-            log($request);
-        
-    state: webim_actions
-        q!: webimAct
-        a: actions!
-        script:
-            $response.actions = [{
-               type:"close_chat",
-               operatorId:"123"
-            },
-            {
-               type:"redirect_to_department",
-               departmentKey:"123"
-            },
-            {
-               type:"redirect_to_operator",
-               departmentKey:"123"
-            },
-            {
-               type:"redirect_to_department",
-               departmentKey:"123"
-            }];
-            
-    state: image
-        event: imageEvent
-        a: изображение дошло
+require: /scripts/zenflow.js
+
+require: /scripts/base64.js
+
+require: /scripts/md5.js
+
+require: newSession.sc
+
+
+
+init:
+    Zenflow.init(); //сделать параметры со своего сайта доступными в виджете в объекте start
     
-    state: bitrixbot
-        event: ONIMBOTJOINCHAT
-        a: Бот вернулся, во славу битрикса
+    $global.sendResultAPI = $injector.sendResultAPI;
     
-    state: updatemessage
-        event: ONIMBOTMESSAGEUPDATE
-        a: Глаз да глаз за оператором
-    
-    state: deletemessage
-        event: ONIMBOTMESSAGEDELETE
-        a: Вжух и карандаш испарился
-      
-    state: file
-        event: fileEvent
-        a: файл дошел!
+    if (!$global.$converters) {
+        $global.$converters = {};
+    }
+
+    $global.$converters
+        .customerOrientationConverter = function(parseTree) {
+            var id = parseTree.customerOrientation[0].value;
+            return $customerOrientation[id].value;
+        };
+
+    $global.$converters
+        .teamConverter = function(parseTree) {
+            var id = parseTree.teamQuestions[0].value;
+            return $teamQuestions[id].value;
+        };
+
+    $global.$converters
+        .communicationConverter = function(parseTree) {
+            var id = parseTree.communicationQuestions[0].value;
+            return $communicationQuestions[id].value;
+        };
+
+    $global.$converters
+        .focusConverter = function(parseTree) {
+            var id = parseTree.focusQuestions[0].value;
+            return $focusQuestions[id].value;
+        };
         
-    state: telegramError
-        event: telegramApiRequestFailed
-        script: $request.data.eventData.errorMessage
+    bind("preProcess", function($context) {
+        var $session = $jsapi.context().session;
+        //Нужен для CatchAll
+        $session.lastState =  $context.contextPath;
+    });
+    
+    //$jsapi.bind({
+    //   type: "preMatch",
+    //   handler: function($context)
+    //        {if (!$context.request.query) {
+    //            if($temp.complete){
+    //                $context.temp.targetState = "/CV/Tell results/Refresh page";
+    //            } else {         
+    //                $context.temp.targetState = "/CV/Enter";
+    //            }
+    //        }
+    //    },
+    //   path: "/",
+    //   name: "avoidNullUtterance"
+   //});
+   
+patterns:
+    $customerOrientation = $entity<customerOrientation> || converter = $converters.customerOrientationConverter
+    $teamQuestions = $entity<teamQuestions> || converter = $converters.teamConverter
+    $communicationQuestions = $entity<communicationQuestions> || converter = $converters.communicationConverter
+    $focusQuestions = $entity<focusQuestions> || converter = $converters.focusConverter
+    $Text = *
+    
+    
+    
+theme: /CV
+
+    state: Enter
+        q!: тест
+        #q!: *start *
+        a: Здравствуйте! 👋
+        script:
+            QuestionService.init();
+            $session.curAnswers = [];  //создать такое поле в questionService
+            $reactions.timeout({interval: '3 seconds', targetState: '/CV/Enter/Intro1'});
+
+        state: Intro1
+            a: Представлюсь: я директор ресторана Макдоналдс 👱
+            script:
+                $reactions.timeout({interval: '3 seconds', targetState: '/CV/Enter/Intro2'});
+
+        state: Intro2
+            a: Прежде чем пригласить Вас на собеседование, я бы хотел узнать Вас получше.
+            script:
+                $reactions.timeout({interval: '3 seconds', targetState: '/CV/Enter/Intro3'});
+
+        state: Intro3
+            a: Я задам несколько вопросов, а Вам нужно просто выбрать наиболее близкий Вам вариант ответа, кликнув по нему. Хорошо?
+            buttons:
+                "Давай!👍"
+            go: /CV/Customer orientation questionarie
+
+    state: Customer orientation questionarie 
+        q: * давай *
+        script:
+            log("id: " + $session.start.id + "; secretToken: " + "iIvqtaKVle8fjkMTC3otC4kL2nN7IyBN; forHash: " + $session.start.id + "iIvqtaKVle8fjkMTC3otC4kL2nN7IyBN; hash: " + md5($session.start.id + "iIvqtaKVle8fjkMTC3otC4kL2nN7IyBN"));
+            $session.i = $session.i || 0;
+        if: $session.i < 4
+            script:
+                $session.themeQuestionarie = "Customer orientation";
+                QuestionService.generateQuestions($session.themeQuestionarie);
+                $session.i++;
+        elseif: $session.i == 4
+            if: QuestionService.partWasRotated("Customer orientation")
+                script:
+                    QuestionService.generateQuestions($session.themeQuestionarie);
+            else:
+                script:
+                    QuestionService.generateRotataionQuestion($customerOrientation);
+            script:
+                $session.i++;
+        else:
+            a: Интересно 🤔\nВозможно, в некоторых ситуациях я поступил бы так же… 
+            script:
+                $reactions.timeout({interval: '3 seconds', targetState: './Transition'});
+
+        state: Transition
+            a: Вы отлично справляетесь, давайте продолжим!
+            buttons:
+                "Да!👌"
+            script:
+                $session.i = 0;
+            go: /CV/Team questionarie
+
+    state: Team questionarie
+        q: * да *
+        script:
+            $session.i = $session.i || 0;
+        if: $session.i < 4
+            script:
+                $session.themeQuestionarie = "Team";
+                QuestionService.generateQuestions($session.themeQuestionarie);
+                $session.i++;
+        elseif: $session.i == 4
+            if: QuestionService.partWasRotated("Team")
+                script:
+                    QuestionService.generateQuestions($session.themeQuestionarie);
+            else:
+                script:
+                    QuestionService.generateRotataionQuestion($teamQuestions);
+            script:
+                $session.i++;
+        else:
+            a: За разговорами время летит незаметно, правда?⏰
+            script:
+                $reactions.timeout({interval: '3 seconds', targetState: './Transition'});
+
+        state: Transition
+            a: Мы в Макдоналдс ценим открытое общение. И мне нравится с Вами беседовать!🙂
+            buttons:
+                "🙌Продолжаем!"
+            script:
+                $session.i = 0;
+            go: /CV/Communication questionarie
+
+
+    state: Communication questionarie 
+        q: * продолжаем *
+        script:
+            $session.i = $session.i || 0;
+        if: $session.i < 4
+            script:
+                $session.themeQuestionarie = "Communication";
+                QuestionService.generateQuestions($session.themeQuestionarie);
+                $session.i++;
+        elseif: $session.i == 4
+            if: QuestionService.partWasRotated("Communication")
+                script:
+                    QuestionService.generateQuestions($session.themeQuestionarie);
+            else:
+                script:
+                    QuestionService.generateRotataionQuestion($communicationQuestions);
+            script:
+                $session.i++;
+        else:
+            a: Спасибо Вам за откровенность!🙏
+            script:
+                $reactions.timeout({interval: '3 seconds', targetState: './Transition'});
+
+        state: Transition
+            a: У меня осталось совсем немного вопросов… Я задам их, и Вы сможете вернуться к своим делам, хорошо?
+            buttons:
+                "Ок!👌"
+            script:
+                $session.i = 0;
+            go: /CV/Focus questionarie
+    
+
+    state: Focus questionarie
+        q: * ок *
+        script:
+            $session.i = $session.i || 0;
+        if: $session.i < 4
+            script:
+                $session.themeQuestionarie = "Focus";
+                QuestionService.generateQuestions($session.themeQuestionarie);
+                $session.i++;
+        elseif: $session.i == 4
+            if: QuestionService.partWasRotated("Focus")
+                script:
+                    QuestionService.generateQuestions($session.themeQuestionarie);
+            else:
+                script:
+                    QuestionService.generateRotataionQuestion($focusQuestions);
+            script:
+                $session.i++;
+        else:
+            script:
+                $session.i = 0;
+            go!: ../Check results
+
+
+    state: Check results
+        if: QuestionService.finalScoreBigEnough()
+            if: $session.testResults.customerOrientationScore <= 6
+                script:
+                    $session.testResults.finalScore -= 15;
+                go!: ../Tell results
+            elseif: $session.testResults.customerOrientationScore >= 14
+                script:
+                    $session.i = 0;
+                go!:../Ask other customer orientation questions
+        else:
+            go!: ../Tell results
+
+                
+    state: Ask other customer orientation questions
+        script:
+            $session.i = $session.i || 0;
+        if: $session.i < 5
+            script:
+                $session.themeQuestionarie = "Customer orientation last";
+                QuestionService.generateQuestions($session.themeQuestionarie);
+                $session.i++;
+        else:
+            go!: ../Tell results
+            
+    state: Tell results
+        script:
+            $temp.success = QuestionService.sendTheResult($session.start.id, $session.secretToken, $session.testResults);
+        if: $temp.success
+        #a: Итоговый результат:\n балл за клиентоориентированность: {{$session.testResults.customerOrientationScore}} \nбалл за умение работать в команде: {{$session.testResults.teamScore}} \nбалл за навыки коммуникации: {{$session.testResults.communicationScore}} \nбалл за умение держать фокус: {{$session.testResults.focusScore}} \nобщий балл: {{$session.testResults.finalScore}}.
+            a: Кажется, теперь я узнал Вас отлично!😊
+            script:
+                $temp.complete = true;
+                $reactions.timeout({interval: '3 seconds', targetState: './Final1'});
+        else:
+            a: Что-то пошло не так, и я не смог отправить результаты в компанию. Попробуйте зайти на страницу и пройти тест позже.
+
+        state: Final1
+            a: Было очень приятно пообщаться, спасибо!
+            script:
+                $reactions.timeout({interval: '3 seconds', targetState: '../Final2'});
+
+        state: Final2
+            a: Надеюсь, мои вопросы напомнили Вам о знакомых ситуациях или просто развлекли.✌🏻✨🎉
+            script:
+                $reactions.timeout({interval: '3 seconds', targetState: '../Final3'});
+
+        state: Final3
+            a: При наличии в ресторане свободных вакансий, подходящих под Ваши временные возможности, мы с коллегами свяжемся с Вами в ближайшее время и расскажем о дальнейших шагах.
+            script:
+                $reactions.timeout({interval: '3 seconds', targetState: '../Final4'});
+
+        state: Final4
+            a: А пока Вы можете почитать о графике📋, рабочей униформе👕, корпоративной культуре 🎈и деталях работы. <div><script>window.parent.postMessage("anketa", "*");</script></div>
+            buttons:
+                "Узнать детали работы📋"
+            
+        
+        state: Refresh page
+            q: * узнать детали работы * || fromState = ../Final4, onlyThisState = true
+            a: <div><script>window.parent.postMessage("complete", "*");</script></div>
+        
+    state: Get answer
+        q: $Text || fromState = "/CV/Customer orientation questionarie"
+        q: $Text || fromState = "/CV/Team questionarie"
+        q: $Text || fromState = "/CV/Communication questionarie"
+        q: $Text || fromState = "/CV/Focus questionarie"
+        q: $Text || fromState = "/CV/Ask other customer orientation questions"
+        script:
+            $session.curAnswers = [];
+            for (var i = 0; i < $session.currentQuestion.answers.length; i++){
+                var bb = $session.currentQuestion.answers[i].text.replace(/[.,\/#%!\^\*;:{}=\_`~()]/g,"").toLowerCase().split(" ");
+                var answerPattern = "* " + (bb[bb.length-3] + " " + bb[bb.length-2] + " " + bb[bb.length-1]).replace(/[.,\/#%!\^\*;:{}=\_`~()]/g,"").toLowerCase();
+                $session.curAnswers.push(answerPattern);
+            }
+            var match = $nlp.matchPatterns($parseTree._Text.replace(/[.,\/#%!\^\*;:{}=\_`~()]/g,"").toLowerCase(), $session.curAnswers);
+            if(match){
+                var transformMatch = match.effectivePattern.toLowerCase();
+                var index = $session.curAnswers.indexOf(transformMatch);
+                $session.testResults.questionAnswerList.push({"question": $session.currentQuestion.question, "answer": $parseTree._Text, "score": parseInt($session.currentQuestion.answers[index].score)});
+                
+                $session.testResults.finalScore = $session.testResults.finalScore + parseInt($session.currentQuestion.answers[index].score);
+
+                switch($session.themeQuestionarie){
+                    case "Customer orientation":
+                        $session.testResults.customerOrientationScore = $session.testResults.customerOrientationScore + parseInt($session.currentQuestion.answers[index].score);
+                        $reactions.transition("/CV/Customer orientation questionarie");
+                        break;
+
+                    case "Team":
+                        $session.testResults.teamScore = $session.testResults.teamScore + parseInt($session.currentQuestion.answers[index].score);
+                        $reactions.transition("/CV/Team questionarie");
+                        break;
+                        
+                    case "Communication":
+                        $session.testResults.communicationScore = $session.testResults.communicationScore + parseInt($session.currentQuestion.answers[index].score);
+                        $reactions.transition("/CV/Communication questionarie");
+                        break;выбрать
+
+                    case "Focus":
+                        $session.testResults.focusScore = $session.testResults.focusScore + parseInt($session.currentQuestion.answers[index].score);
+                        $reactions.transition("/CV/Focus questionarie");
+                        break;
+
+                    case "Customer orientation last":
+                        $session.testResults.customerOrientationScore = $session.testResults.customerOrientationScore + parseInt($session.currentQuestion.answers[index].score);
+                        $reactions.transition("/CV/Ask other customer orientation questions");
+                        break;
+                }       
+            } else {
+                $reactions.transition("/CV/CatchAll");
+            }
+
 
     state: CatchAll
         q!: *
-        a: Скажите боту чтото осмысленное .
-                
-    state: Prechat
-        q!: prechat
-        if: !hasOperatorsOnline()
-            go!: NoOperatorsOnline
-        else:
-            a: Переходим?
-            buttons:
-                "Да" -> PrechatO
-                "Нет" -> /CatchAll
-
-        state: NoOperatorsOnline
-            a: Операторов сейчас нет, они отравились сушами в стриптиз баре.
-
-        state: PrechatO
-            a: Перевожу на оператора. Не ходите с ним в стриптиз бар!
-            script:
-                $response.replies = $response.replies || [];
-                $response.replies
-                 .push({
-                    type:"switch",
-                    closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
-                    firstMessage: $client.history,
-                    lastMessage: "Этот паршивец закрыл диалог, запомни это.",
-                    attributes: {
-                        "Имя": "Доминик",
-                        "Фамилия": "Флэндри"
-                    }
-                });
-
-    state: Destination
-        q!: destination
-        if: !hasOperatorsOnline("group1")
-            go!: NoOperatorsOnline
-        else:
-            a: Переходим?
-            buttons:
-                "Да" -> Groups
-                "Нет" -> /CatchAll
-
-        state: NoOperatorsOnline
-            a: Операторов сейчас нет, они отравились сушами в стриптиз баре.
-
-        state: Groups
-            a: Перевожу на оператора. Не ходите с ним в стриптиз бар!
-            script:
-                $response.replies = $response.replies || [];
-                $response.replies
-                 .push({
-                    type:"switch",
-                    closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
-                    firstMessage: $client.history,
-                    destination: "group1",
-                    lastMessage: "Этот паршивец закрыл диалог, запомни это."
-                });
-
-    state: LivechatReset
-        event!: livechatFinished
-        go!: /CatchAll
+        random:
+            a: Пожалуйста, выберите один из предложенных вариантов ответа.
+            a: Вам нужно выбрать один из перечисленных вариантов ответа.
+            a: Необходимо выбрать один из предложенных вариантов.
+        a: {{$session.curQuestionAnswer}}
+        go!: {{$session.lastState}}
         
-    state: Justswitch
-        q!: justswitch
-        a: Перевожу на оператора
-        script:
-            $response.replies = $response.replies || [];
-            $response.replies
-             .push({
-                type:"switch",
-                closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
-                firstMessage: $client.history,
-                lastMessage: "Этот паршивец закрыл диалог, запомни это."
-            });
         
-    state: Operator
-        q!: operator
-        if: !hasOperatorsOnline()
-            go!: Switch/NoOperatorsOnline
-        else:
-            a: Переходим?
-            buttons:
-                "Да" -> Switch
-                "Нет" -> /CatchAll
-
-        state: Switch
-            a: Переводим на оператора, кстати Марксу уже больше 200лет!
-            buttons:
-                {"text":"Закрыть диалог","storeForViberLivechat":true}
-            script:
-                $response.replies = $response.replies || [];
-                $response.replies
-                 .push({
-                    type:"switch",
-                    appendCloseChatButton: true,
-                    closeChatPhrases: ["Закрыть диалог", "/closeLiveChat"],
-                    firstMessage: $client.history,
-                    lastMessage: "Этот паршивец закрыл диалог, запомни это."
-                });
-
-            state: NoOperatorsOnline
-                a: Операторов нет, а ты есть. Но ты напиши им, порадуй зарождающуюся шизу.
-                buttons:
-                    "Вернись в лоно земли обетованной" -> /Start
-
-                state: GetUserInfo
-                    q: *
-                    script:
-                        $response.replies = $response.replies || [];
-                        $response.replies
-                         .push({
-                            type:"switch",
-                            firstMessage: $parseTree.text + '\nДанное сообщение было отправлено в нерабочее время.',
-                            ignoreOffline: true,
-                            oneTimeMessage: true
-                         });
-                    go!: /CatchAll
-        
-    state: OperatorZopim
-        q: *zopim*
-        a: Перевожу на оператора
-        script:
-            $response.zopim = {
-                needResponse: true,
-                departmentName: 'Dep 1'
-            };
-            
-    state: reset
-        q!: reset
-        script:
-            $reactions.newSession({message: "/start", data: $request.data});    
+    state: Error || noContext = true
+        a: Кажется, что-то пошло не так. Попробуйте пройти тест еще раз чуть позже.
