@@ -7,7 +7,7 @@ theme: /
         q!: timeout
         a: Таймер начался когда вы сказали: {{$parseTree.text}}
         a: Напишите что нибудь и таймер перезапустится
-        script: $reactions.timeout({interval: '0 hour 0min 5sec', targetState: '/timedout'});
+        script: $reactions.timeout({interval: '0hours 0 minute 5 second', targetState: '/timedout'});
         
         state:
             q: *
@@ -16,7 +16,7 @@ theme: /
 
     state: timedout
         a: Первый таймер закончился, второй начался. Напиши что нибудь и второй таймер перезапустится
-        timeout: /end || interval =  "0 hour 0min 5sec"
+        timeout: /end || interval =  "0hours 0 minute 5 second"
         
         state:
             q: *
