@@ -22,7 +22,15 @@ theme: /
                 }
             });
 
-        
+    state: checkimage
+        q!: image
+        script:
+            $response.replies = $response.replies || [];
+            $response.replies.push( {
+                type: "image",
+                imageUrl: "https://www.tikkurila.ru/files/12213/textsize/Joker_0.9L_1024.jpg",
+                text: "Короткое, но информативное описание краски"
+            } );
     state: Internal http
         q!: http internal
         script: 
