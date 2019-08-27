@@ -4,7 +4,7 @@ theme: /
 
     state: Start 
         q!: start
-        a:  Вы сказали и бот ответил КОПИЯ
+        a:  Вы сказали и бот ответил
         image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
         
     state: Send File
