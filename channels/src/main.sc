@@ -4,8 +4,7 @@ theme: /
 
     state: Start 
         q!: start
-        a:  Вы сказали! и бот ответил
-
+        a:  Вы сказали! и бот ответил : {{$parseTree.text}}
         
     state: Send File
         q!: seeeeend
