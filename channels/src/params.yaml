@@ -20,7 +20,7 @@
                 }
             ]
         },
-        "actions": [ 
+        "actions": [
             {
                 "state": "/newNode_0",
                 "action": "start",
