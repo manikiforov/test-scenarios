@@ -1,10 +1,10 @@
-require: function.js
+﻿require: function.js
 
 theme: /
 
     state: Start 
         q!: start
-        a:  Вы сказали и бот ответил : {{$parseTree.text}}
+        a:  Вы сказали и бот ответил : Привет
         
     state: Send File
         q!: seeeeend
