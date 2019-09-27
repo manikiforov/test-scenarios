@@ -304,5 +304,5 @@ theme: /
                 oauth2ResourceDetail: oauth2ResourceDetail
             };
             var response = $http.query('https://sso-uni.demo.rooxteam.com/webapi-1.0/operator/loans?customerNumber=00923077', options);
-            $reactions.answer(JSON.stringify(response));
+            $reactions.answer("dsgdsg");
             
