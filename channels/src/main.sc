@@ -292,7 +292,7 @@ theme: /
             var oauth2ResourceDetail = { 
                 grantType: 'client_credentials',
                 accessTokenUri: 'https://sso-uni.demo.rooxteam.com/sso/oauth2/access_token',
-                clientId: 'justaibot1',
+                clientId: 'justaibot',
                 clientSecret: 'password',
                 parameterIncludes: { 
                     realm: '/customer'  
