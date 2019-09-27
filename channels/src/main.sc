@@ -326,5 +326,5 @@ theme: /
             q: requestAuth
             script:
                 var response = $http.query('https://sso-uni.demo.rooxteam.com/webapi-1.0/operator/loans?customerNumber=00923077');
-                $reactions.answer("dsgdsg213213");
+                $reactions.answer(JSON.stringify(response));
             
