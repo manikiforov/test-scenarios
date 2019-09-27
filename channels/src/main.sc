@@ -287,7 +287,7 @@ theme: /
             a: {{ $session.name }}
             
     state: single 
-        q!: single
+        q!: singleAuth
         script:
             var oauth2ResourceDetail = { 
                 grantType: 'client_credentials',
