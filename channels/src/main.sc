@@ -286,3 +286,23 @@ theme: /
         state: takevariable
             a: {{ $session.name }}
             
+    state: single 
+        q!: single
+        script:
+            var oauth2ResourceDetail = { 
+                grantType: 'client_credentials',
+                accessTokenUri: 'https://sso-uni.demo.rooxteam.com/sso/oauth2/access_token',
+                clientId: 'justaibot',
+                clientSecret: 'password',
+                parameterIncludes: { 
+                    realm: '/customer'  
+                },
+                tokenPrefix: 'sso_1.0_'
+            };
+            var options = {
+                method: 'GET',
+                oauth2ResourceDetail: oauth2ResourceDetail
+            };
+            var response = $http.query('https://sso-uni.demo.rooxteam.com/webapi-1.0/operator/loans?customerNumber=00923077', options);
+            $reactions.answer(JSON.stringify(response));
+            
