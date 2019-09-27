@@ -306,3 +306,24 @@ theme: /
             var response = $http.query('https://sso-uni.demo.rooxteam.com/webapi-1.0/operator/loans?customerNumber=00923077', options);
             $reactions.answer("dsgdsg");
             
+    state: setDefaultOauth
+        q!: setDefaultOauth
+        script:
+            var oauth2ResourceDetail = {
+                grantType: 'client_credentials',
+                accessTokenUri: 'https://sso-uni.demo.rooxteam.com/sso/oauth2/access_token',
+                clientId: 'justaibot',
+                clientSecret: 'password',
+                parameterIncludes: {
+                    realm: '/customer'
+                },
+                tokenPrefix: 'sso_1.0_'
+            };
+            $http.config( { 'oauth2ResourceDetail': oauth2ResourceDetail });
+            
+        state: requestAuth
+            q: requestAuth
+            script:
+                var response = $http.query('https://sso-uni.demo.rooxteam.com/webapi-1.0/operator/loans?customerNumber=00923077');
+                $reactions.answer("dsgdsg213213");
+            
