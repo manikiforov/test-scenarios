@@ -320,6 +320,7 @@ theme: /
                 tokenPrefix: 'sso_1.0_'
             };
             $http.config( { 'oauth2ResourceDetail': oauth2ResourceDetail });
+            $reactions.answer("оляля");
             
         state: requestAuth
             q: requestAuth
