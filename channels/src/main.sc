@@ -3,7 +3,7 @@ require: function.js
 theme: /
 
     state: Start 
-        q!: start
+        q!: start // вызов бота
         a:  Вы сказали и бот ответил : {{$parseTree.text}}
         
     state: Send File
