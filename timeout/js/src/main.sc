@@ -1,5 +1,5 @@
 theme: /
-    state: CatchAll
+    state: CatchAll 
         q: *
         a: Набери timeout или loop чтобы начать
     
