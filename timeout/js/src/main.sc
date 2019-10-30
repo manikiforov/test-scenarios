@@ -1,5 +1,5 @@
 theme: /
-    state: CatchAll 
+    state: 
         q: *
         a: Набери timeout или loop чтобы начать
     
@@ -31,3 +31,8 @@ theme: /
         q!: loop
         a: Цикл бам бам
         timeout: /loop || interval = 1s
+        
+    state: TariffBlocked || noChangeState=true
+        event: tariffBlocked
+        script:
+            $reactions.answer("Извините, работа приостановлена");   
