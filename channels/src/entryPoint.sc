@@ -1,7 +1,3 @@
-require: entities.sc
-
-require: default-knowledge-base.sc
-
 require: common.js
   module = sys.zb-common
 require: patterns.sc
