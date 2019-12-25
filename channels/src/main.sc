@@ -271,7 +271,7 @@ theme: /
         script:
             $response.zopim = {
                 needResponse: true,
-                departmentName: 'Dep 1'
+                departmentName: 'Dep'
             };
             
     state: reset
