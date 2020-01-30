@@ -9,6 +9,12 @@ theme: /
         a: Скажите боту чтото осмысленное.
         
     state: Switch
-        q!: switch
-        a: тут происходит перевод на оператор, пока этого нет, к сожалению. сорян
+        q!: operator
+        {
+          "type":"switch",               //тип сообщения
+          "firstMessage":"..."  ,        //опциональные параметры
+          "closeChatPhrases": [".."],
+          "ignoreOffline":true|false,
+          "oneTimeMessage": true|false
+        } 
         
