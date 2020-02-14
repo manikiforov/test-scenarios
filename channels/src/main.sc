@@ -9,7 +9,7 @@ theme: /
         script:
             $response.replies.push( {
                 type: "image",
-                imageUrl: "https://cdn1.imggmi.com/uploads/2019/10/16/0af36bc6017573383e65d9860b16d9ff-full.jpg",
+                imageUrl: "https://img-s2.onedio.com/id-5856bd43f93495cc2689a05b/rev-0/raw/s-907df56c8f0f1bbac319c217407861265de42837.jpg",
                 text: "описаниизображения.jpg"
             } )
         
