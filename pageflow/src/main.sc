@@ -24,7 +24,7 @@ theme: /
         q!: *
         script:
             pageName("Что то ");
-        a: Что то непоняль dkfja;sdkf
+        a: Что то непоняль...
 
     state: Первый стейт
         q!: 1
