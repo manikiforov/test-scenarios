@@ -1,7 +1,7 @@
 theme: /
     state: 
         q!: *
-        a: Вы сказали: {{$parseTree.text}}
+        a: Вы написали: {{$parseTree.text}}
     
     state: image
         q!: image
