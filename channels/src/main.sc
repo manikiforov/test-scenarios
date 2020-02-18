@@ -5,7 +5,7 @@ theme: /
     
     state: image
         q!: image
-        a: изображение
+        a: изображение какое-то
         script:
             $response.replies.push( {
                 type: "image",
