@@ -1,0 +1,400 @@
+{
+  "project" : {
+    "id" : "testprojectnamelocal-13800-Cxi",
+    "name" : "testprojectnamelocal-13800-Cxi",
+    "folder" : "/"
+  },
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "UTC"
+  },
+  "intents" : [
+    {
+      "id" : 43982,
+      "path" : "/1",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43989,
+      "path" : "/10",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43999,
+      "path" : "/10/1010",
+      "enabled" : false,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43990,
+      "path" : "/11",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43994,
+      "path" : "/1/11",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43995,
+      "path" : "/1/11/111",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 44002,
+      "path" : "/11/forDelete1",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 44003,
+      "path" : "/11/forDelete2",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 44004,
+      "path" : "/11/forDelete2/deletehimself1",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 44005,
+      "path" : "/11/forDelete2/deletehimself2",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43991,
+      "path" : "/12",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43992,
+      "path" : "/13",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43993,
+      "path" : "/14",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43983,
+      "path" : "/2",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43996,
+      "path" : "/2/2",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43997,
+      "path" : "/2/2-2",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43998,
+      "path" : "/2/2-2-2",
+      "enabled" : true,
+      "phrases" : [
+        {
+          "text" : "phrase 1"
+        },
+        {
+          "text" : "phrase 2"
+        }
+      ],
+      "patterns" : [
+        "pattern 1",
+        "pattern 2"
+      ],
+      "slots" : [
+        {
+          "name" : "S1",
+          "entity" : "duckling.url",
+          "required" : true,
+          "prompts" : [
+            "Чего",
+            "Каво",
+            "Зачем",
+            "и",
+            "Почему"
+          ],
+          "array" : false
+        }
+      ]
+    },
+    {
+      "id" : 43984,
+      "path" : "/3",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 44000,
+      "path" : "/4",
+      "description" : "Описание интента 4",
+      "answer" : "Ответ интента 4",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ],
+      "slots" : [
+        {
+          "name" : "duckling.time",
+          "entity" : "duckling.time",
+          "required" : true,
+          "prompts" : [
+            "1",
+            "2",
+            "3"
+          ],
+          "array" : true
+        }
+      ]
+    },
+    {
+      "id" : 43985,
+      "path" : "/5",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 44001,
+      "path" : "/6",
+      "enabled" : false,
+      "phrases" : [
+        {
+          "text" : "Тренировочная фраза 1"
+        },
+        {
+          "text" : "Тренировочная фраза 2"
+        },
+        {
+          "text" : "Фраза тренировочная 3"
+        },
+        {
+          "text" : "Еще какие-то слова"
+        },
+        {
+          "text" : "Фраза тоже тут будет"
+        },
+        {
+          "text" : "И можно еще одну"
+        },
+        {
+          "text" : "Много - не мало"
+        }
+      ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43986,
+      "path" : "/7",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43987,
+      "path" : "/8",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 43988,
+      "path" : "/9",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ]
+    },
+    {
+      "id" : 44006,
+      "path" : "/MoreSlots",
+      "enabled" : true,
+      "phrases" : [
+        {
+          "text" : "1"
+        },
+        {
+          "text" : "2"
+        },
+        {
+          "text" : "3"
+        },
+        {
+          "text" : "4"
+        },
+        {
+          "text" : "5"
+        },
+        {
+          "text" : "6"
+        }
+      ],
+      "patterns" : [ ],
+      "slots" : [
+        {
+          "name" : "1",
+          "entity" : "duckling.number",
+          "required" : true,
+          "prompts" : [
+            "11",
+            "2"
+          ]
+        },
+        {
+          "name" : "2",
+          "entity" : "duckling.number",
+          "required" : false,
+          "prompts" : [
+            "213",
+            "123",
+            "213",
+            "123",
+            "123"
+          ],
+          "array" : true
+        },
+        {
+          "name" : "3",
+          "entity" : "duckling.number",
+          "required" : false,
+          "prompts" : [
+            "42323423",
+            "344"
+          ],
+          "array" : true
+        },
+        {
+          "name" : "4",
+          "entity" : "duckling.number",
+          "required" : false,
+          "prompts" : [ ],
+          "array" : true
+        }
+      ]
+    },
+    {
+      "id" : 44007,
+      "path" : "/MoreSlots2",
+      "enabled" : true,
+      "phrases" : [ ],
+      "patterns" : [ ],
+      "slots" : [
+        {
+          "name" : "1",
+          "entity" : "duckling.number",
+          "required" : true,
+          "prompts" : [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "name" : "2",
+          "entity" : "duckling.number",
+          "required" : true,
+          "prompts" : [ ]
+        },
+        {
+          "name" : "3",
+          "entity" : "duckling.number",
+          "required" : true,
+          "prompts" : [
+            "2,",
+            "2",
+            "2",
+            "2"
+          ]
+        },
+        {
+          "name" : "4",
+          "entity" : "duckling.number",
+          "required" : true,
+          "prompts" : [
+            "1",
+            "2",
+            "3"
+          ]
+        },
+        {
+          "name" : "5",
+          "entity" : "duckling.number",
+          "required" : true,
+          "prompts" : [ ]
+        },
+        {
+          "name" : "6",
+          "entity" : "duckling.number",
+          "required" : true,
+          "prompts" : [ ]
+        },
+        {
+          "name" : "7",
+          "entity" : "duckling.number",
+          "required" : true,
+          "prompts" : [
+            "33333",
+            "33"
+          ]
+        },
+        {
+          "name" : "8",
+          "entity" : "duckling.number",
+          "required" : true,
+          "prompts" : [ ]
+        },
+        {
+          "name" : "9",
+          "entity" : "duckling.number",
+          "required" : true,
+          "prompts" : [ ]
+        }
+      ]
+    }
+  ],
+  "entities" : [ ],
+  "enabledSystemEntities" : [
+    "duckling.number",
+    "duckling.time",
+    "duckling.duration",
+    "duckling.phone-number",
+    "duckling.email",
+    "duckling.url"
+  ]
+}

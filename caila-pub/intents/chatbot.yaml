@@ -1,0 +1,9 @@
+name: echo-template
+
+entryPoint:
+  - main.sc
+
+tests:
+  include:
+    - test.xml
+
