@@ -1,7 +1,11 @@
 theme: /
     state: 
         q!: *
-        a: Вы написали: {{$parseTree.text}} COPY1
+        a: скажите боту что-то осмысленное
+        
+    state:
+        q!: start
+        a: вы написали и бот ответил {{$parseThree.text}}
     
     state: image
         q!: image
