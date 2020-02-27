@@ -1,7 +1,7 @@
 theme: /
     state: 
         q!: *
-        a: Вы написали: {{$parseTree.text}} COPY
+        a: Вы написали: {{$parseTree.text}} COPY1
     
     state: image
         q!: image
