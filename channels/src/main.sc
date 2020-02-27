@@ -5,7 +5,7 @@ theme: /
         
     state:
         q!: start
-        a: вы написали и бот ответил {{$parseThree.text}}
+        a: вы написали и бот ответил {{$parseTree.text}}
     
     state: image
         q!: image
