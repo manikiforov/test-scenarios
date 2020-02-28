@@ -1,34 +1,20 @@
 theme: /
     state: 
         q!: *
-        a: скажите боту что-то осмысленное
-        
-    state:
-        q!: start
-        a: вы написали и бот ответил {{$parseTree.text}}
+        a: Вы сказали: {{$parseTree.text}}
     
     state: image
-        q!: image
-        a: изображение какое-то
-        script:
-            $response.replies.push( {
-                type: "image",
-                imageUrl: "https://img-s2.onedio.com/id-5856bd43f93495cc2689a05b/rev-0/raw/s-907df56c8f0f1bbac319c217407861265de42837.jpg",
-                text: "описаниизображения.jpg"
-            } )
+        q!: JA image
+        a: изображение
+        image: https://248305.selcdn.ru/public_test/255/256/JtRAnNB2EYoldTfo.jpg
         
-    state: audio1
-        q!: audio666
+    state: audio
+        q!: JA audio
         a: аудио
-        audio: http://techslides.com/demos/samples/sample.mp3 || name="asdasda.mp3"
-    
-    state: audio2
-        q!: audio2
-        a: аудио
-        audio: https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3 || name = asdasda.mp3
+        audio: https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3 || name = "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"
     
     state: buttons
-        q!: buttons
+        q!: JA buttons
         a: кнопки
         buttons:
             "Кнопка1" -> /NormalButtons1
@@ -41,13 +27,13 @@ theme: /
         a: Результат нажатия кнопки 2
         
     state: inline
-        q!: inlineButtons
+        q!: JA inlineButtons
         a: 123
         inlineButtons:
             {text:"Просмотреть", url:"http://ya.ru"}
     
     state: switch
-        q!: switch
+        q!: JA switch
         script:
             $response.replies = $response.replies || [];
             $response.replies.push({
@@ -62,6 +48,6 @@ theme: /
             });
             
     state: reset
-        q!: reset
+        q!: JA reset
         script:
             $reactions.newSession({message: "/start", data: $request.data});
