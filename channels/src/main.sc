@@ -1,7 +1,12 @@
 theme: /
+    
+    state:
+        q!: start
+        a: Вы сказали и бот ответил {{$parseTree.text}}
+    
     state: 
         q!: *
-        a: Вы сказали: {{$parseTree.text}}
+        a: скажите что-то осмысленное
     
     state: image
         q!: JA image
