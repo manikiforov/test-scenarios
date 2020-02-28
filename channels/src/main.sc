@@ -56,3 +56,28 @@ theme: /
         q!: JA reset
         script:
             $reactions.newSession({message: "/start", data: $request.data});
+            
+     state: Operator
+        q!: operator
+        if: !hasOperatorsOnline()
+            go!: Switch/NoOperatorsOnline
+        else:
+            a: Переходим?
+            buttons:
+                "Да" -> Switch
+                "Нет" -> /CatchAll
+
+        state: Switch
+            a: Переводим на оператора, кстати Марксу уже больше 200лет!
+            buttons:
+                {"text":"Закрыть диалог","storeForViberLivechat":true}
+            script:
+                $response.replies = $response.replies || [];
+                $response.replies
+                 .push({
+                    type:"switch",
+                    appendCloseChatButton: true,
+                    closeChatPhrases: ["Закрыть диалог", "/closeLiveChat"],
+                    firstMessage: $client.history,
+                    lastMessage: "Этот паршивец закрыл диалог, запомни это."
+                });
