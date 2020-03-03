@@ -2,7 +2,7 @@ theme: /
 
     state: CatchAll
         q!: *
-        a: Лол работает f[f[f[
+        a: Лол работает f[f[f[a
         
     state: First
         q!: Пыщ
