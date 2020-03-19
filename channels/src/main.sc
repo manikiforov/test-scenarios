@@ -57,7 +57,7 @@ theme: /
         script:
             $reactions.newSession({message: "/start", data: $request.data});
             
-     state: Operator
+    state: Operator
         q!: operator
         if: !hasOperatorsOnline()
             go!: Switch/NoOperatorsOnline
