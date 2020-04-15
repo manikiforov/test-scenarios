@@ -10,6 +10,8 @@ theme: /
         
     state: Switch
         q!: operator
+        random:
+        a:
         {
           "type":"switch",               //тип сообщения
           "firstMessage":"..."  ,        //опциональные параметры
