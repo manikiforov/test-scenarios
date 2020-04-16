@@ -10,4 +10,4 @@ theme: /
 
     state: CatchAll
         q!: *
-        a: Я не понял1
+        a: Я 1не понял1
