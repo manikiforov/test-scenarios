@@ -11,7 +11,7 @@ theme: /
         q!: seeeend
         script:
             var link = "https://hrmobile.mmk.ru/apex/a13403/hrmob/img";
-            var imageUrl = "https://bipbap.ru/wp-content/uploads/2017/08/16.jpg";
+            var imageUrl = "https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif";
     
             log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LINK: ' + link);
             var response = $http.post(link, {
