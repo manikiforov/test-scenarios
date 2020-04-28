@@ -1,15 +1,3 @@
 {
-  "classes" : [
-    {
-      "id" : "",
-      "path" : "/testClass",
-      "description" : "",
-      "disabled" : false,
-      "phrases" : [
-        "Привет",
-        "Пока",
-        "ваыпва"
-      ]
-    }
-  ]
+  "classes" : [ ]
 }
