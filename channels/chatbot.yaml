@@ -1,7 +1,7 @@
 name: echo
 
 entryPoint:
-  - main.sc
+  - main1.sc
 
 tests:
   exclude:
