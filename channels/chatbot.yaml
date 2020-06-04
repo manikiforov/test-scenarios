@@ -1,8 +1,0 @@
-name: echo
-
-entryPoint:
-  - main1.sc
-
-tests:
-  exclude:
-    - test.xml
