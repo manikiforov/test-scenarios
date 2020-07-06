@@ -1,1 +1,24 @@
-{"project":{"id":"novyj_proekt-247852676-LUC","name":"novyj_proekt-247852676-LUC","folder":"/"},"settings":{"language":"ru","spellingCorrection":false,"classificationAlgorithm":"sts","timezone":"Europe/Moscow","shared":false},"intents":[{"path":"/пока","enabled":true,"phrases":[{"text":"пока"}]},{"path":"/привет","enabled":true,"phrases":[{"text":"привет"}]}],"entities":[],"enabledSystemEntities":["duckling.number","duckling.time","duckling.duration","duckling.phone-number","duckling.email","duckling.url"]}
+{
+  "project" : {
+    "id" : "i_zdorova2-247852676-LMM",
+    "name" : "i_zdorova2-247852676-LMM",
+    "folder" : "/"
+  },
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "UTC",
+    "shared" : false
+  },
+  "intents" : [ ],
+  "entities" : [ ],
+  "enabledSystemEntities" : [
+    "duckling.number",
+    "duckling.time",
+    "duckling.duration",
+    "duckling.phone-number",
+    "duckling.email",
+    "duckling.url"
+  ]
+}

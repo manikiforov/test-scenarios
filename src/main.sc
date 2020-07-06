@@ -1,24 +1,56 @@
 theme: /
-
     state: 
         q!: *
-        a: привет
-
-    state: 
-        q!: bitrix
-        a: Вы сказали: {{$parseTree.text}} токен: {{ $request.data.customData.bitrix.accessToken }}
+        a: Вы сказали что-то: {{$parseTree.text}}
+    
+    state: switch
+        q!: switch
         script:
-            var bitrix = $request.data.customData.bitrix;
-            log(bitrix);
-            var url = bitrix.clientEndpoint + "imbot.bot.list";
-            var options = {
-                dataType: "json",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: {
-                    "auth": bitrix.accessToken
+            $response.replies = $response.replies || [];
+            $response.replies.push({
+                type:"switch",
+                closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
+                firstMessage: $client.history,
+                lastMessage: "Этот паршивец закрыл диалог, запомни это.",
+                attributes: {
+                "Имя": "Доминик",
+                "Фамилия": "Флэндри"
                 }
-            };
-            var response = $http.post(url, options);
-            $reactions.answer(JSON.stringify(response.data));
+            });
+            
+    state: ev_f
+        event!: fileEvent
+        event!: imageEvent
+        event!: audioEvent
+        a: f
+        a: {{ $request.data.eventData.url }}
+        script:
+            log($request);
+        
+    state: ev_nexmo_file
+        event!: file
+        a: nexmo
+        a: {{ $request.data.eventData.message.content.file.url }}
+        script:
+            log($request);        
+            
+    state: ev_nexmo_image
+        event!: image
+        a: nexmo
+        a: {{ $request.data.eventData.message.content.image.url }}
+        script:
+            log($request);        
+            
+    state: ev_nexmo_audio
+        event!: audio
+        a: nexmo
+        a: {{ $request.data.eventData.message.content.audio.url }}
+        script:
+            log($request);    
+            
+    state: ev_nexmo_video
+        event!: video
+        a: nexmo
+        a: {{ $request.data.eventData.message.content.video.url }}
+        script:
+            log($request);             
