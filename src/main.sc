@@ -1,56 +1,92 @@
+require: slotfilling/slotFilling.sc
+  module = sys.zb-common
 theme: /
-    state: 
-        q!: *
-        a: Вы сказали что-то: {{$parseTree.text}}
-    
-    state: switch
-        q!: switch
-        script:
-            $response.replies = $response.replies || [];
-            $response.replies.push({
-                type:"switch",
-                closeChatPhrases: ["/closeLiveChat", "Закрыть диалог"],
-                firstMessage: $client.history,
-                lastMessage: "Этот паршивец закрыл диалог, запомни это.",
-                attributes: {
-                "Имя": "Доминик",
-                "Фамилия": "Флэндри"
-                }
-            });
-            
-    state: ev_f
-        event!: fileEvent
-        event!: imageEvent
-        event!: audioEvent
-        a: f
-        a: {{ $request.data.eventData.url }}
-        script:
-            log($request);
+
+    state: Start
+        q!: $regex</start>
+        a: Начнём.
+
+    state: Hello
+        intent!: /привет
+        a: Привет привет
+
+    state: Bye
+        intent!: /пока
+        a: Пока пока
         
-    state: ev_nexmo_file
-        event!: file
-        a: nexmo
-        a: {{ $request.data.eventData.message.content.file.url }}
-        script:
-            log($request);        
+    state:
+        intent!: /Валик
+        a: Вошли 1: Валик
+        
+        state:
+            intent: /Адреса
+            a: Вошли 2: Адреса
             
-    state: ev_nexmo_image
-        event!: image
-        a: nexmo
-        a: {{ $request.data.eventData.message.content.image.url }}
-        script:
-            log($request);        
+            state:
+                intent: /Расход
+                a: Вошли 3: Расход
+    
+    state: Delivery
+        intent!: /Доставка
+        a: {{toPrettyString($context.entities.filter( function(entity) { return entity.pattern == "Мебель" | entity.pattern == "Виды_доставки" | entity.pattern == "Дни_недели" | entity.pattern == "mystem.persn"}).map( function(entity) { return entity.value }))}}
+        a: {{$context.intent.answer}}
+        
+    state: 
+        intent!: /Нужна краска
+        a: Краска??
+        
+    state: Operator
+        intent!: /Оператор
+        if: !hasOperatorsOnline()
+            go!: Switch/NoOperatorsOnline
+        else:
+            a: Переходим?
+            buttons:
+                "Да" -> Switch
+                "Нет" -> /CatchAll
+
+        state: Switch
+            a: Переводим на оператора...
+            buttons:
+                {"text":"Закрыть диалог","storeForViberLivechat":true}
+            script:
+                $response.replies = $response.replies || [];
+                $response.replies
+                 .push({
+                    type:"switch",
+                    appendCloseChatButton: true,
+                    closeChatPhrases: ["Закрыть диалог", "/closeLiveChat"],
+                    firstMessage: $client.history,
+                    lastMessage: "Клиент закрыл диалог"
+                });
+
+            state: NoOperatorsOnline
+                a: Операторов сейчас нет на месте
+                buttons:
+                    "Вернуться к боту" -> /Start
+
+                state: GetUserInfo
+                    q: *
+                    script:
+                        $response.replies = $response.replies || [];
+                        $response.replies
+                         .push({
+                            type:"switch",
+                            firstMessage: $parseTree.text + '\nДанное сообщение было отправлено в нерабочее время.',
+                            ignoreOffline: true,
+                            oneTimeMessage: true
+                         });
+                    go!: /CatchAll
             
-    state: ev_nexmo_audio
-        event!: audio
-        a: nexmo
-        a: {{ $request.data.eventData.message.content.audio.url }}
-        script:
-            log($request);    
-            
-    state: ev_nexmo_video
-        event!: video
-        a: nexmo
-        a: {{ $request.data.eventData.message.content.video.url }}
-        script:
-            log($request);             
+    state: /newNode_0
+        a: Операторы офлайн
+    state: /newNode_1
+        a: Вернулись к боту 
+    state: 
+        event!: match
+        a: {{ $context.intent.answer }}
+        
+    state: NoMatch
+        event!: noMatch
+        a: Я не понял. Вы сказали: {{$request.query}}
+
