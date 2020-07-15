@@ -6,6 +6,18 @@ theme: /
         q!: $regex</start>
         a: Начнём.
 
+    state:  q1
+        q!: q
+        a: Тег q1
+        
+        state: q2
+            q: q
+            a: Тег q2
+            
+            state: q3
+                q: Третий q
+                a: Тег q3
+                
     state: Hello
         intent!: /привет
         a: Привет привет
@@ -25,7 +37,21 @@ theme: /
             state:
                 intent: /Расход
                 a: Вошли 3: Расход
+                
+    state:
+        e!: Входим
+        a: Тег е1
+        
+        state:
+            e: Входим
+            a: Тег е2
+            
+            state:
+                e: Врываемся в третий
+                a: Тег е3
+                
     
+                
     state: Delivery
         intent!: /Доставка
         a: {{toPrettyString($context.entities.filter( function(entity) { return entity.pattern == "Мебель" | entity.pattern == "Виды_доставки" | entity.pattern == "Дни_недели" | entity.pattern == "mystem.persn"}).map( function(entity) { return entity.value }))}}
