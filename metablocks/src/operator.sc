@@ -9,7 +9,7 @@ theme: /
             titleOfCloseButton = Выйти в окно
             messageBeforeTransfer = Сейчас переведем на оператора
             prechatAttributes = {"Имя":"Tester","Организация":"JuasAI"}
-            ignoreOffline = false
+            ignoreOffline = true
             messageForWaitingOperator = Ждем оператора
             noOperatorsOnlineState = /newNode_noOperators
             dialogCompletedState = /newNode_BackToBot
