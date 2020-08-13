@@ -1,18 +1,21 @@
 {
   "positions" : [ {
-    "id" : "/newNode_0",
-    "name" : "Ввод числа 0",
-    "x" : 511,
-    "y" : 322
-  }, {
     "id" : "/newNode_1",
     "name" : "newNode_1",
-    "x" : 115,
-    "y" : 197
+    "x" : 36,
+    "y" : 259
   }, {
     "id" : "/newNode_2",
     "name" : "newNode_2",
     "x" : 965,
     "y" : 579
+  }, {
+    "id" : "/newNode",
+    "x" : 680,
+    "y" : 412
+  }, {
+    "id" : "/InputNumber",
+    "x" : 520,
+    "y" : 190
   } ]
 }
