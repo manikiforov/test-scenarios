@@ -15,7 +15,15 @@
     "y" : 412
   }, {
     "id" : "/InputNumber",
-    "x" : 520,
-    "y" : 190
+    "x" : 560,
+    "y" : 148
+  }, {
+    "id" : "/newNode_inputNumber",
+    "x" : 220,
+    "y" : 148
+  }, {
+    "id" : "/answerNumber",
+    "x" : 900,
+    "y" : 148
   } ]
 }
