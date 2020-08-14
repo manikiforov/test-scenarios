@@ -1,6 +1,7 @@
 require: inputNumber.sc
 require: inputText.sc
 require: operator.sc
+require: confirmation.sc
 theme: /
 
     state: Start

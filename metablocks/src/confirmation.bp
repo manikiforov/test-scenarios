@@ -2,8 +2,8 @@
   "positions" : [ {
     "id" : "/newNode_0",
     "name" : "fine",
-    "x" : 593,
-    "y" : 262
+    "x" : 900,
+    "y" : 308
   }, {
     "id" : "/newNode_1",
     "x" : 93,
@@ -16,5 +16,17 @@
     "id" : "/newNode_3",
     "x" : 1005,
     "y" : 442
+  }, {
+    "id" : "/newNode",
+    "x" : 900,
+    "y" : 136
+  }, {
+    "id" : "/Confirmation",
+    "x" : 560,
+    "y" : 222
+  }, {
+    "id" : "/toConfirmation",
+    "x" : 220,
+    "y" : 222
   } ]
 }
