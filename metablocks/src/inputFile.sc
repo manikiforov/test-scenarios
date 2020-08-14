@@ -1,0 +1,2 @@
+theme: /
+    state: toInputFile

@@ -9,10 +9,10 @@ theme: /
             prompt = Введите дату
             varName = date
             failureMessage = ["Не думаю, что это дата"]
-            then = /newNode
+            then = /newNode_answerDate
             actions = []
 
-    state: newNode
+    state: newNode_answerDate
         a: Значит вы выбрали дату - {{toPrettyString($session.date)}}
         go!: /InputDateTime
         

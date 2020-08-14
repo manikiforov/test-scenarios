@@ -1,10 +1,5 @@
 {
   "positions" : [ {
-    "id" : "/newNode_0",
-    "name" : "fine",
-    "x" : 900,
-    "y" : 308
-  }, {
     "id" : "/newNode_1",
     "x" : 93,
     "y" : 120
@@ -17,13 +12,18 @@
     "x" : 1005,
     "y" : 442
   }, {
-    "id" : "/newNode",
+    "id" : "/newNode_agree",
     "x" : 900,
     "y" : 136
   }, {
     "id" : "/Confirmation",
     "x" : 560,
     "y" : 222
+  }, {
+    "id" : "/newNode_disagree",
+    "name" : "fine",
+    "x" : 900,
+    "y" : 308
   }, {
     "id" : "/toConfirmation",
     "x" : 220,

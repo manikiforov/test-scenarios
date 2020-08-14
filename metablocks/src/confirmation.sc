@@ -7,17 +7,17 @@ theme: /
     state: Confirmation
         Confirmation:
             prompt = Вы согласны?
-            agreeState = /newNode
-            disagreeState = /newNode_0
+            agreeState = /newNode_agree
+            disagreeState = /newNode_disagree
             useButtons = true
             agreeButton = Конечно!
             disagreeButton = Пфф
 
-    state: newNode
+    state: newNode_agree
         a: Я рад что вы согласны, но может вы передумали?
         go!: /Confirmation
 
-    state: newNode_0
+    state: newNode_disagree
         a: Плохо что вы не согласны, но может вы передумаете?
         go!: /Confirmation
         
