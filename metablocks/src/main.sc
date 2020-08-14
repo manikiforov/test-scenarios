@@ -3,6 +3,7 @@ require: inputText.sc
 require: operator.sc
 require: confirmation.sc
 require: inputDateTime.sc
+require: inputFile.sc
 theme: /
 
     state: Start
