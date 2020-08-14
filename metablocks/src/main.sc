@@ -2,6 +2,7 @@ require: inputNumber.sc
 require: inputText.sc
 require: operator.sc
 require: confirmation.sc
+require: inputDateTime.sc
 theme: /
 
     state: Start

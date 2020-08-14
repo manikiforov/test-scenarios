@@ -1,0 +1,15 @@
+{
+  "positions" : [ {
+    "id" : "/toInputDate",
+    "x" : 220,
+    "y" : 148
+  }, {
+    "id" : "/newNode",
+    "x" : 900,
+    "y" : 148
+  }, {
+    "id" : "/InputDateTime",
+    "x" : 560,
+    "y" : 148
+  } ]
+}
