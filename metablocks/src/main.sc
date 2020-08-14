@@ -4,6 +4,7 @@ require: operator.sc
 require: confirmation.sc
 require: inputDateTime.sc
 require: inputFile.sc
+require: inputPhoneNumber.sc
 theme: /
 
     state: Start
