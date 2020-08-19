@@ -46,7 +46,7 @@ theme: /
     state: statemaster
         q!: state
         script: pageName("State main");
-        a: В главном стейте
+        a: В главном стейте (Второй ветки)
         
         state: Первый подстейт
             q: Первый
