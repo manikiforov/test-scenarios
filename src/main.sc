@@ -107,7 +107,7 @@ theme: /
     state: /newNode_0
         a: Операторы офлайн
     state: /newNode_1
-        a: Вернулись к боту 
+        a: Вернулись к боту
     state: 
         event!: match
         a: {{ $context.intent.answer }}
