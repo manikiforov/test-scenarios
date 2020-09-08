@@ -1,5 +1,9 @@
-entryPoint: main.sc
+name: dialer-demo
+
+entryPoint:
+  - main.sc
 
 tests:
   include:
     - test.xml
+

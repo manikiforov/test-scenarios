@@ -1,54 +1,79 @@
+require: functions.js
+
 theme: /
-
-
-    state:
-        q!: test 1
+    state: NoInput || noContext=true
+        event: speechNotRecognized
         script:
-            log("before get");
-            $http.get('http://localhost:9001/method1').then( function (data) {
-                $response.data = data;
-            });
-        a: {{ $response.data.response }}
+            $session.noInputCounter = $session.noInputCounter || 0;
+            $session.noInputCounter++;
+        
+        if: $session.noInputCounter >= 5
+            a: Кажется какие-то проблемы со связью. Перезвоню вам позднее.
+            script:
+                hangUp();
+        else:
+            a: Вас плохо слышно, повторите, пожалуйста!
+    
 
-    state:
-        q!: test 2
+    state: Main
+        q: * *start
+        a: Привет, я телефонный бот!
+        a: <audio src="https://dialer-sandbox.just-ai.com/audio/ta-da-sound.wav"/>
+        a: Ваш номер {{getCaller()}}.
+        a: Согласны ли вы на наши распрекрасные условия?
+        a: Ответьте: да, нет или наверное
+        
+        state: Yes
+            q: Да
+            a: Как хорошо, что вы согласны!
+            script:
+                $dialer.setCallResult("Согласие");
+            a: Теперь скажи одно любое небольшое предложение, а я за тобой повторю.
+            
+            state: Repeat1
+                q: *
+                a: Вы сказали: {{$parseTree.text}}
+                script:
+                    hangUp();
+            
+        state: No
+            q: Нет
+            a: Очень жаль, что вы отказались.
+            script:
+               $dialer.setCallResult("Отказ");
+            a: Теперь скажи одно любое небольшое предложение, а я за тобой повторю.
+            
+            state: Repeat2
+                q: *
+                a: Вы сказали: {{$parseTree.text}}
+                script:
+                    hangUp();
+            
+        state: Maybe
+            q: Наверное
+            a: Ах какая неуверенность! В следующий раз будте смелее.
+            script:
+                $dialer.setCallResult("Сомнение");
+            a: Теперь скажи одно любое предложение, а я за тобой повторю.
+    
+            state: Repeat3
+                q: *
+                a: Вы сказали: {{$parseTree.text}}
+                script:
+                    hangUp();
+    
+    state: ClientHungUp
+        event!: hangup
         script:
-            log("before get");
-            $http.get('http://localhost:9001/method2').then( function (data) {
-                $response.data = data;
-            });
-        a: {{ $response.data.response }}
-
-    state:
-        q!: test 3
+            log("hangup event works properly")
+    
+    state: reset
+        q!: рестарт
         script:
-            $response.status = $http.get('http://localhost:9001/401').status
-        a: статус {{ $response.status }}
-
-    state:
-        q!: test 4
-        script:
-            $response = $http.get('http://localhost:9001/parameters?p1=${param1}&p2=${param2}', {
-                query: {
-                  param1: 1,
-                  param2: 2
-                }
-            })
-        a: {{ $response.data }}
-
-    state:
-        q!: test 5
-        script:
-            $response = $http.get('http://example.com/${path}/?param1=${p1}&param2=${p2}', {
-                query: {
-                  path: 'путь',
-                  p1: 'value 1',
-                  p2: 'value 2'
-                }
-            });
-        a: {{ $response.data }}
-
-
+            $reactions.newSession({message: "/start", data: $request.data});
+       
     state: CatchAll
         q!: *
-        a: CatchAll
+        a: Вы сказали что-то, чего я не понимаю, а именно: {{$parseTree.text}}. Но отсутствие внятного результата для меня тоже результат. За сим прощаюсь!
+        script:
+            hangUp();
