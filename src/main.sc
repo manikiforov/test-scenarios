@@ -18,7 +18,6 @@ theme: /
     state: Main
         q: * *start
         a: Привет, я телефонный бот!
-        a: <audio src="https://dialer-sandbox.just-ai.com/audio/ta-da-sound.wav"/>
         a: Ваш номер {{getCaller()}}.
         a: Согласны ли вы на наши распрекрасные условия?
         a: Ответьте: да, нет или наверное
@@ -27,7 +26,7 @@ theme: /
             q: Да
             a: Как хорошо, что вы согласны!
             script:
-                $dialer.setCallResult("Согласие");
+                $dialer.redial()
             a: Теперь скажи одно любое небольшое предложение, а я за тобой повторю.
             
             state: Repeat1
