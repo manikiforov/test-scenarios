@@ -2,7 +2,7 @@ require: functions.js
 
 theme: /
     state: NoInput || noContext=true
-        event: speechNotRecognized
+        event: speechNotRecognizedf
         script:
             $session.noInputCounter = $session.noInputCounter || 0;
             $session.noInputCounter++;
