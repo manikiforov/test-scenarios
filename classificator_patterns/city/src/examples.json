@@ -1,0 +1,11 @@
+{
+  "classes" : [
+    {
+      "path": "/Patterns/InExample/City",
+      "phrases": [
+        "какая сегодня погода в $City",
+        "в $City сегодня какая погода?"
+      ]
+    }
+  ]
+}

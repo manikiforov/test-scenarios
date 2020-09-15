@@ -1,0 +1,62 @@
+{
+    "catchAll": {
+        "phrases": [
+            "Извините, непонятно"
+        ]
+    },
+    "fulfillment": {
+        "settings": {
+            "default": {
+                "url": ""
+            },
+            "channels": []
+        },
+        "actions": [
+            {
+                "state": "/newNode_0",
+                "action": "Приветствие",
+                "color": "#9fd356"
+            },
+            {
+                "state": "/newNode_2",
+                "action": "Завершение подтверждения",
+                "color": "#9fd356"
+            },
+            {
+                "state": "/newNode_4",
+                "action": "Отказ",
+                "color": "#f991cc"
+            },
+            {
+                "state": "/newNode_6",
+                "action": "Ошибка при разборе",
+                "color": "#ef767a"
+            },
+            {
+                "state": "/newNode_12",
+                "action": "Перенос на другое время ошибка",
+                "color": "#fed766"
+            },
+            {
+                "state": "/newNode_10",
+                "action": "Перенос на другое время",
+                "color": "#fed766"
+            },
+            {
+                "state": "/newNode_8",
+                "action": "Завершение диалога с ошибкой",
+                "color": "#ef767a"
+            },
+            {
+                "state": "/newNode_14",
+                "action": "Завершение переноса на др вр",
+                "color": "#ffbf69"
+            },
+            {
+                "state": "/newNode_15",
+                "action": "Завершение отказа",
+                "color": "#f991cc"
+            }
+        ]
+    }
+}
