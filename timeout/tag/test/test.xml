@@ -1,0 +1,13 @@
+<test>
+
+    <test-case>
+        <q>/start</q>
+        <a>Набери timeout чтобы начать</a>
+        <timeoutReply targetState="/timedout"/>
+        <timeout/>
+        <a>Этот ответ должен быть выведен в случае, если клиент молчит</a>
+        <timeoutReply interval="2"/>
+        <timeout/>
+        <a>Тест окончен</a>
+    </test-case>
+</test>
