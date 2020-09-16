@@ -18,7 +18,7 @@ theme: /
                 fileUrl: imageUrl,
                 headers: {
                     //"idGroup": groupID
-                    "idGroup": "123456789"
+                    "idGroup": "123456789" 
                 }
             });
 
