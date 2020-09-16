@@ -19,7 +19,7 @@ theme: /
                 a: Тег q3
                 
     state: Hello
-        intent!: /привет
+        intent!: /привет 
         a: Привет привет
 
     state: Bye
