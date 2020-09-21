@@ -36,7 +36,7 @@ init:
         handler: function($context) {
             if ($.session.lastActiveTime) {
                 var interval = $jsapi.currentTime() - $context.session.lastActiveTime;
-                if (interval > 10) {
+                if (interval > 900000) {
                     $reactions.newSession({message: $.request.query, session: $.request.data});
                 }
             }
