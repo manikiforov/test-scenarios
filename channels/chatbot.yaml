@@ -1,8 +1,47 @@
-name: echo
+name:
+  - mVideo
 
 entryPoint:
   - main.sc
 
+
+dependencies:
+  - name: common
+    type: git
+    url: https://bitbucket.org/just-ai/zb-common
+    version: heads/master
+
+messages:
+    onError:
+        defaultMessage: Уточните, пожалуйста, что вы хотели бы узнать?
+        locales:
+            ru: Уточните, пожалуйста, что вы хотели бы узнать?
+
+botEngine: v2
+language: ru
+
+
+caila:
+    noMatchThreshold: 0.3
+
+nlp:
+    lengthLimit:
+      symbols: 1000
+      enabled: true
+      
 tests:
-  exclude:
-    - test.xml
+    exclude:
+      - orderStatus.xml
+      
+      
+
+scriptsPreLoad:
+  global:
+   - /jslib/moment.min.js
+   - /jslib/underscore.js
+   - /jsapi/common.js
+   - /jsapi/http.js
+   - /jsapi/mail.js
+  local:
+   - /jsapi/mail.js
+   - /jsapi/reactions.js
