@@ -1,0 +1,53 @@
+<test>
+    <test-case id="Hello">
+        <q>Привет</q>
+        <a state="/Conversation/Hello"/>
+        <q>здравствуйте</q>
+        <a state="/Conversation/Hello"/>
+        <q>добрый день</q>
+        <a state="/Conversation/Hello"/>
+        <q>доброй ночи</q>
+        <a state="/Conversation/Hello"/>
+        <q>доброго дня</q>
+        <a state="/Conversation/Hello"/>
+    </test-case>
+
+    <test-case id="AreYouHere">
+        <q>куку</q>
+        <a state="/Conversation/AreYouHere"/>
+        <q>ау</q>
+        <a state="/Conversation/AreYouHere"/>
+    </test-case>
+
+    <test-case id="Bye">
+        <q>До свидания</q>
+        <a state="/Conversation/Bye"/>
+        <q>пока</q>
+        <a state="/Conversation/Bye"/>
+    </test-case>
+
+    <test-case id="Thanks">
+        <q>спасибо</q>
+        <a state="/Conversation/Thanks"/>
+        <q>все понятно</q>
+        <a state="/Conversation/Thanks"/>
+        <q>вопрос решен</q>
+        <a state="/Conversation/Thanks"/>
+    </test-case>
+
+    <test-case id="Negative">
+        <q>а пошел ка ты баран</q>
+        <a state="/Conversation/Negative"/>
+        <q>иди ты на</q>
+        <a state="/Conversation/Negative"/>
+        <q>да свали ты на</q>
+        <a state="/Conversation/Negative"/>
+        <q>сраный бот иди на три веселых буквы</q>
+        <a state="/Conversation/Negative"/>
+        <q>шел бы ты на хуй</q>
+        <a state="/Conversation/Negative"/>
+        <q>на хер ты мне сдался</q>
+        <a state="/Conversation/Negative"/>
+    </test-case>
+
+</test>

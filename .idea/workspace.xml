@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:timeout" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c615acee-991f-451c-87c3-57dd17112b2e" name="Default Changelist" comment="test">
+      <change beforePath="$PROJECT_DIR$/channels/chatbot.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/channels/chatbot.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/src/.empty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/src/default-knowledge-base.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/src/dict/fdffff.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/src/entities.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/src/entryPoint.sc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/src/examples.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/src/function.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/src/main.bp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/src/main.sc" beforeDir="false" afterPath="$PROJECT_DIR$/channels/src/main.sc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/src/params.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/test/.empty" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/channels/test/test.xml" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="lushov_test" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hJIYIbvZyjqVgSqX3HSvs6HU1B" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c615acee-991f-451c-87c3-57dd17112b2e" name="Default Changelist" comment="" />
+      <created>1599722813653</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599722813653</updated>
+      <workItem from="1599722814891" duration="67000" />
+      <workItem from="1600184908208" duration="677000" />
+      <workItem from="1600357686828" duration="4000" />
+      <workItem from="1600431322048" duration="2829000" />
+      <workItem from="1600677635635" duration="1113000" />
+    </task>
+    <task id="LOCAL-00001" summary="test">
+      <created>1600431391165</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1600431391165</updated>
+    </task>
+    <task id="LOCAL-00002" summary="test">
+      <created>1600677651543</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1600677651543</updated>
+    </task>
+    <task id="LOCAL-00003" summary="test">
+      <created>1600678099562</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1600678099562</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="455" y="226" width="1000" height="661" key="Vcs.Push.Dialog.v2" timestamp="1600678100839">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="455" y="226" width="1000" height="661" key="Vcs.Push.Dialog.v2/0.27.1920.1053@0.27.1920.1053" timestamp="1600678100839" />
+    <state x="700" y="452" width="519" height="209" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600184934954">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="700" y="452" width="519" height="209" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053@0.27.1920.1053" timestamp="1600184934954" />
+  </component>
+</project>
