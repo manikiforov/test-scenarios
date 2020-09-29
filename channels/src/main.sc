@@ -271,7 +271,7 @@ theme: /
             
     state: InlineButtons
         q!: Кнопки телеграма
-        a: Для Телеграма
+        a: Для Телеграма!!
         inlineButtons:
             { text: "{{ 'текст из справочника' }}", callback_data: "cb-55" }
             { text: "{{ 'текст из справочника' }}", url: "{{ 'https://just-ai.com/' }}" }
