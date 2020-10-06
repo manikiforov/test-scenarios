@@ -12,7 +12,7 @@ theme: /
         
         state: q2
             q: q
-            a: Тег q2
+            a: Тег q2g
             
             state: q3
                 q: Третий q
