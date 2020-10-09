@@ -4,7 +4,7 @@ theme: /
 
     state: Start 
         q!: start
-        a:  Че: {{$parseTree.text}}
+        a:  Че: йййй {{$parseTree.text}}
         
     state: Send File
         q!: seeeeend
