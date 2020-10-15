@@ -13,11 +13,7 @@ theme: /
         state: q2
             q: q
             a: Тег q2
-            
-            state: q3
-                q: Третий q
-                a: Тег q3
-                
+        
     state: Hello
         intent!: /привет 
         a: Привет привет
