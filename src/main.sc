@@ -1,117 +1,41 @@
-require: slotfilling/slotFilling.sc
-  module = sys.zb-common
 theme: /
 
-    state: Start
-        q!: $regex</start>
-        a: Начнём.
-
-    state:  q1
-        q!: q
-        a: Тег q1
-        
-        state: q2
-            q: q
-            a: Тег q2g
-            
-            state: q3
-                q: Третий q
-                a: Тег q3 
-                
-    state: Hello
-        intent!: /привет 
-        a: Привет привет
-
-    state: Bye
-        intent!: /пока
-        a: Пока пока
+    state:
+        q!: покажи
+        a: Для сущности ClientEntity и клиента {{$request.channelUserId}} были созданы следующие рекорды:
+        a: {{JSON.stringify($caila.getClientEntityRecords("ClientEntity"))}}
         
     state:
-        intent!: /Валик
-        a: Вошли 1: Валик
+        q!: проверяем addClientEntityRecords с 1 записью
+        script:
+            $caila.addClientEntityRecords("ClientEntity", [{"type": "synonyms", "rule": ["первый"], "value": "первый"}]);
+        a: Готово
         
-        state:
-            intent: /Адреса
-            a: Вошли 2: Адреса
-            
-            state:
-                intent: /Расход
-                a: Вошли 3: Расход
-                
+    state: 
+        q!: проверяем addClientEntityRecords с несколькими записями
+        script:
+            $caila.addClientEntityRecords("ClientEntity", [{"type": "synonyms", "rule": ["второй"], "value": "второй"},
+            {"type": "synonyms", "rule": ["третий"], "value": "третий"}]);
+        a: Готово
+        
     state:
-        e!: Входим
-        a: Тег е1
-        
-        state:
-            e: Входим
-            a: Тег е2
-            
-            state:
-                e: Врываемся в третий
-                a: Тег е3
-                
+        q!: покажи с id
+        a: Для сущности ClientEntity и клиента {{$request.channelUserId}} были созданы следующие рекорды:
+        a: {{JSON.stringify($caila.getClientEntityRecords("ClientEntity", "testClientId"))}}
     
-                
-    state: Delivery
-        intent!: /Доставка
-        a: {{toPrettyString($context.entities.filter( function(entity) { return entity.pattern == "Мебель" | entity.pattern == "Виды_доставки" | entity.pattern == "Дни_недели" | entity.pattern == "mystem.persn"}).map( function(entity) { return entity.value }))}}
-        a: {{$context.intent.answer}}
+    state:
+        q!: проверяем addClientEntityRecords с 1 записью и с id
+        script:
+            $caila.addClientEntityRecords("ClientEntity", [{"type": "synonyms", "rule": ["первый c id"], "value": "первый c id"}], "testClientId");
+        a: Готово
         
     state: 
-        intent!: /Нужна краска
-        a: Краска??
-        
-    state: Operator
-        intent!: /Оператор
-        if: !hasOperatorsOnline()
-            go!: Switch/NoOperatorsOnline
-        else:
-            a: Переходим?
-            buttons:
-                "Да" -> Switch
-                "Нет" -> /CatchAll
-
-        state: Switch
-            a: Переводим на оператора...
-            buttons:
-                {"text":"Закрыть диалог","storeForViberLivechat":true}
-            script:
-                $response.replies = $response.replies || [];
-                $response.replies
-                 .push({
-                    type:"switch",
-                    appendCloseChatButton: true,
-                    closeChatPhrases: ["Закрыть диалог", "/closeLiveChat"],
-                    firstMessage: $client.history,
-                    lastMessage: "Клиент закрыл диалог"
-                });
-
-            state: NoOperatorsOnline
-                a: Операторов сейчас нет на месте
-                buttons:
-                    "Вернуться к боту" -> /Start
-
-                state: GetUserInfo
-                    q: *
-                    script:
-                        $response.replies = $response.replies || [];
-                        $response.replies
-                         .push({
-                            type:"switch",
-                            firstMessage: $parseTree.text + '\nДанное сообщение было отправлено в нерабочее время.',
-                            ignoreOffline: true,
-                            oneTimeMessage: true
-                         });
-                    go!: /CatchAll
-            
-    state: /newNode_0
-        a: Операторы офлайн
-    state: /newNode_1
-        a: Вернулись к боту
-    state: 
-        event!: match
-        a: {{ $context.intent.answer }}
-        
-    state: NoMatch
+        q!: проверяем addClientEntityRecords с несколькими записями и с id
+        script:
+            $caila.addClientEntityRecords("ClientEntity", [{"type": "synonyms", "rule": ["второй c id"], "value": "второй c id"},
+            {"type": "synonyms", "rule": ["третий c id"], "value": "третий c id"}], "testClientId");
+        a: Готово  
+    
+    state:
         event!: noMatch
-        a: Я не понял. Вы сказали: {{$request.query}}
+        a: Сработал no match
