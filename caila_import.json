@@ -1,18 +1,18 @@
 {
   "project" : {
-    "id" : "gigit-40941-Fua",
-    "name" : "gigit-40941-Fua",
+    "id" : "weewewweew-40941-Oti",
+    "name" : "weewewweew-40941-Oti",
     "folder" : "/jaicp"
   },
   "settings" : {
     "language" : "ru",
-    "spellingCorrection" : false,
+    "spellingCorrection" : true,
     "classificationAlgorithm" : "sts",
     "timezone" : "UTC",
     "shared" : false
   },
   "intents" : [ {
-    "id" : 27045,
+    "id" : 27101,
     "path" : "/Billing/uniqueUsers",
     "answer" : "У нас есть статья о том, что такое уникальные пользователи и как подсчитывается их количество. Возможно, она покажется вам полезной: https://help.aimylogic.com/ru/article/chto-oznachaet-unikalnyj-polzovatel-1ef6idq/",
     "enabled" : true,
@@ -25,12 +25,12 @@
       "text" : "кто такие уникальные пользователи"
     } ]
   }, {
-    "id" : 27046,
+    "id" : 27102,
     "path" : "/Channels",
     "enabled" : true,
     "shared" : false
   }, {
-    "id" : 27047,
+    "id" : 27103,
     "path" : "/Channels/AimyBox",
     "answer" : "Документация по работе с каналом Aimybox, тут: https://help.aimylogic.com/ru/article/aimybox-1tviugk/",
     "enabled" : true,
@@ -54,7 +54,7 @@
       "array" : false
     } ]
   }, {
-    "id" : 27048,
+    "id" : 27104,
     "path" : "/Channels/AimyBox/HowConnectAimybox",
     "answer" : "Подробная инструкция тут: https://help.aimylogic.com/ru/article/aimybox-1tviugk/",
     "enabled" : true,
@@ -76,7 +76,7 @@
       "array" : false
     } ]
   }, {
-    "id" : 27049,
+    "id" : 27105,
     "path" : "/Channels/AimyBox/NotWorkingAimybox",
     "answer" : "Вы канал подключали по этой инструкции? https://help.aimylogic.com/ru/article/aimybox-1tviugk/",
     "enabled" : true,
@@ -98,7 +98,7 @@
       "array" : false
     } ]
   }, {
-    "id" : 27050,
+    "id" : 27106,
     "path" : "/Errors",
     "answer" : "Спасибо, что сообщили нам об этой ситуации!",
     "enabled" : true,
@@ -122,7 +122,7 @@
       "array" : false
     } ]
   }, {
-    "id" : 27051,
+    "id" : 27107,
     "path" : "/Errors/objectObject",
     "answer" : "Скажите, пожалуйста, в какое время (по Москве) точно возникла эта ошибка? Сообщите, пожалуйста, email, привязанный к аккаунту, и название сценария. Спасибо!",
     "enabled" : true,
@@ -135,12 +135,12 @@
       "text" : "object"
     } ]
   }, {
-    "id" : 27052,
+    "id" : 27108,
     "path" : "/GoogleSheets",
     "enabled" : true,
     "shared" : false
   }, {
-    "id" : 27053,
+    "id" : 27109,
     "path" : "/GoogleSheets/arrayElements",
     "answer" : "Возможно, вам будет интересен укро о том, как выводить сразу несколько элементов массива: https://help.aimylogic.com/ru/article/chtenie-iz-gugl-tablic-kak-vyvesti-neskolko-elementov-massiva-1og2q1x/",
     "enabled" : true,
@@ -149,7 +149,7 @@
       "text" : "Подскажите, есть ли возможность выводить сразу несколько строк из Гугл Таблицы?"
     } ]
   }, {
-    "id" : 27054,
+    "id" : 27110,
     "path" : "/GoogleSheets/readSpreadsheet",
     "answer" : "Пожалуйста, ознакомьтесь с этой статьёй о чтении данных из гугл таблиц: https://help.aimylogic.com/ru/article/chtenie-dannyh-iz-google-tablic-erzuov/\\nВ конце статьи вы найдете ссылки на пошаговые уроки.",
     "enabled" : true,
@@ -162,7 +162,7 @@
       "text" : "гуг таблица вывод данных"
     } ]
   }, {
-    "id" : 27055,
+    "id" : 27111,
     "path" : "/GoogleSheets/spreadsheetGame",
     "answer" : "Если вы хотите создать игру с помощью гугл-таблиц, то вам может помочь https://help.aimylogic.com/ru/article/kak-sohranyat-informaciyu-o-polzovatele-eapoja\" этот урок.\nИ ещё есть https://help.aimylogic.com/ru/article/ispolzovanie-vebhukov-dlya-vychislenij-v-scenarii-47ii61\" (первая часть урока посвещена созданию сценария игры).",
     "enabled" : true,
@@ -175,7 +175,7 @@
       "text" : "игра в гугл таблице"
     } ]
   }, {
-    "id" : 27056,
+    "id" : 27112,
     "path" : "/GoogleSheets/spreadsheetRandom",
     "answer" : "Если вам нужно выводить случайную строку (ячейку) из таблицы, то это описано в этом уроке: https://help.aimylogic.com/ru/article/pechenki-s-predskazaniyami-lqz38l/",
     "enabled" : true,
@@ -188,12 +188,12 @@
       "text" : "случайная запись в гугл таблице"
     } ]
   }, {
-    "id" : 27057,
+    "id" : 27113,
     "path" : "/Jaicp",
     "enabled" : true,
     "shared" : false
   }, {
-    "id" : 27058,
+    "id" : 27114,
     "path" : "/Jaicp/geo",
     "answer" : "В Aimylogic нет функционала, поддерживающего определение геолокации. Вы можете использовать данные о местонахождении, только если клиент вышлет вам точные координаты, либо можно принимать адрес по частям - страна, город, улица, дом...\nЕсли вас интересует отправка геолокации, то такое возможно в другом нашем продукте - JAICP. \nВ данный момент доступ к JAICP предоставляется только для компаний. Для индивидуальных разработчиков планируем открыть доступ к концу года. Следите за новостями в нашем канале: https://t.me/aimylogic_channel\n    \n",
     "enabled" : true,
@@ -206,12 +206,12 @@
       "text" : "текущее местоположение"
     } ]
   }, {
-    "id" : 27059,
+    "id" : 27115,
     "path" : "/Main",
     "enabled" : true,
     "shared" : false
   }, {
-    "id" : 27060,
+    "id" : 27116,
     "path" : "/Main/arduino",
     "enabled" : true,
     "shared" : false,
@@ -232,7 +232,7 @@
       "array" : false
     } ]
   }, {
-    "id" : 27061,
+    "id" : 27117,
     "path" : "/Main/beautiful",
     "answer" : "Спасибо! Люблю, когда я нравлюсь людям!\nЭто так мило с вашей стороны. :)\nОчень приятно!",
     "enabled" : true,
@@ -265,7 +265,7 @@
       "text" : "милашка"
     } ]
   }, {
-    "id" : 27062,
+    "id" : 27118,
     "path" : "/Main/Bye",
     "answer" : "Всего хорошего!",
     "enabled" : true,
@@ -284,7 +284,7 @@
       "text" : "удачи"
     } ]
   }, {
-    "id" : 27063,
+    "id" : 27119,
     "path" : "/Main/deleteMe",
     "answer" : "Для удаления аккаунта нам нужно убедиться, что данный аккаунт действительно принадлежит вам. Пожалуйста, отправьте запрос на удаление аккаунта с почты, привязанной к аккуанту, на contact@just-ai.com. Спасибо!",
     "enabled" : true,
@@ -303,7 +303,7 @@
       "text" : "отключите тариф и удалите как пользователя"
     } ]
   }, {
-    "id" : 27064,
+    "id" : 27120,
     "path" : "/Main/human",
     "answer" : "Сейчас нет свободных операторов, так что я могу с вами побеседовать. :) Операторы поддержки Aimylogic ответят вам в рабочее время.",
     "enabled" : true,
@@ -320,7 +320,7 @@
       "text" : "По какому номеру можно позвонить в поддержку и задать вопрос"
     } ]
   }, {
-    "id" : 27086,
+    "id" : 27121,
     "path" : "/Main/teachBot",
     "enabled" : true,
     "shared" : false,
@@ -334,7 +334,7 @@
       "text" : "изменить реакцию бота чтобы он учился"
     } ]
   }, {
-    "id" : 27087,
+    "id" : 27122,
     "path" : "/Main/templatesEnglish",
     "answer" : "В ботах на английском нельзя использовать шаблоны в интентах. Можно только добавлять примеры в интенты.",
     "enabled" : true,
@@ -349,7 +349,7 @@
       "text" : "как переключить на шаблон на английском"
     } ]
   }, {
-    "id" : 27088,
+    "id" : 27123,
     "path" : "/Main/thanks",
     "answer" : "Пожалуйста. :) Обращайтейсь!",
     "enabled" : true,
@@ -376,7 +376,7 @@
       "text" : "спасяб"
     } ]
   }, {
-    "id" : 27089,
+    "id" : 27124,
     "path" : "/Main/timer",
     "answer" : "Вы не могли бы описать, какой именно функционал вас интересует? Что бот должен делать, можете привести пример? И какие каналы вас интересуют?",
     "enabled" : true,
@@ -391,7 +391,7 @@
       "text" : "реализовать задержку"
     } ]
   }, {
-    "id" : 27090,
+    "id" : 27125,
     "path" : "/Main/transferBots",
     "answer" : "Для переноса ботов, пожалуйста, пришлите следующее: 1) Почту, привязанную к аккаунту, на котором разработан бот.2) Название сценария, который вы хотите передать;3) Почту, привязанную к аккаунту, на который вы хотите перенести этого бота; 4) Название пустого сценария на новом аккаунте. Мы на место этого сценария загрузим бота.",
     "enabled" : true,
@@ -404,7 +404,7 @@
       "text" : "перенос бота"
     } ]
   }, {
-    "id" : 27091,
+    "id" : 27126,
     "path" : "/Main/UseHTTP",
     "answer" : "Вы можете воспользоваться блоком http-запрос, чтобы обратиться к вашему серверу. Подробнее тут: https://help.aimylogic.com/ru/article/http-zapros-1kpratf/",
     "enabled" : true,
@@ -417,7 +417,7 @@
       "text" : "бот обращается к серверу"
     } ]
   }, {
-    "id" : 27092,
+    "id" : 27127,
     "path" : "/Main/variables",
     "answer" : "У нас есть статья о переменных, возможно, она покажется вам интересной: https://help.aimylogic.com/ru/article/chto-takoe-peremennye-lydpfn/",
     "enabled" : true,
@@ -432,7 +432,7 @@
       "text" : "как работать с переменными"
     } ]
   }, {
-    "id" : 27093,
+    "id" : 27128,
     "path" : "/Main/wantToTest",
     "answer" : "Если вы хотите потестировать визуальный конструктор Aimylogic, пожалуйста, зарегистрируйте бесплатный аккаунт на app.aimylogic.com. Эти статьи помогут вам освоиться в конструкторе: https://help.aimylogic.com/ru/article/bystryj-start-dveetn/. А вот пошаговые уроки по созданию ботов: https://help.aimylogic.com/ru/category/uroki-ez7lar/",
     "enabled" : true,
@@ -445,7 +445,7 @@
       "text" : "поробовать платформу"
     } ]
   }, {
-    "id" : 27094,
+    "id" : 27129,
     "path" : "/Main/webhooks",
     "answer" : "Ознакомьтесь, пожалуйста, со статьёй о вебхуках: https://help.aimylogic.com/ru/article/vebhuk-awj2ob/ В ней также есть ссылка на пошаговый урок.",
     "enabled" : true,
@@ -457,7 +457,7 @@
     } ],
     "slots" : [ ]
   }, {
-    "id" : 27095,
+    "id" : 27130,
     "path" : "/Main/WhatDoYouKnow",
     "answer" : "Я умею отвечать на некоторые вопросы, касающиеся функционала Aimylogic. Не на все, конечно, - я еще учусь. :) Могу порекомендовать какой-нибудь из наших уроков. Просто скажи \"посоветуй урок\".",
     "enabled" : true,
@@ -482,7 +482,7 @@
       "text" : "что ты можешь отввеить?"
     } ]
   }, {
-    "id" : 27065,
+    "id" : 27131,
     "path" : "/Main/Developer",
     "answer" : "Если вы желаете разработать бота и продать его другой компании, вы можете делать это с Aimylogic. :) Вы можете разработать бота и передать его на аккаунт заказчика. Информация о том, как это сделать, и все подробности: https://help.aimylogic.com/ru/article/ya-razrabotchik-kak-mne-zarabatyvat-s-aimylogic-1uxfgh",
     "enabled" : true,
@@ -509,7 +509,7 @@
       "text" : "как передать бота заказчику"
     } ]
   }, {
-    "id" : 27096,
+    "id" : 27132,
     "path" : "/Main/whatsapp",
     "answer" : "WhatsApp планируем добавить осенью. Пожалуйста, следите за новостями в канале: https://t.me/aimylogic_channel",
     "enabled" : true,
@@ -539,7 +539,7 @@
       "array" : false
     } ]
   }, {
-    "id" : 27097,
+    "id" : 27133,
     "path" : "/Main/whatsYourName",
     "answer" : "Меня зовут робот Зая. Я пока только учусь! Могу посоветовать вам один из наших уроков. Просто скажите \"посоветуй урок\".",
     "enabled" : true,
@@ -554,7 +554,7 @@
       "text" : "ты кто?"
     } ]
   }, {
-    "id" : 27098,
+    "id" : 27134,
     "path" : "/Main/youBot",
     "answer" : "Если я скажу нет, вы мне поверите? :)",
     "enabled" : true,
@@ -567,7 +567,7 @@
       "text" : "я разговариваю с ботом"
     } ]
   }, {
-    "id" : 27027,
+    "id" : 27135,
     "path" : "/Main/youtube",
     "answer" : "В данный момент боты не могут отвечать на ютубе. А вы не могли бы описать, какой конкретно функционал вы хотели бы видеть? Оператор прочитает и ответит вам в рабочее время.\n",
     "enabled" : true,
@@ -591,12 +591,12 @@
       "array" : false
     } ]
   }, {
-    "id" : 27028,
+    "id" : 27136,
     "path" : "/NewKb",
     "enabled" : true,
     "shared" : false
   }, {
-    "id" : 27029,
+    "id" : 27137,
     "path" : "/NewKb/humanAgent",
     "answer" : "Пожалуйста, ознакомьтесь с этой статьёй о переводе на оператора: https://help.aimylogic.com/ru/article/perevod-na-operatora-1skld4l/\nВ статье вы найдете всю необходимую информацию о настройках. Если у вас какие-либо неполадки, что-то работает некорректно, пожалуйста, пришлите скриншоты переписки с ботом и дождитесь ответа оператора. Спасибо!",
     "enabled" : true,
@@ -609,7 +609,7 @@
       "text" : "подскажите пока по другому вопросу, мы сделали перевод на оператора, когда клиент пишет не понятное слово он должен переводить, но почему то ничего не происходит и он не переводит"
     } ]
   }, {
-    "id" : 27030,
+    "id" : 27138,
     "path" : "/NewKb/intentPhone",
     "answer" : "отовый интент \\\"Телефон\\\" принимает только российские номера телефонов. Пожалуйста, ознакомьтесь с подробной информацией об интенте здесь: https://help.aimylogic.com/ru/article/gotovyj-intent-telefon-ntp1gu/",
     "enabled" : true,
@@ -618,7 +618,7 @@
       "text" : "ок. и ещё - при вводе номера телефона с другим кодом страны чем Россия выдаёт сообщение Некорректный номер. Почему так?"
     } ]
   }, {
-    "id" : 27031,
+    "id" : 27139,
     "path" : "/NewKb/notWorking",
     "answer" : "Пришлите, пожалуйста, описание неполадки. Какую ошибку вы видите? Пришлите, пожалуйста, лог ошибки.  Также, пожалуйста, пришлите скриншоты (скриншоты переписки с ботом, если ошибка возникает в чате с ботом), чтобы мы могли видеть, на каком этапе возникает ошибка.\\nСообщите, пожалуйста, имейл, привязанный к аккаунту, и название сценария.",
     "enabled" : true,
@@ -637,7 +637,7 @@
       "text" : "Выдает ошибку: RuntimeException: java.util.concurrent.ExecutionException: com.justai.zb.scenarios.errors.DialogException: Infinite loop was detected for state /newNode_10"
     } ]
   }, {
-    "id" : 27032,
+    "id" : 27140,
     "path" : "/NewKb/weirdBehavior",
     "answer" : "Пришлите, пожалуйста, скриншоты переписки с ботом. Также, сообщите, пожалуйста, название сценария (название бота) и имейл, привязанный к аккаунту.",
     "enabled" : true,
@@ -648,7 +648,7 @@
       "text" : "он должен был пойти по сценарию визы - там есть шенген как подсказка, а пошел почему-то по сценарию карта побыта"
     } ]
   }, {
-    "id" : 27033,
+    "id" : 27141,
     "path" : "/NewKb/whatDoYouCan",
     "enabled" : true,
     "shared" : false,
@@ -658,7 +658,7 @@
       "text" : "на что ты вообще можешь ответить?"
     } ]
   }, {
-    "id" : 27034,
+    "id" : 27142,
     "path" : "/Channels/alexa/HowConnectAlexa",
     "answer" : "Подробная инструкция тут: https://help.aimylogic.com/en/article/amazon-alexa-1ozbby9/",
     "enabled" : true,
@@ -676,7 +676,7 @@
       "array" : false
     } ]
   }, {
-    "id" : 27035,
+    "id" : 27143,
     "path" : "/Billing/byMyself",
     "answer" : "Хорошо. Aimylogic - это простой визуальный конструктор, так что вы действительно можете самостоятельно создать бота!\nСкажите, вы планируете использовать бота для коммерческой деятельности, для извлечения любого вида прибыли?",
     "enabled" : true,
@@ -693,12 +693,12 @@
       "text" : "собираюсь создавать самостоятельно"
     } ]
   }, {
-    "id" : 27036,
+    "id" : 27144,
     "path" : "/Billing",
     "enabled" : true,
     "shared" : false
   }, {
-    "id" : 27037,
+    "id" : 27145,
     "path" : "/Billing/backToCommunity",
     "answer" : "Возврат на тариф Community в данный момент технически невозможен. Вы можете завести новый аккаунт. Если вы уже создали на этом аккаунте ботов, оператор поддержки в рабочее время сможет помочь вам перенести их на новый аккаунт.\nОбратите внимание, что Community предназначен только для некоммерческих проектов, не связанных с получением прибыли. Для разработчиков у нас есть тариф Developer, для бизнеса у нас есть линейка Business-тарифов. На все платные тарифы первый месяц бесплатно.",
     "enabled" : true,
@@ -725,7 +725,7 @@
       "text" : "вернуться на бесплатный тариф"
     } ]
   }, {
-    "id" : 27038,
+    "id" : 27146,
     "path" : "/Channels/alexa",
     "answer" : "Документация по работе с каналом Amazon Alexa, тут: https://help.aimylogic.com/en/article/amazon-alexa-1ozbby9/",
     "enabled" : true,
@@ -747,7 +747,7 @@
       "array" : false
     } ]
   }, {
-    "id" : 27039,
+    "id" : 27147,
     "path" : "/Billing/communityLimits",
     "answer" : "Позвольте пояснить. Тариф Community предназначен только для некоммерческих проектов. Если ваш проект каким-либо образом связан с получением прибыли, вы уже не можете использовать тариф Community.\nОграничение в 200 уникальных пользователей связано с тем, что тариф бесплатный. О том, как оно реализуется, можете почитать здесь: https://help.aimylogic.com/ru/article/chto-oznachaet-unikalnyj-polzovatel-1ef6idq/",
     "enabled" : true,
@@ -764,7 +764,7 @@
       "text" : "лимит пользователей"
     } ]
   }, {
-    "id" : 27040,
+    "id" : 27148,
     "path" : "/Billing/HowMuch",
     "answer" : "У нас есть статья о тарифах, возможно, она покажется вам полезной: https://help.aimylogic.com/ru/article/ceny-i-usloviya-ispolzovaniya-yva435/. \nТакже, можете перейти в личный кабинет Aimylogic и перейти на вкладку \"Тарифные планы\"",
     "enabled" : true,
@@ -781,7 +781,7 @@
       "text" : "стоимость "
     } ]
   }, {
-    "id" : 27074,
+    "id" : 27149,
     "path" : "/Main/Intent",
     "answer" : "У нас есть очень интересная статья об интентах. Возможно, вам будет она полезна: https://help.aimylogic.com/ru/article/intenty-frazy-1k89gmn/ ",
     "enabled" : true,
@@ -794,7 +794,7 @@
       "text" : "Здравствуйте! Подскажите, можно ли из Списка интентов сделать исключения. Например, я хочу исключить Москву и СанктПетербург из предложенного списка интентов Города. Здравствуйте! Подскажите, можно ли из Списка интентов сделать исключения. Например, я хочу исключить Москву и СанктПетербург из предложенного списка интентов Города."
     } ]
   }, {
-    "id" : 27041,
+    "id" : 27150,
     "path" : "/Billing/order",
     "answer" : "Хорошо! Сейчас я всё объясню.\nУ нас есть два основных продукта - Aimylogic и JAICP. Aimylogic - это простой визуальный конструктор, на нём вы самостоятельно можете разрабатывать ботов. У нас есть много уроков, готовых шаблонов и вебинаров по Aimylogic! По этой причине мы не разрабатываем ботов для клиентов на Aimylogic, но можем дать контакты одного из наших разработчиков. :) Вы можете написать на contact@just-ai.com.\n JAICP - расширенная платформа для разработки ботов. Она обладает гораздо более широким функционалом, чем Aimylogic. Доступ к JAICP в настоящий момент предоставляется только компаниям, в индивидуальном порядке, по запросу. Чтобы создавать бота на JAICP, нужно обладать навыками программирования. Мы можем разработать для вас бота на JAICP, а затем вы будете использовать JAICP самостоятельно. \nХотите узнать больше о JAICP?",
     "enabled" : true,
@@ -813,7 +813,7 @@
       "text" : "хочу у вас заказать"
     } ]
   }, {
-    "id" : 27042,
+    "id" : 27151,
     "path" : "/Billing/plans",
     "answer" : "В Aimylogic есть бесплатные и платные тарифы. На все платные тарифы мы предоставляем один месяц бесплатно. Вы можете ознакомиться с тарифами в этой статье https://help.aimylogic.com/ru/article/ceny-i-usloviya-ispolzovaniya-yva435/ либо в личном кабинете -> \"Тарифные планы\". ",
     "enabled" : true,
@@ -824,7 +824,7 @@
       "text" : "какие есть тарифы"
     } ]
   }, {
-    "id" : 27043,
+    "id" : 27152,
     "path" : "/Billing/trial",
     "answer" : "На все платные тарифы мы предоставляем один месяц бесплатно. :) Подробнее можете узнать здесь: https://help.aimylogic.com/ru/article/ceny-i-usloviya-ispolzovaniya-yva435/",
     "enabled" : true,
@@ -841,7 +841,7 @@
       "text" : "бесплатно"
     } ]
   }, {
-    "id" : 27044,
+    "id" : 27153,
     "path" : "/Billing/uniqOtherQ",
     "answer" : "У нас есть статья, в которой описано, как рассчитывается количество уникальных пользователей. https://help.aimylogic.com/ru/article/chto-oznachaet-unikalnyj-polzovatel-1ef6idq/\nЕсли ваш вопрос не связан с этим, то, пожалуйста, сформулируйте, что конкретно вас интересует. Оператор прочитает в рабочее время и ответит вам. Вам придет оповещение на почту.",
     "enabled" : true,
@@ -852,7 +852,7 @@
       "text" : "как подсчитать уникальных пользователей"
     } ]
   }, {
-    "id" : 27075,
+    "id" : 27154,
     "path" : "/Main/itsAlive",
     "answer" : "Здорово! Поздравляю!",
     "enabled" : true,
@@ -865,7 +865,7 @@
       "text" : "ура, ожил"
     } ]
   }, {
-    "id" : 27066,
+    "id" : 27155,
     "path" : "/Main/developerOnMyOwn",
     "answer" : "Aimylogic вы можете разработать бота самостоятельно. Вам нужно только определиться с тарифным планом. Информацию о тарифах вы можете найти здесь: https://help.aimylogic.com/ru/article/ceny-i-usloviya-ispolzovaniya-yva435/\nНапример, если вы хотите создать бота и использовать его для коммерческой деятельности (для любого извлечения прибыли), то вам нужно выбрать один из тарифов Business-линейки (Business Basic, Business Standard или Business Pro). Если вы хотите создать бота и продать его заказчику (сами не собираетесь использовать бота), то вам подойдет тариф Developer. А если у вас некоммерческий проект, никак не связанный с получением прибыли, то вы можете оставаться на тарифе Community (хотя у него есть, конечно, определенные ограничения). Также, у нас есть бесплатный тариф Skill Master для разработчиков голосовых навыков для Яндекс Алисы, Google Assistant и Amazon Alexa. Обратите внимание, что на Skill Master будут работать только эти три канала!\n",
     "enabled" : true,
@@ -882,7 +882,7 @@
       "text" : "сам"
     } ]
   }, {
-    "id" : 27067,
+    "id" : 27156,
     "path" : "/Main/EngWebhooks",
     "answer" : "Да, в английской версии можно использовать вебхуки. Вот статья об использовании вебхуков на английском: https://help.aimylogic.com/en/article/webhook-14yx2uz/\nА это статья на русском, в которой есть также сссылка на пошаговый урок: https://help.aimylogic.com/ru/article/vebhuk-awj2ob/",
     "enabled" : true,
@@ -891,7 +891,7 @@
       "text" : "английские вебхуки"
     } ]
   }, {
-    "id" : 27068,
+    "id" : 27157,
     "path" : "/Main/Hello",
     "answer" : "Здравствуйте! Какой у вас вопрос?",
     "enabled" : true,
@@ -943,7 +943,7 @@
     } ],
     "slots" : [ ]
   }, {
-    "id" : 27069,
+    "id" : 27158,
     "path" : "/Main/howAreYou",
     "answer" : "У меня всё прекрасно, спасибо, что интересуетесь. :)",
     "enabled" : true,
@@ -956,7 +956,7 @@
       "text" : "как твои дела"
     } ]
   }, {
-    "id" : 27070,
+    "id" : 27159,
     "path" : "/Main/howold",
     "answer" : "Интересный вопрос! Однако, мне не разрешают раскрывать личную информацию. Я могу ответить на ваши вопросы по поводу Aimylogic. Или могу посоветовать урок.",
     "enabled" : true,
@@ -969,7 +969,7 @@
       "text" : "какой возраст у тебя"
     } ]
   }, {
-    "id" : 27071,
+    "id" : 27160,
     "path" : "/Main/howtoName",
     "answer" : "Если вам нужно, чтобы бот обращался к пользователю по имени, то у нас есть два урока об этом. \n1) Если в канале нет имени (например, чат на сайте, Алиса): https://help.aimylogic.com/ru/article/kak-validirovat-gorodskoj-nomer-telefona-i-otpravit-ego-v-telegram-s-pomoshyu-telegram-api-nea0jb/\n2) Если в канале уже есть имя (вк, телеграм, фейсбук): https://help.aimylogic.com/ru/article/kak-poluchat-dannye-o-polzovatelyah-s-pomoshyu-dollarrawrequest-oji9fs/",
     "enabled" : true,
@@ -982,7 +982,7 @@
       "text" : "имя пользователя"
     } ]
   }, {
-    "id" : 27072,
+    "id" : 27161,
     "path" : "/Main/howToStart",
     "answer" : "Если вы хотите потестировать визуальный конструктор Aimylogic, пожалуйста, зарегистрируйте бесплатный аккаунт на app.aimylogic.com. \nЧтобы ознакомиться с конструктором, рекомендуем почитать статьи из этого раздела: https://help.aimylogic.com/ru/category/znakomstvo-s-aimylogic-1cqh3vz/\nА в этом разделе много пошаговых уроков по созданию ботов на любой вкус: https://help.aimylogic.com/ru/category/uroki-ez7lar/\nВы можете начать с бесплатного тарифа, а затем выбрать подходящий вам тариф: https://help.aimylogic.com/ru/article/ceny-i-usloviya-ispolzovaniya-yva435/\n",
     "enabled" : true,
@@ -1009,7 +1009,7 @@
       "text" : "хочу попробовать создать бота"
     } ]
   }, {
-    "id" : 27073,
+    "id" : 27162,
     "path" : "/Main/Images",
     "answer" : "Нет, бот Aimylogic не может реагировать на изображения. Если пользователь пришлет изображение, бот даже не поймёт, что пользователь что-то написал.\nБот может как-то отреагировать только если пользователь пришлет ссылку на изображение.И в этом случае бот не сможет понять, что изображено на картинке, но сможет, например, отправить ссылку на изображение в телеграм, или письмом на email, или отправить ссылку на изображение в гугл-таблицу — с помощью сервиса IFTTT. https://help.aimylogic.com/ru/article/integraciya-s-ifttt-sho8pe/",
     "enabled" : true,
@@ -1024,7 +1024,7 @@
       "text" : "может бот пересылать картинки"
     } ]
   }, {
-    "id" : 27076,
+    "id" : 27163,
     "path" : "/Main/mailing",
     "answer" : "Если вас интересует отправка сообщений на email, то у нас есть два примера того, как можно это делать.\n        1) В этом уроке вы узнаете, как научить бота отправлять сообщение на ваш имейл (только на один адрес электронной почты, принадлежащий вам лично): https://help.aimylogic.com/ru/article/kak-otpravit-email-s-pomoshyu-ifttt-68bv8g/\n        2) Если вам нужно делать рассылки (вы часто отправляете похожую информацию по шаблону) по разным имейлам своих клиентов, то вот статья для вас: https://help.aimylogic.com/ru/article/integraciya-s-mailchimp-18z044c/\n",
     "enabled" : true,
@@ -1041,7 +1041,7 @@
       "text" : "электронная почта рассылка"
     } ]
   }, {
-    "id" : 27077,
+    "id" : 27164,
     "path" : "/Main/moreBotsInOneAccount",
     "answer" : "а одном аккаунте может быть неограниченное количество ботов. В зависимости от тарифного плана есть ограничения по каналам на бота. Подробнее с тарифами можете ознакомиться тут: https://help.aimylogic.com/ru/article/ceny-i-usloviya-ispolzovaniya-yva435/, а так же в личном кабинете Aimylogic.",
     "enabled" : true,
@@ -1056,7 +1056,7 @@
       "text" : "как создать еще одного бота на этом же аккаунте"
     } ]
   }, {
-    "id" : 27078,
+    "id" : 27165,
     "path" : "/Main/question",
     "answer" : "Да, какой у вас вопрос?",
     "enabled" : true,
@@ -1071,7 +1071,7 @@
       "text" : "есть вопрос"
     } ]
   }, {
-    "id" : 27079,
+    "id" : 27166,
     "path" : "/Main/recommend",
     "answer" : "Попробуйте пройти этот урок. В нём вы научитесь создавать игру, принимать правильные ответы от пользователя, и сохранять прогресс в игре с помощью базы данных: https://help.aimylogic.com/ru/article/kak-sohranyat-informaciyu-o-polzovatele-eapoja/",
     "enabled" : true,
@@ -1084,7 +1084,7 @@
       "text" : "совет"
     } ]
   }, {
-    "id" : 27080,
+    "id" : 27167,
     "path" : "/Main/ScriptError",
     "answer" : "Если вы не можете открыть какой-либо из сценариев, пожалуйста, пришлите email, на который зарегистрирован аккаунт, и название сценария, который перестал открываться. Оператор посмотрит в рабочее время и ответит вам.",
     "enabled" : true,
@@ -1103,7 +1103,7 @@
       "text" : "не открывается навык"
     } ]
   }, {
-    "id" : 27081,
+    "id" : 27168,
     "path" : "/Main/sendOut",
     "answer" : "В этой статье подробная информация по рассылкам: https://help.aimylogic.com/ru/article/mozhet-li-bot-delat-rassylki-16j0v8j/ В ней вы найдете описание всех возможных способов рассылок. :)",
     "enabled" : true,
@@ -1126,7 +1126,7 @@
       "text" : "рассылка сообщений"
     } ]
   }, {
-    "id" : 27082,
+    "id" : 27169,
     "path" : "/Main/webhooksNotWorking",
     "answer" : "У нас немного изменился способ добавления вебхуков. Теперь название события нужно прописывать в заголовке экрана. Всё подробно описано в этой статье: https://help.aimylogic.com/ru/article/vebhuk-awj2ob/\nА вот пошаговый урок: https://help.aimylogic.com/ru/article/ispolzovanie-vebhukov-dlya-vychislenij-v-scenarii-47ii61/",
     "enabled" : true,
@@ -1137,7 +1137,7 @@
       "text" : "не получается вебхук"
     } ]
   }, {
-    "id" : 27083,
+    "id" : 27170,
     "path" : "/Main/Socials",
     "answer" : "Вы можете создать бота для фейсбука (будет отвечать в Facebook messenger), Вконтакте, Телеграм и других каналов!\nТакже, через Bitrix24 можно подключить Вайбер и Инстаграм (в инстаграме бот сможет только отвечать на комментарии).\nПолный список каналов можете посмотреть здесь: https://help.aimylogic.com/ru/category/kanaly-1v12wo9/",
     "enabled" : true,
@@ -1152,7 +1152,7 @@
       "text" : "какие соцсети поддерживает бот"
     } ]
   }, {
-    "id" : 27084,
+    "id" : 27171,
     "path" : "/Main/sorryIDontGetIt",
     "enabled" : true,
     "shared" : false,
@@ -1162,7 +1162,7 @@
       "text" : "извините непонятно"
     } ]
   }, {
-    "id" : 27085,
+    "id" : 27172,
     "path" : "/Main/talkToBot",
     "answer" : "Вы можете посмотреть ботов, сделанных на Aimylogic, по ссылкам ниже. :)\nГолосовые навыки:\n            “Одно из двух” в Алисе https://dialogs.yandex.ru/store/skills/69a22df1-odno-iz-dvuh\n            “Да милорд” в Алисе https://dialogs.yandex.ru/store/skills/c358af99-da-milord\n            “Сто к одному” в Алисе https://dialogs.yandex.ru/store/skills/e4565d81-sto-k-odnomu\n            “Да милорд” в Google Assistant  https://assistant.google.com/services/a/uid/0000007229b6b8f9?hl=ru_ru\n            “Первое или второе” в Google Assistant https://assistant.google.com/services/a/uid/00000087d4d216e0\n            “Зарядка для глаз” в Алисе https://dialogs.yandex.ru/store/skills/661f6936-joga-dlya-gla “\n            “Дневник артериального давления” в Алисе https://dialogs.yandex.ru/store/skills/bb8e99eb-dnevnik-arterial-nogo-davleniya\nhttps://icccamp.ru - на этом сайте в виджете бот, которого сделали дети на нашем мастер-классе @Drink_Party_Bot - а это бот в телеграмме для игры компанией\n",
     "enabled" : true,
@@ -1173,7 +1173,7 @@
   } ],
   "entities" : [ {
     "entity" : {
-      "id" : 23004,
+      "id" : 23011,
       "name" : "agree",
       "enabled" : true,
       "shared" : false,
@@ -1186,14 +1186,14 @@
       "client" : false
     },
     "records" : [ {
-      "id" : 619009,
+      "id" : 619016,
       "type" : "synonyms",
       "rule" : [ "да", "давай", "конечно давай", "+", "ну давай", "согласен", "конечно да" ],
       "value" : ""
     } ]
   }, {
     "entity" : {
-      "id" : 23005,
+      "id" : 23012,
       "name" : "aimybox",
       "enabled" : true,
       "shared" : false,
@@ -1206,14 +1206,14 @@
       "client" : false
     },
     "records" : [ {
-      "id" : 619010,
+      "id" : 619017,
       "type" : "synonyms",
       "rule" : [ "aimybox", "аимибокс", "эмибокс", "эймибокс" ],
       "value" : "aimybox"
     } ]
   }, {
     "entity" : {
-      "id" : 23006,
+      "id" : 23013,
       "name" : "alexa",
       "enabled" : true,
       "shared" : false,
@@ -1226,14 +1226,14 @@
       "client" : false
     },
     "records" : [ {
-      "id" : 619011,
+      "id" : 619018,
       "type" : "synonyms",
       "rule" : [ "alexa", "алекса", "amazon alexa" ],
       "value" : ""
     } ]
   }, {
     "entity" : {
-      "id" : 23007,
+      "id" : 23014,
       "name" : "arduino",
       "enabled" : true,
       "shared" : false,
@@ -1246,14 +1246,53 @@
       "client" : false
     },
     "records" : [ {
-      "id" : 619012,
+      "id" : 619019,
       "type" : "synonyms",
       "rule" : [ "ардуино", "arduino" ],
       "value" : "arduino"
     } ]
   }, {
     "entity" : {
-      "id" : 23008,
+      "id" : 23019,
+      "name" : "ClientEntity",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : true
+    },
+    "records" : [ {
+      "id" : 619026,
+      "type" : "synonyms",
+      "rule" : [ "третий c id" ],
+      "value" : "третий c id",
+      "clientId" : "testClientId"
+    }, {
+      "id" : 619025,
+      "type" : "synonyms",
+      "rule" : [ "второй c id" ],
+      "value" : "второй c id",
+      "clientId" : "testClientId"
+    }, {
+      "id" : 619024,
+      "type" : "synonyms",
+      "rule" : [ "третий" ],
+      "value" : "третий",
+      "clientId" : "bd38007c-9573-21e9-606f-c18bdfee6430"
+    }, {
+      "id" : 619023,
+      "type" : "synonyms",
+      "rule" : [ "второй" ],
+      "value" : "второй",
+      "clientId" : "bd38007c-9573-21e9-606f-c18bdfee6430"
+    } ]
+  }, {
+    "entity" : {
+      "id" : 23015,
       "name" : "disagree",
       "enabled" : true,
       "shared" : false,
@@ -1266,14 +1305,14 @@
       "client" : false
     },
     "records" : [ {
-      "id" : 619013,
+      "id" : 619020,
       "type" : "synonyms",
       "rule" : [ "нет", "не думаю", "не", "конечно нет", "ни в коем случае" ],
       "value" : ""
     } ]
   }, {
     "entity" : {
-      "id" : 23009,
+      "id" : 23016,
       "name" : "WhatsApp",
       "enabled" : true,
       "shared" : false,
@@ -1286,14 +1325,14 @@
       "client" : false
     },
     "records" : [ {
-      "id" : 619014,
+      "id" : 619021,
       "type" : "synonyms",
       "rule" : [ "whatsapp", "whstsapp", "вотсапп", "wats app", "вотсап", "вотс ап" ],
       "value" : "WhatsApp"
     } ]
   }, {
     "entity" : {
-      "id" : 23010,
+      "id" : 23017,
       "name" : "youtube",
       "enabled" : true,
       "shared" : false,
@@ -1306,11 +1345,26 @@
       "client" : false
     },
     "records" : [ {
-      "id" : 619015,
+      "id" : 619022,
       "type" : "synonyms",
       "rule" : [ "youtube", "ютуб", "ютьюб" ],
       "value" : "youtube"
     } ]
+  }, {
+    "entity" : {
+      "id" : 23018,
+      "name" : "Новая_сущность",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ ]
   } ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
 }
