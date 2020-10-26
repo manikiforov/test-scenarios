@@ -5,7 +5,10 @@ theme: /
     state: Start
         q!: $regex</start>
         a: Начнём.
-
+    
+    state:
+        q!: test    
+        a: test
     state:  q1
         q!: q
         a: Тег q1
