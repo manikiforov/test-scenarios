@@ -8,11 +8,11 @@ theme: /
 
     state: Hello
         intent!: /привет
-        a: Привет привет
+        a: Привет привет1
 
     state: Bye
         intent!: /пока
-        a: Пока пока
+        a: Пока пока1
 
     state: NoMatch
         event!: noMatch
