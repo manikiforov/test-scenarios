@@ -8,7 +8,8 @@ theme: /
     
     state:
         q!: test    
-        a: test
+        a: test1
+        
     state:  q1
         q!: q
         a: Тег q1
