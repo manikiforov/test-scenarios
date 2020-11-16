@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git1-775-MHm",
-    "name" : "git1-775-MHm",
+    "id" : "fromgit2-8109-IKY",
+    "name" : "fromgit2-8109-IKY",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 740,
+    "id" : 3574,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 741,
+    "id" : 3575,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
