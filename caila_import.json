@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "fromgit-8109-bBk",
-    "name" : "fromgit-8109-bBk",
+    "id" : "fromgit2-8109-IKY",
+    "name" : "fromgit2-8109-IKY",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 3572,
+    "id" : 6585,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 3573,
+    "id" : 6586,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
