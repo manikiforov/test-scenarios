@@ -1,1 +1,18 @@
-{"project":{"id":"git_key_2-38943-LaK","name":"git_key_2-38943-LaK","folder":"/"},"settings":{"language":"ru","spellingCorrection":false,"classificationAlgorithm":"sts","timezone":"UTC","shared":false},"intents":[],"entities":[],"enabledSystemEntities":["duckling.number","duckling.time","duckling.duration","duckling.phone-number","duckling.email","duckling.url"]}
+{
+  "project" : {
+    "id" : "test_scenarios-17421-fPB",
+    "name" : "test_scenarios-17421-fPB",
+    "folder" : "/jaicp"
+  },
+  "settings" : {
+    "language" : "ru",
+    "spellingCorrection" : false,
+    "classificationAlgorithm" : "sts",
+    "timezone" : "UTC",
+    "shared" : false
+  },
+  "intents" : [ ],
+  "entities" : [ ],
+  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
+  "spellerDictionary" : [ ]
+}
