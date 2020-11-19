@@ -67,6 +67,7 @@ theme: /
             e: Буду
             e: Приду
             e: Ждите
+            e: Test
 
             go!: /newNode_2
 
