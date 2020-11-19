@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "fromgit2-8109-IKY",
-    "name" : "fromgit2-8109-IKY",
+    "id" : "git1-17421-gmr",
+    "name" : "git1-17421-gmr",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 6585,
+    "id" : 6738,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 6586,
+    "id" : 6739,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
