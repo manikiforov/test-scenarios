@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git2-17421-pHf",
-    "name" : "git2-17421-pHf",
+    "id" : "git1-17421-Sln",
+    "name" : "git1-17421-Sln",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 6748,
+    "id" : 6746,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 6749,
+    "id" : 6747,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
