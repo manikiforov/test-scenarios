@@ -33,6 +33,10 @@ theme: /
     state: image4
         q!: image4
         image: https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png
+        
+    state:
+        q!: чпоньк
+        a: атата
 
     state: Hello
         intent!: /привет
