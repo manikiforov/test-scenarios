@@ -13,7 +13,7 @@ theme: /
             $response.replies.push( {
                 type: "image",
                 imageUrl: "https://248305.selcdn.ru/zenbot_dev_ca/telegram/kirill_yarulin/100015003-file_uploader-100015003-Cwo-602500161/JTM59X0yay.jpg",
-                text: "описание изображения"      
+                text: "описание изображения.jpg"      
             } )
             
     state: image2
@@ -23,7 +23,7 @@ theme: /
             $response.replies.push( {
                 type: "image",
                 imageUrl: "https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png",
-                text: "описание изображения"      
+                text: "описание изображения.png"      
             } )
             
     state: image3
