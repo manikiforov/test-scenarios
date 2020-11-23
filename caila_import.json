@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git1-17421-Sln",
-    "name" : "git1-17421-Sln",
+    "id" : "fromgit-8109-bBk",
+    "name" : "fromgit-8109-bBk",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 6746,
+    "id" : 13378,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 6747,
+    "id" : 13379,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
