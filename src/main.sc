@@ -8,7 +8,7 @@ theme: /
         
     state: image1
         q!: image1
-         script:
+        script:
             $response.replies = []
             $response.replies.push( {
                 type: "image",
@@ -18,7 +18,7 @@ theme: /
             
     state: image2
         q!: image2
-         script:
+        script:
             $response.replies = []
             $response.replies.push( {
                 type: "image",
