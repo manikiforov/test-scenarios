@@ -29,7 +29,7 @@ theme: /
                 },
                 {
                   "type" : "example",
-                  "value" : "Приду"
+                  "value" : "Не Приду"
                 },
                 {
                   "type" : "example",
