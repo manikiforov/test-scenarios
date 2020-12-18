@@ -1,11 +1,11 @@
 {
   "project" : {
-    "id" : "try_to_not_save_test-10591-IsB",
-    "name" : "try_to_not_save_test-10591-IsB",
-    "folder" : "/"
+    "id" : "test_remote-67222-fiS",
+    "name" : "test_remote-67222-fiS",
+    "folder" : "/jaicp"
   },
   "settings" : {
-    "language" : "en",
+    "language" : "ru",
     "spellingCorrection" : false,
     "classificationAlgorithm" : "sts",
     "timezone" : "UTC",
@@ -13,5 +13,6 @@
   },
   "intents" : [ ],
   "entities" : [ ],
-  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
+  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
+  "spellerDictionary" : [ ]
 }
