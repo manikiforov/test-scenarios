@@ -265,8 +265,6 @@ theme: /
                 departmentName: 'Dep 1'
             };
 
-
-
     state: reset
         q!: reset
         script:
