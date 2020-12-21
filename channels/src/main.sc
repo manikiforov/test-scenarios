@@ -7,6 +7,11 @@ theme: /
         a:  Вы сказали и бот ответил: {{$parseTree.text}}
         
         
+        
+        
+        
+        
+        
     state: Send File
         q!: send
         script:
@@ -264,6 +269,8 @@ theme: /
                 needResponse: true,
                 departmentName: 'Dep 1'
             };
+
+
 
     state: reset
         q!: reset
