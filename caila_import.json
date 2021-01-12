@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git2-75185-EfY",
-    "name" : "git2-75185-EfY",
+    "id" : "git2-75185-TNF",
+    "name" : "git2-75185-TNF",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 2650,
+    "id" : 2656,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 2651,
+    "id" : 2657,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
@@ -123,6 +123,10 @@
     "name" : "duckling.url",
     "version" : "v1",
     "enabled" : true
+  }, {
+    "name" : "duckling.interval",
+    "version" : "v2",
+    "enabled" : false
   }, {
     "name" : "mlps-obscene.obscene",
     "enabled" : false
