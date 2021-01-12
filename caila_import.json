@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git1-75185-Wwu",
-    "name" : "git1-75185-Wwu",
+    "id" : "git2-75185-EfY",
+    "name" : "git2-75185-EfY",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 2648,
+    "id" : 2650,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 2649,
+    "id" : 2651,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,

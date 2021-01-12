@@ -4,7 +4,7 @@ theme: /
 
     state: Start
         q!: $regex</start>
-        a: Начнём11111
+        a: Начнём
         
     state: image1
         q!: jpgo
