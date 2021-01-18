@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git2-75185-TNF",
-    "name" : "git2-75185-TNF",
+    "id" : "afdf1-263-cgk",
+    "name" : "afdf1-263-cgk",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 2656,
+    "id" : 1234,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 2657,
+    "id" : 1235,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
