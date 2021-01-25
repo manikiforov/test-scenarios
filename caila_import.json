@@ -1,11 +1,11 @@
 {
   "project" : {
-    "id" : "1-247852676-cnq",
-    "name" : "1-247852676-cnq",
+    "id" : "https_bitbucket_org_-22800-xrB",
+    "name" : "https_bitbucket_org_-22800-xrB",
     "folder" : "/jaicp"
   },
   "settings" : {
-    "language" : "ru",
+    "language" : "en",
     "spellingCorrection" : false,
     "classificationAlgorithm" : "sts",
     "timezone" : "UTC",
@@ -13,5 +13,67 @@
   },
   "intents" : [ ],
   "entities" : [ ],
-  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ]
+  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
+  "spellerDictionary" : [ ],
+  "systemEntities" : [ {
+    "name" : "duckling.number",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.ordinal",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.amount-of-money",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.distance",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.quantity",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.temperature",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.volume",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.time",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.date",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.time-of-day",
+    "version" : "v2",
+    "enabled" : false
+  }, {
+    "name" : "duckling.duration",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.phone-number",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.email",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.url",
+    "version" : "v2",
+    "enabled" : true
+  }, {
+    "name" : "duckling.interval",
+    "version" : "v2",
+    "enabled" : false
+  } ]
 }
