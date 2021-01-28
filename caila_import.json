@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "afdf1-263-cgk",
-    "name" : "afdf1-263-cgk",
+    "id" : "pull2-52899-jNa",
+    "name" : "pull2-52899-jNa",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 1234,
+    "id" : 2029,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 1235,
+    "id" : 2030,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
