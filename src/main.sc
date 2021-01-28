@@ -4,7 +4,7 @@ theme: /
 
     state: Start
         q!: $regex</start>
-        event: Начнём1111
+        a: Начнём1111
         
         
         
@@ -38,17 +38,17 @@ theme: /
         
     state:
         q!: чпоньк
-        event: атата
+        a: атата
 
     state: Hello
         intent!: /привет
-        event: Привет привет!!!!cgfhcg
+        a: Привет привет!!!!cgfhcg
 
     state: Bye
         intent!: /пока
-        event: Пока пока!!!!
+        a: Пока пока!!!!
 
     state: NoMatch
-        event!: noMatch
-        event: Я не понял. Вы сказали: {{$request.query}}
+        intent!: noMatch
+        a: Я не понял. Вы сказали: {{$request.query}}
 
