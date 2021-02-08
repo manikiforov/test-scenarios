@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "pull2-52899-jNa",
-    "name" : "pull2-52899-jNa",
+    "id" : "channel_update_b-263-yFd",
+    "name" : "channel_update_b-263-yFd",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 2029,
+    "id" : 4088,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 2030,
+    "id" : 4089,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
