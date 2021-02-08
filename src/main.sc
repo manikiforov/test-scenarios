@@ -7,6 +7,7 @@ theme: /
         a: Начнём1111
         
         
+        
     state: image1
         q!: jpgo
         script:
