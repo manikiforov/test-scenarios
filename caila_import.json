@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "channel_update_b-263-yFd",
-    "name" : "channel_update_b-263-yFd",
+    "id" : "channel_update_a-263-eFX",
+    "name" : "channel_update_a-263-eFX",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 4088,
+    "id" : 4086,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 4089,
+    "id" : 4087,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
