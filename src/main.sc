@@ -3,7 +3,7 @@ require: slotfilling/slotFilling.sc
 theme: /
 
     state: Start
-        q!: $regex</start>
+        q: $regex</start>
         a: Начнём1111
         
         
