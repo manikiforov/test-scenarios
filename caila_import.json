@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "ts_dobavlenie_i_udal-13704-LwI",
-    "name" : "ts_dobavlenie_i_udal-13704-LwI",
+    "id" : "test-13704-UBh",
+    "name" : "test-13704-UBh",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -9,11 +9,13 @@
     "spellingCorrection" : false,
     "classificationAlgorithm" : "sts",
     "timezone" : "UTC",
-    "extendedSettings" : { },
+    "extendedSettings" : {
+      "useShared" : false
+    },
     "shared" : false
   },
   "intents" : [ {
-    "id" : 120,
+    "id" : 122,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -21,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 121,
+    "id" : 123,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
