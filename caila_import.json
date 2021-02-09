@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "channel_update_a-263-eFX",
-    "name" : "channel_update_a-263-eFX",
+    "id" : "ts_dobavlenie_i_udal-13704-LwI",
+    "name" : "ts_dobavlenie_i_udal-13704-LwI",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -9,13 +9,11 @@
     "spellingCorrection" : false,
     "classificationAlgorithm" : "sts",
     "timezone" : "UTC",
-    "extendedSettings" : {
-      "useShared" : false
-    },
+    "extendedSettings" : { },
     "shared" : false
   },
   "intents" : [ {
-    "id" : 4086,
+    "id" : 120,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +21,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 4087,
+    "id" : 121,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
