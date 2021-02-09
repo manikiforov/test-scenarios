@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "test-13704-UBh",
-    "name" : "test-13704-UBh",
+    "id" : "ts_dobavlenie_i_udal-13704-LwI",
+    "name" : "ts_dobavlenie_i_udal-13704-LwI",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 122,
+    "id" : 124,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 123,
+    "id" : 125,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
