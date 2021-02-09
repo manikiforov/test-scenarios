@@ -15,6 +15,7 @@ fun main() {
             ChatApiChannel,
             ChatWidgetChannel,
             TelephonyChannel
-        )
+        ),
+        url = "http://test-ha01.lo.test-ai.net/chatadapter"
     ).start(wait = true)
 }

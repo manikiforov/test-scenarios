@@ -17,6 +17,6 @@ fun main() {
             ChatWidgetChannel,
             TelephonyChannel
         ),
-        url = System.getenv("CA_URL") ?: DEFAULT_PROXY_URL
+        url = "http://test-ha01.lo.test-ai.net/chatadapter"
     ).runBlocking()
 }
