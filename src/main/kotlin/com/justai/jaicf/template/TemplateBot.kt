@@ -43,7 +43,7 @@ val templateBot = BotEngine(
     ),
     conversationLoggers = arrayOf(
         Slf4jConversationLogger(),
-        JaicpConversationLogger(accessToken, url = System.getenv("CA_URL") ?: DEFAULT_PROXY_URL)
+        JaicpConversationLogger(accessToken, url = "http://test-ha01.lo.test-ai.net/chatadapter")
     )
 )
 

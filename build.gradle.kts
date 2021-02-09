@@ -32,6 +32,11 @@ dependencies {
     implementation("com.justai.jaicf:mongo:$jaicf")
     implementation("com.justai.jaicf:jaicp:$jaicf")
     implementation("com.justai.jaicf:caila:$jaicf")
+    implementation("com.justai.jaicf:slack:$jaicf")
+    implementation("com.justai.jaicf:alexa:$jaicf")
+    implementation("com.justai.jaicf:telegram:$jaicf")
+    implementation("com.justai.jaicf:yandex-alice:$jaicf")
+    implementation("com.justai.jaicf:google-actions:$jaicf")
 }
 
 tasks {
