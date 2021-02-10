@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "vzyat_moe-52899-TAm",
-    "name" : "vzyat_moe-52899-TAm",
+    "id" : "test-13704-UBh",
+    "name" : "test-13704-UBh",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -9,6 +9,9 @@
     "spellingCorrection" : false,
     "classificationAlgorithm" : "sts",
     "timezone" : "UTC",
+    "extendedSettings" : {
+      "useShared" : false
+    },
     "shared" : false
   },
   "intents" : [ ],
@@ -104,6 +107,10 @@
     "name" : "duckling.url",
     "version" : "v1",
     "enabled" : true
+  }, {
+    "name" : "duckling.interval",
+    "version" : "v2",
+    "enabled" : false
   }, {
     "name" : "mlps-obscene.obscene",
     "enabled" : false
