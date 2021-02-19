@@ -1,5 +1,20 @@
+require: slotfilling/slotFilling.sc
+  module = sys.zb-common
 theme: /
 
-    state: Echo
+    state: Start
+        q!: $regex</start>
+        a: Начнём.
+
+    state: Hello
+        intent!: /привет
+        a: Привет привет
+
+    state: Bye
+        intent!: /пока
+        a: Пока пока
+
+    state: NoMatch
         event!: noMatch
-        a: Вы сказали: {{$parseTree.text}}
+        a: Я не понял. Вы сказали: {{$request.query}}
+
