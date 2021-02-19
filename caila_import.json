@@ -1,51 +1,19 @@
 {
     "project": {
-        "id": "zb-cailapub",
-        "name": "zb-cailapub",
+        "id": "zb-echo-cailapub-template_ru",
+        "name": "zb-echo-cailapub-template_ru",
         "folder": "/"
     },
     "settings": {
         "language": "ru",
         "spellingCorrection": false,
         "classificationAlgorithm": "sts",
-        "timezone": "Europe/Moscow",
+        "timezone": "UTC",
         "extendedSettings": {
-      "tokenizerEngine": "mystem",
             "useShared": false
         }
     },
-    "intents": [
-        {
-            "path": "/пока",
-            "description": null,
-            "answer": null,
-            "customData": null,
-            "enabled": true,
-            "phrases": [
-                {
-                    "text": "пока",
-                    "entities": null
-                }
-            ],
-            "patterns": null,
-            "slots": null
-        },
-        {
-            "path": "/привет",
-            "description": null,
-            "answer": null,
-            "customData": null,
-            "enabled": true,
-            "phrases": [
-                {
-                    "text": "привет",
-                    "entities": null
-                }
-            ],
-            "patterns": null,
-            "slots": null
-        }
-    ],
+    "intents": [],
     "entities": [],
     "enabledSystemEntities": [
         "duckling.number",

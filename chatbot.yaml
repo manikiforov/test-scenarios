@@ -1,4 +1,4 @@
-name: zb-cailapub
+name: echo-template
 
 entryPoint:
   - main.sc
@@ -6,8 +6,12 @@ entryPoint:
 botEngine: v2
 language: ru
 
+tests:
+  include:
+    - test.xml
+
 sts:
-    noMatchThreshold: 0.2
+  noMatchThreshold: 0.2
 
 caila:
-    noMatchThreshold: 0.2
+  noMatchThreshold: 0.2
