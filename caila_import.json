@@ -1,18 +1,58 @@
 {
-  "project" : {
-    "id" : "test_git-353-IXW",
-    "name" : "test_git-353-IXW",
-    "folder" : "/jaicp"
-  },
-  "settings" : {
-    "language" : "ru",
-    "spellingCorrection" : false,
-    "classificationAlgorithm" : "sts",
-    "timezone" : "UTC",
-    "shared" : false
-  },
-  "intents" : [ ],
-  "entities" : [ ],
-  "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
-  "spellerDictionary" : [ ]
+    "project": {
+        "id": "zb-cailapub",
+        "name": "zb-cailapub",
+        "folder": "/"
+    },
+    "settings": {
+        "language": "ru",
+        "spellingCorrection": false,
+        "classificationAlgorithm": "sts",
+        "timezone": "Europe/Moscow",
+        "extendedSettings": {
+      "tokenizerEngine": "mystem",
+            "useShared": false
+        }
+    },
+    "intents": [
+        {
+            "path": "/пока",
+            "description": null,
+            "answer": null,
+            "customData": null,
+            "enabled": true,
+            "phrases": [
+                {
+                    "text": "пока",
+                    "entities": null
+                }
+            ],
+            "patterns": null,
+            "slots": null
+        },
+        {
+            "path": "/привет",
+            "description": null,
+            "answer": null,
+            "customData": null,
+            "enabled": true,
+            "phrases": [
+                {
+                    "text": "привет",
+                    "entities": null
+                }
+            ],
+            "patterns": null,
+            "slots": null
+        }
+    ],
+    "entities": [],
+    "enabledSystemEntities": [
+        "duckling.number",
+        "duckling.time",
+        "duckling.duration",
+        "duckling.phone-number",
+        "duckling.email",
+        "duckling.url"
+    ]
 }
