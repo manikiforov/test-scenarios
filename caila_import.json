@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "ts_dobavlenie_i_udal-13704-LwI",
-    "name" : "ts_dobavlenie_i_udal-13704-LwI",
+    "id" : "git1-905307-Icc",
+    "name" : "git1-905307-Icc",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 124,
+    "id" : 2799,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 125,
+    "id" : 2800,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
