@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git1-905307-Icc",
-    "name" : "git1-905307-Icc",
+    "id" : "git2-905307-idu",
+    "name" : "git2-905307-idu",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 2799,
+    "id" : 2803,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 2800,
+    "id" : 2804,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
