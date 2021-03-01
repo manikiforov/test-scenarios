@@ -42,11 +42,11 @@ theme: /
 
     state: Hello
         intent!: /привет
-        a: Привет привет!!!!cgfhcg
+        a: Привет-привет!
 
     state: Bye
         intent!: /пока
-        a: Пока пока!!!!
+        a: Пока-пока!
 
     state: NoMatch
         intent!: noMatch

@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git2-905307-idu",
-    "name" : "git2-905307-idu",
+    "id" : "git1-13746-XRk",
+    "name" : "git1-13746-XRk",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 2803,
+    "id" : 563,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 2804,
+    "id" : 564,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
