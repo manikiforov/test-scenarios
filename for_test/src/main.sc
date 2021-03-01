@@ -3,7 +3,7 @@ theme: /
 
     state: newNode_011
         random:
-            a: Привет!
+            a: Привет-привет!
         go!: /newNode_1
     @IntentGroup
         {
