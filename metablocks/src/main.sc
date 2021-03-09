@@ -12,7 +12,7 @@ theme: /
          a: "блаблаблабла!"
 
     state: newNode_7
-        image: https://248305.selcdn.ru/public_test/sadmin/NXxJAPvXHWr0pqld.jpg
+        image: ура!
     @InputText
         {
           "prompt" : "\"Введите текст или отправитесь играть в покер со Смертью1!\"",
@@ -29,7 +29,7 @@ theme: /
             go!: /newNode_2
     @InputNumber
         {
-          "prompt" : "\"Введите число, о Величаший!\"",
+          "prompt" : "\"Введите число, о человек!\"",
           "varName" : "number",
           "minValue" : 0,
           "maxValue" : 10,
