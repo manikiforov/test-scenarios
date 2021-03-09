@@ -6,10 +6,10 @@ require: patterns.sc
 theme: /
 
     state: newNode_3
-        a: пыщ!
+        a: пыдыщ!
 
     state: newNode_6
-        image: https://248305.selcdn.ru/public_test/sadmin/O3O9argQgcvlEwRe.jpg
+         a: "блаблаблабла!"
 
     state: newNode_7
         image: https://248305.selcdn.ru/public_test/sadmin/NXxJAPvXHWr0pqld.jpg
@@ -41,7 +41,7 @@ theme: /
           "then" : "/newNode_5"
         }
     state: newNode_2
-        a: "Введите число, о Величаший!"
+        a: "Введите число, о повелитель!"
 
         state: CatchNumber
             q: $Number
