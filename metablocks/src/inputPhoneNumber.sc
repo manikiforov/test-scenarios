@@ -8,10 +8,9 @@ theme: /
             prompt = Введите номер телефона
             varName = phone
             failureMessage = ["Это не формат мобильного телефона"]
-            then = /newNode
-            actions = []
+            then = /newNodePhone
 
-    state: newNode
+    state: newNodePhone
         a: Ваш номер - {{$session.phone}}
     
     
