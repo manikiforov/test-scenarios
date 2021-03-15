@@ -9,15 +9,13 @@ import com.justai.jaicf.channel.jaicp.logging.JaicpConversationLogger
 import com.justai.jaicf.context.manager.InMemoryBotContextManager
 import com.justai.jaicf.context.manager.mongo.MongoBotContextManager
 import com.justai.jaicf.logging.Slf4jConversationLogger
-import com.justai.jaicf.template.scenario.MainScenario
-import com.mongodb.MongoClient
-import com.mongodb.MongoClientURI
+import com.justai.jaicf.template.scenario.mainScenario
+import com.mongodb.client.MongoClients
 import java.util.*
 
 private val contextManager = System.getenv("MONGODB_URI")?.let { url ->
-    val uri = MongoClientURI(url)
-    val client = MongoClient(uri)
-    MongoBotContextManager(client.getDatabase(uri.database!!).getCollection("contexts"))
+    val client = MongoClients.create(url)
+    MongoBotContextManager(client.getDatabase("jaicf").getCollection("contexts"))
 } ?: InMemoryBotContextManager
 
 val accessToken: String = System.getenv("JAICP_API_TOKEN") ?: Properties().run {
@@ -37,7 +35,7 @@ private val cailaNLUSettings = CailaNLUSettings(
 )
 
 val templateBot = BotEngine(
-    model = MainScenario.model,
+    scenario = mainScenario,
     defaultContextManager = contextManager,
     activators = arrayOf(
         CailaIntentActivator.Factory(cailaNLUSettings),
