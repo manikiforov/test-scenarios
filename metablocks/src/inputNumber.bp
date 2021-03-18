@@ -1,0 +1,29 @@
+{
+  "positions" : [ {
+    "id" : "/newNode_1",
+    "name" : "newNode_1",
+    "x" : 36,
+    "y" : 259
+  }, {
+    "id" : "/newNode_2",
+    "name" : "newNode_2",
+    "x" : 965,
+    "y" : 579
+  }, {
+    "id" : "/newNode",
+    "x" : 680,
+    "y" : 412
+  }, {
+    "id" : "/InputNumber",
+    "x" : 560,
+    "y" : 148
+  }, {
+    "id" : "/newNode_inputNumber",
+    "x" : 220,
+    "y" : 148
+  }, {
+    "id" : "/answerNumber",
+    "x" : 900,
+    "y" : 148
+  } ]
+}

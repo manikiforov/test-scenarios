@@ -1,0 +1,23 @@
+{
+  "positions" : [ {
+    "id" : "/newNode_1",
+    "x" : 758,
+    "y" : 124
+  }, {
+    "id" : "/InputText",
+    "x" : 560,
+    "y" : 148
+  }, {
+    "id" : "/answerText",
+    "x" : 900,
+    "y" : 148
+  }, {
+    "id" : "/newNode_inputText",
+    "x" : 220,
+    "y" : 148
+  }, {
+    "id" : "/start",
+    "x" : 31,
+    "y" : 137
+  } ]
+}
