@@ -38,7 +38,7 @@ theme: /
         
     state:
         q!: чпоньк
-        a: атата
+        a: новая строка кода
 
     state: Hello
         intent!: /привет
