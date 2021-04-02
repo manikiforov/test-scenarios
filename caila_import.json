@@ -12,7 +12,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 9812,
+    "id" : 10265,
     "path" : "/Новый интент",
     "enabled" : true,
     "shared" : false,
@@ -25,7 +25,7 @@
   } ],
   "entities" : [ {
     "entity" : {
-      "id" : 2401,
+      "id" : 2454,
       "name" : "Новая_сущность",
       "enabled" : true,
       "shared" : false,
@@ -38,7 +38,7 @@
       "client" : false
     },
     "records" : [ {
-      "id" : 488661,
+      "id" : 538057,
       "type" : "synonyms",
       "rule" : [ "121" ],
       "value" : ""
