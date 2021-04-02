@@ -11,8 +11,37 @@
     "timezone" : "UTC",
     "shared" : false
   },
-  "intents" : [ ],
-  "entities" : [ ],
+  "intents" : [ {
+    "id" : 9803,
+    "path" : "/Новый интент",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "бот 2"
+    } ],
+    "patterns" : [ ]
+  } ],
+  "entities" : [ {
+    "entity" : {
+      "id" : 2396,
+      "name" : "сущность_бот2",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ {
+      "id" : 488657,
+      "type" : "synonyms",
+      "rule" : [ "бот2" ],
+      "value" : ""
+    } ]
+  } ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
   "spellerDictionary" : [ ],
   "systemEntities" : [ {
