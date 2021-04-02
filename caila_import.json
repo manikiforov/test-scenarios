@@ -1,8 +1,8 @@
 {
   "project" : {
-    "id" : "ggg-4286315-FPD",
-    "name" : "ggg-4286315-FPD",
-    "folder" : "/"
+    "id" : "5454-4286315-FXj",
+    "name" : "5454-4286315-FXj",
+    "folder" : "/jaicp"
   },
   "settings" : {
     "language" : "ru",
@@ -11,8 +11,39 @@
     "timezone" : "UTC",
     "shared" : false
   },
-  "intents" : [ ],
-  "entities" : [ ],
+  "intents" : [ {
+    "id" : 9811,
+    "path" : "/Новый интент",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "привет"
+    }, {
+      "text" : "пока"
+    } ],
+    "patterns" : [ ]
+  } ],
+  "entities" : [ {
+    "entity" : {
+      "id" : 2400,
+      "name" : "Новая_сущность",
+      "enabled" : true,
+      "shared" : false,
+      "type" : "annotation",
+      "priority" : 1,
+      "noSpelling" : true,
+      "noMorph" : false,
+      "phoneticSearch" : false,
+      "fuzzySearch" : false,
+      "client" : false
+    },
+    "records" : [ {
+      "id" : 488660,
+      "type" : "synonyms",
+      "rule" : [ "121" ],
+      "value" : ""
+    } ]
+  } ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
   "spellerDictionary" : [ ],
   "systemEntities" : [ {
