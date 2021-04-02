@@ -1,8 +1,8 @@
 {
   "project" : {
-    "id" : "git-4286315-naW",
-    "name" : "git-4286315-naW",
-    "folder" : "/jaicp"
+    "id" : "ggg-4286315-FPD",
+    "name" : "ggg-4286315-FPD",
+    "folder" : "/"
   },
   "settings" : {
     "language" : "ru",
@@ -11,46 +11,8 @@
     "timezone" : "UTC",
     "shared" : false
   },
-  "intents" : [ {
-    "id" : 9804,
-    "path" : "/привет",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "привет"
-    } ],
-    "patterns" : [ ]
-  }, {
-    "id" : 9805,
-    "path" : "/пока",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "пока"
-    } ],
-    "patterns" : [ ]
-  } ],
-  "entities" : [ {
-    "entity" : {
-      "id" : 2397,
-      "name" : "привет_привет",
-      "enabled" : true,
-      "shared" : false,
-      "type" : "annotation",
-      "priority" : 1,
-      "noSpelling" : true,
-      "noMorph" : false,
-      "phoneticSearch" : false,
-      "fuzzySearch" : false,
-      "client" : false
-    },
-    "records" : [ {
-      "id" : 488658,
-      "type" : "synonyms",
-      "rule" : [ "пока пока" ],
-      "value" : ""
-    } ]
-  } ],
+  "intents" : [ ],
+  "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
   "spellerDictionary" : [ ],
   "systemEntities" : [ {
