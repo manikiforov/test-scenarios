@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "ygyy-4286315-JOe",
-    "name" : "ygyy-4286315-JOe",
+    "id" : "git-3711-YFx",
+    "name" : "git-3711-YFx",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -12,8 +12,8 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 10488,
-    "path" : "/Новый интент",
+    "id" : 17236,
+    "path" : "/Новый_интент",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
@@ -25,7 +25,7 @@
   } ],
   "entities" : [ {
     "entity" : {
-      "id" : 2457,
+      "id" : 9561,
       "name" : "Новая_сущность",
       "enabled" : true,
       "shared" : false,
@@ -38,7 +38,7 @@
       "client" : false
     },
     "records" : [ {
-      "id" : 538060,
+      "id" : 109897,
       "type" : "synonyms",
       "rule" : [ "121" ],
       "value" : ""

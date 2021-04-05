@@ -7,7 +7,7 @@ theme: /
         a: Начнём.
 
     state: Hello
-        intent!: /привет
+        intent!: /Новый_интент
         a: Привет привет
 
     state: Bye
