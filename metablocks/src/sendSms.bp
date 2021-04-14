@@ -1,0 +1,19 @@
+{
+  "positions" : [ {
+    "id" : "/newNode_sendSms",
+    "x" : 220,
+    "y" : 198
+  }, {
+    "id" : "/successResultSms",
+    "x" : 900,
+    "y" : 124
+  }, {
+    "id" : "/failedResultSms",
+    "x" : 900,
+    "y" : 272
+  }, {
+    "id" : "/Sms",
+    "x" : 560,
+    "y" : 198
+  } ]
+}
