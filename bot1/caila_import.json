@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git-4286315-naW",
-    "name" : "git-4286315-naW",
+    "id" : "gitos-13726-ioo",
+    "name" : "gitos-13726-ioo",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -12,7 +12,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 9804,
+    "id" : 1512,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
@@ -21,7 +21,7 @@
     } ],
     "patterns" : [ ]
   }, {
-    "id" : 9805,
+    "id" : 1513,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -32,7 +32,7 @@
   } ],
   "entities" : [ {
     "entity" : {
-      "id" : 2397,
+      "id" : 1013,
       "name" : "привет_привет",
       "enabled" : true,
       "shared" : false,
@@ -45,7 +45,7 @@
       "client" : false
     },
     "records" : [ {
-      "id" : 488658,
+      "id" : 19651,
       "type" : "synonyms",
       "rule" : [ "пока пока" ],
       "value" : ""

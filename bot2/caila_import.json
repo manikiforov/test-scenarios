@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git-4286315-naW",
-    "name" : "git-4286315-naW",
+    "id" : "gitos-13726-ioo",
+    "name" : "gitos-13726-ioo",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -12,18 +12,20 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 9803,
+    "id" : 1514,
     "path" : "/Новый интент",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
       "text" : "бот 2"
+    }, {
+      "text" : "booba"
     } ],
     "patterns" : [ ]
   } ],
   "entities" : [ {
     "entity" : {
-      "id" : 2396,
+      "id" : 1014,
       "name" : "сущность_бот2",
       "enabled" : true,
       "shared" : false,
@@ -36,7 +38,7 @@
       "client" : false
     },
     "records" : [ {
-      "id" : 488657,
+      "id" : 19652,
       "type" : "synonyms",
       "rule" : [ "бот2" ],
       "value" : ""
