@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git_2-3615719-QEf",
-    "name" : "git_2-3615719-QEf",
+    "id" : "git1-3415533-mCG",
+    "name" : "git1-3415533-mCG",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 126,
+    "id" : 68,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 127,
+    "id" : 69,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,

@@ -39,6 +39,10 @@ theme: /
     state:
         q!: чпоньк
         a: атата
+        
+    state:
+        q!: шпуньк
+        a: ататата    
 
     state: Hello
         intent!: /привет
