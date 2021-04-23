@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git1-3415533-mCG",
-    "name" : "git1-3415533-mCG",
+    "id" : "git1-5977059-IYd",
+    "name" : "git1-5977059-IYd",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 68,
+    "id" : 132,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 69,
+    "id" : 133,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
