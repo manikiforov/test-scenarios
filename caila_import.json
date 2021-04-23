@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git1-5977059-IYd",
-    "name" : "git1-5977059-IYd",
+    "id" : "git2-5977059-kNy",
+    "name" : "git2-5977059-kNy",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 132,
+    "id" : 134,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 133,
+    "id" : 135,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
