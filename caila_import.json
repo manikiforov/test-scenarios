@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git-4367786-uid",
-    "name" : "git-4367786-uid",
+    "id" : "git-4367786-YHU",
+    "name" : "git-4367786-YHU",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 14165,
+    "id" : 14167,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -24,7 +24,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 14166,
+    "id" : 14168,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
