@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git-4367786-kqM",
-    "name" : "git-4367786-kqM",
+    "id" : "git-4367786-uid",
+    "name" : "git-4367786-uid",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 14163,
+    "id" : 14165,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -24,7 +24,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 14164,
+    "id" : 14166,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
@@ -124,6 +124,10 @@
     "name" : "duckling.url",
     "version" : "v1",
     "enabled" : true
+  }, {
+    "name" : "duckling.interval",
+    "version" : "v2",
+    "enabled" : false
   }, {
     "name" : "mlps-obscene.obscene",
     "enabled" : false
