@@ -4,12 +4,12 @@ theme: /
 
     state: Start
         q!: $regex</start>
-        a: Начнём!3332
+        a: Начнём!
         
         
         
     state: image1
-        q!: jpgo3333
+        q!: jpg
         script:
             $response.replies = []
             $response.replies.push( {
@@ -19,7 +19,7 @@ theme: /
             } )
             
     state: image2
-        q!: pngo222
+        q!: png
         script:
             $response.replies = []
             $response.replies.push( {
