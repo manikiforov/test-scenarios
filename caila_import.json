@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git_2-3449122-sAp",
-    "name" : "git_2-3449122-sAp",
+    "id" : "git_1-3449122-IRc",
+    "name" : "git_1-3449122-IRc",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -15,7 +15,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 2477,
+    "id" : 2560,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -23,7 +23,7 @@
       "text" : "пока"
     } ]
   }, {
-    "id" : 2478,
+    "id" : 2561,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
