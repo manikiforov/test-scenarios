@@ -9,7 +9,7 @@ theme: /
         
         
     state: image1
-        q!: jpgo111
+        q!: jpgo
         script:
             $response.replies = []
             $response.replies.push( {
@@ -19,7 +19,7 @@ theme: /
             } )
             
     state: image2
-        q!: pngo
+        q!: pngo222
         script:
             $response.replies = []
             $response.replies.push( {
