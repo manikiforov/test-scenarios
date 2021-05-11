@@ -4,7 +4,7 @@ theme: /
 
     state: Start
         q!: $regex</start>
-        a: Начнём!!2222
+        a: Начнём!!111
         
         
         
