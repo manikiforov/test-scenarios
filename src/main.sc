@@ -5,7 +5,11 @@ theme: /
     state: Start
         q!: $regex</start>
         a: Начнём.
-
+    
+    state:
+        q!: test    
+        a: test1
+        
     state:  q1
         q!: q
         a: Тег q1
@@ -19,7 +23,7 @@ theme: /
                 a: Тег q3
                 
     state: Hello
-        intent!: /привет
+        intent!: /привет 
         a: Привет привет
 
     state: Bye
@@ -107,7 +111,7 @@ theme: /
     state: /newNode_0
         a: Операторы офлайн
     state: /newNode_1
-        a: Вернулись к боту 
+        a: Вернулись к боту
     state: 
         event!: match
         a: {{ $context.intent.answer }}
@@ -115,4 +119,3 @@ theme: /
     state: NoMatch
         event!: noMatch
         a: Я не понял. Вы сказали: {{$request.query}}
-
