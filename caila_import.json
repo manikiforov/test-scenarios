@@ -1,14 +1,14 @@
 {
   "project" : {
-    "id" : "git1-3456388-kIn",
-    "name" : "git1-3456388-kIn",
+    "id" : "pull1-854297-dof",
+    "name" : "pull1-854297-dof",
     "folder" : "/jaicp"
   },
   "settings" : {
     "language" : "ru",
     "spellingCorrection" : false,
     "classificationAlgorithm" : "sts",
-    "timezone" : "Europe/Moscow",
+    "timezone" : "UTC",
     "extendedSettings" : {
       "tokenizerEngine" : "mystem",
       "useShared" : false
@@ -16,23 +16,21 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 5998,
+    "id" : 42503,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
       "text" : "пока"
-    } ],
-    "priority" : 0
+    } ]
   }, {
-    "id" : 5999,
+    "id" : 42504,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
       "text" : "привет"
-    } ],
-    "priority" : 0
+    } ]
   } ],
   "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
@@ -126,6 +124,10 @@
     "name" : "duckling.url",
     "version" : "v1",
     "enabled" : true
+  }, {
+    "name" : "duckling.interval",
+    "version" : "v2",
+    "enabled" : false
   }, {
     "name" : "mlps-obscene.obscene",
     "enabled" : false
