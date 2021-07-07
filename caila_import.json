@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git2-3449849-WOR",
-    "name" : "git2-3449849-WOR",
+    "id" : "git_1-3449849-cUp",
+    "name" : "git_1-3449849-cUp",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 2775,
+    "id" : 2777,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -25,7 +25,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 2776,
+    "id" : 2778,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
