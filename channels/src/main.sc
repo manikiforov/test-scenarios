@@ -4,7 +4,7 @@ theme: /
 
     state: Start 
         q!: start
-        a:  Вы сказали и бот ответил: {{$parseTree.text}} GSonVryYKxnnDnZyTUmC hPAAMDmtMmzVJfclEzmt lqZCTWIJdQItqKHVWqJI
+        a:  Вы сказали и бот ответил: {{$parseTree.text}} GSonVryYKxnnDnZyTUmC hPAAMDmtMmzVJfclEzmt lqZCTWIJdQItqKHVWqJI fNhidsGDBxQFcLVvdoJS
         
     state: Send File
         q!: send
