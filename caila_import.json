@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git1-3433586-hVZ",
-    "name" : "git1-3433586-hVZ",
+    "id" : "git1-3486795-umU",
+    "name" : "git1-3486795-umU",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 4501,
+    "id" : 8328,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -25,7 +25,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 4502,
+    "id" : 8329,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
