@@ -7,6 +7,8 @@ require: inputFile.sc
 require: inputPhoneNumber.sc
 require: http.sc
 require: sendSms.sc
+require: googleSheet.sc
+
 theme: /
 
     state: Start
