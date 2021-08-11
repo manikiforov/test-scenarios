@@ -1,14 +1,14 @@
 {
   "project" : {
-    "id" : "git1-3486795-umU",
-    "name" : "git1-3486795-umU",
+    "id" : "locautocomplete-3486795-zvs",
+    "name" : "locautocomplete-3486795-zvs",
     "folder" : "/jaicp"
   },
   "settings" : {
     "language" : "ru",
     "spellingCorrection" : false,
     "classificationAlgorithm" : "sts",
-    "timezone" : "Europe/Moscow",
+    "timezone" : "UTC",
     "extendedSettings" : {
       "tokenizerEngine" : "mystem",
       "useShared" : false
@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 8334,
+    "id" : 4458,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -25,13 +25,16 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 8335,
-    "path" : "/привет",
+    "id" : 4459,
+    "path" : "/привет.",
     "enabled" : true,
     "shared" : false,
     "phrases" : [ {
       "text" : "привет"
+    }, {
+      "text" : "hi"
     } ],
+    "patterns" : [ ],
     "priority" : 0
   } ],
   "entities" : [ ],
