@@ -17,23 +17,23 @@ theme: /
             a: В стейтмастере
             go: /
                
-            state: /
+            state: о
                 a: ты в state_0
-
+                
                 state: state1
                     q: 1
                     a: ты в state_1
-
+                    
                     state: goTo0
                         q: назад
                         a: перехожу в 0 стейт
                         # пропиши путь /Hello/statemaster/state_0
-                            
+                        
                     state: end
                         q: * пока *
                         # пропиши путь /Bye 
                         go!: /Bye
-                        
+
     state: Bye || noContext = true
         intent!: /пока
         a: Пока пока
