@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "locautocomplete-3486795-zvs",
-    "name" : "locautocomplete-3486795-zvs",
+    "id" : "pshe-3486795-jgq",
+    "name" : "pshe-3486795-jgq",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 4458,
+    "id" : 24666,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -25,7 +25,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 4459,
+    "id" : 24667,
     "path" : "/привет.",
     "enabled" : true,
     "shared" : false,
