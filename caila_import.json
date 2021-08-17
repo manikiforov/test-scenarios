@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "pshe-3486795-jgq",
-    "name" : "pshe-3486795-jgq",
+    "id" : "git1-3449814-kJQ",
+    "name" : "git1-3449814-kJQ",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 24666,
+    "id" : 5428,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -25,7 +25,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 24667,
+    "id" : 5429,
     "path" : "/привет.",
     "enabled" : true,
     "shared" : false,
