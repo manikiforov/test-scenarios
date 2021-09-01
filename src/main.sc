@@ -8,7 +8,7 @@ theme: /
 
     state: Hello
         intent!: /привет
-        a: Привет привет
+        a: Привет это регресс
         # Пропиши путь statemaster
         go!: statemaster
         
