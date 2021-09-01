@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git2-3482245-bUP",
-    "name" : "git2-3482245-bUP",
+    "id" : "git1-3482245-QvA",
+    "name" : "git1-3482245-QvA",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 4330,
+    "id" : 4334,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -25,7 +25,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 4331,
+    "id" : 4335,
     "path" : "/привет.",
     "enabled" : true,
     "shared" : false,
