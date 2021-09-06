@@ -12,3 +12,6 @@ dependencies:
     type: git
     url: https://bitbucket.org/just-ai/zb-common
     version: heads/master
+    
+projectPreferences:
+    disableValidation: true
