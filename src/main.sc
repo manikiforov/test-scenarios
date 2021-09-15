@@ -4,9 +4,9 @@ theme: /
 
     state: Start
         q!: $regex</start>
-        a: Начнём./
+        a: Начнём.111
 
-    state: Hello
+    state: Hello2
         intent!: /привет
         a: Привет это 
         # Пропиши путь statemaster
