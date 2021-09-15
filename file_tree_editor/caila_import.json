@@ -16,16 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 3019,
-    "path" : "/пока",
-    "enabled" : true,
-    "shared" : false,
-    "phrases" : [ {
-      "text" : "пока"
-    } ],
-    "priority" : 0
-  }, {
-    "id" : 3020,
+    "id" : 3018,
     "path" : "/привет.",
     "enabled" : true,
     "shared" : false,
@@ -35,6 +26,15 @@
       "text" : "hi"
     } ],
     "patterns" : [ ],
+    "priority" : 0
+  }, {
+    "id" : 3017,
+    "path" : "/пока",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "пока"
+    } ],
     "priority" : 0
   } ],
   "entities" : [ ],
