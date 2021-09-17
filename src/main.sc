@@ -105,7 +105,7 @@ theme: /
                     go!: /CatchAll
             
     state: /newNode_0
-        a: Операторы оффлайн
+        a: Операторы офлайн
     state: /newNode_1
         a: Вернулись к боту 
     state: 
