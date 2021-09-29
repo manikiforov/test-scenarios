@@ -7,8 +7,8 @@ theme: /
         a: Начнём.
 
     state: Hello
-        intent!: /привет
-        a: Привет это 
+        intent!: /привет.
+        a: Привет это ДИКОБРАЗ
         # Пропиши путь statemaster
         go!: statemaster
         

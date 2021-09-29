@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "editor_actions-3459113-Jkn",
-    "name" : "editor_actions-3459113-Jkn",
+    "id" : "git2-3415750-fNK",
+    "name" : "git2-3415750-fNK",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 3019,
+    "id" : 220,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -25,7 +25,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 3020,
+    "id" : 221,
     "path" : "/привет.",
     "enabled" : true,
     "shared" : false,
