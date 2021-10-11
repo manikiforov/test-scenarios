@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git2-3415750-fNK",
-    "name" : "git2-3415750-fNK",
+    "id" : "project_1-3419941-zQn",
+    "name" : "project_1-3419941-zQn",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 220,
+    "id" : 5523,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -25,7 +25,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 221,
+    "id" : 5524,
     "path" : "/привет.",
     "enabled" : true,
     "shared" : false,

@@ -8,7 +8,7 @@ theme: /
 
     state: Hello
         intent!: /привет.
-        a: Привет это ДИКОБРАЗ
+        a: Дароу, братишка
         # Пропиши путь statemaster
         go!: statemaster
         
@@ -40,5 +40,5 @@ theme: /
 
     state: NoMatch
         event!: noMatch
-        a: Я не понял. Вы сказали: {{$request.query}}
+        a: Что ты, черт побери, такое несешь. Ты сказал: {{$request.query}}
 
