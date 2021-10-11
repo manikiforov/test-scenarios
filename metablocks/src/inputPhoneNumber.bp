@@ -4,6 +4,10 @@
     "x" : 900,
     "y" : 136
   }, {
+    "id" : "/newNodePhone",
+    "x" : 900,
+    "y" : 136
+  }, {
     "id" : "/toInputPhone",
     "x" : 220,
     "y" : 136

@@ -13,6 +13,6 @@ theme: /
     state: Sms
         Sms:
             text = hello QA
-            destination = 79992370897
+            destination = 79650987127
             okState = /successResultSms
             errorState = /failedResultSms
