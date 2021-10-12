@@ -5,4 +5,4 @@ theme: /
         q!: *
         a: "Вы сказали и бот ответил КОПИЯ КОПИЙ:"
         script:
-            $reactions.buttons("Red button")
+            $reactions.buttons({button: {text: "Red Button", request_contact: true}})
