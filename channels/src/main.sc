@@ -1,3 +1,5 @@
+require: buttons.js
+
 theme: /
 
     state: Start
