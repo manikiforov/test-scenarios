@@ -1,6 +1,7 @@
-name: zb-cailapub
+name: classifier-template
 
-entryPoint: main.sc
+entryPoint:
+  - main.sc
 
 botEngine: v2
 language: ru
@@ -9,8 +10,14 @@ tests:
   include:
     - test.xml
 
+dependencies:
+  - name: common
+    type: git
+    url: https://bitbucket.org/just-ai/zb-common
+    version: heads/master
+
 sts:
-    noMatchThreshold: 0.2
+  noMatchThreshold: 0.2
 
 caila:
-    noMatchThreshold: 0.2
+  noMatchThreshold: 0.2

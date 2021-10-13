@@ -1,49 +1,91 @@
 {
     "project": {
-        "id": "zb-cailapub",
-        "name": "zb-cailapub",
+        "id": "zb-classifier-template",
+        "name": "zb-classifier-template",
         "folder": "/"
     },
     "settings": {
         "language": "ru",
         "spellingCorrection": false,
         "classificationAlgorithm": "sts",
-        "timezone": "Europe/Moscow",
+        "timezone": "UTC",
         "extendedSettings": {
-      "tokenizerEngine": "mystem",
             "useShared": false
         }
     },
     "intents": [
         {
-            "path": "/пока",
-            "description": null,
-            "answer": null,
-            "customData": null,
+            "id": 4692,
+            "path": "/CardPayment",
+            "answer": "Оплатить у нас можно как по карте, так и наличными.",
             "enabled": true,
             "phrases": [
                 {
-                    "text": "пока",
-                    "entities": null
+                    "text": "по карте оплатить можно?"
+                },
+                {
+                    "text": "а вы карту принимаете?"
+                },
+                {
+                    "text": "картой оплата пройдет?"
+                },
+                {
+                    "text": "а вы безнал принимаете?"
                 }
             ],
-            "patterns": null,
-            "slots": null
+            "patterns": []
         },
         {
-            "path": "/привет",
-            "description": null,
-            "answer": null,
-            "customData": null,
+            "id": 4690,
+            "path": "/Location",
             "enabled": true,
             "phrases": [
                 {
-                    "text": "привет",
-                    "entities": null
+                    "text": "как вас найти"
+                },
+                {
+                    "text": "как к вам проехать"
+                },
+                {
+                    "text": "где вы находитесь"
                 }
             ],
-            "patterns": null,
-            "slots": null
+            "patterns": []
+        },
+        {
+            "id": 4693,
+            "path": "/ScheduleAppointment",
+            "answer": "Вы можете назначить встречу завтра, в 18:00.",
+            "enabled": true,
+            "phrases": [
+                {
+                    "text": "А к вам можно записаться на прием?"
+                },
+                {
+                    "text": "а записаться можно?"
+                },
+                {
+                    "text": "а запись возможна?"
+                },
+                {
+                    "text": "а можно назначить встречу на время?"
+                }
+            ],
+            "patterns": []
+        },
+        {
+            "id": 4689,
+            "path": "/WorkHours",
+            "enabled": true,
+            "phrases": [
+                {
+                    "text": "как вы работаете?"
+                },
+                {
+                    "text": "до скольки вы работаете?"
+                }
+            ],
+            "patterns": []
         }
     ],
     "entities": [],
