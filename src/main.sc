@@ -1,45 +1,20 @@
-# Enable basic functions and patterns from zb-common
-require: common.js
-    module = common
-require: patterns.sc
-    module = common
-require: text/text.sc
-    module = common
-require: number/number.sc
-    module = common
-require: number/number.sc
-    module = common
-require: dateTime/dateTime.sc
-    module = common
-
-# Enable Slot-Filling handling
 require: slotfilling/slotFilling.sc
-    module = sys.zb-common
-
-# Enable newSession handling
-require: newSessionOnStart/newSession.sc
-    module = common
-    injector = { newSessionStartState: "/Welcome", newSessionTimeout: 120 }
-
+  module = sys.zb-common
 theme: /
 
-    state: Welcome
-        a: Начнём!
+    state: Start
+        q!: $regex</start>
+        a: Начнём.
 
-    state: WorkHours
-        intent!: /WorkHours
-        a: Мы работаем с 9 до 18
+    state: Hello
+        intent!: /привет
+        a: Привет привет
 
-    state: Location
-        intent!: /Location
-        a: Мы находимся на Малом ПС д.5
+    state: Bye
+        intent!: /пока
+        a: Пока пока
 
-    # Обрабатываем все интенты с ответами одним стейтом
-    state: Match
-        event!: match
-        a: {{ $context.intent.answer }}
-
-    state: CatchAll || noContext = true
+    state: NoMatch
         event!: noMatch
-        a: Не понял
-    
+        a: Я не понял. Вы сказали: {{$request.query}}
+
