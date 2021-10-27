@@ -35,6 +35,7 @@ theme: /
                         q: * пока *
                         # пропиши путь /Bye 
                         go!: /Bye
+                        sdfdgfhjkl
 
     state: Bye || noContext = true
         intent!: /пока
