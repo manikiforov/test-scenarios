@@ -11,7 +11,7 @@ theme: /
         a: Дароу, братишка
         # Пропиши путь statemaster
         go!: statemaster1
-
+        1234567890-
         state: statemaster
             q!: statemaster
             a: В стейтмастере
@@ -27,7 +27,7 @@ theme: /
                     state: goTo0
                         q: назад
                         a: перехожу в 0 стейт
-                        # пропиши путь /Hello/statemaster/state_0fee
+                        
                         
                     state: end
                         q: * пока *
