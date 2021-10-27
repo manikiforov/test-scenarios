@@ -26,8 +26,7 @@ theme: /
                     state: goTo0
                         q: назад
                         a: перехожу в 0 стейт
-                        # пропиши путь /Hello/statemaster/state_0
-                        
+
                     state: end
                         q: * пока *
                         # пропиши путь /Bye 
