@@ -12,6 +12,8 @@ theme: /
         # Пропиши путь statemaster
         go!: statemaster1
 
+12345678
+
         state: statemaster
             q!: statemaster
             a: В стейтмастере
