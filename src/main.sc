@@ -9,7 +9,8 @@ theme: /
     state: Hello
         intent!: /привет.
         a: Дароу, братишка
-        go!: statemaster
+        # Пропиши путь statemaster
+        go!: statemaster1
         
         state: statemaster
             q!: statemaster
@@ -26,7 +27,8 @@ theme: /
                     state: goTo0
                         q: назад
                         a: перехожу в 0 стейт
-
+                        # пропиши путь /Hello/statemaster/state_0fee
+                        
                     state: end
                         q: * пока *
                         # пропиши путь /Bye 

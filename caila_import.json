@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "git2-1000014-xyq",
-    "name" : "git2-1000014-xyq",
+    "id" : "git1-1000014-CQq",
+    "name" : "git1-1000014-CQq",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 3029,
+    "id" : 3025,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -25,7 +25,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 3030,
+    "id" : 3026,
     "path" : "/привет.",
     "enabled" : true,
     "shared" : false,
