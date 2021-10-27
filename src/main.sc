@@ -11,7 +11,7 @@ theme: /
         a: Дароу, братишка
         # Пропиши путь statemaster
         go!: statemaster1
-        
+        1234567890-
         state: statemaster
             q!: statemaster
             a: В стейтмастере
