@@ -9,7 +9,6 @@ theme: /
     state: Hello
         intent!: /привет.
         a: Дароу, братишка
-        # Пропиши путь statemaster
         go!: statemaster
         
         state: statemaster
