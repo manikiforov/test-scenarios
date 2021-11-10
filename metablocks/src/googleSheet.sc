@@ -11,8 +11,8 @@ theme: /
     state: 1
         GoogleSheets:
             operationType = writeDataToCells
-            integrationId = 3d35e148-cbbc-418c-bbb3-798d165dc746
-            spreadsheetId = 1sScNs3admQdU2a1C_k_pNMe-kymW4AaqRWMZV3BLuIc
+            integrationId = 36896c21-bda6-4d7d-9217-cabfff371761
+            spreadsheetId = 1Hyre-Oa3tQ7t6lB_xxjfplBFQRj-7hrGhH3oq3kJl1o
             sheetName = Лист1
             body = [{"values": ["yessss6", "yessss6"],"cell": "A2"}]
             okState = /success
