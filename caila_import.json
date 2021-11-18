@@ -1,7 +1,7 @@
 {
   "project" : {
-    "id" : "1-1000089-sRa",
-    "name" : "1-1000089-sRa",
+    "id" : "test_scen-1000089-ovQ",
+    "name" : "test_scen-1000089-ovQ",
     "folder" : "/jaicp"
   },
   "settings" : {
@@ -16,7 +16,7 @@
     "shared" : false
   },
   "intents" : [ {
-    "id" : 2607,
+    "id" : 2609,
     "path" : "/пока",
     "enabled" : true,
     "shared" : false,
@@ -25,7 +25,7 @@
     } ],
     "priority" : 0
   }, {
-    "id" : 2608,
+    "id" : 2610,
     "path" : "/привет",
     "enabled" : true,
     "shared" : false,
