@@ -37,6 +37,13 @@ theme: /
         script: 
             var result = $http.get("http://localhost:9030/restapi/public/mts-distribution");
 
+    state: Timeout
+        q!: timeout
+        script: $reactions.timeout({interval: '1s', targetState: '/TimeoutFinished'});
+    
+    state: TimeoutFinished
+        a: Timeout завершен!
+
     state:
         q!: сайт
         script:
