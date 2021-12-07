@@ -74,7 +74,12 @@ theme: /
             "Первая" -> /Start
             "Вторая" -> /Stop
             "Третья" -> /CatchAll
-        
+    
+    state: inlineButtons
+        q!: inlineButtons
+        inlineButtons:
+            {text:"Название кнопки", url:"https://help.just-ai.com/docs/ru/JAICP_DSL/tags/reaction_tags/inline_buttons"}
+    
     state: raw
         event: rawRequestEvent
         a: LOL
