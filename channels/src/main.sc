@@ -84,6 +84,7 @@ theme: /
     
     state: inlineButtons
         q!: inlineButtons
+        a: А вот и кнопка с ссылкой
         inlineButtons:
             {text:"Название кнопки", url:"https://help.just-ai.com/docs/ru/JAICP_DSL/tags/reaction_tags/inline_buttons"}
     
