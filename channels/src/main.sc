@@ -28,7 +28,7 @@ theme: /
             $response.replies = $response.replies || [];
             $response.replies.push( {
                 type: "image",
-                imageUrl: "https://www.tikkurila.ru/files/12213/textsize/Joker_0.9L_1024.jpg",
+                imageUrl: "https://klike.net/uploads/posts/2020-04/1587719791_1.jpg",
                 text: "чето там текст"
             } );
 
