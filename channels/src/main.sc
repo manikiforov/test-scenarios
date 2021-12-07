@@ -63,7 +63,7 @@ theme: /
                 buttons:
                     "exit" -> /Start
             
-    state: stop
+    state: Stop
         q!: stop
         a: Вы прервали меня!
         
