@@ -27,9 +27,9 @@ theme: /
         script:
             $response.replies = $response.replies || [];
             $response.replies.push( {
+                text: "чето там текст",
                 type: "image",
-                imageUrl: "https://klike.net/uploads/posts/2020-04/1587719791_1.jpg",
-                text: "чето там текст"
+                imageUrl: "https://klike.net/uploads/posts/2020-04/1587719791_1.jpg"
             } );
 
     state: checkAudio
