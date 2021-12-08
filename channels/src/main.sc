@@ -24,7 +24,6 @@ theme: /
 
     state: checkimage
         q!: image
-        a: текст
         script:
             $response.replies = $response.replies || [];
             $response.replies.push( {
