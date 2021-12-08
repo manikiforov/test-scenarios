@@ -310,7 +310,7 @@ theme: /
             a: {{ $session.name }}
             
     state: Sms
-        intent!: /sms
+        q!: sms
         script:
             var randomText = Math.random().toString(36).substring(7);
             var reply = {
