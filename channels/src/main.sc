@@ -314,9 +314,9 @@ theme: /
         script:
             var randomText = Math.random().toString(36).substring(7);
             var reply = {
-            "type": "sms",
-            "text": "Ваш заказ " + randomText + " успешно оформлен",
-            "destination": "79217644193"
+                "type": "sms",
+                "text": "Ваш заказ " + randomText + " успешно оформлен",
+                "destination": "79217644193"
             };
             $response.replies = $response.replies || [];
             $response.replies.push(reply);
