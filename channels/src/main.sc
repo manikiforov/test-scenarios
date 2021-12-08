@@ -309,3 +309,22 @@ theme: /
         state: takevariable
             a: {{ $session.name }}
             
+    state: Sms
+        intent!: /sms
+        script:
+            var randomText = Math.random().toString(36).substring(7);
+            var reply = {
+            "type": "sms",
+            "text": "Ваш заказ " + randomText + " успешно оформлен",
+            "destination": "79217644193"
+            };
+            $response.replies = $response.replies || [];
+            $response.replies.push(reply);
+    
+    state: SmsSuccess
+        event: smsSuccessEvent
+        a: SMS успешно отправлена.
+            
+    state: SmsFailed
+        event: smsFailedEvent
+        a: SMS не отправлена.
