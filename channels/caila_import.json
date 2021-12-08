@@ -11,7 +11,23 @@
     "timezone" : "UTC",
     "shared" : false
   },
-  "intents" : [ ],
+  "intents" : [ {
+    "id" : 1151,
+    "path" : "/sms",
+    "enabled" : true,
+    "shared" : false,
+    "phrases" : [ {
+      "text" : "sms"
+    }, {
+      "text" : "смс "
+    }, {
+      "text" : "смска"
+    }, {
+      "text" : "сообщение"
+    } ],
+    "patterns" : [ ],
+    "priority" : 0
+  } ],
   "entities" : [ ],
   "enabledSystemEntities" : [ "duckling.number", "duckling.time", "duckling.duration", "duckling.phone-number", "duckling.email", "duckling.url" ],
   "spellerDictionary" : [ ],
