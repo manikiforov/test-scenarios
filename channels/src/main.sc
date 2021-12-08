@@ -32,6 +32,16 @@ theme: /
                 text: "чето там текст"
             } );
 
+    state: checkAudio
+        q!: audio
+        script:
+            $response.replies = $response.replies || [];
+            $response.replies.push( {
+                type:"audio",
+                audioUrl: "https://mp3bob.ru/download/muz/Vesyolye_rebyata_-_Lyudi_vstrechayutsya_[mp3pulse.ru].mp3",
+                audioName: "чето там аудио"
+            } );
+
     state: Internal http
         q!: http internal
         script: 
