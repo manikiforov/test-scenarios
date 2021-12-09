@@ -28,7 +28,7 @@ theme: /
             $response.replies = $response.replies || [];
             $response.replies.push( {
                 type: "image",
-                imageUrl: "https://klike.net/uploads/posts/2020-04/1587719791_1.jpg",
+                imageUrl: "https://avatarko.ru/img/kartinka/33/igra_Minecraft_32501.jpg",
                 text: "чето там текст"
             } );
 
