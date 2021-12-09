@@ -35,6 +35,7 @@ theme: /
 
     state: checkAudio
         q!: audio
+        a: text
         script:
             $response.replies = $response.replies || [];
             $response.replies.push( {
