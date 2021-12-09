@@ -51,6 +51,7 @@ theme: /
 
     state: Timeout
         q!: timeout
+        a: text timeout
         script: $reactions.timeout({interval: '1s', targetState: '/TimeoutFinished'});
     
     state: TimeoutFinished
