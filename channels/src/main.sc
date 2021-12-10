@@ -28,8 +28,7 @@ theme: /
             $response.replies = $response.replies || [];
             $response.replies.push( {
                 type: "image",
-                imageUrl: "https://avatarko.ru/img/kartinka/33/igra_Minecraft_32501.jpg",
-                text: "чето там текст"
+                imageUrl: "https://avatarko.ru/img/kartinka/33/igra_Minecraft_32501.jpg"
             } );
 
     state: checkAudio
