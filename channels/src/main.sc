@@ -6,7 +6,7 @@ theme: /
         
     state: CatchAll
         q!: *
-        a: Скажите боту что-то осмысленное.
+        a: Скажите боту что-то осмысленное!
         
     state: Switch
         q!: switch
