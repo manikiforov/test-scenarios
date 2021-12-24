@@ -8,7 +8,7 @@ require: inputPhoneNumber.sc
 require: http.sc
 require: sendSms.sc
 #Этот импорт закомментирован для того, чтобы при прохождении тк на блоки не появлялось ошибки из-за неподключенной интеграции google.
-require: googleSheet.sc
+#require: googleSheet.sc
 
 theme: /
 
