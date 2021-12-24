@@ -35,8 +35,8 @@ nlp:
   # Словарь должен совпадать с указанным в секции aligner
   vocabulary: src/aer.json
   
-dependencies:
-  - name: common
-    type: git
-    url: https://bitbucket.org/just-ai/zb-common
-    version: heads/master
+#dependencies:
+#  - name: common
+#    type: git
+#    url: https://bitbucket.org/just-ai/zb-common
+#    version: heads/master
