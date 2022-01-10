@@ -128,8 +128,8 @@ theme: /
         
     state: button_link
         q!: link
-        a: Кнопки с ссылкой
-        inlineButtons:{text: "button", url: "www.google.com"}
+       inlineButtons:
+           {text: "button", url: "www.google.com"}
         
     state: telegramError
         event: telegramApiRequestFailed
