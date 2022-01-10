@@ -128,7 +128,8 @@ theme: /
         
     state: button_link
         q!: link
-        buttons:
+        a: кнопки с ссылкой
+            buttons:
             {text: "button", url: "www.google.com"}
         
     state: telegramError
