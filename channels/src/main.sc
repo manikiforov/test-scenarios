@@ -17,6 +17,17 @@ theme: /
                 fileName: "example.docx",            // имя файла
                 mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
             });
+            
+    state: sendAudio
+        q!: audio
+        a: отправка аудио
+        script:
+            $response.replies = $response.replies || [];
+            $response.replies.push({
+                type: "audio",
+                audioUrl: "https://mobzvonok.ru/_ld/17/1720_Nila_Mania_Iowa.mp3",
+                audioName: "1720_Nila_Mania_Iowa"       //поле опционально
+            });
        
     state: time
         q!: timeout
