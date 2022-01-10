@@ -17,6 +17,17 @@ theme: /
                 fileName: "example.docx",            // имя файла
                 mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
             });
+            
+        state: time
+        q!: timeout
+        a: Таймер начался, когда вы сказали: {{$parseTree.text}}
+        a: Напишите что нибудь и таймер перезапустится
+        script: 
+          $reactions.timeout({interval: '30 seconds', targetState: '/timeout'});
+
+
+        state: timeout
+        a: Отведенное время закончилось. Спасибо за ваше обращение! Будем рады видеть вас снова.
         
     state:
         q!: Изображение
