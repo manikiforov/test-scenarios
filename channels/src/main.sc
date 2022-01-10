@@ -128,7 +128,7 @@ theme: /
         
     state: button_link
         q!: link
-        a: кнопки с ссылкой
+        a:  
             buttons:
             {text: "button", url: "www.google.com"}
         
