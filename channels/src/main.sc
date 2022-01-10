@@ -126,6 +126,11 @@ theme: /
         event: fileEvent
         a: файл дошел!
         
+    state: button_link
+        q!: link
+        buttons:
+            {text: "button", url: "www.google.com"}
+        
     state: telegramError
         event: telegramApiRequestFailed
         script: $request.data.eventData.errorMessage
