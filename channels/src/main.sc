@@ -18,7 +18,7 @@ theme: /
                 mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
             });
        
-        state: time
+    state: time
         q!: timeout
         a: Таймер начался, когда вы сказали: {{$parseTree.text}}
         a: Напишите что нибудь и таймер перезапустится
@@ -26,14 +26,14 @@ theme: /
           $reactions.timeout({interval: '30 seconds', targetState: '/timeout'});
 
 
-        state: timeout
+    state: timeout
         a: Отведенное время закончилось. Спасибо за ваше обращение! Будем рады видеть вас снова.
         
-        state:
+    state:
         q!: Изображение
         image: https://just-ai.com/wp-content/uploads/2020/02/logo_og-2x-1.png
 
-        state: Internal http
+    state: Internal http
         q!: http internal
         script: 
             var result = $http.get("http://localhost:9030/restapi/public/mts-distribution");
