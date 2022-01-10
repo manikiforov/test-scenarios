@@ -6,22 +6,18 @@ theme: /
         q!: start
         a:  Вы сказали и бот ответил: {{$parseTree.text}}
         
-    state: Send File
-        q!: send
+    state: sendFile
+        q!: file
+        a: отправка файла
         script:
-            var link = "https://hrmobile.mmk.ru/apex/a13403/hrmob/img";
-            var imageUrl = "https://248305.selcdn.ru/zfl_prod/27877338/27877341/J7ifRIQqAslZx0e3.png";
-    
-            log('>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> LINK: ' + link);
-            var response = $http.post(link, {
-                timeout: 10000,
-                fileUrl: imageUrl,
-                headers: {
-                    //"idGroup": groupID
-                    "idGroup": "123456789"
-                }
+            $response.replies = $response.replies || [];
+            $response.replies.push({
+                type:"file",                         // тип, может принимать значения `audio`, `image`
+                fileUrl: "https://docs.google.com/document/d/1n1CJFWA1MIR4r1NXbc3rEfbvQwcmvdET/",        // путь до файла
+                fileName: "example.docx",            // имя файла
+                mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
             });
-
+        
     state:
         q!: Изображение
         image: https://just-ai.com/wp-content/uploads/2020/02/logo_og-2x-1.png
