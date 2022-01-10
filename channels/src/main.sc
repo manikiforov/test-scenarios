@@ -129,7 +129,7 @@ theme: /
     state: button_link
         q!: link
         inlineButtons:
-            {text:"Просмотреть", url:"http://example.com"}  
+            {text:"button", url:"https://www.google.com/"}  
           
         
     state: telegramError
