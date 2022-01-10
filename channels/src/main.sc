@@ -22,15 +22,9 @@ theme: /
                 }
             });
 
-    state: checkimage
-        q!: image
-        script:
-            $response.replies = $response.replies || [];
-            $response.replies.push( {
-                type: "image",
-                imageUrl: "https://www.tikkurila.ru/files/12213/textsize/Joker_0.9L_1024.jpg",
-                text: "чето там текст"
-            } );
+    state:
+        q!: Изображение
+        image: https://just-ai.com/wp-content/uploads/2020/02/logo_og-2x-1.png
 
     state: Internal http
         q!: http internal
