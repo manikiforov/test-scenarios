@@ -20,7 +20,7 @@ theme: /
             
     state: sendAudio
         q!: audio
-        a: отправка аудио
+        a: отправка аудио!
         script:
             $response.replies = $response.replies || [];
             $response.replies.push({
