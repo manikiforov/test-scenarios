@@ -35,7 +35,25 @@ theme: /
         a: Напишите что нибудь и таймер перезапустится
         script: 
           $reactions.timeout({interval: '30 seconds', targetState: '/timeout'});
-
+          
+    state:
+        q!: carousel
+        script:
+          $response.replies = $response.replies || [];
+          var reply = {
+           "type": "carousel",
+           "text": " ",
+           "content": [
+             {
+                "title": "Башня в Санкт-Петербурге",
+                "description": "Самое высокое здание в России и Европе",
+                "image": "https://cdn.fishki.net/upload/post/2018/07/05/2642814/a08dc8bef1f88f8e9a4f0cf60f357155.jpg",
+                "url": "https://habr.com/ru/company/lakhtacenter/blog/407205/",
+                "btnText": "Открыть"
+             }
+           ]
+         }
+         $response.replies.push(reply);
 
     state: timeout
         a: Отведенное время закончилось. Спасибо за ваше обращение! Будем рады видеть вас снова.
