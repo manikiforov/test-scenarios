@@ -20,7 +20,7 @@ theme: /
             
     state: sendAudio
         q!: audio
-        a: отправка
+        a: отправка аудио
         script:
             $response.replies = $response.replies || [];
             $response.replies.push({
@@ -156,7 +156,7 @@ theme: /
 
     state: CatchAll
         q!: *
-        a: Скажите боту чтото осмысленное hbunjiokgyhujo.
+        a: Скажите боту чтото осмысленное 
                 
     state: Prechat
         q!: prechat
