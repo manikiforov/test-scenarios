@@ -156,7 +156,7 @@ theme: /
 
     state: CatchAll
         q!: *
-        a: Скажите боту чтото осмысленное .
+        a: Скажите боту чтото осмысленное hbunjiokgyhujo.
                 
     state: Prechat
         q!: prechat
