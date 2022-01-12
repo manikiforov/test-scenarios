@@ -34,7 +34,7 @@ theme: /
         a: Таймер начался, когда вы сказали: {{$parseTree.text}}
         a: Напишите что нибудь и таймер перезапустится
         script: 
-          $reactions.timeout({interval: '30 seconds', targetState: '/timeout'});
+          $reactions.timeout({interval: '10 seconds', targetState: '/timeout'});
           
     state:
         q!: carousel
