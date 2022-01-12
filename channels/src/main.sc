@@ -2,7 +2,7 @@ theme: /
 
     state: Start
         q!: start
-        a: Вы сказали и бот ответил: {{$parseTree.text}}
+        a: Вы сказали и бот ответил : {{$parseTree.text}} А еще это ветка test_channels:)
         
     state: CatchAll
         q!: *
