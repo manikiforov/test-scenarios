@@ -60,6 +60,7 @@ theme: /
         
     state:
         q!: Изображение
+        a: image
         image: https://just-ai.com/wp-content/uploads/2020/02/logo_og-2x-1.png
 
     state: Internal http
