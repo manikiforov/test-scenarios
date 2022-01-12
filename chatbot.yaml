@@ -1,0 +1,28 @@
+name: zb-cailapub
+
+entryPoint:
+  - main.sc
+
+botEngine: v2
+language: ru
+
+sts:
+    noMatchThreshold: 0.2
+
+caila:
+    noMatchThreshold: 0.2
+dependencies:
+  - name: common-branch
+    type: git
+    url: https://bitbucket.org/just-ai/zb-common
+    version: for-test
+  - name: common-tag
+    type: git
+    url: https://bitbucket.org/just-ai/zb-common
+    version: dep-tag
+    versionType: tag
+  - name: common-revision
+    type: git
+    url: https://bitbucket.org/just-ai/zb-common
+    version: 932c76d646177e60a1fec81eb8b25ee5de950b5b
+    versionType: revision
