@@ -62,6 +62,11 @@ theme: /
         q!: Изображение
         a: image
         image: https://just-ai.com/wp-content/uploads/2020/02/logo_og-2x-1.png
+        
+        
+    state:
+        q!: Аудио2
+        audio: https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3        
 
     state: Internal http
         q!: http internal
