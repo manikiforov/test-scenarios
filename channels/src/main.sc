@@ -18,6 +18,25 @@ theme: /
                 mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
             });
             
+    state:sendImage
+        q: image
+        a: отправка изображения
+        script:
+            $response.replies = $response.replies || [];
+            $response.replies.push({
+                type: "image",
+                imageUrl: "C:\Users\a.ikhsanova\Downloads\Home-security.png",
+                text: "описание изображения"       
+            });
+    
+    state: fileEventsdsd
+        event!: fileEvent
+        script: 
+            $client.files = $request.data.eventData
+            for (var i = 0; i < $request.data.eventData.length; i++) {
+                $reactions.answer($request.data.eventData[i].url);
+            };
+            
     state: sendAudio
         q!: audio
         a: отправка аудио
@@ -61,7 +80,7 @@ theme: /
     state:
         q!: Изображение
         a: image
-        image: https://just-ai.com/wp-content/uploads/2020/02/logo_og-2x-1.png
+        image: https://248305.selcdn.ru/public_test/chatadapter/1000003-testfb-1000003-RJs-16012/e7wzlBOqHel9OWPt.png
         
         
     state:
@@ -164,9 +183,9 @@ theme: /
         event: ONIMBOTMESSAGEDELETE
         a: Вжух и карандаш испарился
       
-    state: file
-        event: fileEvent
-        a: файл дошел!
+    #state: file
+     #   event: fileEvent
+      #  a: файл дошел!
         
     state: button_link
         q!: link
