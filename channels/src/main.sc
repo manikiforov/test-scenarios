@@ -18,17 +18,6 @@ theme: /
                 mimeType: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
             });
             
-    state:sendImage
-        q: image
-        a: отправка изображения
-        script:
-            $response.replies = $response.replies || [];
-            $response.replies.push({
-                type: "image",
-                imageUrl: "C:\Users\a.ikhsanova\Downloads\Home-security.png",
-                text: "описание изображения"       
-            });
-    
     state: fileEventsdsd
         event!: fileEvent
         script: 
@@ -36,6 +25,17 @@ theme: /
             for (var i = 0; i < $request.data.eventData.length; i++) {
                 $reactions.answer($request.data.eventData[i].url);
             };
+            
+    state:sendImage
+        q: image
+        a: отправка изображения
+        script:
+            $response.replies = $response.replies || [];
+            $response.replies.push({
+                type: "image",
+                imageUrl: "https://just-ai.com/wp-content/uploads/2020/02/logo_og-2x-1.png",
+                text: "описание изображения"       
+            });
             
     state: sendAudio
         q!: audio
@@ -79,7 +79,7 @@ theme: /
         
     state:
         q!: Изображение
-        a: image
+        a: 
         image: https://248305.selcdn.ru/public_test/chatadapter/1000003-testfb-1000003-RJs-16012/e7wzlBOqHel9OWPt.png
         
         
