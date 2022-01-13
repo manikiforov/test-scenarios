@@ -189,7 +189,6 @@ theme: /
         
     state: button_link
         q!: link
-        a:
         inlineButtons:
             {text:"button", url:"https://www.google.com/"}  
           
