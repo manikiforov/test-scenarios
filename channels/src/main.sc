@@ -69,11 +69,11 @@ theme: /
                 "image": "https://cdn.fishki.net/upload/post/2018/07/05/2642814/a08dc8bef1f88f8e9a4f0cf60f357155.jpg",
                 "url": "https://habr.com/ru/company/lakhtacenter/blog/407205/",
                 "btnText": "Открыть"
-             ,
-                "title": "Башня в Санкт-Петербурге",
-                "description": "Самое высокое здание в России и Европе",
-                "image": "https://cdn.fishki.net/upload/post/2018/07/05/2642814/a08dc8bef1f88f8e9a4f0cf60f357155.jpg",
-                "url": "https://habr.com/ru/company/lakhtacenter/blog/407205/",
+             }, { 
+                "title": "Стадион Санкт-Петербург",
+                "description": "Самый современный стадион в России",
+                "image": "https://248305.selcdn.ru/public_test/chatadapter/1000003-testfb-1000003-RJs-16012/8VrqAVzBV8Rpv58U.jpg",
+                "url": "https://o-krohe.ru/news/stadiony-chm-2018-otdadut-detyam/",
                 "btnText": "Открыть"
              }
            ]
