@@ -1,0 +1,39 @@
+{
+  "positions" : [ {
+    "id" : "/CatchAll",
+    "name" : "1",
+    "actionTitles" : [ null, null ],
+    "x" : 200,
+    "y" : 894
+  }, {
+    "id" : "/Первый стейт",
+    "name" : "2",
+    "actionTitles" : [ null, null ],
+    "x" : 200,
+    "y" : 646
+  }, {
+    "id" : "/Первый стейт/Первый контекстный",
+    "name" : "3",
+    "actionTitles" : [ null, null ],
+    "x" : 736,
+    "y" : 535
+  }, {
+    "id" : "/Первый стейт/Первый контекстный без имени",
+    "name" : "4",
+    "actionTitles" : [ null ],
+    "x" : 736,
+    "y" : 783
+  }, {
+    "id" : "/Второй стейт",
+    "name" : "5",
+    "actionTitles" : [ null, null ],
+    "x" : 200,
+    "y" : 398
+  }, {
+    "id" : "/Безымянный",
+    "name" : "6",
+    "actionTitles" : [ null ],
+    "x" : 200,
+    "y" : 200
+  } ]
+}
