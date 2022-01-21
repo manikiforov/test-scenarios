@@ -1,0 +1,39 @@
+{
+  "positions" : [ {
+    "id" : "/Echo ",
+    "x" : 400,
+    "y" : 84
+  }, {
+    "id" : "/InputFile",
+    "x" : 1580,
+    "y" : 308
+  }, {
+    "id" : "/newNode",
+    "x" : 220,
+    "y" : 308
+  }, {
+    "id" : "/Echo",
+    "x" : 220,
+    "y" : 136
+  }, {
+    "id" : "/InputText",
+    "x" : 900,
+    "y" : 308
+  }, {
+    "id" : "/InputNumber",
+    "x" : 560,
+    "y" : 308
+  }, {
+    "id" : "/InputPhoneNumber",
+    "x" : 1240,
+    "y" : 308
+  }, {
+    "id" : "/Confirmation",
+    "x" : 1920,
+    "y" : 308
+  }, {
+    "id" : "/TransferToOperator",
+    "x" : 2260,
+    "y" : 308
+  } ]
+}
