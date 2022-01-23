@@ -9,6 +9,9 @@
     "spellingCorrection" : false,
     "classificationAlgorithm" : "sts",
     "timezone" : "UTC",
+    "extendedSettings" : {
+      "useShared" : false
+    },
     "shared" : false
   },
   "intents" : [ ],
@@ -62,47 +65,47 @@
     "enabled" : false
   }, {
     "name" : "duckling.number",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : true
   }, {
     "name" : "duckling.ordinal",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : false
   }, {
     "name" : "duckling.amount-of-money",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : false
   }, {
     "name" : "duckling.distance",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : false
   }, {
     "name" : "duckling.time",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : true
   }, {
     "name" : "duckling.date",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : false
   }, {
     "name" : "duckling.time-of-day",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : false
   }, {
     "name" : "duckling.duration",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : true
   }, {
     "name" : "duckling.phone-number",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : true
   }, {
     "name" : "duckling.email",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : true
   }, {
     "name" : "duckling.url",
-    "version" : "v2",
+    "version" : "v1",
     "enabled" : true
   }, {
     "name" : "duckling.interval",
