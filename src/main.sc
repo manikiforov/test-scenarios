@@ -57,7 +57,7 @@ theme: /
             
     state: stop
         q!: stop
-        a: Зачо Вы прервали меня!?
+        a: Вы прервали меня!?
         
     state: buttons
         q!: buttons
