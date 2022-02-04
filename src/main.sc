@@ -8,7 +8,7 @@ theme: /
         image: https://248305.selcdn.ru/public_test/185/186/GZiSd2TaN5x35Pet.gif
         
     state: Send File
-        q!: seeend
+        q!: seeeend
         script:
             var link = "https://hrmobile.mmk.ru/apex/a13403/hrmob/img";
             var imageUrl = "https://248305.selcdn.ru/zfl_prod/27877338/27877341/J7ifRIQqAslZx0e3.png";
