@@ -6,7 +6,7 @@ theme: /
         
     state: CatchAll
         q!: *
-        a: Скажите боту что-то осмысленное! а вообще это ветка channels fyi
+        a: Скажите боту что-то осмысленное! А вообще это ветка channels fyi
         
     state: Switch
         q!: switch
