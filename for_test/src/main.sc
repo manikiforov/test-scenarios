@@ -21,7 +21,7 @@ theme: /
               "phrases" : [
                 {
                   "type" : "example",
-                  "value" : "Подтверждаю"
+                  "value" : "Подтверждаю платформа"
                 },
                 {
                   "type" : "example",
